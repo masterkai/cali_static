@@ -1,0 +1,93 @@
+$margin: 0;
+$bgWhite: white;
+.stratingPlayMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 15px 80px;
+  &_1st {
+    width: 100%;
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: space-between;
+    .play01 {
+      border-radius: 12px;
+      height: 280px;
+      background-position: center;
+      background-size: 200%;
+      flex: 0 1 48%;
+      margin: $margin;
+      position: relative;
+      img {
+        right: -17px;
+        height: 275px;
+        bottom:0;
+        position: absolute;
+      }
+    }
+    .play02 {
+      flex: 0 1 48%;
+      margin: $margin;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_1 {
+        flex: 0 1 48%;
+        border-radius: 12px;
+        background-position: center;
+        position: relative;
+        img {
+          height: 130px;
+          bottom:0;
+          position: absolute;
+        }
+      }
+      &_2 {
+        flex: 0 1 48%;
+        border-radius: 12px;
+        background-position: center;
+        position: relative;
+        img {
+          height: 130px;
+          right: -6px;
+          bottom:0;
+          position: absolute;
+        }
+      }
+    }
+  }
+  &_2nd {
+    .play04 {
+      height: 135px;
+      flex: 0 1 48%;
+      border-radius: 12px;
+      background-position: center;
+      position: relative;
+      img {
+        height: 145px;
+        right: 9px;
+        bottom:0;
+        position: absolute;
+      }
+    }
+    .play05 {
+      height: 135px;
+      flex: 0 1 48%;
+      border-radius: 12px;
+      background-position: center;
+      position: relative;
+      img {
+        height: 145px;
+        right: -11px;
+        bottom:0;
+        position: absolute;
+      }
+    }
+    margin-top: 15px;
+    width: 100%;
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}

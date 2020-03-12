@@ -1,0 +1,13 @@
+.displayMobile {
+  display: none;
+  @include breakpoint(max-width 480px) {
+    display: block;
+  }
+}
+
+.displayDesktop {
+  display: block;
+  @include breakpoint(max-width 480px) {
+    display: none;
+  }
+}

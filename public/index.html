@@ -2,6 +2,9 @@
 <html lang="en" style='font-family: "Microsoft YaHei","Noto Sans TC", sans-serif;'>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
     <title>ES6</title>
 
     <!--=========================== CSS ===========================-->
@@ -52,565 +55,715 @@
 
 </head>
 <body>
-
-<div class='headerBG'>
-    <form class='flexContainer'>
-        <div class='flex'>
+<div class="displayDesktop">
+    <div class='headerBG'>
+        <form class='flexContainer'>
+            <div class='flex'>
+                <button
+                        style='margin-right: 5px;'
+                        type="button"
+                        class="btn btn-dark btn-sm"
+                >
+                    立即註冊&nbsp;
+                    <span
+                            class="iconfont icon_user-plus-light"
+                            style='color: white;'
+                    ></span>
+                </button>
+                <input
+                        style='margin-right: 5px;'
+                        type="text"
+                        class='input'
+                        placeholder="會員賬號"
+                />
+                <input
+                        style='margin-right: 5px;'
+                        type="text"
+                        class='input'
+                        placeholder="登入密碼"
+                />
+            </div>
             <button
                     style='margin-right: 5px;'
                     type="button"
-                    class="btn btn-dark btn-sm"
+                    class="btn btn-outline-dark btn-sm"
             >
-                立即註冊&nbsp;
-                <span
-                        class="iconfont icon_user-plus-light"
-                        style='color: white;'
-                ></span>
+                登入
             </button>
-            <input
-                    style='margin-right: 5px;'
-                    type="text"
-                    class='input'
-                    placeholder="會員賬號"
-            />
-            <input
-                    style='margin-right: 5px;'
-                    type="text"
-                    class='input'
-                    placeholder="登入密碼"
-            />
-        </div>
-        <button
-                style='margin-right: 5px;'
-                type="button"
-                class="btn btn-outline-dark btn-sm"
-        >
-            登入
-        </button>
-        <button type="button" class="btn btn-outline-dark btn-sm">
-            忘記密碼
-        </button>
-    </form>
-</div>
-<header>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
+            <button type="button" class="btn btn-outline-dark btn-sm">
+                忘記密碼
+            </button>
+        </form>
+    </div>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
             <span
                     class="iconfont icon_bars-light"
             ></span>
 
 
-            <a href="/" class='navbar-brand logo'>
-                <img
-                        class="img-responsive logo"
-                        src="build/images/Cali_logo_02.png"
-                        alt=""
-                />
-            </a>
+                <a href="/" class='navbar-brand logo'>
+                    <img
+                            class="img-responsive logo"
+                            src="build/images/Cali_logo_02.png"
+                            alt=""
+                    />
+                </a>
 
-            <div class="collapse navbar-collapse">
-                <ul class='flexContainer'>
-                    <li><a href="/online_baccarat"
-                           class="nav-item nav-link menuToggle lv1Menu"
-                           style='padding: 0.5rem 0;'
-                    >
-                        真人娛樂
-                    </a></li>
-
-                    <li><a
-                            href="/sports"
-                            class="nav-item nav-link menuToggle lv1Menu"
-                            style='padding: 0.5rem 0;'
-                    >
-                        體育博彩
-                    </a></li>
-                    <li><a
-                            href="/lottery"
-                            class="nav-item nav-link menuToggle lv1Menu"
-                            style='padding: 0.5rem 0;'
-                    >
-                        賓果彩票
-                    </a></li>
-                    <li><a href="/electronics"
-                           class="nav-item nav-link menuToggle lv1Menu"
-                           style='padding: 0.5rem 0;'
-                    >
-                        電子遊戲
-                    </a></li>
-                    <li><a
-                            href="/fish"
-                            class="nav-item nav-link menuToggle lv1Menu"
-                            style='padding: 0.5rem 0;'
-                    >
-                        捕魚王
-                    </a></li>
-                    <li><a
-                            href="/promotions"
-                            class="nav-item nav-link menuToggle lv1Menu"
-                            style='padding: 0.5rem 0;'
-                    >
-                        優惠活動
-                    </a></li>
-                    <li style="position: relative">
-                        <a
-                            href="/promotions"
-                            class="nav-item nav-link menuToggle lv1Menu"
-                            style='padding: 0.5rem 0;'
+                <div class="collapse navbar-collapse">
+                    <ul class='flexContainer'>
+                        <li><a href="/online_baccarat"
+                               class="nav-item nav-link menuToggle lv1Menu"
+                               style='padding: 0.5rem 0;'
                         >
-                            更多
-                        </a>
-                        <ul class="nav-menu-2 menu">
-                            <a className="text-black">玩家評價</a>
-                            <a className="text-black">存取流程</a>
-                            <a className="text-black">APP下載</a>
-                            <a className="text-black">代理加盟</a>
-                            <a className="text-black">關於卡利</a>
-                        </ul>
+                            真人娛樂
+                        </a></li>
 
-                    </li>
-                </ul>
-            </div>
+                        <li><a
+                                href="/sports"
+                                class="nav-item nav-link menuToggle lv1Menu"
+                                style='padding: 0.5rem 0;'
+                        >
+                            體育博彩
+                        </a></li>
+                        <li><a
+                                href="/lottery"
+                                class="nav-item nav-link menuToggle lv1Menu"
+                                style='padding: 0.5rem 0;'
+                        >
+                            賓果彩票
+                        </a></li>
+                        <li><a href="/electronics"
+                               class="nav-item nav-link menuToggle lv1Menu"
+                               style='padding: 0.5rem 0;'
+                        >
+                            電子遊戲
+                        </a></li>
+                        <li><a
+                                href="/fish"
+                                class="nav-item nav-link menuToggle lv1Menu"
+                                style='padding: 0.5rem 0;'
+                        >
+                            捕魚王
+                        </a></li>
+                        <li><a
+                                href="/promotions"
+                                class="nav-item nav-link menuToggle lv1Menu"
+                                style='padding: 0.5rem 0;'
+                        >
+                            優惠活動
+                        </a></li>
+                        <li style="position: relative">
+                            <a
+                                    href="/promotions"
+                                    class="nav-item nav-link menuToggle lv1Menu"
+                                    style='padding: 0.5rem 0;'
+                            >
+                                更多
+                            </a>
+                            <ul class="nav-menu-2 menu">
+                                <a class="text-black">玩家評價</a>
+                                <a class="text-black">存取流程</a>
+                                <a class="text-black">APP下載</a>
+                                <a class="text-black">代理加盟</a>
+                                <a class="text-black">關於卡利</a>
+                            </ul>
 
-        </nav>
-    </div>
-</header>
+                        </li>
+                    </ul>
+                </div>
 
-<div class="mainBG">
-    <div class="mainCarousel">
-        <img
-                src="build/images/banner/banner01.jpg"
-                alt=""
-                class="img-responsive"
-        />
-        <img
-                src="build/images/banner/banner02.jpg"
-                alt=""
-                class="img-responsive"
-        />
-        <img
-                src="build/images/banner/banner03.jpg"
-                alt=""
-                class="img-responsive"
-        />
-        <img
-                src="build/images/banner/banner04.jpg"
-                alt=""
-                class="img-responsive"
-        />
-    </div>
+            </nav>
+        </div>
+    </header>
 
-    <div class="container">
-        <div class='sectionTitle'>
-            <div class='titleGroup'>
-                <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-                <div class='subject' style='text-shadow: 0 2px 4px black;'>開始遊玩</div>
-                <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-            </div>
+    <div class="mainBG">
+        <div class="mainCarousel">
+            <img
+                    src="build/images/banner/banner01.jpg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <img
+                    src="build/images/banner/banner02.jpg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <img
+                    src="build/images/banner/banner03.jpg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <img
+                    src="build/images/banner/banner04.jpg"
+                    alt=""
+                    class="img-responsive"
+            />
         </div>
 
-        <ul class="accordion">
-            <li class="tabs active">
-                <div class="social-links">
-                    <span class="iconfont icon_baccarat"></span>
-                    <p>真人娛樂</p>
-                </div>
-                <div class="paragraph" style="background-image: url(./build/images/startPlay/truePeople_photo.jpg)">
-                    <div class="iconBox">
-                        <div class="iconBtn">
-                            <span class="iconfont icon_allbet"></span>
-
-                        </div>
-                        <div class="iconBtn"><span class="iconfont icon_DreamGaming"></span></div>
-                        <div class="iconBtn"><span class="iconfont icon_WM"></span></div>
-                        <div class="iconBtn"><span class="iconfont icon_SAgaming"></span></div>
-                    </div>
-                </div>
-            </li>
-            <li class="tabs">
-                <div class="social-links">
-                    <span class="iconfont icon_futbol-solid"></span>
-                    <p>體育博彩</p>
-                </div>
-                <div class="paragraph" style="background-image: url(./build/images/startPlay/sport_photo.jpg)">
-                    <div class="iconBox">
-                        <div class="iconBtn"><span class="iconfont icon_SUPER"></span></div>
-                        <div class="iconBtn"><span class="iconfont icon_AFBCash"></span></div>
-                    </div>
-                </div>
-            </li>
-            <li class="tabs">
-                <div class="social-links">
-                    <span class="iconfont icon_ticket-alt-solid"></span>
-                    <p>賓果彩票</p>
-                </div>
-                <div class="paragraph" style="background-image: url(./build/images/startPlay/lottery_photo.jpg)">
-                    <div class="iconBox">
-                        <div class="iconBtn"><span class="iconfont icon_Klottery"></span></div>
-                        <div class="iconBtn"><span class="iconfont icon_SUPERbingo"></span></div>
-                    </div>
-                </div>
-            </li>
-            <li class="tabs">
-                <div class="social-links">
-                    <span class="iconfont icon_alien-monster-solid"></span>
-                    <p>電子遊戲</p>
-                </div>
-                <div class="paragraph" style="background-image: url(./build/images/startPlay/poker_photo.jpg)">
-                    <div class="iconBox">
-                        <div class="iconBtn">
-                            <span class="iconfont icon_RTGslots"></span>
-
-                        </div>
-                        <div class="iconBtn"><span class="iconfont icon_SAgaming"></span></div>
-                        <div class="iconBtn"><span class="iconfont icon_betixion"></span></div>
-                        <div class="iconBtn"><span class="iconfont icon_betsoft"></span></div>
-                    </div>
-                </div>
-            </li>
-            <li class="tabs">
-                <div class="social-links">
-                    <span class="iconfont icon_fish"></span>
-                    <p>捕魚王</p>
-                </div>
-                <div class="paragraph" style="background-image: url(./build/images/startPlay/fish_photo.jpg)">
-                    <div class="iconBox">
-                        <div class="iconBtn"><span class="iconfont icon_allbet"></span></div>
-                        <div class="iconBtn"><span class="iconfont icon_SAgaming"></span></div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <div class='sectionTitle'>
-            <div class='titleGroup'>
-                <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-                <div class='subject' style='text-shadow: 0 2px 4px black;'>優惠活動</div>
-                <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-            </div>
-        </div>
-
-        <div class="bonusCarousel">
-            <div class='bonus'>
-                <img src='build/images/bonus/img-promotion-1.png' alt="" class="img-responsive"/>
-                <div class='title'>{title}</div>
-                <p>{context}</p>
-                <div class='bottom'>
-                    <p class='time'>{time}</p>
-                    <a style='white-space:nowrap'>更多</a>
-                </div>
-            </div>
-            <div class='bonus'>
-                <img src='build/images/bonus/img-promotion-2.png' alt="" class="img-responsive"/>
-                <div class='title'>{title}</div>
-                <p>{context}</p>
-                <div class='bottom'>
-                    <p class='time'>{time}</p>
-                    <a style='white-space:nowrap'>更多</a>
-                </div>
-            </div>
-            <div class='bonus'>
-                <img src='build/images/bonus/img-promotion-3.png' alt="" class="img-responsive"/>
-                <div class='title'>{title}</div>
-                <p>{context}</p>
-                <div class='bottom'>
-                    <p class='time'>{time}</p>
-                    <a style='white-space:nowrap'>更多</a>
-                </div>
-            </div>
-            <div class='bonus'>
-                <img src='build/images/bonus/img-promotion-4.png' alt="" class="img-responsive"/>
-                <div class='title'>{title}</div>
-                <p>{context}</p>
-                <div class='bottom'>
-                    <p class='time'>{time}</p>
-                    <a style='white-space:nowrap'>更多</a>
-                </div>
-            </div>
-            <div class='bonus'>
-                <img src='build/images/bonus/img-promotion-1.png' alt="" class="img-responsive"/>
-                <div class='title'>{title}</div>
-                <p>{context}</p>
-                <div class='bottom'>
-                    <p class='time'>{time}</p>
-                    <a style='white-space:nowrap'>更多</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class='useEvaluationSec'>
         <div class="container">
             <div class='sectionTitle'>
                 <div class='titleGroup'>
                     <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-                    <div class='subject' style='text-shadow: 0 2px 4px black;'>卡利玩家實測</div>
+                    <div class='subject' style='text-shadow: 0 2px 4px black;'>開始遊玩</div>
                     <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
                 </div>
             </div>
-            <div class="row">
 
-                <div class="col userTestHeight">
-                    <div class='userTest'>
-                        <div class='top'>
-                            <img src="build/images/userTest.png" alt="" class="img-responsive"/>
-                            <div class='main'>
-                                <div class='userTest_title'>
-                                    卡利娛樂城
+            <ul class="accordion">
+                <li class="tabs active">
+                    <div class="social-links">
+                        <span class="iconfont icon_baccarat"></span>
+                        <p>真人娛樂</p>
+                    </div>
+                    <div class="paragraph" style="background-image: url(./build/images/startPlay/truePeople_photo.jpg)">
+                        <div class="iconBox">
+                            <div class="iconBtn">
+                                <span class="iconfont icon_allbet"></span>
+
+                            </div>
+                            <div class="iconBtn"><span class="iconfont icon_DreamGaming"></span></div>
+                            <div class="iconBtn"><span class="iconfont icon_WM"></span></div>
+                            <div class="iconBtn"><span class="iconfont icon_SAgaming"></span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="tabs">
+                    <div class="social-links">
+                        <span class="iconfont icon_futbol-solid"></span>
+                        <p>體育博彩</p>
+                    </div>
+                    <div class="paragraph" style="background-image: url(./build/images/startPlay/sport_photo.jpg)">
+                        <div class="iconBox">
+                            <div class="iconBtn"><span class="iconfont icon_SUPER"></span></div>
+                            <div class="iconBtn"><span class="iconfont icon_AFBCash"></span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="tabs">
+                    <div class="social-links">
+                        <span class="iconfont icon_ticket-alt-solid"></span>
+                        <p>賓果彩票</p>
+                    </div>
+                    <div class="paragraph" style="background-image: url(./build/images/startPlay/lottery_photo.jpg)">
+                        <div class="iconBox">
+                            <div class="iconBtn"><span class="iconfont icon_Klottery"></span></div>
+                            <div class="iconBtn"><span class="iconfont icon_SUPERbingo"></span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="tabs">
+                    <div class="social-links">
+                        <span class="iconfont icon_alien-monster-solid"></span>
+                        <p>電子遊戲</p>
+                    </div>
+                    <div class="paragraph" style="background-image: url(./build/images/startPlay/poker_photo.jpg)">
+                        <div class="iconBox">
+                            <div class="iconBtn">
+                                <span class="iconfont icon_RTGslots"></span>
+
+                            </div>
+                            <div class="iconBtn"><span class="iconfont icon_SAgaming"></span></div>
+                            <div class="iconBtn"><span class="iconfont icon_betixion"></span></div>
+                            <div class="iconBtn"><span class="iconfont icon_betsoft"></span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="tabs">
+                    <div class="social-links">
+                        <span class="iconfont icon_fish"></span>
+                        <p>捕魚王</p>
+                    </div>
+                    <div class="paragraph" style="background-image: url(./build/images/startPlay/fish_photo.jpg)">
+                        <div class="iconBox">
+                            <div class="iconBtn"><span class="iconfont icon_allbet"></span></div>
+                            <div class="iconBtn"><span class="iconfont icon_SAgaming"></span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class='sectionTitle'>
+                <div class='titleGroup'>
+                    <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    <div class='subject' style='text-shadow: 0 2px 4px black;'>優惠活動</div>
+                    <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                </div>
+            </div>
+
+            <div class="bonusCarousel">
+                <div class='bonus'>
+                    <img src='build/images/bonus/img-promotion-1.png' alt="" class="img-responsive"/>
+                    <div class='title'>{title}</div>
+                    <p>{context}</p>
+                    <div class='bottom'>
+                        <p class='time'>{time}</p>
+                        <a style='white-space:nowrap'>更多</a>
+                    </div>
+                </div>
+                <div class='bonus'>
+                    <img src='build/images/bonus/img-promotion-2.png' alt="" class="img-responsive"/>
+                    <div class='title'>{title}</div>
+                    <p>{context}</p>
+                    <div class='bottom'>
+                        <p class='time'>{time}</p>
+                        <a style='white-space:nowrap'>更多</a>
+                    </div>
+                </div>
+                <div class='bonus'>
+                    <img src='build/images/bonus/img-promotion-3.png' alt="" class="img-responsive"/>
+                    <div class='title'>{title}</div>
+                    <p>{context}</p>
+                    <div class='bottom'>
+                        <p class='time'>{time}</p>
+                        <a style='white-space:nowrap'>更多</a>
+                    </div>
+                </div>
+                <div class='bonus'>
+                    <img src='build/images/bonus/img-promotion-4.png' alt="" class="img-responsive"/>
+                    <div class='title'>{title}</div>
+                    <p>{context}</p>
+                    <div class='bottom'>
+                        <p class='time'>{time}</p>
+                        <a style='white-space:nowrap'>更多</a>
+                    </div>
+                </div>
+                <div class='bonus'>
+                    <img src='build/images/bonus/img-promotion-1.png' alt="" class="img-responsive"/>
+                    <div class='title'>{title}</div>
+                    <p>{context}</p>
+                    <div class='bottom'>
+                        <p class='time'>{time}</p>
+                        <a style='white-space:nowrap'>更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='useEvaluationSec'>
+            <div class="container">
+                <div class='sectionTitle'>
+                    <div class='titleGroup'>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                        <div class='subject' style='text-shadow: 0 2px 4px black;'>卡利玩家實測</div>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col userTestHeight">
+                        <div class='userTest'>
+                            <div class='top'>
+                                <img src="build/images/userTest.png" alt="" class="img-responsive"/>
+                                <div class='main'>
+                                    <div class='userTest_title'>
+                                        卡利娛樂城
+                                    </div>
+                                    <div class='starBox'>
+                                        <p>4.8</p>
+                                        <span class='iconfont icon_star-solid'></span>
+                                        <span class='iconfont icon_star-solid'></span>
+                                        <span class='iconfont icon_star-solid'></span>
+                                        <span class='iconfont icon_star-solid'></span>
+                                        <span class='iconfont icon_star-solid'></span>
+                                    </div>
+                                    <p>共168則評論</p>
                                 </div>
-                                <div class='starBox'>
-                                    <p>4.8</p>
-                                    <span class='iconfont icon_star-solid'></span>
-                                    <span class='iconfont icon_star-solid'></span>
-                                    <span class='iconfont icon_star-solid'></span>
-                                    <span class='iconfont icon_star-solid'></span>
-                                    <span class='iconfont icon_star-solid'></span>
-                                </div>
-                                <p>共168則評論</p>
+                            </div>
+                            <p class='paragraph'>
+                                卡利玩家實際遊玩回饋，VIP3以上會員即可評價，認證機制保證真實性，各位會員提出對卡利娛樂城的意見，卡利娛樂城更加進步，打造出更讓各為喜愛的線上博弈平台。
+                            </p>
+                        </div>
+                    </div>
+                    <div class='col userFeedBackBox'>
+                        <div class='userBox'>
+                            <div class='userNumber'>VIP8 會員1658432</div>
+                            <div class='starBox'>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                            </div>
+                            <p>卡利娛樂城是真心能信賴的~就算我贏了15萬，出金也很快不囉嗦，而且遊戲種類很多，也有很多優惠，喜歡!</p>
+                        </div>
+                        <div class='userBox'>
+                            <div class='userNumber'>VIP8 會員1658432</div>
+                            <div class='starBox'>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                            </div>
+                            <p>卡利娛樂城是真心能信賴的~就算我贏了15萬，出金也很快不囉嗦，而且遊戲種類很多，也有很多優惠，喜歡!</p>
+                        </div>
+                        <div class='userBox'>
+                            <div class='userNumber'>VIP8 會員1658432</div>
+                            <div class='starBox'>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                            </div>
+                            <p>卡利娛樂城是真心能信賴的~就算我贏了15萬，出金也很快不囉嗦，而且遊戲種類很多，也有很多優惠，喜歡!</p>
+                        </div>
+                        <button
+                                type="button" class="btn btn-block btn-sm"
+                                style='background-color: #6236FF;color: white;width: 80%;margin: 10px auto;'>查看更多
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="AboutSec">
+            <div class="container">
+                <div class='sectionTitle'>
+                    <div class='titleGroup'>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                        <div class='subject' style='text-shadow: 0 2px 4px black;'>關於卡利</div>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    </div>
+                </div>
+                <div class="subTitle">亞洲最新興的博彩娛樂集團</div>
+                <p>
+                    卡利娛樂城 (官方直營網址: cali99.net)
+                    為卡利集團專營的線上博奕平台，我們秉持誠信美譽、效率快速的宗旨，為會員提供優良完善的遊戲環境。
+                </p>
+                <div class="row">
+                    <div class="flex">
+                        <div class="card" style='width: 16.5rem;'>
+                            <img src='build/images/about/img-about1.png' class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                                <a class='title'>{props.title}</a>
                             </div>
                         </div>
-                        <p class='paragraph'>
-                            卡利玩家實際遊玩回饋，VIP3以上會員即可評價，認證機制保證真實性，各位會員提出對卡利娛樂城的意見，卡利娛樂城更加進步，打造出更讓各為喜愛的線上博弈平台。
-                        </p>
-                    </div>
-                </div>
-                <div class='col userFeedBackBox'>
-                    <div class='userBox'>
-                        <div class='userNumber'>VIP8 會員1658432</div>
-                        <div class='starBox'>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                        </div>
-                        <p>卡利娛樂城是真心能信賴的~就算我贏了15萬，出金也很快不囉嗦，而且遊戲種類很多，也有很多優惠，喜歡!</p>
-                    </div>
-                    <div class='userBox'>
-                        <div class='userNumber'>VIP8 會員1658432</div>
-                        <div class='starBox'>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                        </div>
-                        <p>卡利娛樂城是真心能信賴的~就算我贏了15萬，出金也很快不囉嗦，而且遊戲種類很多，也有很多優惠，喜歡!</p>
-                    </div>
-                    <div class='userBox'>
-                        <div class='userNumber'>VIP8 會員1658432</div>
-                        <div class='starBox'>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                            <span class='iconfont icon_star-solid'></span>
-                        </div>
-                        <p>卡利娛樂城是真心能信賴的~就算我贏了15萬，出金也很快不囉嗦，而且遊戲種類很多，也有很多優惠，喜歡!</p>
-                    </div>
-                    <button
-                            type="button" class="btn btn-block btn-sm"
-                            style='background-color: #6236FF;color: white;width: 80%;margin: 10px auto;'>查看更多
-                    </button>
 
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="AboutSec">
-        <div class="container">
-            <div class='sectionTitle'>
-                <div class='titleGroup'>
-                    <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-                    <div class='subject' style='text-shadow: 0 2px 4px black;'>關於卡利</div>
-                    <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-                </div>
-            </div>
-            <div class="subTitle">亞洲最新興的博彩娛樂集團</div>
-            <p>
-                卡利娛樂城 (官方直營網址: cali99.net)
-                為卡利集團專營的線上博奕平台，我們秉持誠信美譽、效率快速的宗旨，為會員提供優良完善的遊戲環境。
-            </p>
-            <div class="row">
-                <div class="flex">
-                    <div class="card" style='width: 16.5rem;'>
-                        <img src='build/images/about/img-about1.png' class="card-img-top" alt="..."/>
-                        <div class="card-body">
-                            <a class='title'>{props.title}</a>
+                        <div class="card" style='width: 16.5rem;'>
+                            <img src='build/images/about/img-about2.png' class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                                <a class='title'>{props.title}</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" style='width: 16.5rem;'>
-                        <img src='build/images/about/img-about2.png' class="card-img-top" alt="..."/>
-                        <div class="card-body">
-                            <a class='title'>{props.title}</a>
+                        <div class="card" style='width: 16.5rem;'>
+                            <img src='build/images/about/img-about3.png' class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                                <a class='title'>{props.title}</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" style='width: 16.5rem;'>
-                        <img src='build/images/about/img-about3.png' class="card-img-top" alt="..."/>
-                        <div class="card-body">
-                            <a class='title'>{props.title}</a>
-                        </div>
-                    </div>
-
-                    <div class="card" style='width: 16.5rem;'>
-                        <img src='build/images/about/img-about4.png' class="card-img-top" alt="..."/>
-                        <div class="card-body">
-                            <a class='title'>{props.title}</a>
+                        <div class="card" style='width: 16.5rem;'>
+                            <img src='build/images/about/img-about4.png' class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                                <a class='title'>{props.title}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <div class="container">
-            <div class='sectionTitle'>
-                <div class='titleGroup'>
-                    <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-                    <div class='subject' style='text-shadow: 0 2px 4px black;'>卡利合作娛樂品牌</div>
-                    <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+        <div class="footer">
+            <div class="container">
+                <div class='sectionTitle'>
+                    <div class='titleGroup'>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                        <div class='subject' style='text-shadow: 0 2px 4px black;'>卡利合作娛樂品牌</div>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="iconBox">
+                <div class="row">
+                    <div class="iconBox">
             <span
                     class="iconfont icon_allbet"
                     style='font-size: 7rem;'
             ></span>
-                    <span class="iconfont icon_DreamGaming"></span>
-                    <span class="iconfont icon_WM" style='font-size: 4rem;'></span>
-                    <span class="iconfont icon_SAgaming" style='font-size: 5rem;'></span>
-                    <span class="iconfont icon_SUPER"></span>
-                    <span
-                            class="iconfont icon_AFBCash"
-                            style='font-size: 4rem;'
-                    ></span>
+                        <span class="iconfont icon_DreamGaming"></span>
+                        <span class="iconfont icon_WM" style='font-size: 4rem;'></span>
+                        <span class="iconfont icon_SAgaming" style='font-size: 5rem;'></span>
+                        <span class="iconfont icon_SUPER"></span>
+                        <span
+                                class="iconfont icon_AFBCash"
+                                style='font-size: 4rem;'
+                        ></span>
+                    </div>
+                    <div class="iconBox">
+                        <span class="iconfont icon_Klottery"></span>
+                        <span
+                                class="iconfont icon_SUPERbingo"
+                                style='font-size: 5rem;'
+                        ></span>
+                        <span
+                                class="iconfont icon_RTGslots"
+                                style='font-size: 4.8rem;'
+                        ></span>
+                        <span class="iconfont icon_betixion"></span>
+                        <span class="iconfont icon_betsoft"></span>
+                    </div>
                 </div>
-                <div class="iconBox">
-                    <span class="iconfont icon_Klottery"></span>
-                    <span
-                            class="iconfont icon_SUPERbingo"
-                            style='font-size: 5rem;'
-                    ></span>
-                    <span
-                            class="iconfont icon_RTGslots"
-                            style='font-size: 4.8rem;'
-                    ></span>
-                    <span class="iconfont icon_betixion"></span>
-                    <span class="iconfont icon_betsoft"></span>
+                <div class='sectionTitle'>
+                    <div class='titleGroup'>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                        <div class='subject' style='text-shadow: 0 2px 4px black;'>國際安全認證</div>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    </div>
                 </div>
-            </div>
-            <div class='sectionTitle'>
-                <div class='titleGroup'>
-                    <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
-                    <div class='subject' style='text-shadow: 0 2px 4px black;'>國際安全認證</div>
-                    <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                <div class="row">
+                    <div class="securityLogoBox">
+                        <img
+                                src="./build/images/securityLogo/partner_logo_1.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_2.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_3.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_4.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_5.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_6.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_7.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_8.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="securityLogoBox">
-                    <img
-                            src="./build/images/securityLogo/partner_logo_1.png"
-                            alt=""
-                            class="img-responsive"
-                    />
-                    <img
-                            src="./build/images/securityLogo/partner_logo_2.png"
-                            alt=""
-                            class="img-responsive"
-                    />
-                    <img
-                            src="./build/images/securityLogo/partner_logo_3.png"
-                            alt=""
-                            class="img-responsive"
-                    />
-                    <img
-                            src="./build/images/securityLogo/partner_logo_4.png"
-                            alt=""
-                            class="img-responsive"
-                    />
-                    <img
-                            src="./build/images/securityLogo/partner_logo_5.png"
-                            alt=""
-                            class="img-responsive"
-                    />
-                    <img
-                            src="./build/images/securityLogo/partner_logo_6.png"
-                            alt=""
-                            class="img-responsive"
-                    />
-                    <img
-                            src="./build/images/securityLogo/partner_logo_7.png"
-                            alt=""
-                            class="img-responsive"
-                    />
-                    <img
-                            src="./build/images/securityLogo/partner_logo_8.png"
-                            alt=""
-                            class="img-responsive"
-                    />
-                </div>
-            </div>
-            <p>
-                Copyright© 2019 Allbetgaming.com. All Rights Reserved.
-                服務條款|隱私權保護政策
-            </p>
+                <p>
+                    Copyright© 2019 Allbetgaming.com. All Rights Reserved.
+                    服務條款|隱私權保護政策
+                </p>
 
-            <div class="row">
-                <div class="footerLink">
-                    <a href="/">娛樂城</a>
-                    |
-                    <a href="/">百家樂</a>
-                    |
-                    <a href="/">球版現金版</a>
-                    |
-                    <a href="/">電子拉霸</a>
-                    |
-                    <a href="/">鑫城賓果</a>
-                    |
-                    <a href="/">百家樂技巧教學</a>
+                <div class="row">
+                    <div class="footerLink">
+                        <a href="/">娛樂城</a>
+                        |
+                        <a href="/">百家樂</a>
+                        |
+                        <a href="/">球版現金版</a>
+                        |
+                        <a href="/">電子拉霸</a>
+                        |
+                        <a href="/">鑫城賓果</a>
+                        |
+                        <a href="/">百家樂技巧教學</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class='drawerBox'>
+        <div class="infoBox">
+            <p>在線客服</p>
+            <img src="build/images/qrCode.png" alt="" class="img-responsive"/>
+        </div>
+        <div class="infoBox">
+            <img
+                    src="build/images/line-messenger.svg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <p>@888pi</p>
+        </div>
+        <div class="infoBox">
+            <p style="font-size: 0.85rem;">意見反饋 8888pipipi@gmail.com</p>
+        </div>
+        <div class="TrapezoidTag">
+            <div class="triangleBottomRight"></div>
+            <div class="triangleTopRight"></div>
+            <span class="iconfont iconHR"></span>
+            <p>聯系我們</p>
+        </div>
+
+    </div>
+
+    <div id="GOTOP">
+        <span class="iconfont iconchevron-up-solid"></span>
+    </div>
 </div>
 
-<div class='drawerBox'>
-    <div class="infoBox">
-        <p>在線客服</p>
-        <img src="build/images/qrCode.png" alt="" class="img-responsive"/>
-    </div>
-    <div class="infoBox">
-        <img
-                src="build/images/line-messenger.svg"
-                alt=""
-                class="img-responsive"
-        />
-        <p>@888pi</p>
-    </div>
-    <div class="infoBox">
-        <p style="font-size: 0.85rem;">意見反饋 8888pipipi@gmail.com</p>
-    </div>
-    <div class="TrapezoidTag">
-        <div class="triangleBottomRight"></div>
-        <div class="triangleTopRight"></div>
-        <span class="iconfont iconHR"></span>
-        <p>聯系我們</p>
-    </div>
+<div class="displayMobile">
+    <div class='fixed-top'>
+        <nav class='navbar navBarFlex' style="height: 55px">
+            <span class="iconfont icon_bars-light" style='margin-left: 10px;font-size: 1.625rem;'></span>
 
+            <a class='logo'>
+                <img
+                        class="img-responsive logo_m"
+                        src="build/images/Cali_logo_mobile.png"
+                        alt=""
+                />
+            </a>
+
+            <div class='btnGroup'>
+                <button
+                        type="button"
+                        class='btnOutLine'
+                >
+                    註冊
+                </button>
+                <button
+                        type="button"
+                        class='btnOutLine'
+                >
+                    登入
+                </button>
+            </div>
+
+        </nav>
+
+    </div>
+    <div class="mainBG">
+        <div class="mainCarousel" style="margin-top: 55px">
+            <img
+                    src="build/images/banner/banner01.jpg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <img
+                    src="build/images/banner/banner02.jpg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <img
+                    src="build/images/banner/banner03.jpg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <img
+                    src="build/images/banner/banner04.jpg"
+                    alt=""
+                    class="img-responsive"
+            />
+        </div>
+
+        <div class='marqueeBox'>
+            <span class="iconfont icon_volume-up-solid"></span>
+
+            <div class='marquee'>
+                溫馨提示：尊敬的【卡利娛樂城】會員您好！
+                2020-01-08號天天返水最高1.8%，已經返回到您的遊戲賬號中，請您登入查收！轉賬到公司指定銀行卡，提交入款信息可得到次次存次次送1.3%入款優惠，謝謝。
+            </div>
+        </div>
+
+        <div class='stratingPlayMobile'>
+            <div class='stratingPlayMobile_1st'>
+                <div
+                        class='play01'
+                        style='background-image: url(https://cali.kai09191.now.sh/images/mobile/mainpage/BGpattern.jpg)'
+                >
+                    <img
+                            src="build/images/mobile/mainpage/Front01.png"
+                            alt=""
+                            class="img-responsive"
+                    />
+                </div>
+                <div class='play02'>
+                    <div
+                            class='play02_1'
+                            style='background-image: url(https://cali.kai09191.now.sh/images/mobile/mainpage/BGpattern.jpg)'
+                    >
+                        <img
+                                src="build/images/mobile/mainpage/Front02.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                    </div>
+                    <div
+                            class='play02_2'
+                            style='background-image: url(https://cali.kai09191.now.sh/images/mobile/mainpage/BGpattern.jpg)'
+                    >
+                        <img
+                                src="build/images/mobile/mainpage/Front03.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class='stratingPlayMobile_2nd'>
+                <div
+                        class='play04'
+                        style='background-image: url(https://cali.kai09191.now.sh/images/mobile/mainpage/BGpattern.jpg)'
+                >
+                    <img
+                            src="build/images/mobile/mainpage/Front04.png"
+                            alt=""
+                            class="img-responsive"
+                    />
+                </div>
+                <div
+                        class='play05'
+                        style='background-image: url(https://cali.kai09191.now.sh/images/mobile/mainpage/BGpattern.jpg)'
+                >
+                    <img
+                            src="build/images/mobile/mainpage/Front05.png"
+                            alt=""
+                            class="img-responsive"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class='navbar fixed-bottom BottomNav'>
+        <a href="/platform_transfer">
+            <span class='iconfont icon_Transfer'></span>
+            平台轉帳
+        </a>
+        <a href="/promotions">
+            <span class='iconfont icon_gift-solid'></span>
+            最新優惠
+        </a>
+        <a href="/promotions">
+            <span class='iconfont icon_sack-dollar-solid'></span>
+            在線提款
+        </a>
+        <a href="/customer_service">
+            <span class='iconfont iconHR'></span>
+            在線客服
+        </a>
+        <a href="/">
+            <span class='iconfont icon_user-solid'></span>
+            會員中心
+        </a>
+    </nav>
 </div>
 
-<div id="GOTOP">
-    <span class="iconfont iconchevron-up-solid"></span>
-</div>
 
 <script type="application/javascript"
         src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
+<script type="application/javascript" src="build/js/jquery.marquee.min.js"></script>
 <script type="application/javascript" src="build/js/scripts.min.js?v=1.0"></script>
 
 </body>
