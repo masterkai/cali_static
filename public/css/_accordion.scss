@@ -1,11 +1,3 @@
-$backgroundColor: #f77462;
-$list: #6dc5dd;
-$border: #5ab2ca;
-$geneicons: #fff;
-$tab_odd: #0EB5FF;
-$tab_even: #0295D5;
-
-
 .accordion {
   margin: 0 auto;
   background: $border;
@@ -13,92 +5,161 @@ $tab_even: #0295D5;
   display: block;
   list-style-type: none;
   overflow: hidden;
-  height: 374px;
+  height: 320px;
   font-size: 0;
 }
 
 .tabs {
   &:nth-child(odd){
-    background-color: $tab_odd;
+    background-image: $tab_odd;
   }
   &:nth-child(even){
-    background-color: $tab_even;
+    background-image: $tab_odd;
   }
   display: inline-block;
   background-color: $list;
   //border-right: $border 1px solid;
   width: 70px;
-  height: 374px;
+  height: 320px;
   overflow: hidden;
   position: relative;
   margin: 0;
   font-size: 16px;
+  border: 1px solid $color-mainYellow;
+  cursor: pointer;
   @include transition( all 0.4s 0.1s ease-in-out );
   &:nth-child(1){
     &.active {
-      background-color: #DF3659;
+      background-image: linear-gradient(
+                      180deg,
+                      #ff52f3 15%,
+                      #ffab6c 66%,
+                      #ffdfc7 100%
+      );
+    }
+  }
+  &:nth-child(2){
+    &.active {
+      background-image: linear-gradient(180deg, #2bffee 3%, #b0ffd3 100%);
+    }
+  }
+  &:nth-child(3){
+    &.active {
+      background-image: linear-gradient(180deg, #ff1e74 3%, #fb50ff 100%);
+    }
+  }
+  &:nth-child(4){
+    &.active {
+      background-image: linear-gradient(180deg, #ffb60c 3%, #fff100 100%);
+    }
+  }
+  &:nth-child(5){
+    &.active {
+      background-image: linear-gradient(180deg, #00adff 3%, #5cf7ff 100%);
     }
   }
   &.active {
     width: calc(100% - 280px);
 
+    .paragraph {
+      .iconBox {
+        display: flex;
+      }
+    }
+
     .social-links {
       position: relative;
-      img {
-        position: absolute;
-        width: 38px;
-        left: 15px;
-        top: 20px;
-        &:before {
-          margin-left: -100px;
-        }
-
-        &:after {
-          margin-left: 0px;
-        }
+      p {
+        color: $color-black;
       }
     }
   }
   .social-links {
     position: relative;
-    img {
-      position: absolute;
-      width: 38px;
-      left: 15px;
-      top: 20px;
-      &:before {
-        margin-left: -100px;
-      }
 
-      &:after {
-        margin-left: 0px;
+    span {
+      @include breakpoint($large) {
+        font-size: 2rem;
       }
+      position: absolute;
+      top: 33px;
+      left: 2px;
+      color: #fff3a7;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      max-width: 64px;
+      font-size: 4rem;
+    }
+    p {
+      @include breakpoint($large) {
+        writing-mode: unset;
+        margin-bottom: 0;
+      }
+      left: 22px;
+      bottom: -210px;
+      height: 100px;
+      position: absolute;
+      font-size: 24px;
+      color: #fff3a7;
+      writing-mode: vertical-lr;
     }
   }
   .paragraph {
     position: relative;
     width: calc(100% - 70px);
     margin-left: 70px;
-    padding: 50px 0 0 10px;
-    height: 374px;
-    background-size: cover;
-    background-position: center;
+    height: 320px;
+    background-size: 530px;
+    background-color: black;
+    background-position: -20px 50%;
     background-repeat: no-repeat;
-    img {
-      position: absolute;
-      width: 38px;
-      left: -52px;
-      top: 32px;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
+    border-left: 1px solid $color-mainYellow;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .iconBox {
+      @include breakpoint($large) {
+        flex-wrap: nowrap;
+      }
+      flex: 0 1 32%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: black;
+      //max-height: 100%;
+      .iconBtn {
+        span {
+          &:hover {
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            background: unset;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+          }
+          color: #a68322;
+          font-size: 6rem;
+          background: linear-gradient(
+                          180deg,
+                          #fdf8a2 3%,
+                          #f4d97a 47%,
+                          #eec462 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
 
-    p {
-      font-size: 0.88em;
-      line-height: 1.5em;
-      padding-right: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex: 0 1 25%;
+        max-height: 100px;
+        padding: 5px;
+        margin: 3px;
+        border: 1px solid $darkGray;
+        border-radius: 8px;
+      }
     }
   }
 }
