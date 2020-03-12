@@ -1,0 +1,157 @@
+.bonus {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .title {
+    padding: 10px 0 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  p {
+    color: #fff;
+    width: 100%;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 22px;
+    max-height: 80px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    .time {
+      color: #fff;
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.bonusBox {
+  &__innerpage {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include breakpoint($iphone) {
+    background-color: unset;
+    flex-direction: column;
+    margin-top: 0;
+    .bonusTitle {
+      color: $inputBG;
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    .bonusContext {
+      color: white;
+      line-height: 1.875;
+      margin-bottom: 30px;
+    }
+  }
+  .bonusTitle {
+    color: $inputBG;
+    font-size: 24px;
+    margin: 15px 0;
+  }
+  .bonusContext {
+    color: white;
+    line-height: 1.875;
+    margin-bottom: 30px;
+  }
+  .bonus {
+    @include breakpoint($iphone) {
+      flex: 1 1 100%;
+      flex-direction: row;
+      justify-content: flex-start;
+      position: relative;
+      padding: 15px 20px;
+      margin: 10px 0 0;
+    }
+    @include breakpoint($large) {
+      flex: 0 1 49%;
+    }
+
+    flex: 0 1 32.5%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    img {
+      @include breakpoint($iphone) {
+        width: 147px;
+        height: 80px;
+        margin: 0;
+      }
+      width: 100%;
+      margin: 0 auto;
+    }
+    .title {
+      @include breakpoint($iphone) {
+        margin-left: 15px;
+      }
+      padding: 10px 0 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    p {
+      @include breakpoint($iphone) {
+        display: none;
+      }
+      color: #fff;
+      width: 100%;
+      font-weight: 300;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-height: 22px;
+      max-height: 80px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    .bottom {
+      @include breakpoint($iphone) {
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+      }
+      display: flex;
+      justify-content: space-between;
+      .time {
+        color: #fff;
+        font-size: 0.8rem;
+        margin-bottom: 0;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

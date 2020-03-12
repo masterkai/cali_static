@@ -1,0 +1,125 @@
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include breakpoint($ipad) {
+    margin-bottom: 0;
+  }
+
+  .titleGroup {
+    flex: 1 1 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint($ipad) {
+      margin-bottom: 20px;
+    }
+
+    .subject {
+      &__withRed {
+        display: block;
+      }
+
+      br {
+        display: none;
+        @include breakpoint($ipad) {
+          display: block;
+        }
+      }
+
+      &--white {
+        color: #fff;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65);
+      }
+
+      &--solidBox {
+        background-color: black;
+        padding: 20px;
+        color: $color-mainLightBlue;
+        font-size: 2rem;
+        font-weight: 100;
+      }
+
+      color: $color-white;
+      display: flex;
+      line-height: 1.5;
+      text-align: center;
+      justify-content: center;
+      align-items: flex-end;
+      margin: 30px;
+      font-size: 2rem;
+      font-weight: 200;
+      letter-spacing: $ls-content;
+      @include breakpoint($ipad) {
+        font-size: 1.65rem;
+        line-height: 1.25;
+        text-align: center;
+        padding: 0 10px;
+      }
+      @include breakpoint($iphone) {
+        margin: 0 auto;
+        font-size: 1.25rem;
+        padding: 6px;
+        flex-basis: 80%;
+      }
+
+      small {
+        font-size: 0.8rem;
+      }
+    }
+
+    bar {
+      flex: 1 1 60%;
+      border: 1px solid black;
+      height: 1px;
+      width: 100%;
+      @include breakpoint($medium) {
+        flex: 1 1 25%;
+      }
+      @include breakpoint($iphone) {
+        flex: 1 1 15%;
+      }
+    }
+  }
+
+  p {
+    background-color: white;
+    padding: 20px 30px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    @include breakpoint($ipad) {
+      font-size: 1.2rem;
+    }
+    @include breakpoint($iphone) {
+      font-size: 0.9rem;
+    }
+
+    br {
+      display: none;
+      @include breakpoint($ipad) {
+        display: block;
+      }
+    }
+  }
+
+  svg {
+    margin-right: 15px;
+    @include breakpoint($ipad) {
+      margin: 0 auto 15px;
+    }
+  }
+}
+
+span.red {
+  color: red;
+}
+
+h1.red {
+  color: red;
+}

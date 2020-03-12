@@ -1,0 +1,56 @@
+$ipad: max-width 768px;
+$ipad-Pro: max-width 1200px;
+$iphone: max-width 480px;
+$medium: max-width 991px;
+$large: max-width 1024px;
+
+$magenta: #ff009f;
+$mainText: #fff3a7;
+$mainBK: #343434;
+$main: #332875;
+$main2: #75006c;
+$inputBG: #d7ae3e;
+$lightYellow: #fff3a7;
+$color-brown: #453535;
+$color-white: #ffffff;
+$tab01: #ff52f3;
+$btn-purple: #6236ff;
+$lightBrown: #dcdcdc;
+$color-mainYellow: #ffcf4c;
+$color-mainLightBlue: #0091ff;
+$color-headerBgColor: #012c32;
+$color-mainBgColor: #011e24;
+$color-BgColor: #001119;
+$darkGray: #828282;
+$lightGray: #979797;
+$featureBorder: #00cdac;
+$mainRed: #f70000;
+$color-black: #231F20;
+$color-props: #6D7278;
+
+$mainGradient: linear-gradient(180deg, #FDF8A2 3%, #F4D97A 47%, #EEC462 100%);
+$bannerGradient: linear-gradient(90deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0) 100%);
+$brightness: 70%;
+$buttonFontSize: 1.375rem;
+$ls-content: 0.04em;
+
+html,
+body {
+  background-color: black;
+  -webkit-text-size-adjust: none;
+  font-family: 'Noto Sans TC', 'Microsoft YaHei', sans-serif, Arial, Helvetica;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Noto Sans TC', 'Microsoft YaHei', sans-serif, Arial, Helvetica;
+}
+
+.mobileEmpty {
+  width: 100%;
+  height: 55px;
+}

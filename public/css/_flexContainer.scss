@@ -1,0 +1,200 @@
+.flexContainer {
+  &__rating {
+
+    @include breakpoint($ipad) {
+      flex-direction: column;
+    }
+    @include breakpoint($iphone) {
+      padding: 20px;
+    }
+
+    padding: 20px 40px 40px;
+    justify-content: space-between;
+
+    .ratingContainer {
+
+      .ratingItem {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .progress {
+          @include breakpoint($iphone){
+            flex: 0 1 52%;
+          }
+          flex: 0 1 67%;
+          display: flex;
+          height: 1rem;
+          overflow: hidden;
+          font-size: .75rem;
+          background-color: #e9ecef;
+          border-radius: .25rem;
+        }
+
+        .percentage {
+          color: $color-white;
+          margin-left: 15px;
+          width: 32.5px;
+        }
+
+      }
+
+      flex: 1 1 75%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .mainRatingContainer {
+      @include breakpoint($iphone) {
+        flex-direction: row;
+      }
+      @include breakpoint($ipad) {
+        margin-bottom: 20px;
+      }
+
+      .starsGroup {
+        @include breakpoint($iphone) {
+          margin-right: 10px;
+        }
+        span {
+          font-size: 1.2rem;
+          margin: 2px;
+        }
+
+        color: $color-mainYellow;
+      }
+
+      .ratingValue {
+        @include breakpoint($iphone) {
+          font-size: 2.125rem;
+          margin-right: 10px;
+        }
+        color: $color-white;
+        font-size: 5.4375rem;
+        line-height: 1.25;
+        font-weight: 300;
+      }
+
+      .commentSum {
+        @include breakpoint($iphone) {
+          margin-top: 0;
+        }
+        margin-top: 8px;
+        color: $color-white;
+      }
+
+      flex: 1 1 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__userEvaluation {
+    @include breakpoint($ipad) {
+      flex-direction: column;
+    }
+    @include breakpoint($iphone) {
+      padding: 0;
+    }
+    padding: 20px;
+
+    .profile {
+      @include breakpoint($iphone) {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      @include breakpoint($ipad) {
+        flex: 1 1 100%;
+      }
+      flex: 1 1 35%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        @include breakpoint($ipad) {
+          max-width: 100%;
+        }
+        max-width: 270px;
+
+      }
+
+      .profileContainer {
+        @include breakpoint($ipad) {
+          max-width: 100%;
+        }
+        @include breakpoint($iphone) {
+          margin-top: 0;
+        }
+        margin-top: 20px;
+        max-width: 270px;
+        display: flex;
+        flex-wrap: wrap;
+
+        div {
+          &:nth-child(2) {
+            @include breakpoint($ipad) {
+              text-align: left;
+            }
+            text-align: right;
+          }
+
+          span {
+            color: $mainText;
+          }
+          @include breakpoint($iphone) {
+            flex: 1 1 50%;
+            font-size: .875rem;
+          }
+          @include breakpoint($ipad) {
+            flex: 1 1 33.33%;
+          }
+          margin-bottom: 5px;
+          color: #fff;
+          flex: 1 1 50%;
+        }
+      }
+    }
+
+    .content {
+      @include breakpoint($iphone) {
+        .title {
+          font-size: 1.325em;
+        }
+        p {
+          font-size: .75rem;
+          line-height: 1.6;
+          text-align: justify;
+        }
+      }
+
+      .title {
+        max-width: 585px;
+        color: white;
+        font-size: 1.625em;
+        margin-bottom: 15px;
+      }
+
+      p {
+        max-width: 585px;
+        font-weight: 300;
+        color: white;
+      }
+
+      padding: 20px;
+      flex: 1 1 65%;
+    }
+  }
+
+  &__status {
+    span {
+      font-size: 1.6rem;
+    }
+  }
+
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}

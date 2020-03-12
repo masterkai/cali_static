@@ -1,0 +1,24 @@
+.mainBG {
+  &::after {
+    content: '';
+    background-image: url(https://cali.kai09191.now.sh/images/stary_sky.png);
+    background-repeat: repeat;
+    background-size: 30%;
+    filter: contrast(100%);
+    opacity: 0.32;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(
+                  90deg,
+                  #000000 0%,
+                  #6e41c4 50%,
+                  rgba(0, 0, 0, 1) 100%
+  );
+}

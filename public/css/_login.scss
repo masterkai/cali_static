@@ -1,0 +1,60 @@
+.headerBG {
+  .flexContainer {
+    @include breakpoint($large) {
+      justify-content: center !important;
+    }
+    .flex {
+      //flex: 0 1 35%;
+      @include breakpoint($ipad) {
+        flex: 0 1 45%;
+      }
+      display: flex;
+
+      .input {
+        @include breakpoint($ipad) {
+          width: 45%;
+          flex: 1 1 auto;
+        }
+        &::placeholder {
+          color: white;
+          opacity: 1; /* Firefox */
+        }
+
+        &:focus {
+          color: white;
+          background-color: darken($inputBG, 15%);
+          outline: 0;
+          outline-offset: -2px;
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        flex: 1 1 auto;
+        display: block;
+        height: calc(1.5em + 0.75rem);
+        padding: 0.375rem 0.75rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: black;
+        background-color: $inputBG;
+        background-clip: padding-box;
+        border: unset;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+    }
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: flex-end;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  background-image: linear-gradient(
+                  180deg,
+                  #fdf8a2 3%,
+                  #f4d97a 47%,
+                  #eec462 100%
+  );
+}
+
