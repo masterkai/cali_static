@@ -1,0 +1,46 @@
+.UpSwitch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #d8d8d8;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  padding: 5px 25px;
+  z-index: 100;
+  left: 0;
+  bottom: 64px;
+  a {
+    &:hover {
+      color: #75006c;
+    }
+
+    &:link {
+      text-decoration: none;
+    }
+
+    p {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        line-height: 1.75rem;
+        font-size: 1.75rem;
+      }
+      position: relative;
+      font-size: 16px;
+      color: #231f20;
+      margin: 0;
+    }
+  }
+}
+.overlay {
+  width: 100%;
+  position: fixed;
+  top: -70px;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.65); /*dim the background*/
+}

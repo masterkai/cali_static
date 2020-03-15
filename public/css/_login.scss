@@ -2,9 +2,18 @@
   .flexContainer {
     @include breakpoint($large) {
       justify-content: center !important;
+      align-items: unset;
+      max-width: 100%;
     }
     .flex {
-      //flex: 0 1 35%;
+      button {
+        white-space: nowrap;
+        span {
+          @include breakpoint($ipad) {
+            //display: none;
+          }
+        }
+      }
       @include breakpoint($ipad) {
         flex: 0 1 45%;
       }

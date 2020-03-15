@@ -5,6 +5,6 @@ var app = connect();
 
 app.use(serveStatic(__dirname + '/public'));
 
-http.createServer(app).listen(3000,function ( ) {
-    console.log('server is live on port 3000!');
+http.createServer(app).listen(3001,function ( ) {
+    console.log('server is live on port 3001!');
 })

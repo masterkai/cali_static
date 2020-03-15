@@ -1,0 +1,12 @@
+.outlineBtn {
+  &:hover {
+    background-color: $magenta;
+  }
+  text-align: center;
+  color: white;
+  padding: 5px 50px;
+  border: 2px solid $magenta;
+  border-radius: 36px;
+  font-size: 1.3125rem;
+  transition: all 0.25s ease;
+}

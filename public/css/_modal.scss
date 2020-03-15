@@ -1,0 +1,92 @@
+.mobileModal-container {
+  &.show-mobileModal {
+    display: block;
+  }
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+
+.mobileModal {
+  .mobileModal-header {
+    h3 {
+      text-align: center;
+      margin: 0;
+    }
+    background: $modalHeaderGradient;
+    color: #fff;
+    padding: 15px;
+  }
+
+  .mobileModal-content {
+    padding: 20px;
+    .mobileModal-form {
+      .inputWithBtn {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      div {
+        margin: 15px 0;
+      }
+      .form-input {
+        padding: 8px;
+        width: 100%;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+    }
+  }
+
+  background-color: $color-modalBody;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 320px;
+
+}
+
+.close-btn {
+  span {
+    color: $color-white;
+  }
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+input[type='submit'] {
+  background-color: $color-mainLightBlue;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+  width: 100%;
+}

@@ -10,11 +10,16 @@
     color: $mainText;
     background-color: black;
   }
+  .marqueeDeskTop {
+    padding-top: 3px;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: $mainText;
+  }
   .marquee {
     padding-top: 3px;
     font-size: 1rem;
     white-space: nowrap;
     color: $mainText;
-
   }
 }
