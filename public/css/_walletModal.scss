@@ -1,0 +1,243 @@
+
+.walletModalGroup {
+  &.show-modal{
+    display: block;
+  }
+  display: none;
+
+  .wallet_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .walletModal {
+    .wallet {
+      cursor: pointer;
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      box-sizing: border-box;
+      border: 6px solid #32C5FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+    }
+
+    .walletBox {
+      @include breakpoint($iphone) {
+        display: none;
+      }
+      flex-grow: 1;
+      width: 100%;
+      max-width: 994px;
+      display: flex;
+      justify-content: space-between;
+
+      .walletMain {
+        @include breakpoint($ipad) {
+          padding: 10px;
+        }
+        margin: 15px 7.5px 15px 15px;
+        flex: 1 1 65%;
+        max-width: 619px;
+        height: 542px;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 8px;
+
+        .mainNav {
+          max-width: 530px;
+          margin: auto;
+          height: 60px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .tab {
+            &.active {
+              color: rgba(255, 255, 255, 1);
+              border-bottom: 3px solid #00ADFF;
+            }
+
+            @include breakpoint($ipad) {
+              padding: 10px;
+            }
+            color: rgba(255, 255, 255, .55);
+            padding: 10px 20px;
+            cursor: pointer;
+          }
+        }
+
+        .uiBoxGroup {
+          display: flex;
+          align-items: center;
+          height: calc(100% - 60px);
+
+          .uiBox {
+            &:first-child {
+              display: none;
+            }
+
+            .uiContainer {
+              .formPanel {
+                display: none;
+              }
+
+              .formGroupCenter {
+                display: flex;
+                justify-content: center;
+              }
+
+              .switchBox {
+                display: flex;
+                width: 100%;
+                color: $color-white;
+                border: 1px solid $color-white;
+                margin-bottom: 25px;
+                border-radius: 50px;
+
+                .tab {
+                  &.active {
+                    color: $color-black;
+                    background-color: #fff;
+                    border-radius: 50px;
+                  }
+
+                  padding: 10px;
+                  flex: 1 1 50%;
+                  text-align: center;
+                  cursor: pointer;
+                }
+              }
+
+              .submitBtn {
+                background-image: linear-gradient(225deg, #B620E0 0%, #F7B500 100%);
+                color: #fff;
+                border: none;
+                width: 100%;
+                padding: 6px;
+                border-radius: 19px;
+              }
+
+              flex-grow: 1;
+              max-width: 495px;
+              margin: auto;
+            }
+
+            .datePickerComponent {
+              width: 100%;
+              border-radius: 5px;
+            }
+
+            width: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      .itemBox {
+        .headerBox {
+          height: 36px;
+          width: 100%;
+          display: flex;
+          border-bottom: 3px solid $color-mainLightBlue;
+          margin-bottom: 10px;
+
+          .name {
+            flex: 1 1 33.33%;
+            color: $color-white;
+          }
+
+          .surplus {
+            text-align: right;
+            flex: 1 1 33.33%;
+            color: $color-white;
+          }
+
+          span {
+            text-align: right;
+            flex: 1 1 10%;
+            color: $color-mainLightBlue;
+          }
+        }
+
+        .listContainer {
+          height: 32px;
+          width: 100%;
+          display: flex;
+
+          .name {
+            @include breakpoint($ipad) {
+              font-size: .875rem;
+            }
+            flex: 1 1 33.33%;
+            color: $color-white;
+          }
+
+          .surplus {
+            @include breakpoint($ipad) {
+              font-size: .875rem;
+            }
+            text-align: right;
+            flex: 1 1 33.33%;
+            color: $color-white;
+          }
+
+          span {
+            text-align: right;
+            flex: 1 1 10%;
+            color: $color-mainLightBlue;
+          }
+        }
+
+        .submitBtn {
+          background-image: linear-gradient(225deg, #2120E0 0%, #0081F7 100%);
+          color: #fff;
+          border: none;
+          width: 100%;
+          padding: 6px;
+          border-radius: 19px;
+          margin-top: 20px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        margin: 15px 15px 15px 7.5px;
+        flex: 1 1 35%;
+        max-width: 323px;
+        max-height: 542px;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 8px;
+      }
+    }
+
+    position: fixed;
+    background-image: linear-gradient(225deg, #32C5FF 0%, #B620E0 51%, #F7B500 100%);
+    width: 100%;
+    height: 100%;
+    max-width: 994px;
+    max-height: 574px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d8d8d8;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    border: none;
+    overflow: unset;
+  }
+}
