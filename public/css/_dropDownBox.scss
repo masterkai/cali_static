@@ -1,0 +1,37 @@
+
+.dropDownBox {
+  &.active {
+    display: flex;
+  }
+
+  display: none;
+  padding: 10px 0 20px;
+  width: 100%;
+  border-top: 1px solid #979797;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  div {
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    border: 1px solid #979797;
+    flex: 0 1 48%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .listItem {
+    span {
+      color: $color-black
+    }
+    &:nth-child(even){
+      justify-content: flex-end;
+    }
+    color: $color-props;
+    padding: 0;
+    border: unset;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}

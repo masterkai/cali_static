@@ -1,0 +1,63 @@
+.itemContainer {
+  &__norecords {
+    justify-content: center;
+  }
+  &__records {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    div {
+      font-size: .875rem;
+      flex-basis: 50%;
+    }
+  }
+  &__simple {
+    flex-direction: row;
+    .simpleBox {
+      border: 1px solid #979797;
+      padding: 10px 20px;
+      border-radius: 3px;
+    }
+  }
+  background-color: #d8d8d8;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemPlateTitle {
+  color: $mainRed;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #979797;
+}
+.itemPlate {
+  margin-bottom: 30px;
+  border-radius: 3px;
+  background-color: #d8d8d8;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  .listItem {
+    &:last-child {
+      padding-bottom: 0;
+    }
+    color: #6d7278;
+    padding: 0 0 10px 0;
+    flex: 1 1 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
