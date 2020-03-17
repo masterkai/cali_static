@@ -1,0 +1,40 @@
+.mobileBox {
+  textarea {
+    height: 120px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(216, 216, 216);
+    padding: 10px;
+    overflow: hidden;
+  }
+  &_message {
+    padding: 0;
+    height: auto;
+  }
+  &_nobg {
+    padding: 20px 25px;
+    height: 650px;
+    background-color: unset;
+    .inputGroup {
+      display: flex;
+      button {
+        margin-left: 10px;
+        flex: 0 1 25%;
+      }
+    }
+  }
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px 25px;
+  height: 650px;
+  position: relative;
+  label {
+    color: white;
+  }
+  .inputGroup {
+    display: flex;
+    button {
+      margin-left: 10px;
+      flex: 0 1 25%;
+    }
+  }
+}

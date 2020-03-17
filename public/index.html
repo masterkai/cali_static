@@ -1813,7 +1813,7 @@
         <div class="mobileModal-header">
             <h3>會員通知</h3>
         </div>
-        <div class='modalBody modalBody__BetRecordsLayout'>
+        <div class='modalBody modalBody__BetRecordsLayout' id="swt01">
             <div class="switchTabsNav">
                 <div class="tab active">個人訊息</div>
                 <div class="tab">公告專區</div>
@@ -1827,8 +1827,8 @@
                         <div class="btn btn-danger">線上留言</div>
                     </div>
                     <div class='itemContainer'>
-                        <div
-                                style='display: flex;justify-content: space-between;align-items: center;width: 100%;
+                        <div class="itemHeader"
+                             style='display: flex;justify-content: space-between;align-items: center;width: 100%;
     height: 50px;'
                         >
                             <div
@@ -1849,9 +1849,121 @@
                             <div style='font-size:1rem; color: #6D7278;margin:auto'>{time}</div>
                         </div>
                     </div>
+
+                    <div class='mobileBox mobileBox_message'>
+                        <p style='color:white;text-align: left;'>訊息</p>
+                        <textarea
+                                rows="'1"
+                                aria-label="maximum height"
+                                placeholder="說些什麼吧！"
+                        ></textarea>
+                        <div class="btnGroup">
+                            <div class="btn btn-primary" style="flex: 0 1 49%;">返回</div>
+                            <div class="outlineBtn" style='flex: 0 1 49%;'>送出</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="panel">
+                    <div class='itemContainer'>
+                        <div class="itemHeader"
+                             style='display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                width: 100%;
+                                height: 50px;
+}'
+                        >
+                            <div
+                                    style='display: flex;
+                                align-items: center;
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);'
+                            >
+                                <div style='font-size: 1rem;
+                                    color: black;'>
+                                    搜尋條件
+                                </div>
+                            </div>
 
+                            <span
+                                    class='iconfont icon_chevron-down-light'
+                                    style='font-size: 1rem;color: #9BA2AA'
+                            ></span>
+                        </div>
+
+                        <div class="itemContent"
+                             style="width: 100%;padding: 20px 0;border-top: 1px solid rgb(151, 151, 151);">
+                            <div style='flex-basis: 50%;
+                                    text-align: center;'>
+                                <div style='border: 1px solid rgb(151, 151, 151);
+                                    margin: 4px 6px;
+                                    border-radius: 5px;
+                                    padding: 5px;
+                                    background-color: rgb(192, 192, 192);'>全部
+                                </div>
+                            </div>
+                            <div style='flex-basis: 50%;
+                            text-align: center;'>
+                                <div style='border: 1px solid rgb(151, 151, 151);
+                            margin: 4px 6px;
+                            border-radius: 5px;
+                            padding: 5px;
+                            background-color: rgb(192, 192, 192);'>系統
+                                </div>
+                            </div>
+                            <div style='flex-basis: 50%;
+                    text-align: center;'>
+                                <div style='border: 1px solid rgb(151, 151, 151);
+                            margin: 4px 6px;
+                            border-radius: 5px;
+                            padding: 5px;
+                            background-color: rgb(192, 192, 192);'>特殊
+                                </div>
+                            </div>
+                            <div style='flex-basis: 50%;
+                    text-align: center;'>
+                                <div style='border: 1px solid rgb(151, 151, 151);
+                            margin: 4px 6px;
+                            border-radius: 5px;
+                            padding: 5px;
+                            background-color: rgb(192, 192, 192);'>存提款
+                                </div>
+                            </div>
+                            <div style='flex-basis: 50%;
+                    text-align: center;'>
+                                <div style='border: 1px solid rgb(151, 151, 151);
+                            margin: 4px 6px;
+                            border-radius: 5px;
+                            padding: 5px;
+                            background-color: rgb(192, 192, 192);'>銀行維護
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='itemContainer'>
+                        <div class="itemHeader"
+                             style='display: flex;justify-content: space-between;align-items: center;width: 100%;
+    height: 50px;'
+                        >
+                            <div
+                                    style='display: flex;align-items: center;'
+                            >
+                                <div style='font-size: 1rem;color: rgb(35, 31, 32);'>{notification}</div>
+                            </div>
+
+                            <span class='iconfont icon_chevron-down-light'
+                                  style='font-size: 1rem; color: #9BA2AA'></span>
+                        </div>
+                        <div class='itemContent'
+                             style='font-size: 0.875rem;width: 100%;padding: 20px 0;border-top: 1px solid rgb(151, 151, 151);'>
+                            {content}
+                        </div>
+                        <div class='itemResult'>
+                            <div style='font-size:1rem; color: #6D7278;margin:auto'>{time}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

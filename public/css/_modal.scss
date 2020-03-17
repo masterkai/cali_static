@@ -149,6 +149,10 @@ input[type='submit'] {
 
     .panelsGroup {
       .panel {
+        &:first-child {
+          display: block;
+        }
+        display: none;
         .btnGroup {
           display: flex;
           justify-content: space-between;
