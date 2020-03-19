@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        style='font-family: "Microsoft YaHei","Noto Sans TC", sans-serif;'
+>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>ES6</title>
+
+    <!--=========================== CSS ===========================-->
+    <link
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link rel="stylesheet" href="build/css/slick.css"/>
+    <link rel="stylesheet" href="build/css/slick-theme.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="build/css/vendor.min.css"/>
+    <link rel="stylesheet" href="build/css/iconfont.css"/>
+    <link href="build/css/jquery-ui.css" rel="stylesheet"/>
+    <link
+            href="build/css/datetimepicker/jquery-ui-timepicker-addon.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/styles.css?v=1.1"/>
+
+    <!--=========================== JS ===========================-->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    ></script>
+    <script
+            type="text/javascript"
+            src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="build/js/data-watermark.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            alert(
+                    '很抱歉，目前本站瀏覽不支援IE9以下的瀏覽器，若看見版面跑掉，純屬正常狀況。'
+            );
+        });
+    </script>
+    <![endif]-->
+
+    <!--=========================== 思源黑體 ===========================-->
+    <!--<script src="https://use.typekit.net/mrp7iog.js"></script>
+    <script>try {
+        Typekit.load({async: true});
+    } catch (e) {
+    }</script>-->
+
+    <!--=========================== WOW ===========================-->
+    <script type="text/javascript" src="build/js/wow.min.js"></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+</head>
+<body>
+
+<div class="displayMobile">
+    <!--    使用者登入前  -->
+    <!--    <div class='fixed-top'>-->
+    <!--        <nav class='navbar navBarFlex' style="height: 55px">-->
+    <!--            <span class="iconfont icon_bars-light" style='margin-left: 10px;font-size: 1.625rem;'></span>-->
+
+    <!--            <a class='logo'>-->
+    <!--                <img-->
+    <!--                        class="img-responsive logo_m"-->
+    <!--                        src="build/images/Cali_logo_mobile.png"-->
+    <!--                        alt=""-->
+    <!--                />-->
+    <!--            </a>-->
+
+    <!--            <div class='btnGroup'>-->
+    <!--                <button-->
+    <!--                        type="button"-->
+    <!--                        class='btnOutLine'-->
+    <!--                >-->
+    <!--                    註冊-->
+    <!--                </button>-->
+    <!--                <button-->
+    <!--                        type="button"-->
+    <!--                        class='btnOutLine'-->
+    <!--                >-->
+    <!--                    登入-->
+    <!--                </button>-->
+    <!--            </div>-->
+
+    <!--        </nav>-->
+
+    <!--    </div>-->
+
+    <!--    使用者登入後  -->
+    <div class='fixed-top'>
+        <nav class='navbar navBarFlex' style="height: 55px;">
+              <span
+                      class="iconfont icon_chevron-left-light"
+                      style='margin-left: 10px;font-size: 1.625rem;'></span>
+            <div class='title'>優惠紀錄</div>
+        </nav>
+        <div class="userStateBar">
+            <div class='userStateColumn'>
+                <div class='userInfo'>test123</div>
+                <div class='userLevel'>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-light"></span>
+                    <span class="iconfont icon_star-light"></span>
+                    <span class="iconfont icon_star-light"></span>
+                </div>
+                <span class="iconfont icon_bell-light"></span>
+            </div>
+            <div class='userStateColumn'>
+                <span class="iconfont icon_usd-circle-light"></span>
+                <div class='userInfo'>250.00</div>
+                <div style="position: relative">
+                    <span class='iconfont icon_chevron-down-light menuToggle lv1Menu'></span>
+                    <div class='DDWallet nav-menu-2 DDW'>
+                        <div class='itemsBox'>
+                            <div class='item'>
+                                <div class="itemName">DG百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">歐博</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">沙龍百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">WM百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">任你博體育</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">Super體育博彩</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">AFB88</div>
+                                <div class='itemValue'>維護中</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">RTG天地</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">Betsoft</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">BTX</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">9K彩票</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">六合彩539</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                        </div>
+                        <div class='bottomBox'>
+                            <div class='sumBox'>
+                                <div>總額度</div>
+                                <div>250</div>
+                            </div>
+                            <button class="btn" style='background-color:deepskyblue;color: white;border-radius: 20px'>
+                                全部轉回主帳戶
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='mobileBox' style="margin-top: 80px;height: auto;padding-bottom: 80px;">
+
+        <div class="itemContainer" style="padding: 0;">
+            <div
+                    style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
+            >
+                <div
+                        style="text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                >
+                    {subject}
+                </div>
+
+                <a
+                        style="text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;padding: 15px;
+    border-right: 1px solid rgb(204, 204, 204);border-left: 1px solid rgb(204, 204, 204);"
+                >詳細內容</a
+                >
+                <div
+                        style="position: relative;text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;
+    padding: 15px 0;"
+                >
+                    前往領取
+                    <span
+                            style="position: absolute;top: 50%;transform: translateY(-50%);border-radius: 50px;left: 10px;
+    height: 10px;width: 10px;background-color: red;"
+                    ></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="itemContainer" style="padding: 0;">
+            <div
+                    style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
+            >
+                <div
+                        style="text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                >
+                    {subject}
+                </div>
+
+                <a
+                        style="text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;padding: 15px;
+    border-right: 1px solid rgb(204, 204, 204);border-left: 1px solid rgb(204, 204, 204);"
+                >詳細內容</a
+                >
+                <div
+                        style="position: relative;text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;
+    padding: 15px 0;"
+                >
+                <span
+                        style="padding: 2px 5px;
+    color: white;
+    background-color: rgb(35, 216, 35);
+    border-radius: 3px;"
+                >已領取</span
+                >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar fixed-bottom BottomNav">
+        <a href="/platform_transfer">
+            <span class="iconfont icon_Transfer"></span>
+            平台轉帳
+        </a>
+        <a href="/promotions">
+            <span class="iconfont icon_gift-solid"></span>
+            最新優惠
+        </a>
+        <div style="position:relative;cursor: pointer">
+            <a href="/promotions" class="menuToggle lv1Menu">
+                <span class="iconfont icon_sack-dollar-solid"></span>
+                在線提款
+            </a>
+            <div class="nav-menu-2 UPS">
+                <div class="overlay"></div>
+                <div class="UpSwitch">
+                    <a href="/deposit">
+                        <p>
+                  <span
+                          class="iconfont icon_turnIN1"
+                          style="color: #077F64"
+                  ></span>
+                            存款專區
+                        </p>
+                    </a>
+                    <a href="/withdrawals">
+                        <p>
+                  <span
+                          class="iconfont icon_turnOUT1"
+                          style="color: #FA6400"
+                  ></span>
+                            提款專區
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="/customer_service">
+            <span class="iconfont iconHR"></span>
+            在線客服
+        </a>
+        <div style="position:relative;">
+            <a href="/" class="menuToggle lv1Menu">
+                <span class="iconfont icon_user-solid"></span>
+                會員中心
+            </a>
+            <div class="UpMenu nav-menu-2 UPM">
+                <a href="/edit_user_info">
+                    <p>
+                        <span class="iconfont icon_user-alt-light"></span>
+                        變更資料
+                    </p>
+                </a>
+                <a href="/transaction_records">
+                    <p>
+                        <span class="iconfont icon_file-invoice-dollar-light"></span>
+                        交易記錄
+                    </p>
+                </a>
+                <a href="/bet_records">
+                    <p>
+                        <span class="iconfont icon_coins-light"></span>
+                        投注記錄
+                    </p>
+                </a>
+                <a href="/bonus_records">
+                    <p>
+                        <span class="iconfont icon_gift-light"></span>
+                        優惠記錄
+                    </p>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="mobile-nav-menu subMenu ani">
+    <div class="slideMenu" role="presentation">
+        <div class="menuBlock">
+            <div class="menuMainMobile">
+                <span class="iconfont icon_user-circle-solid user"></span>
+                <span
+                        class="iconfont icon_times-light icon_times closeBtn"
+                        style="color: #ffffff;"
+                ></span>
+                <p>登入</p>
+            </div>
+            <div class="menuItemsMobile">
+                <a href="/" class="listItem">
+                    <span class="iconfont icon_home-solid"></span>
+                    <p>首頁</p>
+                </a>
+                <a href="/online_baccarat" class="listItem">
+                    <span class="iconfont icon_baccarat"></span>
+                    <p>真人娛樂</p>
+                </a>
+                <a href="/sports" class="listItem">
+                    <span class="iconfont icon_futbol-solid"></span>
+                    <p>體育博彩</p>
+                </a>
+                <a href="/lottery" class="listItem">
+                    <span class="iconfont icon_ticket-alt-solid"></span>
+                    <p>賓果彩票</p>
+                </a>
+                <a href="/electronics" class="listItem">
+                    <span class="iconfont icon_alien-monster-solid"></span>
+                    <p>電子遊戲</p>
+                </a>
+                <a href="/fish" class="listItem">
+                    <span class="iconfont icon_fish"></span>
+                    <p>捕魚王</p>
+                </a>
+            </div>
+
+            <div class="menuItemsMobile">
+                <a href="/promotions" class="listItem">
+                    <span class="iconfont icon_gift-light"></span>
+                    <p>優惠活動</p>
+                </a>
+                <a href="/user_evaluation" class="listItem">
+                    <span class="iconfont icon_star-solid"></span>
+                    <p>玩家評價</p>
+                </a>
+                <a href="/access_process" class="listItem">
+                    <span class="iconfont icon_wallet-light"></span>
+                    <p>存取流程</p>
+                </a>
+                <a href="/electronics" class="listItem">
+                    <span class="iconfont icon_cloud-download-light"></span>
+                    <p>APP下載</p>
+                </a>
+                <a href="/fish" class="listItem">
+                    <span class="iconfont icon_handshake-alt-light"></span>
+                    <p>代理加盟</p>
+                </a>
+                <a href="/about" class="listItem">
+                    <span class="iconfont icon_Cali_logo"></span>
+                    <p>關於卡利</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="mobileModal-container" id="modal">
+    <div class="mobileModal">
+        <div class="close-btn" id="close">
+            <span class="iconfont icon_times-light"></span>
+        </div>
+        <div class="mobileModal-header">
+            <h3>請輸入提款密碼</h3>
+        </div>
+        <div class="mobileModal-content">
+            <!--            <p>Register with us to get offers, support and more</p>-->
+            <form class="mobileModal-form">
+                <div class="inputWithBtn">
+                    <!--                    <label for="name">Name</label>-->
+                    <input
+                            type="text"
+                            id="name"
+                            placeholder="6-10位英、數字符"
+                            class="form-input"
+                    />
+
+                    <button
+                            type="button"
+                            class="btn btn-primary btn-sm"
+                            style="margin-left: 10px;
+    flex: 1 1 40%;"
+                    >
+                        忘記密碼
+                    </button>
+                </div>
+                <input type="submit" value="Submit" class="submit-btn"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script
+        type="application/javascript"
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script
+        type="application/javascript"
+        src="http://localhost:35729/livereload.js"
+></script>
+<script
+        type="application/javascript"
+        src="build/js/jquery.marquee.min.js"
+></script>
+<script src="build/js/datetimepicker/jquery-ui-i18n.js"></script>
+<script src="build/js/jquery-ui-min.js"></script>
+<script src="build/js/datetimepicker/jquery-ui-timepicker-addon.js"></script>
+<script src="build/js/datetimepicker/i18n/jquery-ui-timepicker-addon-i18n.js"></script>
+<script src="build/js/datetimepicker/jquery-ui-sliderAccess.js"></script>
+<script
+        type="application/javascript"
+        src="build/js/scripts.min.js?v=1.1"
+></script>
+<script>
+  const close = document.getElementById('close');
+
+
+  const modal = document.getElementById('modal');
+
+
+  // modal.classList.add('show-mobileModal');
+
+
+  // Hide modal
+  close.addEventListener('click', () =>
+    modal.classList.remove('show-mobileModal')
+  );
+
+
+  // Hide modal on outside click
+  window.addEventListener('click', e =>
+    e.target == modal ? modal.classList.remove('show-mobileModal') : false
+  );
+</script>
+</body>
+</html>
