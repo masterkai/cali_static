@@ -18,6 +18,12 @@
       rel="stylesheet"
     />
     <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
     />
@@ -753,147 +759,45 @@
 
     <div class="displayMobile">
       <!--    使用者登入前  -->
-      <!--    <div class='fixed-top'>-->
-      <!--        <nav class='navbar navBarFlex' style="height: 55px">-->
-      <!--            <span class="iconfont icon_bars-light" style='margin-left: 10px;font-size: 1.625rem;'></span>-->
+          <div class='fixed-top'>
+              <nav class='navbar navBarFlex' style="height: 55px">
+                  <span class="iconfont icon_bars-light" style='margin-left: 10px;font-size: 1.625rem;'></span>
 
-      <!--            <a class='logo'>-->
-      <!--                <img-->
-      <!--                        class="img-responsive logo_m"-->
-      <!--                        src="build/images/Cali_logo_mobile.png"-->
-      <!--                        alt=""-->
-      <!--                />-->
-      <!--            </a>-->
+                  <a class='logo'>
+                      <img
+                              class="img-responsive logo_m"
+                              src="build/images/Cali_logo_mobile.png"
+                              alt=""
+                      />
+                  </a>
 
-      <!--            <div class='btnGroup'>-->
-      <!--                <button-->
-      <!--                        type="button"-->
-      <!--                        class='btnOutLine'-->
-      <!--                >-->
-      <!--                    註冊-->
-      <!--                </button>-->
-      <!--                <button-->
-      <!--                        type="button"-->
-      <!--                        class='btnOutLine'-->
-      <!--                >-->
-      <!--                    登入-->
-      <!--                </button>-->
-      <!--            </div>-->
+                  <div class='btnGroup'>
+                      <button
+                              type="button"
+                              class='btnOutLine'
+                      >
+                          註冊
+                      </button>
+                      <button
+                              id="loginBtn"
+                              type="button"
+                              class='btnOutLine'
+                      >
+                          登入
+                      </button>
+                  </div>
 
-      <!--        </nav>-->
+              </nav>
 
-      <!--    </div>-->
-
-      <!--    使用者登入後  -->
-      <div class="fixed-top">
-        <nav class="navbar navBarFlex" style="height: 55px">
-          <span
-            class="iconfont icon_bars-light openBtn"
-            style="margin-left: 10px;font-size: 1.625rem;"
-          ></span>
-
-          <a class="logoisUser">
-            <img
-              class="img-responsive logo_m"
-              src="build/images/Cali_logo_mobile.png"
-              alt=""
-            />
-          </a>
-        </nav>
-        <div class="userStateBar">
-          <div class="userStateColumn">
-            <div class="userInfo">test123</div>
-            <div class="userLevel">
-              <span class="iconfont icon_star-solid"></span>
-              <span class="iconfont icon_star-solid"></span>
-              <span class="iconfont icon_star-solid"></span>
-              <span class="iconfont icon_star-light"></span>
-              <span class="iconfont icon_star-light"></span>
-              <span class="iconfont icon_star-light"></span>
-            </div>
-            <span class="iconfont icon_bell-light"></span>
           </div>
-          <div class="userStateColumn">
-            <span class="iconfont icon_usd-circle-light"></span>
-            <div class="userInfo">250.00</div>
-            <div style="position: relative">
-              <span
-                class="iconfont icon_chevron-down-light menuToggle lv1Menu"
-              ></span>
-              <div class="DDWallet nav-menu-2 DDW">
-                <div class="itemsBox">
-                  <div class="item">
-                    <div class="itemName">DG百家樂</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">歐博</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">沙龍百家樂</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">WM百家樂</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">任你博體育</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">Super體育博彩</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">AFB88</div>
-                    <div class="itemValue">維護中</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">RTG天地</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">Betsoft</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">BTX</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">9K彩票</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                  <div class="item">
-                    <div class="itemName">六合彩539</div>
-                    <div class="itemValue">0</div>
-                  </div>
-                </div>
-                <div class="bottomBox">
-                  <div class="sumBox">
-                    <div>總額度</div>
-                    <div>250</div>
-                  </div>
-                  <button
-                    class="btn"
-                    style="background-color:deepskyblue;color: white;border-radius: 20px"
-                  >
-                    全部轉回主帳戶
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="mainBG">
+
+
+      <div class="mainBG" style="margin-top: 55px">
         <!--    使用者登入前  -->
         <!--        <div class="mainCarousel" style="margin-top: 55px">-->
         <!--    使用者登入後  -->
-        <div class="mainCarousel" style="margin-top: 80px">
+        <div class="mainCarousel">
           <img
             src="build/images/banner/banner01.jpg"
             alt=""
@@ -2422,6 +2326,37 @@
       </div>
     </div>
 
+    <div class="mobileModal-container" id="modal_login">
+      <div class="mobileModal">
+        <div class="close-btn" id="close_login">
+          <span class="iconfont icon_times-light"></span>
+        </div>
+        <div class="mobileModal-header">
+          <h3>會員登入</h3>
+        </div>
+        <div class="mobileModal-content modalBody">
+          <!--            <p>Register with us to get offers, support and more</p>-->
+          <form class="mobileModal-form formGroup">
+            <label class='userAccount'>
+              <input type="text" placeholder="帳號/手機號碼" />
+            </label>
+            <label class='userPassword'>
+              <input type="text" placeholder="密碼" />
+            </label>
+            <span class='modalBtnGroup'>
+              <button type="button" class="btn btn-warning btn-sm">
+                立即註冊
+              </button>
+              <button type="button" class="btn btn-primary btn-sm">
+                登入
+              </button>
+            </span>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
     <script
       type="application/javascript"
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
@@ -2450,6 +2385,7 @@
         'close_modifyProfile'
       );
       const close_betRecords = document.getElementById('close_betRecords');
+      const close_login = document.getElementById('close_login');
       const close_bonusRecords = document.getElementById('close_bonusRecords');
       const close_memberNotification = document.getElementById(
         'close_memberNotification'
@@ -2462,7 +2398,9 @@
       //     'memberNotificationBtn'
       //   );
       const registerBtn = document.getElementById('registerBtn');
+      const loginBtn = document.getElementById('loginBtn');
       const modal = document.getElementById('modal');
+      const modal_login = document.getElementById('modal_login');
       const modal_modifyProfile = document.getElementById(
         'modal_modifyProfile'
       );
@@ -2486,6 +2424,10 @@
         modal_register.classList.add('show-mobileModal');
       });
 
+      loginBtn.addEventListener('click', () => {
+        modal_login.classList.add('show-mobileModal');
+      });
+
       //   bonusRecordsBtn.addEventListener('click', () => {
       //     modal_bonusRecords.classList.add('show-mobileModal');
       //   });
@@ -2496,6 +2438,9 @@
       // Hide modal
       close.addEventListener('click', () =>
         modal.classList.remove('show-mobileModal')
+      );
+      close_login.addEventListener('click', () =>
+        modal_login.classList.remove('show-mobileModal')
       );
       close_modifyProfile.addEventListener('click', () =>
         modal_modifyProfile.classList.remove('show-mobileModal')

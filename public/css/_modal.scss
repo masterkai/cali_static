@@ -59,6 +59,14 @@
     padding: 20px;
 
     .mobileModal-form {
+      .modalBtnGroup {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: space-between;
+        button {
+          flex: 0 1 49%;
+        }
+      }
       .inputWithBtn {
         display: flex;
         margin-top: 20px;
