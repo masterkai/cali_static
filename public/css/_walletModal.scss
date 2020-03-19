@@ -1,8 +1,9 @@
 
 .walletModalGroup {
-  &.show-modal{
+  &.show-modal {
     display: block;
   }
+
   display: none;
 
   .wallet_overlay {
@@ -93,6 +94,12 @@
               .formGroupCenter {
                 display: flex;
                 justify-content: center;
+
+                .form-check {
+                  display: flex;
+                  padding: 5px 5px;
+                  border-radius: 5px;
+                }
               }
 
               .switchBox {
