@@ -13,16 +13,23 @@
   z-index: 1000;
 }
 
-
 .mobileModal {
+  &--register {
+    max-width: 600px;
+    width: 100%;
+    background-color: black;
+  }
+
   &--betRecords {
     max-width: 600px;
     width: 100%;
+    background-color: black;
   }
 
   &--memberNotification {
     max-width: 600px;
     width: 100%;
+    background-color: black;
   }
 
   &--modifyProfile {
@@ -91,7 +98,6 @@
   transform: translate(-50%, -50%);
   max-width: 100%;
   width: 320px;
-
 }
 
 .close-btn {
@@ -125,7 +131,7 @@ input[type='submit'] {
     height: 1px;
     width: 100%;
     margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, .35);
+    background-color: rgba(255, 255, 255, 0.35);
   }
 
   &__BetRecordsLayout {

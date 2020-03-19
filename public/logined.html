@@ -78,46 +78,147 @@
   </head>
   <body>
     <div class="displayDesktop">
-      <!--    登入前-->
+      <!--  登入後  -->
       <div class="headerBG">
-        <form class="flexContainer">
-          <div class="flex">
-            <div
-              style="margin-right: 5px;"
-              type="button"
-              class="btn btn-dark btn-sm"
-              id="registerBtn"
-            >
-              立即註冊&nbsp;
-              <span
-                class="iconfont icon_user-plus-light"
-                style="color: white;"
-              ></span>
-            </div>
-            <input
-              style="margin-right: 5px;"
-              type="text"
-              class="input"
-              placeholder="會員賬號"
-            />
-            <input
-              style="margin-right: 5px;"
-              type="text"
-              class="input"
-              placeholder="登入密碼"
-            />
+        <div class="flexContainer flexContainer__status">
+          <div class="userLevel" style="color: #F70000">
+            <span
+              class="iconfont icon_star-solid"
+              style="font-size: 1.2rem"
+            ></span>
+            <span
+              class="iconfont icon_star-solid"
+              style="font-size: 1.2rem"
+            ></span>
+            <span
+              class="iconfont icon_star-solid"
+              style="font-size: 1.2rem"
+            ></span>
+            <span
+              class="iconfont icon_star-light"
+              style="font-size: 1.2rem"
+            ></span>
+            <span
+              class="iconfont icon_star-light"
+              style="font-size: 1.2rem"
+            ></span>
+            <span
+              class="iconfont icon_star-light"
+              style="font-size: 1.2rem"
+            ></span>
           </div>
-          <button
-            style="margin-right: 5px;"
-            type="button"
-            class="btn btn-outline-dark btn-sm"
-          >
-            登入
-          </button>
-          <button type="button" class="btn btn-outline-dark btn-sm">
-            忘記密碼
-          </button>
-        </form>
+          <div class="userInfo" style="margin-left: 20px">歡迎test123</div>
+          <span
+            class="iconfont icon_usd-circle-light"
+            style="margin-left: 20px"
+          ></span>
+          <div class="userInfo" style="margin-left: 20px;margin-right: 20px">
+            250.00
+          </div>
+          <div style="position:relative;cursor: pointer">
+            <span
+              class="menuToggle lv1Menu iconfont icon_chevron-down-light"
+            ></span>
+            <div class="DDWallet nav-menu-2 DDW" style="right: -15px;">
+              <div class="itemsBox">
+                <div class="item">
+                  <div class="itemName">DG百家樂</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">歐博</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">沙龍百家樂</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">WM百家樂</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">任你博體育</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">Super體育博彩</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">AFB88</div>
+                  <div class="itemValue">維護中</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">RTG天地</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">Betsoft</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">BTX</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">9K彩票</div>
+                  <div class="itemValue">0</div>
+                </div>
+                <div class="item">
+                  <div class="itemName">六合彩539</div>
+                  <div class="itemValue">0</div>
+                </div>
+              </div>
+              <div class="bottomBox">
+                <div class="sumBox">
+                  <div>總額度</div>
+                  <div>250</div>
+                </div>
+                <button
+                  class="btn"
+                  style="background-color:deepskyblue;color: white;border-radius: 20px"
+                >
+                  全部轉回主帳戶
+                </button>
+              </div>
+            </div>
+          </div>
+          <span
+            id="openWallet"
+            class="iconfont icon_wallet-light"
+            style="margin-left: 20px"
+          ></span>
+          <span
+            id="modifyProfileBtn"
+            class="iconfont icon_user-alt-light"
+            data-tip="變更資料"
+            style="margin-left: 20px"
+          ></span>
+          <span
+            id="betRecordsBtn"
+            class="iconfont icon_coins-light"
+            data-tip="投注記錄"
+            style="margin-left: 20px"
+          ></span>
+          <span
+            id="bonusRecordsBtn"
+            class="iconfont icon_gift-light"
+            data-tip="優惠紀錄"
+            style="margin-left: 20px"
+          ></span>
+          <span
+            id="memberNotificationBtn"
+            class="iconfont icon_bell-light"
+            data-tip="會員通知"
+            style="margin-left: 20px"
+          ></span>
+
+          <span
+            class="iconfont icon_sign-out-light"
+            style="margin-left: 20px"
+          ></span>
+        </div>
       </div>
 
       <header>
@@ -2455,13 +2556,13 @@
         'close_memberNotification'
       );
       const close_register = document.getElementById('close_register');
-      //   const modifyProfileBtn = document.getElementById('modifyProfileBtn');
-      //   const betRecordsBtn = document.getElementById('betRecordsBtn');
-      //   const bonusRecordsBtn = document.getElementById('bonusRecordsBtn');
-      //   const memberNotificationBtn = document.getElementById(
-      //     'memberNotificationBtn'
-      //   );
-      const registerBtn = document.getElementById('registerBtn');
+      const modifyProfileBtn = document.getElementById('modifyProfileBtn');
+      const betRecordsBtn = document.getElementById('betRecordsBtn');
+      const bonusRecordsBtn = document.getElementById('bonusRecordsBtn');
+      const memberNotificationBtn = document.getElementById(
+        'memberNotificationBtn'
+      );
+      // const registerBtn = document.getElementById('registerBtn');
       const modal = document.getElementById('modal');
       const modal_modifyProfile = document.getElementById(
         'modal_modifyProfile'
@@ -2473,26 +2574,27 @@
       );
       const modal_register = document.getElementById('modal_register');
 
-      //   modifyProfileBtn.addEventListener('click', () => {
-      //     modal.classList.add('show-mobileModal');
-      //     modal_modifyProfile.classList.add('show-mobileModal');
-      //   });
-
-      //   betRecordsBtn.addEventListener('click', () => {
-      //     modal_betRecords.classList.add('show-mobileModal');
-      //   });
-
-      registerBtn.addEventListener('click', () => {
-        modal_register.classList.add('show-mobileModal');
+      modifyProfileBtn.addEventListener('click', () => {
+        modal.classList.add('show-mobileModal');
+        modal_modifyProfile.classList.add('show-mobileModal');
       });
 
-      //   bonusRecordsBtn.addEventListener('click', () => {
-      //     modal_bonusRecords.classList.add('show-mobileModal');
-      //   });
+      betRecordsBtn.addEventListener('click', () => {
+        modal_betRecords.classList.add('show-mobileModal');
+      });
 
-      //   memberNotificationBtn.addEventListener('click', () => {
-      //     modal_memberNotification.classList.add('show-mobileModal');
-      //   });
+      // registerBtn.addEventListener('click', () => {
+      //   // modal_register.classList.add('show-mobileModal')
+      //   alert('register!!');
+      // });
+
+      bonusRecordsBtn.addEventListener('click', () => {
+        modal_bonusRecords.classList.add('show-mobileModal');
+      });
+
+      memberNotificationBtn.addEventListener('click', () => {
+        modal_memberNotification.classList.add('show-mobileModal');
+      });
       // Hide modal
       close.addEventListener('click', () =>
         modal.classList.remove('show-mobileModal')
@@ -2517,6 +2619,31 @@
       window.addEventListener('click', e =>
         e.target == modal ? modal.classList.remove('show-mobileModal') : false
       );
+
+      $(function() {
+        const close = document.getElementById('walletCloseBtn');
+        const open = document.getElementById('openWallet');
+        const walletModal = document.getElementById('walletModal');
+        const walletOverLay = document.querySelector('.wallet_overlay');
+
+        // Show modal
+        open.addEventListener('click', () =>
+          walletModal.classList.add('show-modal')
+        );
+
+        // Hide modal
+        close.addEventListener('click', () =>
+          walletModal.classList.remove('show-modal')
+        );
+
+        // Hide modal on outside click
+        window.addEventListener('click', e =>
+          // console.log(e.target)
+          e.target === walletOverLay
+            ? walletModal.classList.remove('show-modal')
+            : false
+        );
+      });
     </script>
   </body>
 </html>
