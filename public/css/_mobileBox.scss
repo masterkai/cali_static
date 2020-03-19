@@ -1,4 +1,38 @@
 .mobileBox {
+  .switchTabsNav {
+    padding: 0 0 20px;
+    display: flex;
+    justify-content: space-around;
+
+    .tab {
+      &.active {
+        color: white;
+        border-bottom: 3px solid $color-mainLightBlue;
+      }
+
+      color: $darkGray;
+      flex: 0 1 50%;
+      padding: 0 0 20px;
+      text-align: center;
+    }
+  }
+  .panelsGroup {
+    .panel {
+      &:first-child {
+        display: block;
+      }
+      display: none;
+      .btnGroup {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .btn {
+          flex: 0 1 24%;
+        }
+      }
+    }
+  }
   textarea {
     height: 120px;
     width: 100%;
