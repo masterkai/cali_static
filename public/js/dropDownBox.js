@@ -1,6 +1,15 @@
 $(function () {
-  $('.itemContainer').find('.icon_chevron-down-light').on('click', function () {
-    // $(this).find('.dropDownBox').toggleClass('active')
-    console.log($(this).parent().parent('.itemContainer').find('.dropDownBox').toggleClass('active'));
+  const state = {
+    clicked: false
+  }
+  $('.itemContainer').on('click', function () {
+    state.clicked = !state.clicked;
+    if (state.clicked) {
+      $(this).find('.icon_chevron-down-light').addClass('icon_chevron-up-light')
+      $(this).find('.itemContent').css('display','flex')
+    } else {
+      $(this).find('.icon_chevron-down-light').removeClass('icon_chevron-up-light')
+      $(this).find('.itemContent').css('display','none')
+    }
   })
 })
