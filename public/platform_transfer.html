@@ -652,6 +652,15 @@
     })
   })
 
+  $(function () {
+    $('.accountSelector2 .accountItem').each(function (index, item) {
+      $(item).on('click', function () {
+        $('.accountSelector2 .accountItem').removeClass('selected')
+        $(this).addClass('selected')
+      })
+    })
+  })
+
   const renderOptions = data => {
     const filteredArr = data.filter(i => i.value !== '維護中');
     return filteredArr.map(d => `<option>轉帳到${d.name}</option>`);
@@ -702,16 +711,18 @@
     }
   })
   intoAccount.addEventListener('click', function () {
+    // console.log(accountData2==false);
+    if(accountData2==false){
+      const $cont = $('.accountSelector .accountItem:not(".selected")').clone();
+      accountData2 = [];
+      $cont.each((i, obj) => accountData2.push({name: `${$cont[i].innerText}`, selected: false}))
+      $('.accountSelector2 .accountItem').remove()
+      $('.accountSelector2').append(renderAccountItem2(accountData2))
+    } else {
 
-    const $cont = $('.accountSelector .accountItem:not(".selected")').clone();
-    // console.log($cont.each((i,obj)=>console.log($cont[i].innerText)))
-    accountData2 = []
-    $cont.each((i, obj) => accountData2.push({name: `${$cont[i].innerText}`, selected: false}))
-    // console.log(accountData2);
-    $('.accountSelector2 .accountItem').remove()
-    $('.accountSelector2').append(renderAccountItem2(accountData2))
-    // $('.accountSelector2 .accountItem').remove()
-    // $cont.appendTo(".overlayAccountSelector2 .accountSelector2");
+
+    }
+
 
 
     state.accountSelector = !state.accountSelector;
