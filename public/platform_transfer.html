@@ -611,7 +611,9 @@
   let accountData2 = []
   const state = {
     clicked: false,
-    accountSelector: false
+    accountSelector: false,
+    accountSelector2: false,
+
   };
   const accountSelector = document.querySelector('.accountSelector')
   const fromAccount = document.querySelector('#fromAccount')
@@ -652,14 +654,14 @@
     })
   })
 
-  $(function () {
-    $('.accountSelector2 .accountItem').each(function (index, item) {
-      $(item).on('click', function () {
-        $('.accountSelector2 .accountItem').removeClass('selected')
-        $(this).addClass('selected')
-      })
-    })
-  })
+  // $(function () {
+  //   $('.accountSelector2 .accountItem').each(function (index, item) {
+  //     $(item).on('click', function () {
+  //       $('.accountSelector2 .accountItem').removeClass('selected')
+  //       $(this).addClass('selected')
+  //     })
+  //   })
+  // })
 
   const renderOptions = data => {
     const filteredArr = data.filter(i => i.value !== '維護中');
@@ -712,7 +714,7 @@
   })
   intoAccount.addEventListener('click', function () {
     // console.log(accountData2==false);
-    if(accountData2==false){
+    if (accountData2 == false) {
       const $cont = $('.accountSelector .accountItem:not(".selected")').clone();
       accountData2 = [];
       $cont.each((i, obj) => accountData2.push({name: `${$cont[i].innerText}`, selected: false}))
@@ -720,20 +722,17 @@
       $('.accountSelector2').append(renderAccountItem2(accountData2))
     } else {
 
-
     }
 
-
-
-    state.accountSelector = !state.accountSelector;
-    if (state.accountSelector) {
+    state.accountSelector2 = !state.accountSelector2;
+    if (state.accountSelector2) {
       overlayAccountSelector2.style.display = 'block'
     } else {
       overlayAccountSelector2.style.display = 'none'
     }
-
     $('.accountSelector2 .accountItem').each(function (index, item) {
       $(item).on('click', function (e) {
+        console.log(state.accountSelector);
         const txt = $(e.target).text();
         // console.log(txt);
         $('#intoAccount').html(txt)
@@ -742,15 +741,16 @@
         // console.log(accountData2);
         $('.accountSelector2 .accountItem').removeClass('selected')
         $(this).addClass('selected')
-        state.accountSelector = !state.accountSelector;
-        if (state.accountSelector) {
+        state.accountSelector2 = false;
+        if (state.accountSelector2) {
           overlayAccountSelector2.style.display = 'block'
         } else {
           overlayAccountSelector2.style.display = 'none'
         }
       })
     })
-  })
+
+  });
 
   $('.accountSelector .accountItem').on('click', function (e) {
     const txt = $(e.target).text();
