@@ -119,3 +119,10 @@
 .overlayAccountSelector2 {
   @extend .overlayAccountSelector;
 }
+
+.value {
+  padding: 5px 0;
+  color: $color-mainYellow  ;
+  text-align: right;
+  font-size: .875rem;
+}
