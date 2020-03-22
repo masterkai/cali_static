@@ -712,6 +712,7 @@
       overlayAccountSelector.style.display = 'none'
     }
   })
+
   intoAccount.addEventListener('click', function () {
     // console.log(accountData2==false);
     if (accountData2 == false) {
@@ -732,21 +733,13 @@
     }
     $('.accountSelector2 .accountItem').each(function (index, item) {
       $(item).on('click', function (e) {
-        console.log(state.accountSelector);
+        state.accountSelector2= false
         const txt = $(e.target).text();
-        // console.log(txt);
         $('#intoAccount').html(txt)
-        // console.log(index);
         accountData2[index].selected = true
-        // console.log(accountData2);
         $('.accountSelector2 .accountItem').removeClass('selected')
         $(this).addClass('selected')
-        state.accountSelector2 = false;
-        if (state.accountSelector2) {
-          overlayAccountSelector2.style.display = 'block'
-        } else {
-          overlayAccountSelector2.style.display = 'none'
-        }
+        overlayAccountSelector2.style.display = 'none';
       })
     })
 
