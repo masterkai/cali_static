@@ -102,6 +102,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     img {
       @include breakpoint($iphone) {
+        flex: 0 1 35%;
         width: 147px;
         height: 80px;
         margin: 0;
@@ -112,6 +113,8 @@
     .title {
       @include breakpoint($iphone) {
         margin-left: 15px;
+        flex: 0 1 55%;
+        font-size: 1.2rem;
       }
       padding: 10px 0 10px;
       color: #fff;

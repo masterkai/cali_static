@@ -2,4 +2,21 @@ $(function () {
   const userTestHeight = $('.userTest').height();
   // console.log('userTestHeight',userTestHeight);
   $('.userFeedBackBox').height(userTestHeight);
+
+  if ($('.mobileBox_nobg').height() < $(window).height()) {
+    $('.mobileBox_nobg').height($(window).height())
+  } else {
+    $('.mobileBox_nobg').css('height', 'auto')
+  }
+
+  const marqueeBoxH = $('.marqueeBox').height()
+  const fixedTopH = $('.fixed-top').height()
+  const mainCarouselH = $('.mainCarousel').height()
+  const totalH = marqueeBoxH + fixedTopH + mainCarouselH
+  if ($('.stratingPlayMobile').height() < $(window).height()) {
+    $('.stratingPlayMobile').height($(window).height() - totalH)
+  } else {
+    $('.stratingPlayMobile').css('height', 'auto')
+  }
+
 })

@@ -217,7 +217,7 @@
                         >
                         <input
                                 type="text"
-                                id="datetimeFrom4"
+                                id="datetimeFrom1"
                                 autocomplete="off"
                                 runat="server"
                                 class="form-control cursor mb-3"
@@ -229,7 +229,7 @@
                         >
                         <input
                                 type="text"
-                                id="datetimeFrom5"
+                                id="datetimeFrom2"
                                 autocomplete="off"
                                 runat="server"
                                 class="form-control cursor mb-3"
@@ -392,7 +392,7 @@
                         >
                         <input
                                 type="text"
-                                id="datetimeFrom4"
+                                id="datetimeFrom3"
                                 autocomplete="off"
                                 runat="server"
                                 class="form-control cursor mb-3"
@@ -404,7 +404,7 @@
                         >
                         <input
                                 type="text"
-                                id="datetimeFrom5"
+                                id="datetimeFrom4"
                                 autocomplete="off"
                                 runat="server"
                                 class="form-control cursor mb-3"
@@ -768,8 +768,11 @@
         src="build/js/scripts.min.js?v=1.1"
 ></script>
 <script>
-  const close = document.getElementById('close');
+  $(document).ready(function () {
+    $('#datetimeFrom1,#datetimeFrom2,#datetimeFrom3, #datetimeFrom4').datepicker($.datepicker.regional["en-US"]);
+  });
 
+  const close = document.getElementById('close');
 
   const modal = document.getElementById('modal');
 

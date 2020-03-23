@@ -1,0 +1,127 @@
+.banner {
+  @include breakpoint($large) {
+    height: auto;
+  }
+  @include breakpoint($ipad) {
+    padding: 0 20px;
+    background-size: cover;
+    background-position: center right;
+    align-items: center;
+  }
+  @include breakpoint($iphone) {
+    padding: 0;
+    background-size: cover;
+    background-position: center right;
+    align-items: flex-start;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  height: 220px;
+
+  .bannerContent {
+    @include breakpoint($iphone){
+      padding-left: 20px;
+      width: 100%;
+      background-image: $bannerGradient;
+    }
+    .title {
+      @include breakpoint($iphone){
+        text-align: left;
+      }
+      @include breakpoint($ipad) {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      @include breakpoint($large) {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      color: $color-white;
+      font-size: 2.125rem;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .desc {
+      @include breakpoint($ipad) {
+        font-size: 0.8rem;
+        max-width: 280px;
+        text-align: left;
+      }
+      font-weight: 300;
+      color: $color-white;
+      max-width: 405px;
+      text-align: center;
+      margin-bottom: 20px;
+      line-height: 1.6rem;
+    }
+  }
+
+}
+
+.banner02 {
+  @include breakpoint($large) {
+    padding: 20px;
+    height: auto;
+  }
+  @include breakpoint($ipad) {
+    padding: 0 20px;
+    background-size: cover;
+    background-position: center right;
+    align-items: flex-end;
+  }
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  height: 220px;
+  padding: 20px 80px;
+
+  div {
+    flex: 1 1 50%;
+    .title {
+      @include breakpoint($ipad) {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      @include breakpoint($large) {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      color: $color-mainYellow;
+      font-size: 1.625rem;
+      text-align: left;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .desc {
+      @include breakpoint($large) {
+        font-size: 0.8rem;
+        max-width: 430px;
+        text-align: left;
+      }
+      @include breakpoint($ipad) {
+        font-size: 0.8rem;
+        max-width: 320px;
+        text-align: left;
+      }
+      font-weight: 300;
+      color: $color-white;
+      max-width: 580px;
+      text-align: left;
+      margin-bottom: 20px;
+      line-height: 1.6rem;
+    }
+  }
+}
