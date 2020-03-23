@@ -32,6 +32,8 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="build/css/vendor.min.css"/>
+    <link rel="stylesheet" href="build/css/tooltipster.bundle.min.css"/>
+    <link rel="stylesheet" href="build/css/tooltipster-sideTip-borderless.min.css"/>
     <link rel="stylesheet" href="build/css/iconfont.css"/>
     <link href="build/css/jquery-ui.css" rel="stylesheet"/>
     <link
@@ -186,36 +188,38 @@
             </div>
             <span
                     id="openWallet"
-                    class="iconfont icon_wallet-light"
+                    class="iconfont icon_wallet-light tip"
+                    title="電子錢包"
                     style="margin-left: 20px"
             ></span>
             <span
                     id="modifyProfileBtn"
-                    class="iconfont icon_user-alt-light"
-                    data-tip="變更資料"
+                    class="iconfont icon_user-alt-light tip"
+                    title="變更資料"
                     style="margin-left: 20px"
             ></span>
             <span
                     id="betRecordsBtn"
-                    class="iconfont icon_coins-light"
-                    data-tip="投注記錄"
+                    class="iconfont icon_coins-light tip"
+                    title="投注記錄"
                     style="margin-left: 20px"
             ></span>
             <span
                     id="bonusRecordsBtn"
-                    class="iconfont icon_gift-light"
-                    data-tip="優惠紀錄"
+                    class="iconfont icon_gift-light tip"
+                    title="優惠紀錄"
                     style="margin-left: 20px"
             ></span>
             <span
                     id="memberNotificationBtn"
-                    class="iconfont icon_bell-light"
-                    data-tip="會員通知"
+                    class="iconfont icon_bell-light tip"
+                    title="會員通知"
                     style="margin-left: 20px"
             ></span>
 
             <span
-                    class="iconfont icon_sign-out-light"
+                    class="iconfont icon_sign-out-light tip"
+                    title="登出"
                     style="margin-left: 20px"
             ></span>
         </div>
@@ -2522,6 +2526,7 @@
 ></script>
 <script src="build/js/datetimepicker/jquery-ui-i18n.js"></script>
 <script src="build/js/jquery-ui-min.js"></script>
+<script src="build/js/tooltipster.bundle.min.js"></script>
 <script src="build/js/datetimepicker/jquery-ui-timepicker-addon.js"></script>
 <script src="build/js/datetimepicker/i18n/jquery-ui-timepicker-addon-i18n.js"></script>
 <script src="build/js/datetimepicker/jquery-ui-sliderAccess.js"></script>
@@ -2530,6 +2535,12 @@
         src="build/js/scripts.min.js?v=1.1"
 ></script>
 <script>
+  $(document).ready(function() {
+    $('.tip').tooltipster({
+      theme: 'tooltipster-borderless'
+    });
+  });
+
   const close = document.getElementById('close');
   const close_modifyProfile = document.getElementById(
     'close_modifyProfile'
