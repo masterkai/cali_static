@@ -2,7 +2,10 @@
   @include breakpoint($large) {
     flex-direction: column;
   }
-  display: flex;
+  &:first-child {
+    display: flex;
+  }
+  display: none;
   align-content: center;
   padding: 20px;
   .itemColumn {
