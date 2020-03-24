@@ -43,6 +43,9 @@
       justify-content: space-between;
 
       .walletMain {
+        &_modified {
+          margin: 15px;
+        }
         @include breakpoint($ipad) {
           padding: 10px;
         }
