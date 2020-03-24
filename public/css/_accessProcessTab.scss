@@ -1,0 +1,89 @@
+.accessProcessTabs {
+  @include breakpoint($iphone){
+    padding: 20px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  &__container {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .tab {
+      &:hover {
+        background-image: $mainGradient;
+        color: $mainBK;
+        border: 1px solid rgba(255,255,255,0);
+      }
+      &.active {
+        background-image: $mainGradient;
+        color: $mainBK;
+        border: 1px solid rgba(255,255,255,0);
+      }
+      @include breakpoint($iphone){
+        padding: 15px 0;
+      }
+      cursor: pointer;
+      flex-basis: 49%;
+      border: 1px solid $lightGray;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      color: $lightGray;
+    }
+  }
+}
+
+.accessProcessFlex {
+  &__column {
+    flex-direction: column;
+  }
+  display: flex;
+  align-items: center;
+}
+.accessProcessBox {
+  @include breakpoint($large){
+    display: flex;
+    flex-direction: column;
+  }
+  @include breakpoint($iphone){
+    padding: 0;
+  }
+  padding: 40px;
+  img {
+    @include breakpoint($iphone){
+      max-width: 400px;
+      width: 100%;
+      padding: 0 40px;
+    }
+  }
+  ol {
+    @include breakpoint($large){
+      margin-top: 20px;
+    }
+    padding-right: 30px;
+    color: $color-white;
+    li {
+      line-height: 1.8;
+      margin-left: 30px;
+    }
+  }
+}
+
+
+#accessProcessGroup, #accessProcessGroupM  {
+  .accessProcessPanel {
+    &:last-child {
+      @include breakpoint($iphone){
+        padding: 20px;
+      }
+    }
+    &:first-child {
+      display: flex;
+    }
+    display: none;
+  }
+}

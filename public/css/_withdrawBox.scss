@@ -1,0 +1,40 @@
+.withdrawBox {
+  &:last-child {
+    padding-bottom: 30px;
+  }
+  .withdrawNoticeBox {
+    border: 1px solid $color-white;
+    padding: 20px 30px;
+    line-height: 34px;
+    text-align: justify;
+    .title {
+      font-size: 1.125rem;
+      color: $color-mainYellow;
+      text-align: center;
+      margin: 10px auto 20px;
+    }
+  }
+  &__row {
+    &:last-child {
+      border-bottom: unset;
+    }
+    div {
+      line-height: 1.6;
+      flex: 1 1 33.33%;
+      text-align: center;
+      padding: 10px 0;
+    }
+    max-width: 810px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+  }
+
+  display: flex;
+  flex-direction: column;
+  max-width: 810px;
+  width: 100%;
+  margin: 0 auto;
+  color: $color-white;
+  font-weight: 300;
+}
