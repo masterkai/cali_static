@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" style='font-family: "Microsoft YaHei","Noto Sans TC", sans-serif;'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
+    <title>ES6</title>
+
+    <!--=========================== CSS ===========================-->
+    <link
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="build/css/slick.css">
+    <link rel="stylesheet" href="build/css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="build/css/vendor.min.css">
+    <link rel="stylesheet" href="build/css/iconfont.css">
+    <link rel="stylesheet" href="build/css/styles.css?v=1.1">
+
+    <!--=========================== JS ===========================-->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="build/js/data-watermark.js"></script>
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            alert('很抱歉，目前本站瀏覽不支援IE9以下的瀏覽器，若看見版面跑掉，純屬正常狀況。');
+        });
+    </script>
+    <![endif]-->
+
+
+    <!--=========================== 思源黑體 ===========================-->
+    <!--<script src="https://use.typekit.net/mrp7iog.js"></script>
+    <script>try {
+        Typekit.load({async: true});
+    } catch (e) {
+    }</script>-->
+
+    <!--=========================== WOW ===========================-->
+    <script type="text/javascript" src="build/js/wow.min.js"></script>
+    <script type="text/javascript">new WOW().init();</script>
+
+</head>
+<body>
+<div class="displayDesktop">
+    <div class='headerBG'>
+        <form class='flexContainer'>
+            <div class='flex'>
+                <button
+                        style='margin-right: 5px;'
+                        type="button"
+                        class="btn btn-dark btn-sm"
+                >
+                    立即註冊&nbsp;
+                    <span
+                            class="iconfont icon_user-plus-light"
+                            style='color: white;'
+                    ></span>
+                </button>
+                <input
+                        style='margin-right: 5px;'
+                        type="text"
+                        class='input'
+                        placeholder="會員賬號"
+                />
+                <input
+                        style='margin-right: 5px;'
+                        type="text"
+                        class='input'
+                        placeholder="登入密碼"
+                />
+            </div>
+            <button
+                    style='margin-right: 5px;'
+                    type="button"
+                    class="btn btn-outline-dark btn-sm"
+            >
+                登入
+            </button>
+            <button type="button" class="btn btn-outline-dark btn-sm">
+                忘記密碼
+            </button>
+        </form>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <span class="iconfont icon_bars-light"></span>
+
+                <a href="/" class='navbar-brand logo'>
+                    <img
+                            class="img-responsive logo"
+                            src="build/images/Cali_logo_02.png"
+                            alt=""
+                    />
+                </a>
+
+                <div class="collapse navbar-collapse">
+                    <ul class='flexContainer'>
+                        <li><a href="/online_baccarat"
+                               class="nav-item nav-link menuToggle lv1Menu"
+                               style='padding: 0.5rem 0;'
+                        >
+                            真人娛樂
+                        </a></li>
+
+                        <li><a
+                                href="/sports"
+                                class="nav-item nav-link menuToggle lv1Menu"
+                                style='padding: 0.5rem 0;'
+                        >
+                            體育博彩
+                        </a></li>
+                        <li><a
+                                href="/lottery"
+                                class="nav-item nav-link menuToggle lv1Menu"
+                                style='padding: 0.5rem 0;'
+                        >
+                            賓果彩票
+                        </a></li>
+                        <li><a href="/electronics"
+                               class="nav-item nav-link menuToggle lv1Menu"
+                               style='padding: 0.5rem 0;'
+                        >
+                            電子遊戲
+                        </a></li>
+                        <li><a
+                                href="/fish"
+                                class="nav-item nav-link menuToggle lv1Menu"
+                                style='padding: 0.5rem 0;'
+                        >
+                            捕魚王
+                        </a></li>
+                        <li><a
+                                href="/promotions"
+                                class="nav-item nav-link menuToggle lv1Menu"
+                                style='padding: 0.5rem 0;'
+                        >
+                            優惠活動
+                        </a></li>
+                        <li style="position: relative">
+                            <a
+                                    href="/promotions"
+                                    class="nav-item nav-link menuToggle lv1Menu"
+                                    style='padding: 0.5rem 0;'
+                            >
+                                更多
+                            </a>
+                            <ul class="nav-menu-2 menu">
+                                <a class="text-black">玩家評價</a>
+                                <a class="text-black">存取流程</a>
+                                <a class="text-black">APP下載</a>
+                                <a class="text-black">代理加盟</a>
+                                <a class="text-black">關於卡利</a>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class='marqueeBox'>
+        <span class="iconfont icon_volume-up-solid"></span>
+
+        <div class='marqueeDeskTop'>
+            溫馨提示：尊敬的【卡利娛樂城】會員您好！
+            2020-01-08號天天返水最高1.8%，已經返回到您的遊戲賬號中，請您登入查收！轉賬到公司指定銀行卡，提交入款信息可得到次次存次次送1.3%入款優惠，謝謝。
+        </div>
+    </div>
+    <div class="mainBG">
+        <div class="container">
+            <div style="background-color: rgba(0,0,0,.65)">
+                <div class="sectionTitle">
+                    <div class="titleGroup">
+                        <div style="flex: 1 1 10%;border: 1px solid #979797;"></div>
+                        <div class="subject" style="text-shadow: 0 2px 4px black;">
+                            卡利玩家實測
+                        </div>
+                        <div style="flex: 1 1 10%;border: 1px solid #979797;"></div>
+                    </div>
+                </div>
+                <div class='flexContainer flexContainer__userEvaluation'>
+                    <div class='profile'>
+                        <img src="build/images/userTest.png" alt="" class="img-responsive"/>
+                        <div class='profileContainer'>
+                            <div><span class='iconfont icon_star-solid'></span> 4.8 玩家評測</div>
+                            <div><span class='iconfont icon_user-solid'></span> 20,008位玩家</div>
+                            <div><span class='iconfont icon_user-solid'></span> 共168則評論</div>
+                        </div>
+                    </div>
+                    <div class='content'>
+                        <div class='title'>卡利娛樂城</div>
+                        <p>卡利系統玩家實際遊玩回饋，以上會員即可評價，
+                            認證機制保證真實性，各位會員提出對卡利娛樂城的意見，卡利集團更加進步，出更讓各為喜愛的線上博弈平台。</p>
+                        <p>交進史方求驚升不最獲識有子文著……如生最、病何大在：對業大面化頭別活灣美張家小時有班到明靈中為色信，運交時、臉觀易飯：師戰斯一雄，證計投？自口主能條在本中效快據阿來國不流大夫。</p>
+                    </div>
+                </div>
+                <div class='flexContainer flexContainer__rating'>
+                    <div class='mainRatingContainer'>
+                        <div class='ratingValue'>4.8</div>
+                        <div class='starsGroup'>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                        </div>
+                        <div class='commentSum'>
+                            共168則評論
+                        </div>
+                    </div>
+                    <div class='ratingContainer'>
+                        <div class='ratingItem'>
+                            <div class='progress'>
+                                <div class="progress-bar bg-warning" role="progressbar" style='width: 75%;'></div>
+                            </div>
+                            <div class='starsGroup'>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                            </div>
+                            <div class='percentage'>76%</div>
+                        </div>
+                        <div class='ratingItem'>
+                            <div class='progress'>
+                                <div class="progress-bar bg-warning" role="progressbar" style='width: 21%'></div>
+                            </div>
+                            <div class='starsGroup'>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-light'></span>
+                            </div>
+                            <div class='percentage'>21%</div>
+                        </div>
+                        <div class='ratingItem'>
+                            <div class='progress'>
+                                <div class="progress-bar bg-warning" role="progressbar" style='width: 3%;'></div>
+                            </div>
+                            <div class='starsGroup'>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-light'></span>
+                                <span class='iconfont icon_star-light'></span>
+                            </div>
+                            <div class='percentage'>3%</div>
+                        </div>
+                        <div class='ratingItem' style='opacity: 0.25;'icon_star-light>
+                            <div class='progress'>
+                                <div class="progress-bar bg-warning" role="progressbar" style='width: 0%;'></div>
+                            </div>
+                            <div class='starsGroup'>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-light'></span>
+                                <span class='iconfont icon_star-light'></span>
+                                <span class='iconfont icon_star-light'></span>
+                            </div>
+                            <div class='percentage'>0%</div>
+                        </div>
+                        <div class='ratingItem' style='opacity: 0.25;'icon_star-light>
+                            <div class='progress'>
+                                <div class="progress-bar bg-warning" role="progressbar" style='width: 0;'></div>
+                            </div>
+                            <div class='starsGroup'>
+                                <span class='iconfont icon_star-solid'></span>
+                                <span class='iconfont icon_star-light'></span>
+                                <span class='iconfont icon_star-light'></span>
+                                <span class='iconfont icon_star-light'></span>
+                                <span class='iconfont icon_star-light'></span>
+                            </div>
+                            <div class='percentage'>0%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='memberFeedbackContainer'>
+                    <div class='memberBox'>
+                        <div class='avatar'>NL</div>
+                        <div class='memberInfo'>
+                            <div class='commentTime'>2 weeks ago</div>
+                            <div class='memberNumbering'>VIP8 會員1658432</div>
+                        </div>
+                    </div>
+                    <div class='commentBox'>
+                        <div class='starsGroup'>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                        </div>
+                        <div class='comment'>
+                            卡利娛樂城是真心能信賴的~就算我贏了15萬，出金也很快不囉嗦，而且遊戲種類很多，也有很多優惠，喜歡!
+                        </div>
+                    </div>
+                </div>
+                <div style='border-top: 1px solid rgba(255, 255, 255, 0.5);padding: 40px;'>
+                    <button
+                            type="button" class="btn btn-block btn-sm"
+                            style='background-color: rgb(98, 54, 255);color: white;width: 40%;margin: 10px auto;'>
+                        查看更多
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class='sectionTitle'>
+                    <div class='titleGroup'>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                        <div class='subject' style='text-shadow: 0 2px 4px black;'>卡利合作娛樂品牌</div>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="iconBox">
+            <span
+                    class="iconfont icon_allbet"
+                    style='font-size: 7rem;'
+            ></span>
+                        <span class="iconfont icon_DreamGaming"></span>
+                        <span class="iconfont icon_WM" style='font-size: 4rem;'></span>
+                        <span class="iconfont icon_SAgaming" style='font-size: 5rem;'></span>
+                        <span class="iconfont icon_SUPER"></span>
+                        <span
+                                class="iconfont icon_AFBCash"
+                                style='font-size: 4rem;'
+                        ></span>
+                    </div>
+                    <div class="iconBox">
+                        <span class="iconfont icon_Klottery"></span>
+                        <span
+                                class="iconfont icon_SUPERbingo"
+                                style='font-size: 5rem;'
+                        ></span>
+                        <span
+                                class="iconfont icon_RTGslots"
+                                style='font-size: 4.8rem;'
+                        ></span>
+                        <span class="iconfont icon_betixion"></span>
+                        <span class="iconfont icon_betsoft"></span>
+                    </div>
+                </div>
+                <div class='sectionTitle'>
+                    <div class='titleGroup'>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                        <div class='subject' style='text-shadow: 0 2px 4px black;'>國際安全認證</div>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="securityLogoBox">
+                        <img
+                                src="./build/images/securityLogo/partner_logo_1.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_2.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_3.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_4.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_5.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_6.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_7.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_8.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                    </div>
+                </div>
+                <p>
+                    Copyright© 2019 Allbetgaming.com. All Rights Reserved.
+                    服務條款|隱私權保護政策
+                </p>
+
+                <div class="row">
+                    <div class="footerLink">
+                        <a href="/">娛樂城</a>
+                        |
+                        <a href="/">百家樂</a>
+                        |
+                        <a href="/">球版現金版</a>
+                        |
+                        <a href="/">電子拉霸</a>
+                        |
+                        <a href="/">鑫城賓果</a>
+                        |
+                        <a href="/">百家樂技巧教學</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='drawerBox'>
+        <div class="infoBox">
+            <p>在線客服</p>
+            <img src="build/images/qrCode.png" alt="" class="img-responsive"/>
+        </div>
+        <div class="infoBox">
+            <img
+                    src="build/images/line-messenger.svg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <p>@888pi</p>
+        </div>
+        <div class="infoBox">
+            <p style="font-size: 0.85rem;">意見反饋 8888pipipi@gmail.com</p>
+        </div>
+        <div class="TrapezoidTag">
+            <div class="triangleBottomRight"></div>
+            <div class="triangleTopRight"></div>
+            <span class="iconfont iconHR"></span>
+            <p>聯系我們</p>
+        </div>
+
+    </div>
+
+    <div id="GOTOP">
+        <span class="iconfont iconchevron-up-solid"></span>
+    </div>
+
+</div>
+
+<div class="displayMobile">
+
+    <!--    使用者登入前  -->
+    <!--    <div class='fixed-top'>-->
+    <!--        <nav class='navbar navBarFlex' style="height: 55px">-->
+    <!--            <span class="iconfont icon_bars-light" style='margin-left: 10px;font-size: 1.625rem;'></span>-->
+
+    <!--            <a class='logo'>-->
+    <!--                <img-->
+    <!--                        class="img-responsive logo_m"-->
+    <!--                        src="build/images/Cali_logo_mobile.png"-->
+    <!--                        alt=""-->
+    <!--                />-->
+    <!--            </a>-->
+
+    <!--            <div class='btnGroup'>-->
+    <!--                <button-->
+    <!--                        type="button"-->
+    <!--                        class='btnOutLine'-->
+    <!--                >-->
+    <!--                    註冊-->
+    <!--                </button>-->
+    <!--                <button-->
+    <!--                        type="button"-->
+    <!--                        class='btnOutLine'-->
+    <!--                >-->
+    <!--                    登入-->
+    <!--                </button>-->
+    <!--            </div>-->
+
+    <!--        </nav>-->
+
+    <!--    </div>-->
+
+    <!--    使用者登入後  -->
+    <div class='fixed-top'>
+        <nav class='navbar navBarFlex' style="height: 55px;">
+              <span
+                      class="iconfont icon_chevron-left-light"
+                      style='margin-left: 10px;font-size: 1.625rem;'></span>
+            <div class='title'>玩家實測</div>
+        </nav>
+        <div class="userStateBar">
+            <div class='userStateColumn'>
+                <div class='userInfo'>test123</div>
+                <div class='userLevel'>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-light"></span>
+                    <span class="iconfont icon_star-light"></span>
+                    <span class="iconfont icon_star-light"></span>
+                </div>
+                <span class="iconfont icon_bell-light"></span>
+            </div>
+            <div class='userStateColumn'>
+                <span class="iconfont icon_usd-circle-light"></span>
+                <div class='userInfo'>250.00</div>
+                <div style="position: relative">
+                    <span class='iconfont icon_chevron-down-light menuToggle lv1Menu'></span>
+                    <div class='DDWallet nav-menu-2 DDW'>
+                        <div class='itemsBox'>
+                            <div class='item'>
+                                <div class="itemName">DG百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">歐博</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">沙龍百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">WM百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">任你博體育</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">Super體育博彩</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">AFB88</div>
+                                <div class='itemValue'>維護中</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">RTG天地</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">Betsoft</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">BTX</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">9K彩票</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">六合彩539</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                        </div>
+                        <div class='bottomBox'>
+                            <div class='sumBox'>
+                                <div>總額度</div>
+                                <div>250</div>
+                            </div>
+                            <button class="btn"
+                                    style='background-color:deepskyblue;color: white;border-radius: 20px'>
+                                全部轉回主帳戶
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mainBG" style="margin-top: 80px;">
+
+        <div class='mobileBox_nobg' style='height: auto;padding: 0 0 80px;'>
+            <div style='height: 138px;background-image: url(build/images/userTest.png);
+    background-size: cover;
+    width: 100%;
+    color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.85) 1px 1px 4px;'
+            >
+                卡利玩家實測
+            </div>
+            <div class='flexContainer flexContainer__userEvaluation'>
+                <div class='profile'>
+                    <div class='profileContainer'>
+                        <div><span class='iconfont icon_star-solid'></span> 4.8 玩家評測</div>
+                        <div><span class='iconfont icon_user-solid'></span> 20,008位玩家</div>
+                        <div><span class='iconfont icon_user-solid'></span> 共168則評論</div>
+                    </div>
+                </div>
+                <div class='content'>
+                    <div class='title'>卡利娛樂城</div>
+                    <p>卡利系統玩家實際遊玩回饋，以上會員即可評價，
+                        認證機制保證真實性，各位會員提出對卡利娛樂城的意見，卡利集團更加進步，出更讓各為喜愛的線上博弈平台。</p>
+                    <p>交進史方求驚升不最獲識有子文著……如生最、病何大在：對業大面化頭別活灣美張家小時有班到明靈中為色信，運交時、臉觀易飯：師戰斯一雄，證計投？自口主能條在本中效快據阿來國不流大夫。</p>
+                </div>
+            </div>
+            <div class='flexContainer flexContainer__rating'>
+                <div class='mainRatingContainer'>
+                    <div class='ratingValue'>4.8</div>
+                    <div class='starsGroup'>
+                        <span class='iconfont icon_star-solid'></span>
+                        <span class='iconfont icon_star-solid'></span>
+                        <span class='iconfont icon_star-solid'></span>
+                        <span class='iconfont icon_star-solid'></span>
+                        <span class='iconfont icon_star-solid'></span>
+                    </div>
+                    <div class='commentSum'>
+                        共168則評論
+                    </div>
+                </div>
+                <div class='ratingContainer'>
+                    <div class='ratingItem'>
+                        <div class='progress'>
+                            <div class="progress-bar bg-warning" role="progressbar" style='width: 75%;'></div>
+                        </div>
+                        <div class='starsGroup'>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                        </div>
+                        <div class='percentage'>76%</div>
+                    </div>
+                    <div class='ratingItem'>
+                        <div class='progress'>
+                            <div class="progress-bar bg-warning" role="progressbar" style='width: 21%'></div>
+                        </div>
+                        <div class='starsGroup'>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-light'></span>
+                        </div>
+                        <div class='percentage'>21%</div>
+                    </div>
+                    <div class='ratingItem'>
+                        <div class='progress'>
+                            <div class="progress-bar bg-warning" role="progressbar" style='width: 3%;'></div>
+                        </div>
+                        <div class='starsGroup'>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-light'></span>
+                            <span class='iconfont icon_star-light'></span>
+                        </div>
+                        <div class='percentage'>3%</div>
+                    </div>
+                    <div class='ratingItem' style='opacity: 0.25;'icon_star-light>
+                        <div class='progress'>
+                            <div class="progress-bar bg-warning" role="progressbar" style='width: 0%;'></div>
+                        </div>
+                        <div class='starsGroup'>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-light'></span>
+                            <span class='iconfont icon_star-light'></span>
+                            <span class='iconfont icon_star-light'></span>
+                        </div>
+                        <div class='percentage'>0%</div>
+                    </div>
+                    <div class='ratingItem' style='opacity: 0.25;'icon_star-light>
+                        <div class='progress'>
+                            <div class="progress-bar bg-warning" role="progressbar" style='width: 0;'></div>
+                        </div>
+                        <div class='starsGroup'>
+                            <span class='iconfont icon_star-solid'></span>
+                            <span class='iconfont icon_star-light'></span>
+                            <span class='iconfont icon_star-light'></span>
+                            <span class='iconfont icon_star-light'></span>
+                            <span class='iconfont icon_star-light'></span>
+                        </div>
+                        <div class='percentage'>0%</div>
+                    </div>
+                </div>
+            </div>
+            <div class='memberFeedbackContainer'>
+                <div class='memberBox'>
+                    <div class='avatar'>NL</div>
+                    <div class='memberInfo'>
+                        <div class='commentTime'>2 weeks ago</div>
+                        <div class='memberNumbering'>VIP8 會員1658432</div>
+                    </div>
+                </div>
+                <div class='commentBox'>
+                    <div class='starsGroup'>
+                        <span class='iconfont icon_star-solid'></span>
+                        <span class='iconfont icon_star-solid'></span>
+                        <span class='iconfont icon_star-solid'></span>
+                        <span class='iconfont icon_star-solid'></span>
+                        <span class='iconfont icon_star-solid'></span>
+                    </div>
+                    <div class='comment'>
+                        卡利娛樂城是真心能信賴的~就算我贏了15萬，出金也很快不囉嗦，而且遊戲種類很多，也有很多優惠，喜歡!
+                    </div>
+                </div>
+            </div>
+            <div style='border-top: 1px solid rgba(255, 255, 255, 0.5);padding: 40px;'>
+                <button
+                        type="button" class="btn btn-block btn-sm"
+                        style='background-color: rgb(98, 54, 255);color: white;width: 40%;margin: 10px auto;'>
+                    查看更多
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <nav class='navbar fixed-bottom BottomNav'>
+        <a href="/platform_transfer">
+            <span class='iconfont icon_Transfer'></span>
+            平台轉帳
+        </a>
+        <a href="/promotions">
+            <span class='iconfont icon_gift-solid'></span>
+            最新優惠
+        </a>
+        <a href="/promotions">
+            <span class='iconfont icon_sack-dollar-solid'></span>
+            在線提款
+        </a>
+        <a href="/customer_service">
+            <span class='iconfont iconHR'></span>
+            在線客服
+        </a>
+        <a href="/">
+            <span class='iconfont icon_user-solid'></span>
+            會員中心
+        </a>
+    </nav>
+</div>
+
+
+<script type="application/javascript"
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
+<script type="application/javascript" src="build/js/jquery.marquee.min.js"></script>
+<script type="application/javascript" src="build/js/scripts.min.js?v=1.1"></script>
+<script>
+  const TabsData = [
+    {
+      index: '0',
+      tabTitle: '嚴格保密及安全性維護',
+      tabContent:
+        '卡利娛樂城cali99.net以國際認可的SSL128bit數字加密連接，來進行對於會員資料的保護及提升安全性，以保證在我們伺服器中儲存的所有會員資料都安全無虞，我們將大量的資源投入在伺服器的資料保密之上，誓言提供給會員最安心有保障的投注環境。',
+      tabImage: 'build/images/about/image1.png'
+    },
+    {
+      index: '1',
+      tabTitle: '付款',
+      tabContent:
+        '我們有多位金流人員待命我們為會員提供安心、快速、有保障的存款和取款服務，讓會員在取款過程中感到備受尊榮的態度。此外，我們遵從＂了解我們的用戶（KYC）＂和＂反洗錢（AML）＂的原則，以符合所有相關法條及法規的方式來保障我們所有的支付。歡迎客戶對卡利娛樂城提出任何意見，幫助我們變得更好！如果對我們有任何的疑問或建議，歡迎將內容發送至我們的電子信箱： cali99net@gmail.com',
+      tabImage: 'build/images/about/image2.png'
+    },
+    {
+      index: '2',
+      tabTitle: '責任博彩',
+      tabContent:
+        '提供會員享受線上博彩的空間是卡利娛樂城的宗旨。確保能成為會員的玩家皆為法定年齡18歲及其以上是我們的責任。當您得知小部分人並非依照合法規定來卡利娛樂城時，歡迎與我們反映相關問題，卡利集團會積極協助處理。歡迎通過電子郵件方式將相關訊息發送至電子信箱： cali99net @gmail.com',
+      tabImage: 'build/images/about/image3.png'
+    },
+    {
+      index: '3',
+      tabTitle: '嚴格保密及安全性維護',
+      tabContent:
+        '卡利娛樂城cali99.net以國際認可的SSL128bit數字加密連接，來進行對於會員資料的保護及提升安全性，以保證在我們伺服器中儲存的所有會員資料都安全無虞，我們將大量的資源投入在伺服器的資料保密之上，誓言提供給會員最安心有保障的投注環境。',
+      tabImage: 'build/images/about/image4.png'
+    }
+  ];
+  const renderAbouts = data => {
+    return data.map((d, i) => `<div
+
+    class='itemBox'
+      >
+      <div class='itemColumn'>
+      <img src=${d.tabImage} alt="" class="img-responsive" />
+      </div>
+      <div class='itemColumn'>
+      <div class='title'>${d.tabTitle}</div>
+      <p>${d.tabContent}</p>
+      </div>
+      </div>`);
+  };
+
+  $('.itemsGroup').append(renderAbouts(TabsData))
+
+</script>
+
+</body>
+</html>

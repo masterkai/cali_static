@@ -86,7 +86,7 @@ gulp.task('scripts', function () {
         // .on('error', function () {
         //     this.emit('end');
         // })
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(concat('scripts.min.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/build/js/'));

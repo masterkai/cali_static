@@ -13,7 +13,6 @@ $(function () {
         $tabPanels.eq(lastTab).css({display: 'none'});
         $tabPanels.eq(currentTab).css({display: 'flex'});
         lastTab = currentTab;
-        // console.log('lastTab:'+lastTab+' ,currentTab:'+currentTab+' ,obj:'+$(obj).attr('href'));
 
         // Add active class to the tab which was clicked!!
         let $this = $(obj);
@@ -25,8 +24,6 @@ $(function () {
         $tabAnchors.removeClass('active');
         $this.addClass('active');
 
-        // $tabPanels.css('display', 'none');
-        // $($this.attr('href')).css('display', 'block');
       });
     });
 
