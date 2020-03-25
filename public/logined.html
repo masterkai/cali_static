@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="build/css/styles.css?v=1.1"/>
 
     <!--=========================== JS ===========================-->
+    <script src="build/js/iconfont.js"></script>
     <script
             type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
@@ -192,6 +193,9 @@
                     title="電子錢包"
                     style="margin-left: 20px"
             ></span>
+            <svg id="recommendBtn" class="icon tip" aria-hidden="true" style="margin-left: 20px" title="會員推薦">
+                <use xlink:href="#icon_thumbs-up-light"></use>
+            </svg>
             <span
                     id="modifyProfileBtn"
                     class="iconfont icon_user-alt-light tip"
@@ -2113,6 +2117,103 @@
     </div>
 </div>
 
+<div class="mobileModal-container" id="modal_recommendation">
+    <div class="mobileModal mobileModal--recommendation">
+        <div class="close-btn" id="close_recommendation">
+            <span class="iconfont icon_times-light"></span>
+        </div>
+        <div class="mobileModal-header">
+            <h3>會員推薦</h3>
+        </div>
+        <div class="modalBody modalBody__BetRecordsLayout">
+            <form>
+                <div class="form-group">
+                    <label class="mb-3" style="display: block;color: white;"
+                    >開始時間</label
+                    >
+                    <input
+                            type="text"
+                            id="recommendFromTime"
+                            autocomplete="off"
+                            runat="server"
+                            class="form-control cursor mb-3"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="mb-3" style="display: block;color: white;"
+                    >結束時間</label
+                    >
+                    <input
+                            type="text"
+                            id="recommendEndTime"
+                            autocomplete="off"
+                            runat="server"
+                            class="form-control cursor mb-3"
+                    />
+                </div>
+
+                <div
+                        class="btn-group mb-3"
+                        role="group"
+                        aria-label="Third group"
+                        style="width: 100%"
+                >
+                    <button type="button" class="btn btn-warning btn-sm">
+                        搜尋
+                    </button>
+                    <button type="button" class="btn btn-info btn-sm">
+                        複製
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm">
+                        QR碼
+                    </button>
+                </div>
+            </form>
+
+            <div
+                    class="itemContainer itemContainer__norecords"
+                    style="height: 48px"
+            >
+                您尚未推薦會員
+            </div>
+            <div class="itemContainer">
+                <div
+                        style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
+                >
+                    <div
+                            style="display: flex;align-items: center;justify-content: space-between;flex-basis: 90%;"
+                    >
+                        <div
+                                style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                        >
+                            2020/02/27/15:28:35
+                        </div>
+                        <div
+                                style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                        >
+                            會員： <span style="color: rgb(0, 145, 255);">{status}</span>
+                        </div>
+                    </div>
+
+                    <span
+                            class="iconfont icon_chevron-down-light"
+                            style="font-size: 1rem; color: #9BA2AA"
+                    ></span>
+                </div>
+
+                <div class="dropDownBox">
+                    <div class="listItem">單號：<span>xxxxx</span></div>
+                    <div class="listItem">星級：<span>六星級</span></div>
+                    <div class="listItem">遊戲平台：<span>xxxxx</span></div>
+                    <div class="listItem">遊戲類型：<span>xxxxx</span></div>
+                    <div class="listItem">投注額：<span>1000</span></div>
+                    <div class="listItem">流水：<span>1000</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="mobileModal-container" id="modal_bonusRecords">
     <div class="mobileModal mobileModal--bonusRecords">
         <div class="close-btn" id="close_bonusRecords">
@@ -2542,7 +2643,7 @@
   });
 
   $(document).ready(function () {
-    $('#datetimeFrom,#datetimeFrom2,#datetimeFrom3, #datetimeFrom4,#datetimeFrom5').datepicker($.datepicker.regional["en-US"]);
+    $('#datetimeFrom,#datetimeFrom2,#datetimeFrom3, #datetimeFrom4,#datetimeFrom5,#recommendFromTime,      #recommendEndTime').datepicker($.datepicker.regional["en-US"]);
 
   });
 
@@ -2551,12 +2652,14 @@
     'close_modifyProfile'
   );
   const close_betRecords = document.getElementById('close_betRecords');
+  const close_recommendation = document.getElementById('close_recommendation');
   const close_bonusRecords = document.getElementById('close_bonusRecords');
   const close_memberNotification = document.getElementById(
     'close_memberNotification'
   );
   const close_register = document.getElementById('close_register');
   const modifyProfileBtn = document.getElementById('modifyProfileBtn');
+  const recommendBtnBtn = document.getElementById('recommendBtn');
   const betRecordsBtn = document.getElementById('betRecordsBtn');
   const bonusRecordsBtn = document.getElementById('bonusRecordsBtn');
   const memberNotificationBtn = document.getElementById(
@@ -2568,6 +2671,7 @@
     'modal_modifyProfile'
   );
   const modal_betRecords = document.getElementById('modal_betRecords');
+  const modal_recommendation = document.getElementById('modal_recommendation');
   const modal_bonusRecords = document.getElementById('modal_bonusRecords');
   const modal_memberNotification = document.getElementById(
     'modal_memberNotification'
@@ -2581,6 +2685,10 @@
 
   betRecordsBtn.addEventListener('click', () => {
     modal_betRecords.classList.add('show-mobileModal');
+  });
+
+  recommendBtnBtn.addEventListener('click', () => {
+    modal_recommendation.classList.add('show-mobileModal');
   });
 
   // registerBtn.addEventListener('click', () => {
@@ -2601,6 +2709,9 @@
   );
   close_modifyProfile.addEventListener('click', () =>
     modal_modifyProfile.classList.remove('show-mobileModal')
+  );
+  close_recommendation.addEventListener('click', () =>
+    modal_recommendation.classList.remove('show-mobileModal')
   );
   close_betRecords.addEventListener('click', () =>
     modal_betRecords.classList.remove('show-mobileModal')
