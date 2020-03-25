@@ -42,7 +42,9 @@
 
 .accountSelector {
   //display: none;
-  top: 55px;
+  top: 80px;
+  max-height: 444px;
+  overflow-y: scroll;
   left: 0;
   width: 50%;
   z-index: 1035;
