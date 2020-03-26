@@ -258,7 +258,7 @@
                                     主帳戶
                                     <span class="iconfont icon_caret-down-solid"></span>
                                 </div>
-                                <div class="value">餘額：250</div>
+                                <div class="value1">餘額：</div>
                             </div>
                             <div class="col">
                                 <label class="mb-3">轉入帳戶</label>
@@ -268,7 +268,7 @@
                                     請選擇
                                     <span class="iconfont icon_caret-down-solid"></span>
                                 </div>
-                                <div class="value">餘額：0</div>
+                                <div class="value2">餘額：</div>
                             </div>
                         </div>
                         <label class="mb-3">轉帳金額</label>
@@ -593,8 +593,8 @@
     {name: '9K彩票', value: 0},
     {name: '六合彩539', value: 0}
   ];
-  const accountData = [
-    {name: '主帳戶', value: 0, selected: true},
+  let accountData = [
+    {name: '主帳戶', value: 100, selected: true},
     {name: 'DG百家樂', value: 0, selected: false},
     {name: '歐博', value: 0, selected: false},
     {name: '沙龍百家樂', value: 0, selected: false},
@@ -615,6 +615,7 @@
     accountSelector2: false,
 
   };
+
   const accountSelector = document.querySelector('.accountSelector')
   const fromAccount = document.querySelector('#fromAccount')
   const intoAccount = document.querySelector('#intoAccount')
@@ -645,14 +646,7 @@
     accountSelector.insertAdjacentElement('beforeend', div)
   })
 
-  $(function () {
-    $('.accountSelector .accountItem').each(function (index, item) {
-      $(item).on('click', function () {
-        $('.accountSelector .accountItem').removeClass('selected')
-        $(this).addClass('selected')
-      })
-    })
-  })
+
 
   // $(function () {
   //   $('.accountSelector2 .accountItem').each(function (index, item) {
@@ -699,6 +693,10 @@
     }
   })
 
+  $(function () {
+    $('.value1').text(`餘額：${accountData[0].value}`)
+    $('.value2').text('')
+  });
   fromAccount.addEventListener('click', function () {
     accountData2 = []
     $('#intoAccount').html('請選擇')
@@ -711,6 +709,25 @@
       // accountSelector.style.display = 'none'
       overlayAccountSelector.style.display = 'none'
     }
+    
+    $('.accountSelector .accountItem').each(function (index, item) {
+      
+      $(item).on('click', function (e) {
+        overlayAccountSelector.style.display = 'none'
+        const txt = $(e.target).text();
+        $('#fromAccount').html(txt)
+        state.accountSelector = false;
+        const filteredSelected = accountData.filter(item=>item.name===txt)
+        // console.log('filteredSelected',filteredSelected);
+        accountData.map(item=>item.selected=false)
+        filteredSelected[0].selected= true
+        // console.log(accountData);
+        // console.log(accountData[index].value);
+        $('.value1').text(`餘額：${filteredSelected[0].value}`)
+        $('.accountSelector .accountItem').removeClass('selected')
+        $(this).addClass('selected')
+      })
+    })
   })
 
   intoAccount.addEventListener('click', function () {
@@ -718,7 +735,9 @@
     if (accountData2 == false) {
       const $cont = $('.accountSelector .accountItem:not(".selected")').clone();
       accountData2 = [];
-      $cont.each((i, obj) => accountData2.push({name: `${$cont[i].innerText}`, selected: false}))
+      const filteredData = accountData.filter(item=> item.selected===false).filter(item=>item.value!=='維護中')
+      // $cont.each((i, obj) => accountData2.push({name: `${$cont[i].innerText}`, selected: false}))
+      accountData2 = filteredData
       $('.accountSelector2 .accountItem').remove()
       $('.accountSelector2').append(renderAccountItem2(accountData2))
     } else {
@@ -736,6 +755,7 @@
         state.accountSelector2= false
         const txt = $(e.target).text();
         $('#intoAccount').html(txt)
+        $('.value2').text(`餘額：${accountData2[index].value}`)
         accountData2[index].selected = true
         $('.accountSelector2 .accountItem').removeClass('selected')
         $(this).addClass('selected')
@@ -745,17 +765,16 @@
 
   });
 
-  $('.accountSelector .accountItem').on('click', function (e) {
-    const txt = $(e.target).text();
-    // console.log(txt);
-    $('#fromAccount').html(txt)
-    state.accountSelector = !state.accountSelector;
-    if (state.accountSelector) {
-      overlayAccountSelector.style.display = 'block'
-    } else {
-      overlayAccountSelector.style.display = 'none'
-    }
-  })
+  // $('.accountSelector .accountItem').on('click', function (e) {
+  //   const txt = $(e.target).text();
+  //   $('#fromAccount').html(txt)
+  //   state.accountSelector = !state.accountSelector;
+  //   if (state.accountSelector) {
+  //     overlayAccountSelector.style.display = 'block'
+  //   } else {
+  //     overlayAccountSelector.style.display = 'none'
+  //   }
+  // })
 
   window.addEventListener('click', e => {
     // console.log(e.target);
