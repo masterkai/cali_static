@@ -720,7 +720,7 @@
         state.accountSelector = false;
         const filteredSelected = accountData.filter(item=>item.name===txt)
         // console.log('filteredSelected',filteredSelected);
-        accountData.map(item=>item.selected=false)
+        accountData.forEach(item=>item.selected=false)
         filteredSelected[0].selected= true
         // console.log(accountData);
         // console.log(accountData[index].value);
@@ -757,6 +757,7 @@
         const txt = $(e.target).text();
         $('#intoAccount').html(txt)
         $('.value2').text(`餘額：${accountData2[index].value}`)
+        accountData2.forEach(item=>item.selected=false)
         accountData2[index].selected = true
         $('.accountSelector2 .accountItem').removeClass('selected')
         $(this).addClass('selected')
