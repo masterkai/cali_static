@@ -32,3 +32,9 @@ $(function () {
     ]
   });
 });
+
+$(document).ready(function() {
+  $('.tip').tooltipster({
+    theme: 'tooltipster-borderless'
+  });
+});

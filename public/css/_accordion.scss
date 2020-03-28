@@ -1,228 +1,270 @@
-.accordion {
-  margin: 0 auto;
-  background: $border;
-  max-width: 1160px;
-  display: block;
-  list-style-type: none;
-  overflow: hidden;
-  height: $startPlayingHeight;
-  font-size: 0;
-}
-
-.tabs {
-  &:nth-child(odd){
-    background-image: $tab_odd;
-  }
-  &:nth-child(even){
-    background-image: $tab_odd;
-  }
-  display: inline-block;
-  background-color: $list;
-  //border-right: $border 1px solid;
-  width: 70px;
-  height: $startPlayingHeight;
-  overflow: hidden;
-  position: relative;
+ul {
+  display: inline-flex;
   margin: 0;
-  font-size: 16px;
-  border: 1px solid $color-mainYellow;
-  cursor: pointer;
-  @include transition( all 0.4s 0.1s ease-in-out );
-  &:nth-child(1){
-    &.active {
-      background-image: linear-gradient(
-                      180deg,
-                      #ff52f3 15%,
-                      #ffab6c 66%,
-                      #ffdfc7 100%
-      );
-    }
-    .iconBtn {
-      &:hover {
-        background-color: #ff52f3;
-        background-image: unset;
-      }
-      background-image: linear-gradient(
-                      1deg,
-                      rgba(255, 82, 243, 0.98) 0%,
-                      rgba(13, 0, 61, 0.33) 19%,
-                      rgba(31, 5, 121, 0.19) 45%,
-                      rgba(28, 0, 50, 0.12) 94%
-      );
-    }
+  padding: 0 0 30px;
+  @include breakpoint($large) {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 0;
   }
-  &:nth-child(2){
-    &.active {
-      background-image: linear-gradient(180deg, #2bffee 3%, #b0ffd3 100%);
-    }
-    .iconBtn {
-      &:hover {
-        background-color: #4ef0ff;
-        background-image: unset;
-      }
-      background-image: linear-gradient(
-                      1deg,
-                      rgba(78, 240, 255, 0.98) 0%,
-                      rgba(13, 0, 61, 0.33) 19%,
-                      rgba(31, 5, 121, 0.19) 45%,
-                      rgba(28, 0, 50, 0.12) 94%
-      );
-    }
-  }
-  &:nth-child(3){
-    &.active {
-      background-image: linear-gradient(180deg, #ff1e74 3%, #fb50ff 100%);
-    }
-    .iconBtn {
-      &:hover {
-        background-color: #ff1e74;
-        background-image: unset;
-      }
-      background-image: linear-gradient(
-                      1deg,
-                      rgba(255, 69, 124, 0.98) 0%,
-                      rgba(13, 0, 61, 0.33) 24%,
-                      rgba(31, 5, 121, 0.19) 45%,
-                      rgba(28, 0, 50, 0.12) 94%
-      );
-    }
-  }
-  &:nth-child(4){
-    &.active {
-      background-image: linear-gradient(180deg, #ffb60c 3%, #fff100 100%);
-    }
-    .iconBtn {
-      &:hover {
-        background-color: #ffc40e;
-        background-image: unset;
-      }
-      background-image: linear-gradient(
-                      1deg,
-                      rgba(255, 196, 14, 0.98) 0%,
-                      rgba(13, 0, 61, 0.33) 16%,
-                      rgba(31, 5, 121, 0.19) 45%,
-                      rgba(28, 0, 50, 0.12) 94%
-      );
-    }
-  }
-  &:nth-child(5){
-    &.active {
-      background-image: linear-gradient(180deg, #00adff 3%, #5cf7ff 100%);
-    }
-    .iconBtn {
-      &:hover {
-        background-color: #45bbff;
-        background-image: unset;
-      }
-      background-image: linear-gradient(
-                      1deg,
-                      rgba(69, 187, 255, 0.98) 0%,
-                      rgba(13, 0, 61, 0.33) 19%,
-                      rgba(31, 5, 121, 0.19) 45%,
-                      rgba(28, 0, 50, 0.12) 94%
-      );
-    }
-  }
-  &.active {
-    width: calc(100% - 280px);
 
-    .paragraph {
-      .iconBox {
-        display: flex;
-      }
-    }
-
-    .social-links {
-      position: relative;
-      p {
-        color: $color-black;
-      }
-    }
-  }
-  .social-links {
-    position: relative;
-
-    span {
-      @include breakpoint($large) {
-        //font-size: 2rem;
-      }
-      position: absolute;
-      top: 33px;
-      left: 2px;
-      color: #fff3a7;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      max-width: 64px;
-      font-size: 4rem;
-    }
-    p {
-      @include breakpoint($large) {
-        writing-mode: unset;
-        margin-bottom: 0;
-      }
-      left: 22px;
-      bottom: -210px;
-      height: 100px;
-      position: absolute;
-      font-size: 24px;
-      color: #fff3a7;
-      writing-mode: vertical-lr;
-    }
-  }
-  .paragraph {
-    position: relative;
-    width: calc(100% - 70px);
-    margin-left: 70px;
-    height: $startPlayingHeight;
-    background-size: 530px;
-    background-color: black;
-    background-position: -15px 50%;
-    background-repeat: no-repeat;
-    border-left: 1px solid $color-mainYellow;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    .iconBox {
-      @include breakpoint($large) {
-        flex-wrap: nowrap;
-      }
-      flex: 0 1 32%;
-      display: none;
-      align-items: center;
-      justify-content: center;
+  .tabs {
+    @include breakpoint($large) {
       flex-wrap: wrap;
-      background-color: black;
-      .iconBtn {
-        span {
-          &:hover {
-            color: white;
-            text-shadow: 1px 1px 3px black;
-            background: unset;
-            -webkit-background-clip: unset;
-            -webkit-text-fill-color: unset;
-          }
-          color: #a68322;
-          font-size: 6rem;
-          background: linear-gradient(
+      flex-direction: column;
+    }
+    display: flex;
+    flex-direction: row;
+    &:nth-child(1) {
+      .iconTab {
+        &.active {
+          background-image: linear-gradient(
                           180deg,
-                          #fdf8a2 3%,
-                          #f4d97a 47%,
-                          #eec462 100%
+                          #ff52f3 15%,
+                          #ffab6c 66%,
+                          #ffdfc7 100%
           );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          p {
+            color: black;
+          }
         }
+      }
+      .iconBtn {
+        &:hover {
+          background-color: #ff52f3;
+          background-image: unset;
+        }
+        background-image: linear-gradient(
+                        1deg,
+                        rgba(255, 82, 243, 0.98) 0%,
+                        rgba(13, 0, 61, 0.33) 19%,
+                        rgba(31, 5, 121, 0.19) 45%,
+                        rgba(28, 0, 50, 0.12) 94%
+        );
+      }
+    }
+    &:nth-child(2) {
+      .iconTab {
+        &.active {
+          background-image: linear-gradient(180deg, #2bffee 3%, #b0ffd3 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+      .iconBtn {
+        &:hover {
+          background-color: #4ef0ff;
+          background-image: unset;
+        }
+        background-image: linear-gradient(
+                        1deg,
+                        rgba(78, 240, 255, 0.98) 0%,
+                        rgba(13, 0, 61, 0.33) 19%,
+                        rgba(31, 5, 121, 0.19) 45%,
+                        rgba(28, 0, 50, 0.12) 94%
+        );
+      }
+    }
+    &:nth-child(3) {
+      .iconTab {
+        &.active {
+          background-image: linear-gradient(180deg, #ff1e74 3%, #fb50ff 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+      .iconBtn {
+        &:hover {
+          background-color: #ff1e74;
+          background-image: unset;
+        }
+        background-image: linear-gradient(
+                        1deg,
+                        rgba(255, 69, 124, 0.98) 0%,
+                        rgba(13, 0, 61, 0.33) 24%,
+                        rgba(31, 5, 121, 0.19) 45%,
+                        rgba(28, 0, 50, 0.12) 94%
+        );
+      }
+    }
+    &:nth-child(4) {
+      .iconTab {
+        &.active {
+          background-image: linear-gradient(180deg, #ffb60c 3%, #fff100 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+      .iconBtn {
+        &:hover {
+          background-color: #ffc40e;
+          background-image: unset;
+        }
+        background-image: linear-gradient(
+                        1deg,
+                        rgba(255, 196, 14, 0.98) 0%,
+                        rgba(13, 0, 61, 0.33) 16%,
+                        rgba(31, 5, 121, 0.19) 45%,
+                        rgba(28, 0, 50, 0.12) 94%
+        );
+      }
+    }
+    &:nth-child(5) {
+      .iconTab {
+        &.active {
+          background-image: linear-gradient(180deg, #8CFF0C 3%, #FFF100 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+      .iconBtn {
+        &:hover {
+          background-color: #45bbff;
+          background-image: unset;
+        }
+        background-image: linear-gradient(
+                        1deg,
+                        rgba(69, 187, 255, 0.98) 0%,
+                        rgba(13, 0, 61, 0.33) 19%,
+                        rgba(31, 5, 121, 0.19) 45%,
+                        rgba(28, 0, 50, 0.12) 94%
+        );
+      }
+    }
+    &:nth-child(6) {
+      .iconTab {
+        &.active {
+          background-image: linear-gradient(180deg, #00adff 3%, #5cf7ff 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+      .iconBtn {
+        &:hover {
+          background-color: #45bbff;
+          background-image: unset;
+        }
+        background-image: linear-gradient(
+                        1deg,
+                        rgba(69, 187, 255, 0.98) 0%,
+                        rgba(13, 0, 61, 0.33) 19%,
+                        rgba(31, 5, 121, 0.19) 45%,
+                        rgba(28, 0, 50, 0.12) 94%
+        );
+      }
+    }
+    .iconTab {
+      @include breakpoint($large) {
+        padding: 6px;
+        max-width: 100%;
+        justify-content: center;
+        flex-direction: row;
+        background-image: linear-gradient(0deg, #2f00d5 0%, #000000 100%);
+        flex: 0 0 auto;
+      }
+      padding: 20px;
+      border: 1px solid #f2f42d;
+      max-width: 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        @include breakpoint($large) {
+          writing-mode: unset;
+          margin-bottom: 0;
+        }
+        font-size: 24px;
+        color: #fff3a7;
+        writing-mode: vertical-lr;
+      }
+      span {
+        @include breakpoint($large) {
+          font-size: 2rem;
+          margin-bottom: unset;
+        }
+        margin-bottom: 10px;
+        color: #fff3a7;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        max-width: 64px;
+        font-size: 4rem;
+      }
+      cursor: pointer;
+      flex: 0 0 60px;
+      background-image: linear-gradient(0deg, #2f00d5 0%, #000000 100%);
+    }
 
+    .contentBox {
+      @include breakpoint($large) {
+        flex-direction: column;
+        max-width: 100%;
+      }
+      border: 1px solid #f2f42d;
+      flex: 1 1 auto;
+      background-color: black;
+      padding: 5px 0 5px 5px;
+      display: flex;
+      max-width: 800px;
+      justify-content: space-between;
+      align-items: center;
+
+      .contentIMG {
+        @include breakpoint($large) {
+          flex: 1 1 auto;
+          max-width: 100%;
+        }
+        flex: 1 1 68%;
+      }
+
+      .iconBox {
+        @include breakpoint($large) {
+          flex-wrap: nowrap;
+        }
+        flex: 1 1 32%;
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
-        flex: 0 1 25%;
-        max-height: 100px;
-        padding: 5px;
-        margin: 3px;
-        border: 1px solid $darkGray;
-        border-radius: 8px;
+        flex-wrap: wrap;
+        background-color: black;
+        .iconBtn {
+          span {
+            &:hover {
+              color: white;
+              text-shadow: 1px 1px 3px black;
+              background: unset;
+              -webkit-background-clip: unset;
+              -webkit-text-fill-color: unset;
+            }
+
+            color: #a68322;
+            font-size: 6rem;
+            background: linear-gradient(
+                            180deg,
+                            #fdf8a2 3%,
+                            #f4d97a 47%,
+                            #eec462 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          flex: 0 1 50%;
+          max-height: 100px;
+          padding: 20px 5px;
+          margin: 3px;
+          border: 1px solid $darkGray;
+          border-radius: 8px;
+        }
       }
     }
   }
