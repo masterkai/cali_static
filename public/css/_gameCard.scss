@@ -330,13 +330,19 @@
   flex-wrap: wrap;
   justify-content: space-between;
   .gameCard {
+    @include breakpoint($iphone){
+      flex: 0 1 100%;
+    }
+    @include breakpoint($ipad){
+      flex: 0 1 49%;
+    }
     height: 198px;
     padding: 20px;
     border-radius: 8px;
     background-position: center, left bottom, center;
     background-size: cover, contain, cover;
     background-repeat: no-repeat;
-    flex: 0 1 49%;
+    flex: 0 1 32%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

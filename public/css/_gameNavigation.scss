@@ -15,12 +15,13 @@
       margin-top: 20px;
     }
     img {
-      max-height: 160px;
+      max-width: 150px;
+      max-height: 150px;
     }
     &:hover {
       box-shadow: 0 0 20px $magenta;
     }
-    flex: 0 1 19%;
+    flex: 0 1 15.5%;
     position: relative;
     margin-bottom: 30px;
     display: flex;
@@ -28,8 +29,7 @@
     align-items: flex-end;
     background-position: center;
     background-size: cover;
-    flex: 0 1 19%;
-    height: 150px;
+    height: 125px;
     border-radius: 8px;
     p {
       @include breakpoint($ipad) {
@@ -40,7 +40,7 @@
       bottom: -30px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 1.625rem;
+      font-size: 1.25rem;
       color: #ffffff;
       letter-spacing: 0;
       text-align: center;
