@@ -1,7 +1,11 @@
 .userStateBar {
   .userStateColumn {
     .userLevel {
+      flex: 0 1 60%;
+      display: flex;
+      align-items: center;
       span {
+        font-size: .875rem;
         color: $mainRed;
       }
     }
