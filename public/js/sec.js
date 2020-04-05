@@ -10,8 +10,6 @@ $(function () {
   }
   const windowHeight = $(window).height()
   const STPH = $('.stratingPlayMobile').height()
-  console.log('STPH', STPH);
-  console.log('windowHeight', windowHeight);
   const marqueeBoxH = $('.marqueeBox').height()
   const fixedTopH = $('.fixed-top').height()
   const mainCarouselH = $('.mainCarousel').height()

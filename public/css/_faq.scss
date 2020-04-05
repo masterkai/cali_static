@@ -1,4 +1,4 @@
-.franchise {
+.faq {
   &Box {
     @include breakpoint($iphone) {
       padding: 20px;
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
 
-    .franchiseItem {
+    .faqItem {
       @include breakpoint($ipad) {
         flex: 1 1 100%;
       }
@@ -58,6 +58,7 @@
 
       ul {
         display: block;
+
         li {
           text-align: justify;
         }
@@ -67,14 +68,6 @@
         line-height: 1.6;
       }
 
-      .table {
-        color: $color-white;
-        margin-bottom: 1.28rem;
-
-        th, td {
-          text-align: center;
-        }
-      }
 
       .title {
         text-align: center;
@@ -90,18 +83,74 @@
   }
 
   &__intro {
-    @include breakpoint($iphone) {
-      padding: 20px;
+    &:last-child {
+      border-bottom: unset;
     }
+
+    @include breakpoint($iphone) {
+      padding: 0;
+    }
+    border-bottom: 1px solid rgba(255, 207, 26, 0.25);
     padding: 40px;
 
     .title {
+      @include breakpoint($iphone) {
+        font-size: 1.2rem;
+        margin-bottom: unset;
+      }
+
+      &:hover {
+        color: darken($color-mainYellow, 20%);
+        border: 1px solid $color-mainYellow;
+      }
+
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       color: $color-mainYellow;
       font-size: 1.5rem;
       margin-bottom: 15px;
+      cursor: pointer;
     }
 
     .desc {
+      @include breakpoint($iphone) {
+        font-size: .9rem;
+        text-align: justify;
+        padding: 20px;
+      }
+
+      &.active {
+        display: block;
+      }
+
+      display: none;
+
+      .subtitle {
+        font-size: 1.375rem;
+        color: $border;
+        margin: 20px 0 10px;
+      }
+
+      .table {
+        color: $color-white;
+        margin-bottom: 1.28rem;
+
+        th, td {
+          text-align: center;
+        }
+      }
+
+      ol {
+        li {
+          list-style: decimal;
+          margin-left: 20px;
+        }
+      }
+
       color: $color-white;
       line-height: 1.6;
     }

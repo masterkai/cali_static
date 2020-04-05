@@ -31,5 +31,16 @@ $(function () {
       }
     ]
   });
+
+  $('.hotPostCarousel').slick({
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    arrows: false,
+    fade: true,
+    speed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  })
 });
 

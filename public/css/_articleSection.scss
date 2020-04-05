@@ -1,0 +1,51 @@
+.articleSection {
+  @include breakpoint($ipad){
+    padding: 30px 20px 30px;
+  }
+  padding: 90px 20px 60px;
+  text-align: center;
+
+  .category {
+    font-size: 1rem;
+    color: $btn-purple;
+    padding: 10px 20px;
+    border: 1px solid $btn-purple;
+    max-width: 880px;
+    margin: 10px auto;
+  }
+
+  .article {
+    &__image {
+      height: 300px;
+      background-position: center top;
+      background-size: cover;
+      max-width: 880px;
+      margin: auto;
+    }
+    &__title {
+      max-width: 880px;
+      color: $color-mainYellow;
+      font-size: 2.1875rem;
+      font-weight: 300;
+      margin: 25px auto 10px;
+      line-height: 2.68rem;
+      text-align: center;
+    }
+
+    &__date {
+      color: $tab01;
+      padding: 10px 20px;
+    }
+    &__content {
+      max-width: 880px;
+      margin: 30px auto;
+      p {
+        text-align: left;
+        color: $color-white;
+        line-height: 1.875;
+        margin-bottom: 25px;
+      }
+    }
+
+  }
+}
