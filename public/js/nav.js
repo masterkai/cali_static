@@ -47,5 +47,5 @@ $(function () {
   const overLay = document.getElementsByClassName('overlay');
   const UPS = $('.UPS');
   const $window = $(window)
-  $window.on('click', e=>e.target.className === 'overlay'? UPS.hide(): false)
+  // $window.on('click', e=>e.target.className === 'overlay'? UPS.hide(): false)
 });

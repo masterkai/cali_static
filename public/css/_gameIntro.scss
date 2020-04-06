@@ -1,0 +1,47 @@
+.gameIntroSection {
+  display: flex;
+  .gameIntroNav {
+    flex: 0 1 25%;
+    ul {
+      li {
+
+      }
+    }
+    background-image: linear-gradient(225deg, #32C5FF 0%, #B620E0 51%, #F7B500 100%);
+    border-radius: 0 0 0 8px;
+    border-radius: 0px 0px 0px 8px;
+  }
+  .gameProviders {
+    flex: 0 1 75%;
+    display: flex;
+    flex-wrap: wrap;
+    .gameProvider {
+      &:hover {
+        background-image: linear-gradient(135deg, #B67377 0%, #372C2B 100%);
+        border: 1px solid rgba(247,181,0, 1);
+      }
+      flex: 1 1 33.33%;
+      height: 223px;
+      border: 1px solid rgba(247,181,0, .41);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: space-between;
+      span {
+        font-size: 6rem;
+        background: linear-gradient(
+                        180deg,
+                        #fdf8a2 3%,
+                        #f4d97a 47%,
+                        #eec462 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .providerName {
+        color: $color-mainYellow;
+      }
+    }
+  }
+}
