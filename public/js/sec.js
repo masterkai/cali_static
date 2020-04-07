@@ -18,7 +18,6 @@ $(function () {
     $('.stratingPlayMobile').height(STPH + 74 )
   } else if (windowHeight < 736 && windowHeight > 667) {
     $('.stratingPlayMobile').height(STPH + ($(window).height() - STPH ))
-    alert(windowHeight)
   }
   // else {
   //   $('.stratingPlayMobile').height(STPH + 64 + mainCarouselH)

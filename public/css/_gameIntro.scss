@@ -2,46 +2,120 @@
   display: flex;
   .gameIntroNav {
     flex: 0 1 25%;
-    ul {
-      li {
-
-      }
-    }
-    background-image: linear-gradient(225deg, #32C5FF 0%, #B620E0 51%, #F7B500 100%);
-    border-radius: 0 0 0 8px;
-    border-radius: 0px 0px 0px 8px;
-  }
-  .gameProviders {
-    flex: 0 1 75%;
     display: flex;
-    flex-wrap: wrap;
-    .gameProvider {
-      &:hover {
-        background-image: linear-gradient(135deg, #B67377 0%, #372C2B 100%);
-        border: 1px solid rgba(247,181,0, 1);
-      }
-      flex: 1 1 33.33%;
-      height: 223px;
-      border: 1px solid rgba(247,181,0, .41);
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      flex: 1 1 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
-      align-content: space-between;
-      span {
-        font-size: 6rem;
-        background: linear-gradient(
-                        180deg,
-                        #fdf8a2 3%,
-                        #f4d97a 47%,
-                        #eec462 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      align-content: center;
+      height: 100%;
+
+      li {
+        @include breakpoint($iphone){
+          font-size: 1rem;
+        }
+        &:hover {
+          color: $color-mainYellow;
+          background-color: rgba(0,0,0,.5);
+        }
+        &.active {
+          border-top: 1px solid rgba(247, 181, 0, .4);
+          border-right: 1px solid rgba(247, 181, 0, .4);
+          color: $color-mainYellow;
+          background-color: rgba(0,0,0,1);
+        }
+
+        padding: 10px;
+        flex: 0 1 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25rem;
+        color: $color-white;
+        //font-weight: 300;
       }
-      .providerName {
-        color: $color-mainYellow;
+    }
+
+    overflow: hidden;
+    background-image: linear-gradient(225deg, #32C5FF 0%, #B620E0 51%, #F7B500 100%);
+    border-radius: 0 0 0 8px;
+  }
+  .gameProvidersGroup {
+    flex: 0 1 75%;
+    .gameProviders {
+      &:first-child {
+        display: flex;
+      }
+
+      display: none;
+      flex-wrap: wrap;
+
+      .gameProvider {
+        @include breakpoint($ipad-Pro){
+          flex-wrap: wrap;
+          flex: 1 1 50%;
+          align-content: center;
+          height: auto;
+          padding: 20px;
+        }
+        @include breakpoint($ipad){
+          flex-wrap: wrap;
+          flex: 1 1 100%;
+          align-content: center;
+          height: auto;
+          padding: 20px;
+        }
+        @include breakpoint($iphone){
+          flex-wrap: wrap;
+          width: 100%;
+          flex: 1 1 100%;
+          align-content: center;
+          height: auto;
+          padding: 20px;
+        }
+
+        &:hover {
+          background-image: linear-gradient(135deg, #B67377 0%, #372C2B 100%);
+          border: 1px solid rgba(247, 181, 0, 1);
+        }
+
+        flex: 1 1 33.33%;
+        height: 223px;
+        border: 1px solid rgba(247, 181, 0, 0.4);
+        background-color: rgba(0,0,0,1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+
+        span {
+          font-size: 6rem;
+          background: linear-gradient(
+                          180deg,
+                          #fdf8a2 3%,
+                          #f4d97a 47%,
+                          #eec462 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .providerName {
+          color: $color-mainYellow;
+          @include breakpoint($ipad-Pro){
+            text-align: center;
+            line-height: 2;
+          }
+        }
       }
     }
   }
+
 }
