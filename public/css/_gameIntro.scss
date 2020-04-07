@@ -24,8 +24,8 @@
           background-color: rgba(0,0,0,.5);
         }
         &.active {
-          border-top: 1px solid rgba(247, 181, 0, .4);
-          border-right: 1px solid rgba(247, 181, 0, .4);
+          border-top: 1px solid rgba(247, 181, 0, 0);
+          border-right: 1px solid rgba(247, 181, 0, 0);
           color: $color-mainYellow;
           background-color: rgba(0,0,0,1);
         }
