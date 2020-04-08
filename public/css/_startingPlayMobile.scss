@@ -53,12 +53,34 @@ $bgWhite: white;
           transform: translateX(-50%);
         }
 
+        .raysBG {
+          position: absolute;
+          z-index: -1;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 180px;
+        }
 
         height: 222px;
         bottom: 0;
         position: absolute;
         left: 50%;
         transform: translateX(-50%)
+      }
+
+      .poker {
+        max-width: 130px;
+        top: -10px;
+        position: absolute;
+        right: -5%;
+      }
+
+      .coin {
+        max-width: 130px;
+        top: 20px;
+        position: absolute;
+        left: -5%;
       }
 
       .title {

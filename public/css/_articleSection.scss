@@ -14,14 +14,52 @@
     margin: 10px auto;
   }
 
-  .article {
-    &__image {
-      height: 300px;
-      background-position: center top;
-      background-size: cover;
-      max-width: 880px;
-      margin: auto;
+  h1.article__title {
+    max-width: 880px;
+    color: $color-mainYellow;
+    font-size: 2.1875rem;
+    font-weight: 300;
+    margin: 25px auto 10px;
+    line-height: 2.68rem;
+    text-align: center;
+  }
+  h2.article__title {
+    max-width: 880px;
+    color: $color-mainYellow;
+    font-size: 1.7321rem;
+    font-weight: 300;
+    margin: 25px auto 10px;
+    line-height: 2.68rem;
+    text-align: center;
+  }
+  h3.article__title {
+    .bar {
+      flex: 1 1 auto;
+      border: 1px solid $color-mainYellow;
+      height: 1px;
+      width: 100px;
     }
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 880px;
+    color: $color-mainYellow;
+    font-size: 1.3745em;
+    font-weight: 300;
+    margin: 25px auto 10px;
+    line-height: 2.68rem;
+    text-align: center;
+  }
+  h4.article__title {
+    max-width: 880px;
+    color: $color-mainYellow;
+    font-size: 1.12345em;
+    font-weight: 300;
+    margin: 25px auto 10px;
+    line-height: 2.68rem;
+    text-align: center;
+  }
+  .article {
     &__title {
       max-width: 880px;
       color: $color-mainYellow;
@@ -31,12 +69,30 @@
       line-height: 2.68rem;
       text-align: center;
     }
+    &__image {
+      @include breakpoint($iphone){
+        max-height: 150px;
+      }
+      height: 300px;
+      background-position: center top;
+      background-size: cover;
+      max-width: 880px;
+      margin: auto;
+    }
 
     &__date {
       color: $tab01;
       padding: 10px 20px;
     }
     &__content {
+      ul {
+        color: white;
+        line-height: 2;
+        text-align: left;
+        list-style: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
       max-width: 880px;
       margin: 30px auto;
       p {
