@@ -739,12 +739,32 @@
             <div class="stratingPlayMobile_1st">
                 <div
                         class="play01"
-                        style="background-image: url(https://cali.kai09191.now.sh/images/mobile/mainpage/BGpattern.jpg)"
+                        style="background-image: url(build/images/mobile/mainpage/BGpattern.jpg)"
                 >
-                    <img
-                            src="build/images/mobile/mainpage/Front01.png"
-                            alt=""
-                            class="img-responsive"
+                    <div class="fanBingBing">
+                        <img src="build/images/FanBingBing/body.png"
+                             alt=""
+                             class="img-responsive body"
+                        />
+                        <img src="build/images/FanBingBing/head.png"
+                             alt=""
+                             class="img-responsive head"
+                        />
+                        <div class="elbow">
+                            <img src="build/images/FanBingBing/elbow-joint.png"
+                                 alt=""
+                                 class="img-responsive"
+                            />
+                            <img src="build/images/FanBingBing/hand.png"
+                                 alt=""
+                                 class="img-responsive hand"
+                            />
+                        </div>
+
+                    </div>
+                    <img src="build/images/FanBingBing/title.png"
+                         alt=""
+                         class="img-responsive title"
                     />
                 </div>
                 <div class="play02">
@@ -2322,7 +2342,7 @@
         "icon": "baccarat",
         "tabName": "真人娛樂",
         "tabImage": "/images/startPlay/truePeople_photo.jpg",
-        "gameProvider": ["allbet", "Cali_logo", "DreamGaming", "WM", "SAgaming","Ezugi"]
+        "gameProvider": ["allbet", "Cali_logo", "DreamGaming", "WM", "SAgaming", "Ezugi"]
       },
       {
         "n": "1",
@@ -2477,7 +2497,7 @@
     e.target == modal ? modal.classList.remove('show-mobileModal') : false
   );
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     $('.tip').tooltipster({
       theme: 'tooltipster-borderless'
     });
