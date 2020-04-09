@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" style='font-family: "Microsoft YaHei","Noto Sans TC", sans-serif;'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
+    <title>ES6</title>
+
+    <!--=========================== CSS ===========================-->
+    <link
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="build/css/slick.css">
+    <link rel="stylesheet" href="build/css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="build/css/vendor.min.css">
+    <link rel="stylesheet" href="build/css/iconfont.css">
+    <link rel="stylesheet" href="build/css/styles.css?v=1.1">
+
+    <!--=========================== JS ===========================-->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="build/js/data-watermark.js"></script>
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            alert('很抱歉，目前本站瀏覽不支援IE9以下的瀏覽器，若看見版面跑掉，純屬正常狀況。');
+        });
+    </script>
+    <![endif]-->
+
+
+    <!--=========================== 思源黑體 ===========================-->
+    <!--<script src="https://use.typekit.net/mrp7iog.js"></script>
+    <script>try {
+        Typekit.load({async: true});
+    } catch (e) {
+    }</script>-->
+
+    <!--=========================== WOW ===========================-->
+    <script type="text/javascript" src="build/js/wow.min.js"></script>
+    <script type="text/javascript">new WOW().init();</script>
+
+</head>
+<body>
+<div class="displayDesktop">
+    <div class='headerBG'>
+        <form class='flexContainer'>
+            <div class='flex'>
+                <button
+                        style='margin-right: 5px;'
+                        type="button"
+                        class="btn btn-dark btn-sm"
+                >
+                    立即註冊&nbsp;
+                    <span
+                            class="iconfont icon_user-plus-light"
+                            style='color: white;'
+                    ></span>
+                </button>
+                <input
+                        style='margin-right: 5px;'
+                        type="text"
+                        class='input'
+                        placeholder="會員賬號"
+                />
+                <input
+                        style='margin-right: 5px;'
+                        type="text"
+                        class='input'
+                        placeholder="登入密碼"
+                />
+            </div>
+            <button
+                    style='margin-right: 5px;'
+                    type="button"
+                    class="btn btn-outline-dark btn-sm"
+            >
+                登入
+            </button>
+            <button type="button" class="btn btn-outline-dark btn-sm">
+                忘記密碼
+            </button>
+        </form>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <span class="iconfont icon_bars-light openBtn"></span>
+
+                <a href="/" class="navbar-brand logo">
+                    <img
+                            class="img-responsive logo"
+                            src="build/images/Cali_logo_02.png"
+                            alt=""
+                    />
+                </a>
+
+                <div class="collapse navbar-collapse">
+                    <div class="flexContainer">
+                        <div>
+                            <a
+                                    href="/online_baccarat"
+                                    class="nav-item nav-link"
+                                    style="padding: 0.5rem 0;"
+                            >
+                                真人娛樂
+                            </a>
+                        </div>
+
+                        <div>
+                            <a
+                                    href="/sports"
+                                    class="nav-item nav-link"
+                                    style="padding: 0.5rem 0;"
+                            >
+                                體育博彩
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                    href="/lottery"
+                                    class="nav-item nav-link"
+                                    style="padding: 0.5rem 0;"
+                            >
+                                賓果彩票
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                    href="/electronics"
+                                    class="nav-item nav-link"
+                                    style="padding: 0.5rem 0;"
+                            >
+                                電子遊戲
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                    href="/fish"
+                                    class="nav-item nav-link"
+                                    style="padding: 0.5rem 0;"
+                            >
+                                棋牌
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                    href="/promotions"
+                                    class="nav-item nav-link"
+                                    style="padding: 0.5rem 0;"
+                            >
+                                捕魚王
+                            </a>
+                        </div>
+                        <div style="position: relative">
+                            <a
+                                    href="/promotions"
+                                    class="nav-item nav-link menuToggle lv1Menu"
+                                    style="padding: 0.5rem 0;"
+                            >
+                                更多
+                            </a>
+                            <ul class="nav-menu-2 menu">
+                                <a class="text-black">優惠活動</a>
+                                <a class="text-black">玩家評價</a>
+                                <a class="text-black">存取流程</a>
+                                <a class="text-black">APP下載</a>
+                                <a class="text-black">代理加盟</a>
+                                <a class="text-black">關於卡利</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class='marqueeBox'>
+        <span class="iconfont icon_volume-up-solid"></span>
+
+        <div class='marqueeDeskTop'>
+            溫馨提示：尊敬的【卡利娛樂城】會員您好！
+            2020-01-08號天天返水最高1.8%，已經返回到您的遊戲賬號中，請您登入查收！轉賬到公司指定銀行卡，提交入款信息可得到次次存次次送1.3%入款優惠，謝謝。
+        </div>
+    </div>
+    <div class="mainBG">
+        <div class="container">
+            <div style="background-color: rgba(0,0,0,.65)">
+
+                <div class="articleSection">
+                    <div class="article__image"
+                         style="background-image: url(build/images/gameProvider/mg_gaming/MG_logo.png);background-size: contain;"></div>
+                    <h1 class="article__title">
+                        MG棋牌介紹
+                    </h1>
+                    <div class="article__content">
+                        <p>
+                            台灣團隊獨家開發<a href="https://777vip.net/card">MG棋牌</a>，是一款深受廣大玩家喜愛的線上競技棋牌遊戲，規則簡單，新手也能輕鬆上手暢玩，新穎獨特的遊戲玩法，歡樂開局，數據清晰，使用介面一目了然，且身為台灣人就要支持台灣的遊戲啊！
+
+                        </p>
+
+                    </div>
+                    <div class="article__box">
+                        <img src="build/images/gameProvider/mg_gaming/mg棋牌介紹.jpg" alt="" class="img-responsive">
+                        <div>
+                            <h2 class="article__title">MG棋牌特色</h2>
+                            <div class="article__content">
+                                <ol>
+                                    <li>
+                                        豐富賽事：擁有眾多比賽，趣味競技，豐厚競技。
+                                    </li>
+                                    <li>
+                                        完美細節體驗：快速開始、美聲配音、真實公平。
+                                    </li>
+                                    <li>
+                                        特色玩法：專為玩家打造，提供最正宗玩法。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="article__box">
+                        <div>
+                            <h2 class="article__title">
+                                MG棋牌遊戲規則
+                            </h2>
+                            <div class="article__content">
+                                <ol>
+                                    <li>倍數：叫地主玩法初始分為1分(叫分玩法初始分為最大叫分，乘以加倍的倍數)每出一個炸彈或者火箭翻一倍。(留在手裡沒有出去的火箭和炸彈不算)</li>
+                                    <li>春天：地主所有牌出完，而其餘兩家一張未出，分數X2。</li>
+                                    <li>反春天：農民其中一家先出完牌，而地主只出過一手牌，分數X2。</li>
+                                    <li>炸彈：每打出一個炸彈，分數X2。</li>
+                                    <li>火箭：火箭打出後，分數X2。</li>
+                                </ol>
+
+
+                            </div>
+                        </div>
+                        <img src="build/images/gameProvider/mg_gaming/MG棋牌-炸金花玩法.jpg" alt="" class="img-responsive">
+                    </div>
+
+                    <h3 class="article__title">
+                        <div class="bar"></div>
+                        MG棋牌遊戲炸金花玩法
+                        <div class="bar"></div>
+                    </h3>
+
+                    <div class="article__content">
+                        <p>炸金花為４人遊戲，由莊家發牌，每人擁有三張撲克牌。</p>
+                        <p>第一局莊家是由每人抽一張撲克牌來比大小而決定，
+                            第一局結束之後，贏的人就是下一局的莊家，以此模式循環。</p>
+
+                        <p>首先投注籌碼，每位玩家都要投注事先約定好的籌碼，以此來獲得本局的牌權。</p>
+
+                        <p>當莊家發完牌後，第一個玩家可以選擇不看牌下注或者是看牌下注，如果不看牌下注，那麼接下來的玩家可以不看牌的跟同樣的注碼，或者看牌之後加倍下注。</p>
+
+                        <p>
+                            在經過多輪的比較以後，只有最後剩下兩個玩家時才能比較大小，分出勝負。當最後兩個人比較大小時，如果兩個玩家的牌一樣，那麼誰先開誰的牌，那個人就輸了。本局所有的籌碼都歸最後的贏家，最終的贏家也會是下一輪的莊。</p>
+
+
+                    </div>
+
+
+                    <div class="outlineBtn" style="max-width: 880px;margin: 10px auto;">返回產品介紹頁</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class='sectionTitle'>
+                    <div class='titleGroup'>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                        <div class='subject' style='text-shadow: 0 2px 4px black;'>卡利合作娛樂品牌</div>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="iconBox">
+            <span
+                    class="iconfont icon_allbet"
+                    style='font-size: 7rem;'
+            ></span>
+                        <span class="iconfont icon_DreamGaming"></span>
+                        <span class="iconfont icon_WM" style='font-size: 4rem;'></span>
+                        <span class="iconfont icon_SAgaming" style='font-size: 5rem;'></span>
+                        <span class="iconfont icon_SUPER"></span>
+                        <span
+                                class="iconfont icon_AFBCash"
+                                style='font-size: 4rem;'
+                        ></span>
+                    </div>
+                    <div class="iconBox">
+                        <span class="iconfont icon_Klottery"></span>
+                        <span
+                                class="iconfont icon_SUPERbingo"
+                                style='font-size: 5rem;'
+                        ></span>
+                        <span
+                                class="iconfont icon_RTGslots"
+                                style='font-size: 4.8rem;'
+                        ></span>
+                        <span class="iconfont icon_betixion"></span>
+                        <span class="iconfont icon_betsoft"></span>
+                    </div>
+                </div>
+                <div class='sectionTitle'>
+                    <div class='titleGroup'>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                        <div class='subject' style='text-shadow: 0 2px 4px black;'>國際安全認證</div>
+                        <div style='flex: 1 1 10%;border: 1px solid #979797;'></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="securityLogoBox">
+                        <img
+                                src="./build/images/securityLogo/partner_logo_1.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_2.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_3.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_4.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_5.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_6.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_7.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                        <img
+                                src="./build/images/securityLogo/partner_logo_8.png"
+                                alt=""
+                                class="img-responsive"
+                        />
+                    </div>
+                </div>
+                <p>
+                    Copyright© 2019 Allbetgaming.com. All Rights Reserved.
+                    服務條款|隱私權保護政策
+                </p>
+
+                <div class="row">
+                    <div class="footerLink">
+                        <a href="/">娛樂城</a>
+                        |
+                        <a href="/">百家樂</a>
+                        |
+                        <a href="/">球版現金版</a>
+                        |
+                        <a href="/">電子拉霸</a>
+                        |
+                        <a href="/">鑫城賓果</a>
+                        |
+                        <a href="/">百家樂技巧教學</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='drawerBox'>
+        <div class="infoBox">
+            <p>在線客服</p>
+            <img src="build/images/qrCode.png" alt="" class="img-responsive"/>
+        </div>
+        <div class="infoBox">
+            <img
+                    src="build/images/line-messenger.svg"
+                    alt=""
+                    class="img-responsive"
+            />
+            <p>@888pi</p>
+        </div>
+        <div class="infoBox">
+            <p style="font-size: 0.85rem;">意見反饋 8888pipipi@gmail.com</p>
+        </div>
+        <div class="TrapezoidTag">
+            <div class="triangleBottomRight"></div>
+            <div class="triangleTopRight"></div>
+            <span class="iconfont iconHR"></span>
+            <p>聯系我們</p>
+        </div>
+
+    </div>
+
+    <div id="GOTOP">
+        <span class="iconfont iconchevron-up-solid"></span>
+    </div>
+
+</div>
+
+<div class="displayMobile">
+
+    <!--    使用者登入前  -->
+    <!--    <div class='fixed-top'>-->
+    <!--        <nav class='navbar navBarFlex' style="height: 55px">-->
+    <!--            <span class="iconfont icon_bars-light" style='margin-left: 10px;font-size: 1.625rem;'></span>-->
+
+    <!--            <a class='logo'>-->
+    <!--                <img-->
+    <!--                        class="img-responsive logo_m"-->
+    <!--                        src="build/images/Cali_logo_mobile.png"-->
+    <!--                        alt=""-->
+    <!--                />-->
+    <!--            </a>-->
+
+    <!--            <div class='btnGroup'>-->
+    <!--                <button-->
+    <!--                        type="button"-->
+    <!--                        class='btnOutLine'-->
+    <!--                >-->
+    <!--                    註冊-->
+    <!--                </button>-->
+    <!--                <button-->
+    <!--                        type="button"-->
+    <!--                        class='btnOutLine'-->
+    <!--                >-->
+    <!--                    登入-->
+    <!--                </button>-->
+    <!--            </div>-->
+
+    <!--        </nav>-->
+
+    <!--    </div>-->
+
+    <!--    使用者登入後  -->
+    <div class='fixed-top'>
+        <nav class='navbar navBarFlex' style="height: 55px;">
+              <span
+                      class="iconfont icon_chevron-left-light"
+                      style='margin-left: 10px;font-size: 1.625rem;'></span>
+            <div class='title'>9K Lottery</div>
+        </nav>
+        <div class="userStateBar">
+            <div class='userStateColumn'>
+                <div class='userInfo'>test123</div>
+                <div class='userLevel'>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-solid"></span>
+                    <span class="iconfont icon_star-light"></span>
+                    <span class="iconfont icon_star-light"></span>
+                    <span class="iconfont icon_star-light"></span>
+                </div>
+                <span class="iconfont icon_bell-light"></span>
+            </div>
+            <div class='userStateColumn'>
+                <span class="iconfont icon_usd-circle-light"></span>
+                <div class='userInfo'>250.00</div>
+                <div style="position: relative">
+                    <span class='iconfont icon_chevron-down-light menuToggle lv1Menu'></span>
+                    <div class='DDWallet nav-menu-2 DDW'>
+                        <div class='itemsBox'>
+                            <div class='item'>
+                                <div class="itemName">DG百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">歐博</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">沙龍百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">WM百家樂</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">卡利體育</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">Super體育博彩</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">AFB88</div>
+                                <div class='itemValue'>維護中</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">RTG天地</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">Betsoft</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">BTX</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">9K彩票</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                            <div class='item'>
+                                <div class="itemName">六合彩539</div>
+                                <div class='itemValue'>0</div>
+                            </div>
+                        </div>
+                        <div class='bottomBox'>
+                            <div class='sumBox'>
+                                <div>總額度</div>
+                                <div>250</div>
+                            </div>
+                            <button class="btn"
+                                    style='background-color:deepskyblue;color: white;border-radius: 20px'>
+                                全部轉回主帳戶
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mainBG" style="margin-top: 80px;">
+
+        <div class='mobileBox_nobg' style='height: auto;padding: 0 0 80px;'>
+
+            <div class="articleSection">
+                <h1 class="article__title">
+                    9K彩票-遊戲介紹
+                </h1>
+                <div class="article__content">
+                    <p>
+                        <a href="https://777vip.net/lottery">9K彩票遊戲</a>已有十年的經驗累積，彩票遊戲9K非常齊全，也很注重細節，不斷提出創新構想，這也是為什麼9K彩票系統在各個娛樂城都看的到的原因吧！
+                        我想<a href="https://777vip.net/">卡利娛樂城</a>營運商一定都希望自己的遊戲產品，是體驗多變且有趣的內容，更
+                        能擁有高品質產品的服務；那當然透過9K的團隊，不斷創新及研發，累積了豐
+                        富的經驗與技術，並具有最完整的產品服務，相信更能滿足兩方多變需求。
+
+                        現今不論在兩岸三地彩票類型，或是快速刺激bingo遊戲，眾多商品如雨後春筍
+                        般地推出，而今天小編為什麼特別介紹9K彩票遊戲？！因為彩票遊戲最齊全、
+                        玩法多元、賠率高、畫面精緻！讓我們進入重點，小編介紹大家9k彩票遊戲裡
+                        有哪些遊戲吧？！
+
+                    </p>
+                </div>
+                <h2 class="article__title">9K彩票遊戲有哪幾種遊戲呢？</h2>
+                <h3 class="article__title">
+                    <div class="bar"></div>
+                    北京賽車
+                    <div class="bar"></div>
+                </h3>
+                <div class="article__image"
+                     style="background-image: url(build/images/gameProvider/9k_lottery/北京賽車遊戲畫面.jpg)"></div>
+                <div class="article__content"><p><a href="https://tsa888.net/">北京賽車(PK10)</a>，又名為北京PK拾，是由中國北京省自立的國家福利的彩票遊
+                    戲。起初北京賽車一局5分鐘，但中國北京福利彩票於今年2019年02月11日發佈，
+                    北京賽車遊戲開獎時間大幅調整為20分鐘一局的遊戲模式，同時賠率也提升到
+                    9.85的高賠率！！</p>
+                </div>
+                <h4 class="article__title">北京賽車PK10時間</h4>
+
+                <div class="article__content">
+                    <p>為了因應時事，現在的北京賽車PK10有三種時間可進行遊戲，分別為：</p>
+                    <ul>
+                        <li>北京賽車PK10， 一場遊戲為20分鐘</li>
+                        <li>極速賽車PK10，一場遊戲為75秒</li>
+                        <li>高頻賽車PK10，一場遊戲為180秒</li>
+                    </ul>
+                    <p>小編認為光在遊戲時間上分為三個大類，是個很體貼玩家的遊戲商，讓喜
+                        愛玩競速類彩票遊戲的玩家，又有更多的選擇！</p>
+
+                </div>
+
+                <h4 class="article__title">北京賽車規則及玩法</h4>
+
+                <div class="article__content">
+                    <p>
+                        這裡小編還是要對玩家說，北京賽車雖分為三種時間，但遊戲規則及玩法還是
+                        一樣的！
+                    </p>
+                    <p>PK10的意思為一至十個號碼，這字代表不同款式及顏色的賽車。</p>
+                    <p>遊戲開獎的時間和結果與官方嚴格對應。如遇以下情況，遊戲平臺有權取消或廢除開獎：</p>
+                    <ul>
+                        <li>官方長時間內未能得出開獎結果。</li>
+                        <li>系統停止下注前，已公佈官方開獎結果。</li>
+                    </ul>
+                </div>
+                <div class="article__title">
+                    北京賽車PK10玩法
+                </div>
+                <div class="article__content">
+                    <p>一、猜車號（車號指定）1~10名：</p>
+                    <p>每一個車號為一個組合，開獎結果「車號」對應「車道」視為中獎，其餘情形
+                        視為不中獎。</p>
+
+                    <p>二、猜大、小、單、雙1~10名：</p>
+                    <p>第1~10名車號，開出的號碼大於或等於6為大；小於或等於5為小。號碼偶數為
+                        雙， 如2、4；號碼奇數為單 如7、9。</p>
+
+                    <p>三、猜組合1~10名：</p>
+                    <p>有四種組合，「大單」、「小雙」、「小單」、「大雙」。</p>
+
+                    <p>四、猜龍虎1~5名：有五組，分別為</p>
+                    <p>前比後大為「龍」；後比前大為「虎」。第1名vs第10名、第2名vs第9名、第3
+                        名vs第8名、第4名vs第7名、第5名vs第6名。
+                        例如：冠軍”的車號大於”第十名”的車號稱作「龍」、如果小於則為「虎」。</p>
+
+                    <p>五、冠亞猜莊閒：</p>
+                    <p>冠軍車號「大於」亞軍車號為莊，反之為閒。</p>
+
+                    <p>六、猜冠亞號碼：</p>
+                    <p>猜冠軍及亞軍車號，每次競猜2個號碼，順序不限。</p>
+
+                    <p>七、冠亞和值猜大、小、單、雙：</p>
+                    <p>冠軍車號+亞軍車號=冠亞和值，數字3~19，冠亞和值大於或等於12為大；小於
+                        或等於11為小。開出的號碼偶數為雙；號碼奇數為單。
+                        例如：投注冠、亞軍和值選項為雙，比賽結果的冠軍車號為9，亞軍車號為4，
+                        冠、亞軍車號相加的和值為13，所以結果就是13、大、單，與投注的選項相符
+                        合時視為中獎。</p>
+
+                    <p>八、冠亞和值猜數字：</p>
+                    <p>「冠亞和值」可能出現結果為數字3~19，對應「冠亞和值」的數字視為中獎，
+                        其餘視為不中獎。</p>
+
+                    <p>九、冠亞和值猜區段：</p>
+                    <ul>「冠亞和值」
+                        <li>1.3~7為A段。</li>
+                        <li>2.8~14為B段。</li>
+                        <li>3.15~19為C段。</li>
+                    </ul>
+                </div>
+                <h3 class="article__title">
+                    <div class="bar"></div>
+                    幸運飛艇
+                    <div class="bar"></div>
+                </h3>
+                <div class="article__image"
+                     style="background-image: url(build/images/gameProvider/9k_lottery/幸運飛艇畫面.png)"></div>
+                <div class="article__content">
+                    <p>幸運飛艇，英文為「Lucky-Airship」。相信喜愛玩彩票遊戲的玩家對幸運飛艇一
+                        定不陌生！幸運飛艇是很多朋友都非常喜歡的一個彩票遊戲，它是由馬耳他共
+                        和國所發行的高頻福利彩票。
+
+                    </p>
+                    <p>幸運飛艇起源於F1賽艇的彩票遊戲，遊戲是由十架飛艇作為開獎號碼，五分鐘
+                        為一個開獎週期，賠率就比北京賽車略為低一點9.7高賠率。讓玩家在購彩的同
+                        時，仿佛享受在海域中的“競賽”。</p>
+                </div>
+                <h3 class="article__title">
+                    <div class="bar"></div>
+                    Bingo Bingo
+                    <div class="bar"></div>
+                </h3>
+                <div class="article__image"
+                     style="background-image: url(build/images/gameProvider/9k_lottery/BINGO遊戲畫面.jpg)"></div>
+                <h4 class="article__title">Bingo Bingo 玩法及規則說明</h4>
+                <div class="article__content">
+                    <p>遊戲分為兩種玩法：一般玩法及超級獎號玩法</p>
+                    <p>Bingo Bingo遊戲天天開獎，全年無休，每日開獎時間為07:00-24:00，每五分鐘
+                        開獎一次，每天開獎204期。</p>
+                    <p>Bingo Bingo總球數為80個號碼，每次開出20個號碼，最後一顆開出球號即為超
+                        級獎號。</p>
+                    <p>Bingo Bingo遊戲絕對公平公正，所有開獎號碼均比照台灣彩卷Bingo Bingo開獎
+                        結果。</p>
+                    <p>超級玩法：</p>
+                    <p>超級猜大小：</p>
+                    <p>超級獎號01-40為小，41-80為大。</p>
+                    <p>超級猜單雙：</p>
+                    <p>超級獎號為單數時為單(如01, 03, 05…)，超級獎號為雙數時為雙(如02, 04, 06…)。</p>
+                    <p>一般玩法：</p>
+                    <p>選號玩法：</p>
+                    <p>你可以任意選擇顆星的玩法(稱為1星，2星，3星…)</p>
+                    <p>猜大小玩法：</p>
+                    <p>您可以選擇大或小任一邊進行投注。
+                        當01-40的球號開出數量大於或等於13顆時，該其結果為小。
+                        當41-80的球號開出數量大於或等於13顆時，該其結果為大。</p>
+                    <p>猜單雙：</p>
+                    <p>單：單數號碼開出的數目將等於或多於13個號碼。
+                        雙：雙數號碼開出的數目將等於或多於13個號碼。
+                        小單：單數號碼開出的數目將等於11或12個號碼。
+                        小雙：雙數號碼開出的數目將等於11或12個號碼。
+                        和：單數與雙數號碼各開出10個號碼。</p>
+
+                </div>
+                <div class="outlineBtn" style="max-width: 880px;margin: 10px auto;">返回產品介紹頁</div>
+            </div>
+        </div>
+
+    </div>
+
+    <nav class='navbar fixed-bottom BottomNav'>
+        <a href="/platform_transfer">
+            <span class='iconfont icon_Transfer'></span>
+            平台轉帳
+        </a>
+        <a href="/promotions">
+            <span class='iconfont icon_gift-solid'></span>
+            最新優惠
+        </a>
+        <a href="/promotions">
+            <span class='iconfont icon_sack-dollar-solid'></span>
+            在線提款
+        </a>
+        <a href="/customer_service">
+            <span class='iconfont iconHR'></span>
+            在線客服
+        </a>
+        <a href="/">
+            <span class='iconfont icon_user-solid'></span>
+            會員中心
+        </a>
+    </nav>
+</div>
+
+
+<script type="application/javascript"
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
+<script type="application/javascript" src="build/js/jquery.marquee.min.js"></script>
+<script type="application/javascript" src="build/js/scripts.min.js?v=1.1"></script>
+
+</body>
+</html>
