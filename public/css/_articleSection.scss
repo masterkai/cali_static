@@ -98,8 +98,9 @@
       text-align: center;
     }
     &__image {
-      @include breakpoint($iphone){
+      @include breakpoint(max-width 500px){
         max-height: 150px;
+        height: 150px;
       }
       height: 300px;
       background-position: center top;
