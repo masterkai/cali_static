@@ -9,15 +9,17 @@ $(function () {
     $('.mobileBox_nobg').css('height', 'auto')
   }
   const windowHeight = $(window).height()
-  const STPH = $('.stratingPlayMobile').height()
+  const STPH = $('.startingPlayMobile').height()
   const marqueeBoxH = $('.marqueeBox').height()
   const fixedTopH = $('.fixed-top').height()
   const mainCarouselH = $('.mainCarousel').height()
   const totalH = marqueeBoxH + fixedTopH + mainCarouselH
-  if (STPH < windowHeight) {
-    $('.stratingPlayMobile').height(STPH + 74 )
+  const $startingPlay = document.getElementsByClassName('startingPlayMobile')
+  // console.log($startingPlay[0].style.display==='flex');
+  if (STPH < windowHeight && $startingPlay[0].style.display === 'flex') {
+    $('.startingPlayMobile').height(STPH + 74)
   } else if (windowHeight < 736 && windowHeight > 667) {
-    $('.stratingPlayMobile').height(STPH + ($(window).height() - STPH ))
+    $('.startingPlayMobile').height(STPH + ($(window).height() - STPH))
   }
   // else {
   //   $('.stratingPlayMobile').height(STPH + 64 + mainCarouselH)

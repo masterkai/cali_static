@@ -1,7 +1,7 @@
 $margin: 0;
 $bgWhite: white;
-.stratingPlayMobile {
-  display: flex;
+.startingPlayMobile {
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -62,25 +62,29 @@ $bgWhite: white;
           height: 180px;
         }
 
+        .pokerCoin {
+          z-index: 10;
+          max-width: 230px;
+          left: -11px;
+          top: -50px;
+          transform: translateX(-50%);
+          position: absolute;
+          right: -21%;
+        }
+
+        .coin {
+          z-index: 10;
+          max-width: 130px;
+          top: -20px;
+          position: absolute;
+          left: -18%;
+        }
+
         height: 222px;
         bottom: 0;
         position: absolute;
         left: 50%;
         transform: translateX(-50%)
-      }
-
-      .poker {
-        max-width: 130px;
-        top: -10px;
-        position: absolute;
-        right: -5%;
-      }
-
-      .coin {
-        max-width: 130px;
-        top: 20px;
-        position: absolute;
-        left: -5%;
       }
 
       .title {
@@ -105,11 +109,41 @@ $bgWhite: white;
         background-position: center;
         position: relative;
 
-        img {
-          height: 130px;
-          bottom: 0;
+        .title {
+          height: 35px;
+          right: 3px;
+          bottom: 10px;
           position: absolute;
+          z-index: 2;
         }
+        .stage {
+          border-radius: 8px;
+          overflow: hidden;
+          height: 200px;
+          max-width: 185.39px;
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 0px;
+          position: absolute;
+          .lebron {
+            height: 142px;
+            left: 50%;
+            transform: translateX(-46%);
+            bottom: 0px;
+            position: absolute;
+            z-index: 1;
+          }
+          .startBG {
+            height: 142px;
+            left: 50%;
+            transform: translateX(-58%);
+            bottom: -16px;
+            position: absolute;
+            z-index: 0;
+          }
+        }
+
       }
 
       &_2 {
@@ -118,11 +152,57 @@ $bgWhite: white;
         background-position: center;
         position: relative;
 
-        img {
-          height: 130px;
-          right: -6px;
-          bottom: 0;
+        .title {
+          height: 35px;
+          right: 3px;
+          bottom: 10px;
           position: absolute;
+          z-index: 2;
+        }
+
+        .stage {
+          border-radius: 8px;
+          overflow: hidden;
+          height: 141px;
+          max-width: 185.39px;
+          width: 110%;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 0px;
+          position: absolute;
+          .roullet {
+            height: 126px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0px;
+            position: absolute;
+            z-index: 0;
+          }
+          .chips {
+            height: 132px;
+            left: 50%;
+            transform: translateX(-51%);
+            bottom: 4px;
+            position: absolute;
+            z-index: 4;
+          }
+          .poker {
+            height: 115px;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0px;
+            position: absolute;
+            z-index: 1;
+          }
+          .Jackpot {
+            height: 100px;
+            left: 50%;
+            transform: translateX(-47%);
+            bottom: 27px;
+            position: absolute;
+            z-index: 2;
+          }
         }
       }
     }
@@ -136,11 +216,64 @@ $bgWhite: white;
       background-position: center;
       position: relative;
 
-      img {
-        height: 145px;
-        right: 0;
-        bottom: 0;
+      .title {
+        height: 38px;
+        right: 5px;
+        bottom: 3px;
         position: absolute;
+        z-index: 2;
+      }
+
+      .stage {
+        border-radius: 8px;
+        overflow: hidden;
+        height: 141px;
+        max-width: 185.39px;
+        width: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
+        position: absolute;
+        .lotteryTicket01 {
+          height: 126px;
+          left: 50%;
+          transform: translateX(-74%);
+          bottom: 15px;
+          position: absolute;
+          z-index: 0;
+        }
+        .lotteryTicket02 {
+          height: 132px;
+          left: 50%;
+          transform: translateX(-44%);
+          bottom: 6px;
+          position: absolute;
+          z-index: 1;
+        }
+        .ColoredBalls_N3 {
+          height: 63px;
+          left: 50%;
+          transform: translateX(-30%);
+          bottom: 30px;
+          position: absolute;
+          z-index: 1;
+        }
+        .ColoredBalls_N5 {
+          height: 100px;
+          left: 50%;
+          transform: translateX(-93%);
+          bottom: 14px;
+          position: absolute;
+          z-index: 2;
+        }
+        .coins {
+          height: 67px;
+          left: 50%;
+          transform: translateX(-47%);
+          bottom: 3px;
+          position: absolute;
+          z-index: 2;
+        }
       }
     }
 
@@ -151,11 +284,49 @@ $bgWhite: white;
       background-position: center;
       position: relative;
 
-      img {
-        height: 145px;
-        right: 0px;
-        bottom: 0;
+      .title {
+        height: 38px;
+        right: 5px;
+        bottom: 3px;
         position: absolute;
+        z-index: 2;
+      }
+
+      .stage {
+        border-radius: 8px;
+        overflow: hidden;
+        height: 141px;
+        max-width: 185.39px;
+        width: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
+        position: absolute;
+        .pufferfish {
+          height: 79px;
+          left: 50%;
+          transform: translateX(5%);
+          bottom: 2px;
+          position: absolute;
+          z-index: 0;
+        }
+        .shark {
+          height: 134px;
+          left: 50%;
+          transform: translateX(-64%);
+          bottom: 6px;
+          position: absolute;
+          z-index: 1;
+        }
+        .nimo {
+          height: 63px;
+          left: 50%;
+          transform: translateX(-113%);
+          bottom: 2px;
+          position: absolute;
+          z-index: 2;
+        }
+
       }
     }
 
@@ -176,11 +347,81 @@ $bgWhite: white;
       background-size: cover;
       background-position: center;
 
-      img {
-        height: 145px;
-        right: 20px;
-        bottom: 0;
+      .title {
+        height: 42px;
+        right: 5px;
+        top: 3px;
         position: absolute;
+        z-index: 10;
+      }
+
+      .stage {
+        border-radius: 8px;
+        overflow: hidden;
+        height: 150px;
+        max-width: 385px;
+        width: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
+        position: absolute;
+        .man {
+          height: 275px;
+          right: 3%;
+          transform: translateX(-5%);
+          bottom: -131px;
+          position: absolute;
+          z-index: 4;
+        }
+        .beauty {
+          height: 207px;
+          left: 17%;
+          transform: translateX(-50%);
+          bottom: -60px;
+          position: absolute;
+          z-index: 8;
+        }
+        .Mahjong {
+          height: 63px;
+          left: 50%;
+          transform: translateX(-110%);
+          bottom: 2px;
+          position: absolute;
+          z-index: 8;
+        }
+        .card01 {
+          height: 133px;
+          left: 50%;
+          transform: translateX(-10%);
+          bottom: -25px;
+          position: absolute;
+          z-index: 3;
+        }
+        .card02 {
+          height: 140px;
+          left: 50%;
+          transform: translateX(-33%);
+          bottom: -25px;
+          position: absolute;
+          z-index: 2;
+        }
+        .card03 {
+          height: 140px;
+          left: 50%;
+          transform: translateX(-60%);
+          bottom: -25px;
+          position: absolute;
+          z-index: 1;
+        }
+        .card04 {
+          height: 130px;
+          left: 50%;
+          transform: translateX(-90%);
+          bottom: -19px;
+          position: absolute;
+          z-index: 0;
+        }
+
       }
     }
 

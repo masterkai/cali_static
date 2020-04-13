@@ -38,12 +38,13 @@
   }
   .btnGroup {
     display: flex;
-    max-width: 96px;
+    max-width: 116px;
     width: 100%;
     justify-content: space-between;
     .btnOutLine {
+      flex: 0 1 48%;
       border: 1px solid $lightYellow;
-      padding: 5px 8px;
+      padding: 8px;
       border-radius: 4px;
       white-space: nowrap;
       font-size: 0.85rem;
