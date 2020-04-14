@@ -1,11 +1,12 @@
 $(function () {
   $('.mainCarousel').slick({
+    lazyLoad: 'progressive',
     autoplay: true,
     dots: true,
     infinite: true,
     arrows: false,
     fade: true,
-    speed: 3000,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1
   });
