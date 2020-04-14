@@ -46,26 +46,26 @@
       .to($pokerCoin, 10, {scale: 1.2, autoAlpha: 1, transformOrigin: 'center'}, 0.02)
       .to($elbow, 2, {transformOrigin: '9.5px 104px 0', autoAlpha: 1, onComplete: bowElbow}, 0.02)
       .to($body, 2, {autoAlpha: 1, onComplete: bowTheHead}, 0.02)
-      .to($raysBG, 2, {scale: 1.2, autoAlpha: 1, onComplete: zoomRay}, 0.02)
+      // .to($raysBG, 2, {scale: 1, autoAlpha: 1, onComplete: zoomRay},0.02)
 
 
     function bowTheHead() {
       const bowHeadTl = new TimelineMax({repeat: -1, repeatDelay: 2.5});
       bowHeadTl
         .to($head, 2, {rotation: -2, ease: Power4.easeInOut})
-        .to($head, 2, {rotation: 5, ease: Power4.easeInOut})
-        .to($head, 2, {rotation: -5, ease: Power4.easeInOut})
-        .to($head, 2, {rotation: 5, ease: Power4.easeInOut})
+        .to($head, 2, {rotation: 2, ease: Power4.easeInOut})
+        .to($head, 2, {rotation: -2, ease: Power4.easeInOut})
+        .to($head, 2, {rotation: 2, ease: Power4.easeInOut})
         .to($head, 2, {rotation: 0, ease: Power4.easeInOut})
     }
 
     function bowElbow() {
       const bowElbowTl = new TimelineMax({repeat: -1, repeatDelay: 2.5})
       bowElbowTl
-        .to($elbow, 2, {rotation: -10, ease: Power4.easeInOut})
-        .to($elbow, 2, {rotation: 10, ease: Power4.easeInOut})
-        .to($elbow, 2, {rotation: -20, ease: Power4.easeInOut})
-        .to($elbow, 2, {rotation: 10, ease: Power4.easeInOut})
+        .to($elbow, 2, {rotation: -2.5, ease: Power4.easeInOut})
+        .to($elbow, 2, {rotation: 2.5, ease: Power4.easeInOut})
+        .to($elbow, 2, {rotation: -5, ease: Power4.easeInOut})
+        .to($elbow, 2, {rotation: 2.5, ease: Power4.easeInOut})
         .to($elbow, 2, {rotation: 0, ease: Power4.easeInOut})
     }
 

@@ -16,8 +16,8 @@ $(function () {
   const totalH = marqueeBoxH + fixedTopH + mainCarouselH
   const $startingPlay = document.getElementsByClassName('startingPlayMobile')
   // console.log($startingPlay[0].style.display==='flex');
-  if (STPH < windowHeight && $startingPlay[0].style.display === 'flex') {
-    $('.startingPlayMobile').height(STPH + 74)
+  if (STPH < windowHeight ) {
+    $('.startingPlayMobile').height(STPH + 88)
   } else if (windowHeight < 736 && windowHeight > 667) {
     $('.startingPlayMobile').height(STPH + ($(window).height() - STPH))
   }

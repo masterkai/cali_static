@@ -1,4 +1,38 @@
 .BottomNav {
+  .btnGroup {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    .btnOutLine {
+      span {
+        font-size: 1.6rem;
+      }
+      cursor: pointer;
+      &--bgRed {
+        height: 75px;
+        border: none;
+        background-image: linear-gradient(to bottom,#ff3c00 0%,#7d0000 100%);
+      }
+      &--bgYellow {
+        color: $color-black;
+        height: 75px;
+        border: none;
+        background-image: linear-gradient(
+                        180deg,
+                        #fdf8a2 3%,
+                        #f4d97a 47%,
+                        #eec462 100%
+        );;
+      }
+      flex: 1 1 50%;
+      color: $mainText;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   a {
     &:active {
       color: #ffcf4c;
@@ -34,7 +68,8 @@
   justify-content: space-around;
   align-items: center;
   bottom: 0;
-  height: 64px;
+  height: 75px;
+  padding: 0;
   background-image: linear-gradient(
                   270deg,
                   #402f80 0%,

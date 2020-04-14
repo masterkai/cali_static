@@ -69,6 +69,7 @@
         display: flex;
         justify-content: space-between;
         button {
+          padding: 10px;
           flex: 0 1 49%;
         }
       }
@@ -110,7 +111,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 100%;
-  width: 320px;
+  width: 90%;
 }
 
 .close-btn {
@@ -253,6 +254,10 @@ input[type='submit'] {
   .formGroup {
     .userAccount,
     .userPassword {
+      input {
+        padding: 30px;
+      }
+      margin-bottom: 15px!important;
       position: relative;
     }
 
