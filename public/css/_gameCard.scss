@@ -522,11 +522,49 @@
   }
 
   &__mobile {
+    &--quarter{
+      padding: 20px 20px 80px;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .gameCard--quarter {
+        padding: 12px 6px;
+        margin-bottom: 15px;
+        flex: 0 1 25%;
+        background-repeat: no-repeat;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        .outlineBtn {
+          white-space: nowrap;
+        }
+        span {
+          color: white;
+          background-image: linear-gradient(
+                          to bottom,
+                          #ff4e50 0%,
+                          #f9d423 51%,
+                          #ff4e50 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 6rem;
+          line-height: 6rem;
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+
+      }
+    }
     flex-direction: column;
     padding: 20px 20px 80px;
     height: 100%;
 
     .gameCard {
+
       .hot {
         position: absolute;
         left: 10px;
@@ -583,6 +621,7 @@
   justify-content: space-between;
 
   .gameCard {
+
     .hot {
       position: absolute;
       left: 10px;
