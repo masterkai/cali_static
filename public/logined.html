@@ -111,10 +111,13 @@
                 ></span>
             </div>
             <div class="userInfo" style="margin-left: 20px">歡迎test123</div>
-            <span
-                    class="iconfont icon_usd-circle-light"
-                    style="margin-left: 20px"
-            ></span>
+            <!--            <span-->
+            <!--                    class="iconfont icon_usd-circle-light"-->
+            <!--                    style="margin-left: 20px"-->
+            <!--            ></span>-->
+            <svg class="icon" style="margin-left: 20px;">
+                <use xlink:href="#icon_usd-circle-light"></use>
+            </svg>
             <div class="userInfo" style="margin-left: 20px;margin-right: 20px">
                 250.00
             </div>
@@ -189,43 +192,50 @@
             </div>
             <span
                     id="openWallet"
-                    class="iconfont icon_wallet-light tip"
+                    class="iconfont icon_wallet-light tip ml30"
                     title="電子錢包"
-                    style="margin-left: 20px"
-            ></span>
-            <svg id="recommendBtn" class="icon tip" aria-hidden="true" style="margin-left: 20px" title="會員推薦">
-                <use xlink:href="#icon_thumbs-up-light"></use>
-            </svg>
+            ><span class="text" style="left: -38%;">電子錢包</span></span>
+            <span id="recommendBtn"
+                  class="iconfont icon_thumbs-up-light ml30"
+                  aria-hidden="true"
+                  title="會員推薦"
+            >
+                <span class="text" style="left: -38%;">會員推薦</span>
+            </span>
             <span
                     id="modifyProfileBtn"
-                    class="iconfont icon_user-alt-light tip"
+                    class="iconfont icon_user-alt-light tip ml30"
                     title="變更資料"
-                    style="margin-left: 20px"
-            ></span>
+            ><span class="text" style="left: -38%;">變更資料</span>
+            </span>
             <span
                     id="betRecordsBtn"
-                    class="iconfont icon_coins-light tip"
+                    class="iconfont icon_coins-light tip ml30"
                     title="投注記錄"
-                    style="margin-left: 20px"
-            ></span>
+            >
+                <span class="text" style="left: -38%;">投注記錄</span>
+            </span>
             <span
                     id="bonusRecordsBtn"
-                    class="iconfont icon_gift-light tip"
-                    title="優惠紀錄"
-                    style="margin-left: 20px"
-            ></span>
+                    class="iconfont icon_gift-light tip ml30"
+                    title="各廳流水"
+            >
+                <span class="text" style="left: -38%;">各廳流水</span>
+            </span>
             <span
                     id="memberNotificationBtn"
-                    class="iconfont icon_bell-light tip"
+                    class="iconfont icon_bell-light tip ml30"
                     title="會員通知"
-                    style="margin-left: 20px"
-            ></span>
+            >
+                <span class="text" style="left: -38%;">會員通知</span>
+            </span>
 
             <span
-                    class="iconfont icon_sign-out-light tip"
+                    class="iconfont icon_sign-out-light tip ml30"
                     title="登出"
-                    style="margin-left: 20px"
-            ></span>
+            >
+                <span class="text" style="left: 5%;">登出</span>
+            </span>
         </div>
     </div>
 
@@ -334,25 +344,16 @@
     <div class="mainBG">
         <div class="mainCarousel">
             <img
-                    src="build/images/banner/banner01.png"
+                    data-lazy="build/images/banner/banner01.png"
                     alt=""
                     class="img-responsive"
             />
             <img
-                    src="build/images/banner/banner02.jpg"
+                    data-lazy="build/images/banner/banner02.jpg"
                     alt=""
                     class="img-responsive"
             />
-            <img
-                    src="build/images/banner/banner03.jpg"
-                    alt=""
-                    class="img-responsive"
-            />
-            <img
-                    src="build/images/banner/banner04.jpg"
-                    alt=""
-                    class="img-responsive"
-            />
+
         </div>
 
         <div class="container">
@@ -1376,18 +1377,18 @@
                             <div class="formGroup">
                                 <form class="formPanel">
                                     <div class="form-group row formGroupCenter" id="bankCreditCardCheck">
-                                      <div class="form-check" style="margin: 0 10px 10px">
-                                        <input id="creditCard" type="radio" name="creditCard">
-                                        <label class="form-check-label" for="creditCard" style="color: #fff;">
-                                          信用卡
-                                        </label>
-                                      </div>
-                                      <div class="form-check" style="margin: 0 10px 10px">
-                                        <input id="bank" type="radio" name="bank">
-                                        <label class="form-check-label" for="bank" style="color: #fff;">
-                                          銀行
-                                        </label>
-                                      </div>
+                                        <div class="form-check" style="margin: 0 10px 10px">
+                                            <input id="creditCard" type="radio" name="creditCard">
+                                            <label class="form-check-label" for="creditCard" style="color: #fff;">
+                                                信用卡
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="margin: 0 10px 10px">
+                                            <input id="bank" type="radio" name="bank">
+                                            <label class="form-check-label" for="bank" style="color: #fff;">
+                                                銀行
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <div class="form-group row">
@@ -2744,7 +2745,7 @@
         "icon": "baccarat",
         "tabName": "真人娛樂",
         "tabImage": "/images/startPlay/truePeople_photo.jpg",
-        "gameProvider": ["allbet", "Cali_logo", "DreamGaming", "WM", "SAgaming","Ezugi"]
+        "gameProvider": ["allbet", "Cali_logo", "DreamGaming", "WM", "SAgaming", "Ezugi"]
       },
       {
         "n": "1",
@@ -2950,7 +2951,7 @@
     );
   });
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     $('.tip').tooltipster({
       theme: 'tooltipster-borderless'
     });

@@ -209,7 +209,18 @@
   }
 
   &__status {
+    .ml30 {
+      margin-left: 30px;
+    }
     span {
+      .text {
+        position: absolute;
+        white-space: nowrap;
+        font-size: .687rem;
+        bottom: -68%;
+      }
+      position: relative;
+      transform: translateY(-5px);
       font-size: 1.6rem;
       cursor: pointer;
     }
