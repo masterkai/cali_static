@@ -21,7 +21,7 @@
     clearTl
       .set($fanBIngBing, {autoAlpha: 0})
       .set($body, {autoAlpha: 1})
-      .set($elbow, {autoAlpha: 0})
+      .set($elbow, {autoAlpha: 1})
       .set($raysBG, {autoAlpha: 0})
       .set($pokerCoin, {autoAlpha: 0, scale: 0.5})
       .set($head, {autoAlpha: 1, onComplete: showContainer})
@@ -42,10 +42,10 @@
     const stuffTl = new TimelineMax();
     stuffTl
       .to($fanBIngBing, 2, {scale: 1.2, autoAlpha: 0}, 0.02)
-      .to($head, 2, {transformOrigin: '60px 114px 0'}, 0.02)
+      .to($head, 2, {transformOrigin: '60px 114px 0'})
       .to($pokerCoin, 10, {scale: 1.2, autoAlpha: 1, transformOrigin: 'center'}, 0.02)
-      .to($elbow, 2, {transformOrigin: '9.5px 104px 0', autoAlpha: 1, onComplete: bowElbow}, 0.02)
-      .to($body, 2, {autoAlpha: 1, onComplete: bowTheHead}, 0.02)
+      .to($elbow, 2, {transformOrigin: '9.5px 104px 0', autoAlpha: 1, onComplete: bowElbow})
+      .to($body, 2, {autoAlpha: 1, onComplete: bowTheHead}, 0.02);
       // .to($raysBG, 2, {scale: 1, autoAlpha: 1, onComplete: zoomRay},0.02)
 
 
