@@ -18,17 +18,11 @@
     flex-direction: row;
     &:nth-child(1) {
       .iconTab {
-        &.active {
-          background-image: linear-gradient(
-                          180deg,
-                          #ff52f3 15%,
-                          #ffab6c 66%,
-                          #ffdfc7 100%
-          );
-          p {
-            color: black;
-          }
+        @include breakpoint($large){
+          border-radius: 5px 5px 0 0;
         }
+        border-radius: 5px 0 0 5px;
+
       }
       .iconBtn {
         &:hover {
@@ -46,11 +40,13 @@
     }
     &:nth-child(2) {
       .iconTab {
-        &.active {
-          background-image: linear-gradient(180deg, #2bffee 3%, #b0ffd3 100%);
-          p {
-            color: black;
+        span{
+          @include breakpoint($large){
+            font-size: 2rem;
+            line-height: 2rem;
           }
+          font-size: 3rem;
+          line-height: 4rem;
         }
       }
       .iconBtn {
@@ -69,11 +65,13 @@
     }
     &:nth-child(3) {
       .iconTab {
-        &.active {
-          background-image: linear-gradient(180deg, #ff1e74 3%, #fb50ff 100%);
-          p {
-            color: black;
+        span{
+          @include breakpoint($large){
+            font-size: 2rem;
+            line-height: 2rem;
           }
+          font-size: 3rem;
+          line-height: 4rem;
         }
       }
       .iconBtn {
@@ -92,11 +90,13 @@
     }
     &:nth-child(4) {
       .iconTab {
-        &.active {
-          background-image: linear-gradient(180deg, #ffb60c 3%, #fff100 100%);
-          p {
-            color: black;
+        span{
+          @include breakpoint($large){
+            font-size: 2rem;
+            line-height: 2rem;
           }
+          font-size: 3rem;
+          line-height: 4rem;
         }
       }
       .iconBtn {
@@ -115,11 +115,13 @@
     }
     &:nth-child(5) {
       .iconTab {
-        &.active {
-          background-image: linear-gradient(180deg, #8CFF0C 3%, #FFF100 100%);
-          p {
-            color: black;
+        span{
+          @include breakpoint($large){
+            font-size: 2rem;
+            line-height: 2rem;
           }
+          font-size: 3rem;
+          line-height: 4rem;
         }
       }
       .iconBtn {
@@ -138,12 +140,18 @@
     }
     &:nth-child(6) {
       .iconTab {
-        &.active {
-          background-image: linear-gradient(180deg, #00adff 3%, #5cf7ff 100%);
-          p {
-            color: black;
-          }
+        @include breakpoint($large){
+          border-radius: 0 0 5px 5px;
         }
+        span{
+          @include breakpoint($large){
+            font-size: 2rem;
+            line-height: 2rem;
+          }
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+        border-radius: 0 5px 5px 0;
       }
       .iconBtn {
         &:hover {
@@ -160,16 +168,51 @@
       }
     }
     .iconTab {
+      @include breakpoint($large){
+        background-image: url(../../build/images/patternBG_l.png),url(../../build/images/patternBG_r.png),linear-gradient(to bottom, #bfbfbf 0%,#616161 48%,#000000 48%,#000000 100%);
+        background-size: contain;
+        background-position: left, right;
+        box-sizing: content-box;
+        border-width: 2px;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, #ffffff 0%,#ffe5a0 47%,#ffe5a0 48%,#341607 48%,#381607 56%,#c79346 83%,#ffeab5 100%);
+        border-image-slice: 1;
+      }
+      &.active {
+        @include breakpoint($large){
+          background-image: url(../../build/images/patternBG_l.png),url(../../build/images/patternBG_r.png),linear-gradient(to bottom, #bfbfbf 0%,#616161 48%,#000000 48%,#000000 100%);
+          background-size: contain;
+          background-position: left, right;
+          box-sizing: content-box;
+          border-width: 2px;
+          border-style: solid;
+          border-image: linear-gradient(to bottom, #ffffff 0%,#ffe5a0 47%,#ffe5a0 48%,#341607 48%,#381607 56%,#c79346 83%,#ffeab5 100%);
+          border-image-slice: 1;
+        }
+        border: unset;
+        background-image: url(../../build/images/itemTag.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        p {
+          color: $mainText;
+          text-shadow: 0px 0px 3px rgba(0,0,0,.8);
+        }
+      }
       @include breakpoint($large) {
         padding: 6px;
         max-width: 100%;
         justify-content: center;
         flex-direction: row;
-        background-image: linear-gradient(0deg, #2f00d5 0%, #000000 100%);
+        //background-image: linear-gradient(0deg, #2f00d5 0%, #000000 100%);
         flex: 0 0 auto;
       }
       padding: 20px;
-      border: 1px solid #f2f42d;
+      background-image: url(../../build/images/itemTag.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       max-width: 64px;
       display: flex;
       flex-direction: column;
@@ -181,6 +224,7 @@
           margin-bottom: 0;
         }
         font-size: 24px;
+        text-shadow: 0px 0px 3px rgba(0,0,0,.8);
         color: #fff3a7;
         writing-mode: vertical-lr;
       }
@@ -188,6 +232,7 @@
         @include breakpoint($large) {
           font-size: 2rem;
           margin-bottom: unset;
+          text-shadow: 0px 0px 3px rgba(0,0,0,.8);
         }
         margin-bottom: 10px;
         color: #fff3a7;
@@ -197,7 +242,7 @@
       }
       cursor: pointer;
       flex: 0 0 60px;
-      background-image: linear-gradient(0deg, #2f00d5 0%, #000000 100%);
+      //background-image: linear-gradient(0deg, #2f00d5 0%, #000000 100%);
     }
 
     .contentBox {
