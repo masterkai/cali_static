@@ -63,6 +63,10 @@ $bgWhite: white;
         }
 
         .pokerCoin {
+          @include breakpoint($iphone8){
+            max-width: 210px;
+            left: -5px;
+          }
           z-index: 10;
           max-width: 230px;
           left: -11px;
@@ -70,14 +74,6 @@ $bgWhite: white;
           transform: translateX(-50%);
           position: absolute;
           right: -21%;
-        }
-
-        .coin {
-          z-index: 10;
-          max-width: 130px;
-          top: -20px;
-          position: absolute;
-          left: -18%;
         }
 
         height: 222px;
@@ -187,6 +183,9 @@ $bgWhite: white;
             z-index: 4;
           }
           .poker {
+            @include breakpoint($iphone8){
+              width: 90%;
+            }
             height: 115px;
             width: 100%;
             left: 50%;
@@ -293,6 +292,9 @@ $bgWhite: white;
       }
 
       .stage {
+        @include breakpoint($iphone8){
+          max-width: 168px;
+        }
         border-radius: 8px;
         overflow: hidden;
         height: 141px;
@@ -374,6 +376,9 @@ $bgWhite: white;
           z-index: 4;
         }
         .beauty {
+          @include breakpoint($iphone8){
+            left: 20%;
+          }
           height: 207px;
           left: 17%;
           transform: translateX(-50%);
