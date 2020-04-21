@@ -28,8 +28,8 @@ $bgWhite: white;
         }
 
         .head {
-          height: 240px;
-          top: -78px;
+          height: 220px;
+          top: -70px;
           position: absolute;
           left: 78%;
           transform: translateX(-50%);
@@ -46,10 +46,10 @@ $bgWhite: white;
           img {
             height: 100%;
           }
-          height: 115px;
-          bottom: 53px;
+          height: 105px;
+          bottom: 50px;
           position: absolute;
-          left: 68%;
+          left: 67%;
           transform: translateX(-50%);
         }
 
@@ -76,8 +76,9 @@ $bgWhite: white;
           right: -21%;
         }
 
-        height: 222px;
+
         bottom: 0;
+        height: 212px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%)

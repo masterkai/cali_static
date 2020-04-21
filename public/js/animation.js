@@ -42,7 +42,7 @@
     const stuffTl = new TimelineMax();
     stuffTl
       .to($fanBIngBing, 2, {scale: 1.2, autoAlpha: 0}, 0.02)
-      .to($head, 2, {transformOrigin: '60px 114px 0'})
+      .to($head, 2, {transformOrigin: '60px 94px 0'})
       .to($pokerCoin, 10, {scale: 1.2, autoAlpha: 1, transformOrigin: 'center'}, 0.02)
       .to($elbow, 2, {transformOrigin: '9.5px 104px 0', autoAlpha: 1, onComplete: bowElbow})
       .to($body, 2, {autoAlpha: 1, onComplete: bowTheHead}, 0.02);
