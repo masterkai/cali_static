@@ -1,4 +1,7 @@
 .caliLocation {
+  @include breakpoint($iphone){
+    flex-direction: column;
+  }
   max-width: 1030px;
   margin: 0 auto 30px;
   display: flex;
@@ -58,17 +61,28 @@
   }
 
   &__nav {
+    @include breakpoint($iphone){
+      border-radius: 8px 8px 0 0;
+      flex-direction: row;
+    }
     .tag {
       br {
         display: none;
         @include breakpoint($ipad){
           display: block;
         }
+        @include breakpoint($iphone){
+          display: none;
+        }
       }
 
       @include breakpoint($ipad){
         font-size: 1.0rem;
         line-height: 1.6;
+      }
+      @include breakpoint($iphone){
+        padding: 15px 0;
+        text-shadow: 2px 1px 6px rgba(0,0,0,0.8);
       }
       &.active {
         color: $color-mainYellow;
