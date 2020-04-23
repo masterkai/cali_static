@@ -52,6 +52,16 @@ $(function () {
     slidesToScroll: 1
   });
 
+  const header = document.querySelector('#header');
+  const topOfHeader = header.offsetTop;
+  function fixNav() {
+    if(window.scrollY >= topOfHeader) {
+      document.body.classList.add('fixed-nav')
+    }else {
+      document.body.classList.remove('fixed-nav')
+    }
+  }
 
+  window.addEventListener('scroll', fixNav)
 });
 
