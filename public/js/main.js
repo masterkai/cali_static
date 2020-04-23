@@ -8,7 +8,15 @@ $(function () {
     fade: true,
     speed: 1000,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          dots: false
+        }
+      }
+    ]
   });
 
   $('.bonusCarousel').slick({
