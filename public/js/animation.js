@@ -5,7 +5,6 @@
   const $fanBIngBing = $('.fanBIngBing'),
     $startingPlayMobile = $('.startingPlayMobile'),
     $head = $('.fanBingBing .head'),
-    $raysBG = $('.raysBG'),
     $body = $('.fanBingBing .body'),
     $elbow = $('.fanBingBing .elbow'),
     $pokerCoin = $('.fanBingBing .pokerCoin')
@@ -22,7 +21,6 @@
       .set($fanBIngBing, {autoAlpha: 0})
       .set($body, {autoAlpha: 1})
       .set($elbow, {autoAlpha: 1})
-      .set($raysBG, {autoAlpha: 0})
       .set($pokerCoin, {autoAlpha: 0, scale: 0.5})
       .set($head, {autoAlpha: 1, onComplete: showContainer})
 
@@ -46,7 +44,6 @@
       .to($pokerCoin, 10, {scale: 1.2, autoAlpha: 1, transformOrigin: 'center'}, 0.02)
       .to($elbow, 2, {transformOrigin: '9.5px 104px 0', autoAlpha: 1, onComplete: bowElbow})
       .to($body, 2, {autoAlpha: 1, onComplete: bowTheHead}, 0.02);
-      // .to($raysBG, 2, {scale: 1, autoAlpha: 1, onComplete: zoomRay},0.02)
 
 
     function bowTheHead() {
@@ -69,14 +66,7 @@
         .to($elbow, 2, {rotation: 0, ease: Power4.easeInOut})
     }
 
-    function zoomRay() {
-      const zoomRayTl = new TimelineMax({repeat: -1})
-      zoomRayTl
-        .to($raysBG, 2, {scale: .6, autoAlpha: .2, rotation: -10, ease: Power4.easeInOut})
-        .to($raysBG, 2, {scale: 1.2, autoAlpha: 1, rotation: 10, ease: Power4.easeInOut})
-        .to($raysBG, 2, {scale: .6, autoAlpha: .2, rotation: -20, ease: Power4.easeInOut})
-        .to($raysBG, 2, {scale: 1.0, autoAlpha: 1, rotation: 10, ease: Power4.easeInOut})
-    }
+
 
     return stuffTl
   }

@@ -50,6 +50,8 @@ $(function () {
     speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1
-  })
+  });
+
+
 });
 
