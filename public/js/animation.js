@@ -59,7 +59,7 @@
     }
 
     function startBlinking() {
-      const birdBlinkTl = new TimelineMax({repeat:-1,repeatDelay:2})
+      const birdBlinkTl = new TimelineMax({repeat:-1,repeatDelay:5})
       birdBlinkTl
         .set($closedEye, {autoAlpha: 1})
         .set($closedEye, {autoAlpha: 0}, '+=0.2')
