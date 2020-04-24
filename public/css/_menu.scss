@@ -17,8 +17,8 @@
   justify-content: space-between;
   background-color: #d8d8d8;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-  width: 164px;
-  height: 238px;
+  width: 120px;
+  height: auto;
   position: absolute;
   padding: 25px;
   border-radius: 3px;
@@ -26,6 +26,9 @@
   left: -20px;
 
   a {
+    &:last-child {
+      margin-bottom: 0;
+    }
     &:hover {
       color: #75006c;
     }
@@ -35,5 +38,6 @@
     }
     cursor: pointer;
     color: $mainBK;
+    margin-bottom: 15px;
   }
 }

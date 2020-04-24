@@ -2,7 +2,7 @@
   .flexContainer {
     @include breakpoint($large) {
       justify-content: center !important;
-      align-items: unset;
+      align-items: center;
       max-width: 100%;
     }
     .flex {

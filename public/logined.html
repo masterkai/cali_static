@@ -87,109 +87,34 @@
             <div class="userLevel" style="color: #F70000">
             <span
                     class="iconfont icon_star-solid"
-                    style="font-size: 1.2rem"
             ></span>
                 <span
                         class="iconfont icon_star-solid"
-                        style="font-size: 1.2rem"
                 ></span>
                 <span
                         class="iconfont icon_star-solid"
-                        style="font-size: 1.2rem"
                 ></span>
                 <span
                         class="iconfont icon_star-light"
-                        style="font-size: 1.2rem"
                 ></span>
                 <span
                         class="iconfont icon_star-light"
-                        style="font-size: 1.2rem"
                 ></span>
                 <span
                         class="iconfont icon_star-light"
-                        style="font-size: 1.2rem"
                 ></span>
             </div>
-            <div class="userInfo" style="margin-left: 20px">歡迎test123</div>
-            <!--            <span-->
-            <!--                    class="iconfont icon_usd-circle-light"-->
-            <!--                    style="margin-left: 20px"-->
-            <!--            ></span>-->
-            <svg class="icon" style="margin-left: 20px;">
+            <div class="userInfo">歡迎test123</div>
+            <svg class="icon">
                 <use xlink:href="#icon_usd-circle-light"></use>
             </svg>
-            <div class="userInfo" style="margin-left: 20px;margin-right: 20px">
+            <svg class="icon">
+                <use xlink:href="#icon_Transfer"></use>
+            </svg>
+            <div class="userInfo userInfo--amount">
                 250.00
             </div>
-            <div style="position:relative;cursor: pointer">
-            <span
-                    class="menuToggle lv1Menu iconfont icon_chevron-down-light"
-            ></span>
-                <div class="DDWallet nav-menu-2 DDW" style="right: -15px;">
-                    <div class="itemsBox">
-                        <div class="item">
-                            <div class="itemName">DG百家樂</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">歐博</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">沙龍百家樂</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">WM百家樂</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">任你博體育</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">Super體育博彩</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">AFB88</div>
-                            <div class="itemValue">維護中</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">RTG天地</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">Betsoft</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">BTX</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">9K彩票</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                        <div class="item">
-                            <div class="itemName">六合彩539</div>
-                            <div class="itemValue">0</div>
-                        </div>
-                    </div>
-                    <div class="bottomBox">
-                        <div class="sumBox">
-                            <div>總額度</div>
-                            <div>250</div>
-                        </div>
-                        <button
-                                class="btn"
-                                style="background-color:deepskyblue;color: white;border-radius: 20px"
-                        >
-                            全部轉回主帳戶
-                        </button>
-                    </div>
-                </div>
-            </div>
+
             <span
                     id="openWallet"
                     class="iconfont icon_wallet-light tip ml30"
@@ -231,7 +156,7 @@
             </span>
 
             <span
-                    class="iconfont icon_sign-out-light tip ml30"
+                    class="iconfont icon_sign-out-light tip ml60"
                     title="登出"
             >
                 <span class="text" style="left: 5%;">登出</span>
@@ -240,7 +165,7 @@
     </div>
 
     <header id="header">
-        <div class="container">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <span class="iconfont icon_bars-light openBtn"></span>
 
@@ -309,6 +234,15 @@
                                 捕魚王
                             </a>
                         </div>
+                        <div>
+                            <a
+                                    href="/promotions"
+                                    class="nav-item nav-link"
+                                    style="padding: 0.5rem 0;"
+                            >
+                                優惠活動
+                            </a>
+                        </div>
                         <div style="position: relative">
                             <a
                                     href="/promotions"
@@ -318,7 +252,6 @@
                                 更多
                             </a>
                             <ul class="nav-menu-2 menu">
-                                <a class="text-black">優惠活動</a>
                                 <a class="text-black">賽事影城</a>
                                 <a class="text-black">玩家評價</a>
                                 <a class="text-black">存取流程</a>
@@ -803,6 +736,7 @@
                         alt=""
                 />
             </a>
+            <span class="iconfont iconHR"><div>客服</div></span>
         </nav>
         <div class="userStateBar">
             <div class="userStateColumn">
@@ -821,10 +755,11 @@
                 <span class="iconfont icon_usd-circle-light"></span>
                 <div class="userInfo">250.00</div>
                 <div style="position: relative">
-              <span
-                      class="iconfont icon_chevron-down-light menuToggle lv1Menu"
-              ></span>
-                    <div class="DDWallet nav-menu-2 DDW">
+                    <div class="DDWalletMobile">
+                        <span class="iconfont icon_chevron-down-light"></span>
+                    </div>
+
+                    <div class="DDWallet DDW">
                         <div class="itemsBox">
                             <div class="item">
                                 <div class="itemName">DG百家樂</div>
@@ -986,11 +921,7 @@
                                     alt=""
                                     class="img-responsive lebron"
                             />
-                            <img
-                                    src="build/images/sports/startBG.png"
-                                    alt=""
-                                    class="img-responsive startBG"
-                            />
+
                         </div>
                     </div>
                     <div
@@ -1142,89 +1073,92 @@
             </div>
         </div>
     </div>
+
     <nav class="navbar fixed-bottom BottomNav">
-        <a href="/platform_transfer">
-            <span class="iconfont icon_Transfer"></span>
-            平台轉帳
-        </a>
-        <a href="/promotions">
-            <span class="iconfont icon_gift-solid"></span>
-            最新優惠
-        </a>
-        <div style="position:relative;cursor: pointer">
-            <a href="/promotions" class="menuToggle lv1Menu">
-                <span class="iconfont icon_sack-dollar-solid"></span>
-                在線提款
+        <div class='btnGroup btnGroup--panel'>
+            <img src="build/images/circle_btn_cali.png" alt="" class="img-responsive home">
+
+            <a href="/platform_transfer">
+                <span class="iconfont icon_Transfer"></span>
+                平台轉帳
             </a>
-            <div class="nav-menu-2 UPS">
-                <div class="overlay"></div>
-                <div class="UpSwitch">
-                    <a href="/deposit">
-                        <p>
+            <a href="/promotions">
+                <span class="iconfont icon_gift-solid"></span>
+                最新優惠
+            </a>
+            <div style="width: 68px;"></div>
+            <div style="position:relative;cursor: pointer">
+                <a href="/promotions" class="onlineWithdraw">
+                    <span class="iconfont icon_sack-dollar-solid"></span>
+                    在線提款
+                </a>
+                <div class="UPS">
+                    <div class="overlay"></div>
+                    <div class="UpSwitch">
+                        <a href="/deposit">
+                            <p>
                   <span
                           class="iconfont icon_turnIN1"
                           style="color: #077F64"
                   ></span>
-                            存款專區
-                        </p>
-                    </a>
-                    <a href="/withdrawals">
-                        <p>
+                                存款專區
+                            </p>
+                        </a>
+                        <a href="/withdrawals">
+                            <p>
                   <span
                           class="iconfont icon_turnOUT1"
                           style="color: #FA6400"
                   ></span>
-                            提款專區
+                                提款專區
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="position:relative;">
+                <a href="/" class="memberCenter">
+                    <span class="iconfont icon_user-solid"></span>
+                    會員中心
+                </a>
+                <div class="UpMenu UPM">
+                    <a href="/edit_user_info">
+                        <p>
+                            <span class="iconfont icon_user-alt-light"></span>
+                            變更資料
+                        </p>
+                    </a>
+                    <a href="/transaction_records">
+                        <p>
+                            <span class="iconfont icon_file-invoice-dollar-light"></span>
+                            交易記錄
+                        </p>
+                    </a>
+                    <a href="/bet_records">
+                        <p>
+                            <span class="iconfont icon_coins-light"></span>
+                            投注記錄
+                        </p>
+                    </a>
+                    <a href="/bonus_records">
+                        <p>
+                            <span class="iconfont icon_gift-light"></span>
+                            優惠記錄
+                        </p>
+                    </a>
+                    <a href="/recommendation">
+                        <p>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon_thumbs-up-light"></use>
+                            </svg>
+                            會員推薦
                         </p>
                     </a>
                 </div>
             </div>
         </div>
-        <a href="/customer_service">
-            <span class="iconfont iconHR"></span>
-            在線客服
-        </a>
-        <div style="position:relative;">
-            <a href="/" class="menuToggle lv1Menu">
-                <span class="iconfont icon_user-solid"></span>
-                會員中心
-            </a>
-            <div class="UpMenu nav-menu-2 UPM">
-                <a href="/edit_user_info">
-                    <p>
-                        <span class="iconfont icon_user-alt-light"></span>
-                        變更資料
-                    </p>
-                </a>
-                <a href="/transaction_records">
-                    <p>
-                        <span class="iconfont icon_file-invoice-dollar-light"></span>
-                        交易記錄
-                    </p>
-                </a>
-                <a href="/bet_records">
-                    <p>
-                        <span class="iconfont icon_coins-light"></span>
-                        投注記錄
-                    </p>
-                </a>
-                <a href="/bonus_records">
-                    <p>
-                        <span class="iconfont icon_gift-light"></span>
-                        優惠記錄
-                    </p>
-                </a>
-                <a href="/recommendation">
-                    <p>
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon_thumbs-up-light"></use>
-                        </svg>
-                        會員推薦
-                    </p>
-                </a>
-            </div>
-        </div>
     </nav>
+
 </div>
 
 <div class="mobile-nav-menu subMenu ani">
