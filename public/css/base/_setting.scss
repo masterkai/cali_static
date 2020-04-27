@@ -90,3 +90,21 @@ h6 {
   fill: currentColor;
   overflow: hidden;
 }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../build/css/iconfont.eot');
+  src: url('../../build/css/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../../build/css/iconfont.woff2') format('woff2'),
+  url('../../build/css/iconfont.woff') format('woff'),
+  url('../../build/css/iconfont.ttf') format('truetype'),
+  url('../../build/css/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

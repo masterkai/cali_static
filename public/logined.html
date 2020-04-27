@@ -19,6 +19,12 @@
     />
     <link
             rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous"
+    />
+    <link
+            rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
     />
     <link
@@ -871,10 +877,7 @@
                         style="background-image: url(build/images/mobile/mainpage/BGpattern.jpg)"
                 >
                     <div class="fanBingBing">
-                        <!--                        <img src="build/images/FanBingBing/coin.png"-->
-                        <!--                             alt=""-->
-                        <!--                             class="img-responsive coin"-->
-                        <!--                        />-->
+
                         <img src="build/images/FanBingBing/poker&coin.png"
                              alt=""
                              class="img-responsive pokerCoin"
@@ -883,10 +886,17 @@
                              alt=""
                              class="img-responsive body"
                         />
-                        <img src="build/images/FanBingBing/head.png"
-                             alt=""
-                             class="img-responsive head"
-                        />
+                        <div class="head">
+                            <img src="build/images/FanBingBing/eye_closed.png"
+                                 alt=""
+                                 class="img-responsive eye_closed"
+                            />
+                            <img src="build/images/FanBingBing/head.png"
+                                 alt=""
+                                 class="img-responsive head_main"
+                            />
+
+                        </div>
                         <div class="elbow">
                             <img src="build/images/FanBingBing/elbow-joint.png"
                                  alt=""
@@ -897,7 +907,6 @@
                                  class="img-responsive hand"
                             />
                         </div>
-
                     </div>
                     <img src="build/images/FanBingBing/title.png"
                          alt=""
@@ -2279,7 +2288,7 @@
     </div>
 </div>
 
-<div class="mobileModal-container" id="modal_memberNotification">
+<div class="mobileModal-container show-mobileModal" id="modal_memberNotification">
     <div class="mobileModal mobileModal--memberNotification">
         <div class="close-btn" id="close_memberNotification">
             <span class="iconfont icon_times-light"></span>
@@ -2307,16 +2316,15 @@
     height: 50px;"
                         >
                             <div style="display: flex;align-items: center;">
-                                <input type="checkbox" style="margin-right: 10px;"/>
+                                <span class="iconfont icon_chevron-down-light"
+                                      style="font-size: 1rem; color: #9BA2AA;margin-right: 10px;"
+                                ></span>
                                 <div style="font-size: 1rem;color: rgb(35, 31, 32);">
-                                    {from}
+                                    系統退水派發通知
                                 </div>
                             </div>
+                            <input type="checkbox" style="margin-right: 10px;"/>
 
-                            <span
-                                    class="iconfont icon_chevron-down-light"
-                                    style="font-size: 1rem; color: #9BA2AA"
-                            ></span>
                         </div>
                         <div
                                 class="itemContent"
@@ -2325,8 +2333,37 @@
                             {content}
                         </div>
                         <div class="itemResult">
-                            <div style="font-size:1rem; color: #6D7278;margin:auto">
-                                {time}
+                            <div class="period unread" style="font-size:1rem; color: #6D7278;margin:auto">
+                                2020/04/25 10:18:07
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemContainer">
+                        <div
+                                class="itemHeader"
+                                style="display: flex;justify-content: space-between;align-items: center;width: 100%;
+    height: 50px;"
+                        >
+                            <div style="display: flex;align-items: center;">
+                                <span class="iconfont icon_chevron-down-light"
+                                      style="font-size: 1rem; color: #9BA2AA;margin-right: 10px;"
+                                ></span>
+                                <div style="font-size: 1rem;color: rgb(35, 31, 32);">
+                                    系統退水派發通知
+                                </div>
+                            </div>
+                            <input type="checkbox" style="margin-right: 10px;"/>
+
+                        </div>
+                        <div
+                                class="itemContent"
+                                style="font-size: 0.875rem;width: 100%;padding: 20px 0;border-top: 1px solid rgb(151, 151, 151);"
+                        >
+                            {content}
+                        </div>
+                        <div class="itemResult">
+                            <div class="period" style="font-size:1rem; color: #6D7278;margin:auto">
+                                2020/04/25 09:25:07
                             </div>
                         </div>
                     </div>

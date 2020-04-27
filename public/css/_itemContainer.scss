@@ -31,7 +31,23 @@
   justify-content: space-between;
   align-items: center;
 }
+.itemResult {
+  .period {
+    &.unread {
+      &:before {
+        font-family: 'fontawesome';
+        position: absolute;
+        content: '\f111';
+        left: -2rem;
+        color: $mainRed;
+      }
+    }
+    position: relative;
 
+  }
+
+
+}
 .itemPlateTitle {
   color: $mainRed;
   margin-bottom: 20px;
