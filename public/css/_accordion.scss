@@ -139,6 +139,12 @@
       }
     }
     &:nth-child(6) {
+      .contentBox {
+        @include breakpoint($large){
+          border-radius: 0 0 8px 8px;
+        }
+        border-radius: 0 8px 8px 0;
+      }
       .iconTab {
         @include breakpoint($large){
           border-radius: 0 0 5px 5px;

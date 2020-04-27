@@ -530,6 +530,12 @@
       flex-wrap: wrap;
       justify-content: space-evenly;
       .gameCard--quarter {
+        &.active {
+          box-shadow: 0 0 20px #ff009f;
+        }
+        &:hover {
+          box-shadow: 0 0 20px #ff009f;
+        }
         padding: 12px 6px;
         margin-bottom: 15px;
         flex: 0 1 45%;

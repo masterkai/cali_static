@@ -272,4 +272,19 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+
+  .icon_bell-light {
+    &.messages {
+      position: relative;
+      &:after {
+        font-family: 'fontawesome';
+        position: absolute;
+        content: '\f111';
+        font-size: .6rem;
+        right: .1rem;
+        color: $mainRed;
+      }
+    }
+
+  }
 }
