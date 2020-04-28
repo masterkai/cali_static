@@ -83,7 +83,9 @@
     </script>
 </head>
 <body>
-
+<div class="displayDesktop">
+    <header id="header"></header>
+</div>
 <div style='z-index: 1034' class='overlayAccountSelector'>
     <div class='accountSelector'></div>
 </div>
@@ -374,77 +376,86 @@
         </div>
     </div>
     <nav class="navbar fixed-bottom BottomNav">
-        <a href="/platform_transfer">
-            <span class="iconfont icon_Transfer"></span>
-            平台轉帳
-        </a>
-        <a href="/promotions">
-            <span class="iconfont icon_gift-solid"></span>
-            最新優惠
-        </a>
-        <div style="position:relative;cursor: pointer">
-            <a href="/promotions" class="menuToggle lv1Menu">
-                <span class="iconfont icon_sack-dollar-solid"></span>
-                在線提款
+        <div class='btnGroup btnGroup--panel'>
+            <img src="build/images/circle_btn_cali.png" alt="" class="img-responsive home">
+
+            <a href="/platform_transfer">
+                <span class="iconfont icon_Transfer"></span>
+                平台轉帳
             </a>
-            <div class="nav-menu-2 UPS">
-                <div class="overlay"></div>
-                <div class="UpSwitch">
-                    <a href="/deposit">
-                        <p>
+            <a href="/promotions">
+                <span class="iconfont icon_gift-solid"></span>
+                最新優惠
+            </a>
+            <div style="width: 68px;"></div>
+            <div style="position:relative;cursor: pointer">
+                <a href="/promotions" class="onlineWithdraw">
+                    <span class="iconfont icon_sack-dollar-solid"></span>
+                    在線提款
+                </a>
+                <div class="UPS">
+                    <div class="overlay"></div>
+                    <div class="UpSwitch">
+                        <a href="/deposit">
+                            <p>
                   <span
                           class="iconfont icon_turnIN1"
                           style="color: #077F64"
                   ></span>
-                            存款專區
-                        </p>
-                    </a>
-                    <a href="/withdrawals">
-                        <p>
+                                存款專區
+                            </p>
+                        </a>
+                        <a href="/withdrawals">
+                            <p>
                   <span
                           class="iconfont icon_turnOUT1"
                           style="color: #FA6400"
                   ></span>
-                            提款專區
+                                提款專區
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="position:relative;">
+                <a href="/" class="memberCenter">
+                    <span class="iconfont icon_user-solid"></span>
+                    會員中心
+                </a>
+                <div class="UpMenu UPM">
+                    <a href="/edit_user_info">
+                        <p>
+                            <span class="iconfont icon_user-alt-light"></span>
+                            變更資料
+                        </p>
+                    </a>
+                    <a href="/transaction_records">
+                        <p>
+                            <span class="iconfont icon_file-invoice-dollar-light"></span>
+                            交易記錄
+                        </p>
+                    </a>
+                    <a href="/bet_records">
+                        <p>
+                            <span class="iconfont icon_coins-light"></span>
+                            投注記錄
+                        </p>
+                    </a>
+                    <a href="/bonus_records">
+                        <p>
+                            <span class="iconfont icon_gift-light"></span>
+                            優惠記錄
+                        </p>
+                    </a>
+                    <a href="/recommendation">
+                        <p>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon_thumbs-up-light"></use>
+                            </svg>
+                            會員推薦
                         </p>
                     </a>
                 </div>
-            </div>
-        </div>
-        <a href="/customer_service">
-            <span class="iconfont iconHR"></span>
-            在線客服
-        </a>
-        <div style="position:relative;">
-            <a href="/" class="menuToggle lv1Menu">
-                <span class="iconfont icon_user-solid"></span>
-                會員中心
-            </a>
-            <div class="UpMenu nav-menu-2 UPM">
-                <a href="/edit_user_info">
-                    <p>
-                        <span class="iconfont icon_user-alt-light"></span>
-                        變更資料
-                    </p>
-                </a>
-                <a href="/transaction_records">
-                    <p>
-                        <span class="iconfont icon_file-invoice-dollar-light"></span>
-                        交易記錄
-                    </p>
-                </a>
-                <a href="/bet_records">
-                    <p>
-                        <span class="iconfont icon_coins-light"></span>
-                        投注記錄
-                    </p>
-                </a>
-                <a href="/bonus_records">
-                    <p>
-                        <span class="iconfont icon_gift-light"></span>
-                        優惠記錄
-                    </p>
-                </a>
             </div>
         </div>
     </nav>
@@ -574,6 +585,8 @@
 <script src="build/js/datetimepicker/jquery-ui-timepicker-addon.js"></script>
 <script src="build/js/datetimepicker/i18n/jquery-ui-timepicker-addon-i18n.js"></script>
 <script src="build/js/datetimepicker/jquery-ui-sliderAccess.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script type="application/javascript" src="build/js/plugin.js"></script>
 <script
         type="application/javascript"
         src="build/js/scripts.min.js?v=1.1"
