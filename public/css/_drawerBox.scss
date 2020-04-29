@@ -12,70 +12,73 @@
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
+  .TrapezoidTag {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -44px;
+    background-color: #00adff;
+    height: calc(223px - 44px);
+    width: 44px;
+    color: black;
+    background-image: linear-gradient(
+                    180deg,
+                    #827610 3%,
+                    #ebdb5a 47%,
+                    #805d24 100%
+    );
+
+    .triangleTopRight {
+      position: absolute;
+      bottom: -30px;
+      width: 0;
+      height: 0;
+      border-top: 30px solid #805d24;
+      border-left: 44px solid transparent;
+    }
+    .triangleBottomRight {
+      position: absolute;
+      top: -30px;
+      width: 0;
+      height: 0;
+      border-bottom: 30px solid #827610;
+      border-left: 44px solid transparent;
+    }
+    p {
+      color: black;
+      writing-mode: vertical-lr;
+    }
+    span {
+      font-size: 2rem;
+    }
+  }
+  .infoBox {
+    &:last-child {
+      border-bottom: unset;
+    }
+    img {
+      margin-bottom: 10px;
+      max-width: 64px;
+    }
+    p {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #979797;
+  }
 }
-.infoBox {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #979797;
-}
-.drawerBox .infoBox:nth-child(3) {
-  border-bottom: unset;
-}
-.infoBox img {
-  margin-bottom: 10px;
-  max-width: 64px;
-}
-.infoBox p {
-  color: #fff;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.TrapezoidTag {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -44px;
-  background-color: #00adff;
-  height: calc(223px - 44px);
-  width: 44px;
-  color: black;
-  background-image: linear-gradient(
-                  180deg,
-                  #827610 3%,
-                  #ebdb5a 47%,
-                  #805d24 100%
-  );
-  //border-radius: 8px 0 0 8px;
-}
-.TrapezoidTag p {
-  color: black;
-  writing-mode: vertical-lr;
-}
-.TrapezoidTag span {
-  font-size: 2rem;
-}
-.triangleTopRight {
-  position: absolute;
-  bottom: -30px;
-  width: 0;
-  height: 0;
-  border-top: 30px solid #805d24;
-  border-left: 44px solid transparent;
-}
-.triangleBottomRight {
-  position: absolute;
-  top: -30px;
-  width: 0;
-  height: 0;
-  border-bottom: 30px solid #827610;
-  border-left: 44px solid transparent;
-}
+
+

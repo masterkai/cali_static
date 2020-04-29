@@ -1,0 +1,209 @@
+.drawerBox--maintenance {
+  &.active {
+    left: 0;
+  }
+
+  max-width: 400px;
+  height: 398px;
+  position: fixed;
+  z-index: 999;
+  background-color: black;
+  left: -201.34px;
+  top: 8%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  .infoBoxContainer {
+    &::-webkit-scrollbar{
+      width: 12.34px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgba(151,151,151,0.45);
+      /* You can add other properties & values */
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $main;
+      outline: 1px solid #654321;
+      /* You can add other properties & values */
+    }
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: scroll;
+    .infoBox {
+      .Title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .titleGroup {
+          flex: 1 1 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include breakpoint($ipad) {
+            margin-bottom: 20px;
+          }
+
+          .subject {
+            &__withRed {
+              display: block;
+            }
+
+            br {
+              display: none;
+              @include breakpoint($ipad) {
+                display: block;
+              }
+            }
+
+            &--white {
+              color: #fff;
+              text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65);
+            }
+
+            &--solidBox {
+              background-color: black;
+              padding: 20px;
+              color: $color-mainLightBlue;
+              font-size: 2rem;
+              font-weight: 100;
+            }
+
+            color: $lightGray;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 20px 10px;
+            font-size: 1rem;
+            white-space: nowrap;
+            font-weight: 200;
+            letter-spacing: $ls-content;
+
+
+            small {
+              font-size: 0.8rem;
+            }
+          }
+
+          bar {
+            flex: 1 1 60%;
+            border: 1px solid black;
+            height: 1px;
+            width: 100%;
+
+          }
+        }
+
+        p {
+          color: $lightGray;
+          padding: 20px 30px;
+          -webkit-border-radius: 60px;
+          -moz-border-radius: 60px;
+          border-radius: 60px;
+          text-align: center;
+          font-size: 1.5rem;
+          line-height: 1.5;
+          @include breakpoint($ipad) {
+            font-size: 1.2rem;
+          }
+          @include breakpoint($iphone) {
+            font-size: 0.9rem;
+          }
+
+          br {
+            display: none;
+            @include breakpoint($ipad) {
+              display: block;
+            }
+          }
+        }
+
+        svg {
+          margin-right: 15px;
+          @include breakpoint($ipad) {
+            margin: 0 auto 15px;
+          }
+        }
+      }
+      .item {
+        margin-bottom: 20px;
+        .brand {
+          padding: 8px 20px;
+          border-radius: 8px;
+          background-image: linear-gradient(180deg,#fdf8a2 3%,#f4d97a 47%,#eec462 100%);
+          color: $color-black;
+          margin-bottom: 15px;
+          text-align: center;
+        }
+        p {
+          color: $lightGray;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+      &:last-child {
+        border-bottom: unset;
+      }
+      padding: 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #979797;
+      img {
+        margin-bottom: 10px;
+        max-width: 64px;
+      }
+
+    }
+  }
+
+
+  .TrapezoidTag--maintenance {
+    .triangleTopRight {
+      position: absolute;
+      bottom: -30px;
+      width: 0;
+      height: 0;
+      border-top: 30px solid #eec462;
+      border-right: 44px solid transparent;
+    }
+    .triangleBottomRight {
+      position: absolute;
+      top: -30px;
+      width: 0;
+      height: 0;
+      border-bottom: 30px solid #fdf8a2;
+      border-right: 44px solid transparent;
+    }
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -44px;
+    background-color: #00adff;
+    height: calc(223px - 44px);
+    width: 44px;
+    color: black;
+    background-image: linear-gradient(180deg,#fdf8a2 3%,#f4d97a 47%,#eec462 100%);
+    p {
+      color: black;
+      writing-mode: vertical-lr;
+    }
+    span {
+      font-size: 2rem;
+    }
+
+  }
+}
+
