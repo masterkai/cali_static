@@ -63,11 +63,11 @@
     function homeBtnFliping() {
       const flipHomeTl = new TimelineMax({repeat: -1});
       flipHomeTl
-        .set($front, {scale: 1, autoAlpha: 1, rotationY: 0}, '-=0.002')
         .to($front, 3, {scale: 1, autoAlpha: 1, rotationY: 0, ease: Power4.easeInOut}, '-=0.002')
         .to($front, 1.5, {scale: .5, autoAlpha: 0, rotationY: 180, ease: Power4.easeInOut})
         .to($back, 3, {scale: 1, autoAlpha: 1, rotationY: 0, ease: Power4.easeInOut}, '-=1.6')
         .to($back, 1.5, {scale: .5, autoAlpha: 0, rotationY: 180, ease: Power4.easeInOut})
+        .to($front, .5, {scale: 1, autoAlpha: 1, rotationY: 0}, '-=0.002')
     }
 
     function bowTheHead() {
