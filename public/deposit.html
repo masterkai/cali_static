@@ -206,31 +206,25 @@
     </div>
     <div class="mainBG" style="margin-top: 80px;">
         <div class='mobileBox mobileBox_nobg' style='height: 700px; padding-bottom: 80px'>
-            <div
-                    style='height: 74px;
-    background-color: rgb(216, 216, 216);
-    border-radius: 3px;
-    margin-bottom: 30px;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;'
-            >
-                <div style='display: flex;align-items: center;'>
-            <span
-                    class="iconfont icon_ATM"
-                    style='font-size: 3.5rem;color: rgb(245, 111, 111);margin-right: 10px;'></span>
-                    <div style='font-size: 1rem;color: black;'>銀行轉帳</div>
+            <div class='itemContainer'>
+                <div style='display: flex;justify-content: space-between;align-items: center;width: 100%;    padding: 9px 0;'>
+                    <div style='display: flex;align-items: center;'>
+    <span class="iconfont iconind-save-money"
+          style='font-size: 3.5rem;color: rgb(201,106,25);margin-right: 10px;'></span>
+                        <div style='font-size: 1rem;color: black;'>線上轉帳</div>
+                        <!--聯結至公司Line客服-->
+                    </div>
+
+                    <span class="iconfont icon_chevron-right-light" style='fontSize: 1rem;color: #9BA2AA;'></span>
                 </div>
 
-                <span class="iconfont icon_chevron-right-light" style='font-size: 1rem; color: #9BA2AA;'></span>
             </div>
             <div class='itemContainer'>
                 <div style='display: flex;justify-content: space-between;align-items: center;width: 100%;    padding: 9px 0;'>
                     <div style='display: flex;align-items: center;'>
     <span class="iconfont icon_credit-card-light"
           style='font-size: 3.5rem;color: rgb(0,62,215);margin-right: 10px;'></span>
-                        <div style='font-size: 1rem;color: black;'>線上支付</div>
+                        <div style='font-size: 1rem;color: black;'>線上刷卡</div>
                         <!--聯結至公司Line客服-->
                     </div>
 
@@ -252,8 +246,31 @@
                 </div>
 
             </div>
-            <p style='color:#fff;margin-bottom: 25px;'>超商轉帳教學<br/><span style='color:#fff;font-size:12px;'>(請點選超商平台如下，謝謝！)</span></p>
-            <div class='dropDownBox active' style='margin-top: 0;background-color: rgb(216, 216, 216);padding: 0 10px 10px;'>
+            <div
+                    style='height: 74px;
+    background-color: rgb(216, 216, 216);
+    border-radius: 3px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;'
+            >
+                <div style='display: flex;align-items: center;'>
+            <span
+                    class="iconfont icon_ATM"
+                    style='font-size: 3.5rem;color: rgb(245, 111, 111);margin-right: 10px;'></span>
+                            <div style='font-size: 1rem;color: black;'>VIP存款專區</div>
+                </div>
+
+                <span class="iconfont icon_chevron-right-light" style='font-size: 1rem; color: #9BA2AA;'></span>
+            </div>
+
+
+            <p style='color:#fff;margin-bottom: 25px;'>超商轉帳教學<br/><span style='color:#fff;font-size:12px;'>(請點選超商平台如下，謝謝！)</span>
+            </p>
+            <div class='dropDownBox active'
+                 style='margin-top: 0;background-color: rgb(216, 216, 216);padding: 0 10px 10px;'>
 
             </div>
         </div>
@@ -416,7 +433,7 @@
             <h3>超商繳費流程</h3>
         </div>
         <div class="mobileModal-content" style="height: 350px;overflow-y: scroll;">
-            
+
         </div>
     </div>
 </div>
@@ -471,25 +488,23 @@
       </div>`).join('')
   };
   const renderImg = processImg => {
-    return processImg.map( (p,i) =>`<img style='width: 100%;' src='build/images/convenienceStore/${p}' alt='流程${i+1}' class="img-responsive"/>`).join('')
+    return processImg.map((p, i) => `<img style='width: 100%;' src='build/images/convenienceStore/${p}' alt='流程${i + 1}' class="img-responsive"/>`).join('')
   };
   $('.dropDownBox').append(renderConvenience(data))
 
   const close = document.getElementById('close');
 
   const modal = document.getElementById('modal');
-$('.dropDownBox').find('div').each(function (i,obj) {
+  $('.dropDownBox').find('div').each(function (i, obj) {
     $(obj).click(function () {
-        // console.log(i);
+      // console.log(i);
       $('.mobileModal-content img').remove();
       $('.mobileModal-content').append(renderImg(data[i].processImg))
       $(document).ready(function () {
         modal.classList.add('show-mobileModal')
-        })
+      })
     })
-})
-
-
+  })
 
 
   // Hide modal
