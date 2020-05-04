@@ -30,15 +30,11 @@ $bgWhite: white;
         .head {
           .eye_closed {
             position: absolute;
-            //left: 50%;
-            //transform: translateX(-50%);
             height: 100%;
             z-index: 2;
           }
           .head_main {
             position: absolute;
-            //left: 50%;
-            //transform: translateX(-50%);
             height: 100%;
           }
           height: 220px;
@@ -67,15 +63,6 @@ $bgWhite: white;
           transform: translateX(-50%);
         }
 
-        .raysBG {
-          position: absolute;
-          z-index: -1;
-          top: 30%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          height: 180px;
-        }
-
         .pokerCoin {
           @include breakpoint($iphone8){
             max-width: 210px;
@@ -90,7 +77,6 @@ $bgWhite: white;
           right: -21%;
         }
 
-
         bottom: 0;
         height: 212px;
         position: absolute;
@@ -102,7 +88,7 @@ $bgWhite: white;
         max-width: 130px;
         bottom: 10px;
         position: absolute;
-        left: 50%;
+        left: 15%;
         transform: translateX(-50%)
       }
     }
