@@ -10,6 +10,21 @@
     bottom: -2px;
   }
   .btnGroup {
+    &--crystal {
+      justify-content: space-around;
+      background-image: url(../../build/images/login&registerPanel.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: contain;
+      height: 68px;
+      a {
+        span {
+          font-size: 1.375rem;
+          color: $mainText;
+          text-shadow: 0 0 3px rgba(0,0,0,.65);
+        }
+      }
+    }
     &--panel {
       justify-content: space-evenly;
     }
