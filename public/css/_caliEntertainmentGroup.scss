@@ -1,0 +1,29 @@
+.caliEntertainmentGroup {
+  .title {
+    height: 90px;
+    background-image: url(../../build/images/deco_bg.png);
+    background-position: center;
+    color: $mainText;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .85);
+    line-height: 1.5;
+  }
+
+  background-image: url(../../build/images/deco_top.png), url(../../build/images/deco_bottom.png), url(../../build/images/deco_bg2.jpg);
+  background-repeat: no-repeat;
+  background-position: center top, center bottom, center;
+  background-size: contain, contain, cover;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
