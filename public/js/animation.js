@@ -16,6 +16,8 @@
     $lebron = $('.lebron'),
     $lebronH1 = $('.lebron_H1'),
     $lebronH2 = $('.lebron_H2'),
+    $lebronRH = $('.lebron_RH'),
+    $lebronLH = $('.lebron_LH'),
     $chips = $('.play02_2 .chips'),
     $poker = $('.poker'),
     $Jackpot = $('.Jackpot'),
@@ -48,6 +50,8 @@
       .set($lebron, {y: 280, autoAlpha: 0})
       .set($lebronH1, {autoAlpha: 1})
       .set($lebronH2, {autoAlpha: 0})
+      .set($lebronRH, {transformOrigin: '24.375px 11.401px 0'})
+      .set($lebronLH, {transformOrigin: '7.438px 13.937px 0'})
       .set($lotteryTicket01, {x: 0, y: 280, autoAlpha: 0})
       .set($lotteryTicket02, {x: 0, y: 280, autoAlpha: 0})
       .set($ColoredBalls_N3, {x: 0, y: 280, autoAlpha: 0})
@@ -124,6 +128,20 @@
         yoyo: true,
         ease: Power0.easeInOut,
       }, 2)
+      .to($lebronRH, 2, {
+        css: {rotation: 8},
+        repeatDelay: null,
+        repeat: -1,
+        yoyo: true,
+        ease: Power0.easeInOut,
+      }, 2)
+      .to($lebronLH, 2, {
+        css: {rotation: -5},
+        repeatDelay: null,
+        repeat: -1,
+        yoyo: true,
+        ease: Power0.easeInOut,
+      }, 2)
       .to($Jackpot, 2.5, {
         css: {scale: 1, autoAlpha: 1},
         repeatDelay: null,
@@ -194,12 +212,12 @@
     }
 
     function lebron() {
-      const flipHomeTl = new TimelineMax({repeat: -1,repeatDelay: 2.5});
-      flipHomeTl
-        .fromTo($lebronH1, {autoAlpha: 0},{autoAlpha: 1,duration: 1})
+      const lebronTl = new TimelineMax({repeat: -1, repeatDelay: 5});
+      lebronTl
+        .fromTo($lebronH1, 1, {autoAlpha: 1}, {autoAlpha: 0, duration: 3})
 
-
-
+        .fromTo($lebronH2, 1, {autoAlpha: 1, ease: Power4.easeInOut, duration: 16}, {autoAlpha: 0},'+=3.2')
+        .to($lebronH1, 1, {autoAlpha: 1}, '-=1.2')
 
     }
 
