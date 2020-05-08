@@ -59,7 +59,7 @@
       .set($chessChips, {rotation: 0, autoAlpha: 0})
       // .set($roulette, {scale: .25, rotation: 0, autoAlpha: 0})
       .set($chips, {scale: .2, autoAlpha: 0})
-      .set($poker, {scale: .2, autoAlpha: 0})
+      // .set($poker, {scale: .2, autoAlpha: 0})
       .set($Jackpot, {scale: .25, autoAlpha: 0})
       .set($lebron, {transformOrigin: '50% 100% 0', autoAlpha: 0})
       .set($lebron2, {y: 200, autoAlpha: 0})
@@ -105,8 +105,8 @@
       .to($Mahjong, 1, {y: 0, autoAlpha: 1, onComplete: mahjong}, -2)
       // .to($roulette, 2, {scale: 1, rotation: 720, autoAlpha: 1}, -2)
       .to($chips, 2, {scale: 1, autoAlpha: 1}, -2)
-      .to($poker, 2, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, -2)
-      .to($Jackpot, 2, {scale: 1, autoAlpha: 1, onComplete: electronics}, -2)
+      // .to($poker, 2, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, -2)
+      .to($Jackpot, 2, {scale: .85, autoAlpha: 1}, -2)
       .to($lebron, 1, {y: 0, autoAlpha: 1, onComplete: lebronSwitch}, -2)
       .to($fanBIngBing, 2, {scale: 1.0, autoAlpha: 0}, 0.02)
       .to($HomeBtn, 2, {autoAlpha: 1}, 0.02)
@@ -123,13 +123,13 @@
         yoyo: true,
         ease: Power0.easeInOut,
       }, 2)
-      // .to($Mahjong, 1, {
-      //   css: {y: 100},
-      //   repeatDelay: null,
-      //   repeat: -1,
-      //   yoyo: true,
-      //   ease: Power0.easeInOut,
-      // }, 2)
+      .to($Jackpot, 2.5, {
+        css: {scale: 1, autoAlpha:1},
+        repeatDelay: null,
+        repeat: -1,
+        yoyo: true,
+        ease: Power0.easeInOut,
+      }, 2)
       .to($rocket, 2, {
         css: {y: 10, rotation: 8},
         repeatDelay: null,
@@ -137,8 +137,8 @@
         yoyo: true,
         ease: Power4.easeInOut,
       }, 2)
-      .to($shark, 1, {
-        css: {y: 5},
+      .to($shark, 2, {
+        css: {y: 8},
         repeatDelay: null,
         repeat: -1,
         yoyo: true,
@@ -165,7 +165,7 @@
         yoyo: true,
         ease: Power0.easeInOut,
       }, 3)
-      .to($chessChips, 4, {
+      .to($chessChips, 12, {
         css: {rotation: 360},
         repeatDelay: null,
         repeat: -1,
@@ -186,25 +186,24 @@
     }
 
     function mahjong() {
-      const flipHomeTl = new TimelineMax({repeat: -1, repeatDelay: 2.5});
+      const flipHomeTl = new TimelineMax();
       flipHomeTl
         .to($Mahjong, 3, {y: 0, autoAlpha: 1, ease: Power4.easeInOut})
         .to($Mahjong, 1, {y: 100, autoAlpha: 0, ease: Power0.easeInOut})
         .to($Mahjong, 1, {y: 0, autoAlpha: 1, ease: Power4.easeInOut})
     }
 
-    function electronics() {
-      const electronicTl = new TimelineMax({repeat: -1});
-      electronicTl
-        // .to($roulette, .5, {scale: 1, autoAlpha: 1, rotation: 0, ease: Power4.easeInOut}, '-=0.002')
-        .to($Jackpot, .5, {scale: .75, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.002')
-        .to($poker, 3, {scale: .75, autoAlpha: 0, ease: Power4.easeInOut}, '-=0.6')
-        .to($chips, 1, {scale: .25, autoAlpha: 0, ease: Power4.easeInOut}, '-=0.6')
-        // .to($roulette, 3, {scale: 1, autoAlpha: 1, rotation: 720, ease: Power4.easeInOut}, '-=0.002')
-        .to($Jackpot, 1.5, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.002')
-        .to($poker, .5, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.002')
-        .to($chips, 3, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.6')
-    }
+    // function electronics() {
+    //   const electronicTl = new TimelineMax({repeat: -1, repeatDelay: 2.5});
+    //   electronicTl
+    //     .to($roulette, .5, {scale: 1, autoAlpha: 1, rotation: 0, ease: Power4.easeInOut}, '-=0.002')
+    //     .to($Jackpot, 1.5, {scale: .75, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.002')
+    //     .to($poker, 3, {scale: .75, autoAlpha: 0, ease: Power4.easeInOut}, '-=0.6')
+    //     .to($chips, 1, {scale: .25, autoAlpha: 0, ease: Power4.easeInOut}, '-=0.6')
+    //     .to($Jackpot, 1.5, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.002')
+    //     .to($poker, .5, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.002')
+    //     .to($chips, 3, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.6')
+    // }
 
     function lebronSwitch() {
       const lebronTl = new TimelineMax({repeat: -1});
