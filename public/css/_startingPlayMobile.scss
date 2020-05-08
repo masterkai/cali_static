@@ -115,7 +115,7 @@ $bgWhite: white;
         .stage {
           border-radius: 8px;
           overflow: hidden;
-          height: 200px;
+          height: 150px;
           max-width: 185.39px;
           width: 100%;
           left: 50%;
@@ -123,18 +123,47 @@ $bgWhite: white;
           bottom: 0px;
           position: absolute;
           .lebron {
-            height: 142px;
-            //left: 50%;
-            //transform: translateX(-46%);
-            bottom: 0px;
-            position: absolute;
+            .lebron_body {
+              position: relative;
+              height: 110px;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-60%);
+            }
+            .lebron_H1 {
+              position: absolute;
+              height: 49px;
+              top: -37px;
+              left: 50%;
+              transform: translateX(-82%);
+            }
+            .lebron_H2 {
+              position: absolute;
+              height: 57px;
+              top: -38px;
+              left: 50%;
+              transform: translateX(-70%);
+            }
+            .lebron_LH {
+              position: absolute;
+              height: 80px;
+              top: 10%;
+              right: 10%;
+              transform: translateX(0%);
+              z-index: -1;
+            }
+            .lebron_RH {
+              position: absolute;
+              height: 94px;
+              top: 12%;
+              left: 15%;
+              transform: translateX(0%);
+              z-index: 1;
+            }
+            height: 110px;
+            bottom: -42px;
+            position: relative;
             z-index: 1;
-          }
-          .lebron02 {
-            height: 218px;
-            bottom: -36%;
-            position: absolute;
-            z-index: 2;
           }
 
           .startBG {

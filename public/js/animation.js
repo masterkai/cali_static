@@ -14,8 +14,8 @@
     $back = $('.home .back'),
     $baccarat = $('.play01 .title'),
     $lebron = $('.lebron'),
-    $lebron2 = $('.lebron02'),
-    // $roulette = $('.roullet'),
+    $lebronH1 = $('.lebron_H1'),
+    $lebronH2 = $('.lebron_H2'),
     $chips = $('.play02_2 .chips'),
     $poker = $('.poker'),
     $Jackpot = $('.Jackpot'),
@@ -45,6 +45,9 @@
     clearTl
       .set($fanBIngBing, {autoAlpha: 0})
       .set($fbb, {x: 0, y: 280, autoAlpha: 0})
+      .set($lebron, {y: 280, autoAlpha: 0})
+      .set($lebronH1, {autoAlpha: 1})
+      .set($lebronH2, {autoAlpha: 0})
       .set($lotteryTicket01, {x: 0, y: 280, autoAlpha: 0})
       .set($lotteryTicket02, {x: 0, y: 280, autoAlpha: 0})
       .set($ColoredBalls_N3, {x: 0, y: 280, autoAlpha: 0})
@@ -61,8 +64,6 @@
       .set($chips, {scale: .2, autoAlpha: 0})
       // .set($poker, {scale: .2, autoAlpha: 0})
       .set($Jackpot, {scale: .25, autoAlpha: 0})
-      .set($lebron, {transformOrigin: '50% 100% 0', autoAlpha: 0})
-      .set($lebron2, {y: 200, autoAlpha: 0})
       .set($baccarat, {y: 200, autoAlpha: 0})
       .set($HomeBtn, {autoAlpha: 0})
       .set($front, {scale: .25, autoAlpha: 1, rotationY: 0})
@@ -91,6 +92,7 @@
     stuffTl
       .to($baccarat, 1, {y: 0, autoAlpha: 1}, -2)
       .to($fbb, 1, {x: 0, autoAlpha: 1}, -2)
+      .to($lebron, 1, {y: 0, autoAlpha: 1, onComplete: lebron}, -2)
       .to($lotteryTicket01, 1, {y: 0, autoAlpha: 1}, -2)
       .to($lotteryTicket02, 1, {y: 0, autoAlpha: 1}, -2)
       .to($ColoredBalls_N3, 1, {y: 0, autoAlpha: 1}, -2)
@@ -107,7 +109,6 @@
       .to($chips, 2, {scale: 1, autoAlpha: 1}, -2)
       // .to($poker, 2, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, -2)
       .to($Jackpot, 2, {scale: .85, autoAlpha: 1}, -2)
-      .to($lebron, 1, {y: 0, autoAlpha: 1, onComplete: lebronSwitch}, -2)
       .to($fanBIngBing, 2, {scale: 1.0, autoAlpha: 0}, 0.02)
       .to($HomeBtn, 2, {autoAlpha: 1}, 0.02)
       .to($front, 1, {scale: 1, autoAlpha: 1, rotationY: 0, ease: Power4.easeInOut, onComplete: homeBtnFliping}, 0.02)
@@ -124,7 +125,7 @@
         ease: Power0.easeInOut,
       }, 2)
       .to($Jackpot, 2.5, {
-        css: {scale: 1, autoAlpha:1},
+        css: {scale: 1, autoAlpha: 1},
         repeatDelay: null,
         repeat: -1,
         yoyo: true,
@@ -136,6 +137,13 @@
         repeat: -1,
         yoyo: true,
         ease: Power4.easeInOut,
+      }, 2)
+      .to($lebron, 2, {
+        css: {y: 5},
+        repeatDelay: null,
+        repeat: -1,
+        yoyo: true,
+        ease: Power0.easeInOut,
       }, 2)
       .to($shark, 2, {
         css: {y: 8},
@@ -185,6 +193,16 @@
         .to($front, .5, {scale: 1, autoAlpha: 1, rotationY: 0}, '-=0.8')
     }
 
+    function lebron() {
+      const flipHomeTl = new TimelineMax({repeat: -1,repeatDelay: 2.5});
+      flipHomeTl
+        .fromTo($lebronH1, {autoAlpha: 0},{autoAlpha: 1,duration: 1})
+
+
+
+
+    }
+
     function mahjong() {
       const flipHomeTl = new TimelineMax();
       flipHomeTl
@@ -205,16 +223,6 @@
     //     .to($chips, 3, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.6')
     // }
 
-    function lebronSwitch() {
-      const lebronTl = new TimelineMax({repeat: -1});
-      lebronTl
-        .to($lebron, 3, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=0.002')
-        .to($lebron, 1.5, {scale: .5, autoAlpha: 0, ease: Power4.easeInOut})
-        .to($lebron2, 3, {y: 0, scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, '-=1.9')
-        .to($lebron2, 1.5, {y: 0, scale: .5, autoAlpha: 0, ease: Power4.easeInOut})
-        .to($lebron, .5, {scale: 1, autoAlpha: 1}, '-=0.8')
-
-    }
 
     function bowTheHead() {
       const bowHeadTl = new TimelineMax({repeat: -1, repeatDelay: 2.5});
