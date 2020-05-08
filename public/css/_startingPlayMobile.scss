@@ -148,7 +148,7 @@ $bgWhite: white;
               position: absolute;
               height: 80px;
               top: 10%;
-              right: 10%;
+              right: -16px;
               transform: translateX(0%);
               z-index: -1;
             }
@@ -156,11 +156,13 @@ $bgWhite: white;
               position: absolute;
               height: 94px;
               top: 12%;
-              left: 15%;
+              left: -5px;
               transform: translateX(0%);
               z-index: 1;
             }
             height: 110px;
+            width: 120px;
+            left: 10%;
             bottom: -42px;
             position: relative;
             z-index: 1;
@@ -433,10 +435,10 @@ $bgWhite: white;
         }
         .beauty {
           @include breakpoint($iphone8){
-            left: 20%;
+            left: 1%;
           }
           height: 227px;
-          left: 0%;
+          left: 0;
           transform: translateX(-50%);
           bottom: -82px;
           position: absolute;
