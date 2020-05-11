@@ -14,7 +14,6 @@ $bgWhite: white;
     justify-content: space-between;
 
     .play01 {
-      overflow: hidden;
       border-radius: 12px;
       height: 280px;
       background-position: center;
@@ -23,21 +22,60 @@ $bgWhite: white;
       margin: $margin;
       position: relative;
 
+      .playerBox {
+        @include breakpoint($iphone8){
+          width: 166px;
+        }
+        @include breakpoint($iphone5){
+          width: 139px;
+        }
+        position: absolute;
+        overflow: hidden;
+        height: 296px;
+        width: 184px;
+        bottom: 0;
+        right: 0;
+        #player-container {
+          @include breakpoint($pixel2xl){
+            width: 85vw;
+            bottom: -265px;
+          }
+          @include breakpoint($iphone8){
+            width: 90vw;
+            bottom: -186px;
+          }
+          @include breakpoint($iphone5){
+            width: 100vw;
+            bottom: -141px;
+          }
+          width: 80vw;
+          height: 100vh;
+          position: absolute;
+          bottom: -220px;
+          left: 50%;
+          transform: translateX(-41%);
+        }
+      }
+
+
       .fanBingBing {
         .body {
           height: 100%;
 
         }
+
         .head {
           .eye_closed {
             position: absolute;
             height: 100%;
             z-index: 2;
           }
+
           .head_main {
             position: absolute;
             height: 100%;
           }
+
           height: 220px;
           width: 197.06px;
           top: -70px;
@@ -54,9 +92,11 @@ $bgWhite: white;
             transform: translateX(-50%);
             height: 90px;
           }
+
           img {
             height: 100%;
           }
+
           height: 105px;
           bottom: 50px;
           position: absolute;
@@ -70,8 +110,9 @@ $bgWhite: white;
         left: 50%;
         transform: translateX(-50%)
       }
+
       .pokerCoin {
-        @include breakpoint($iphone8){
+        @include breakpoint($iphone8) {
           max-width: 210px;
           left: -5px;
         }
@@ -83,11 +124,12 @@ $bgWhite: white;
         position: absolute;
         right: -21%;
       }
+
       .title {
         max-width: 130px;
         bottom: 10px;
         position: absolute;
-        left: 15%;
+        left: 50%;
         transform: translateX(-50%)
       }
     }
@@ -112,6 +154,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 2;
         }
+
         .stage {
           border-radius: 8px;
           overflow: hidden;
@@ -122,6 +165,7 @@ $bgWhite: white;
           transform: translateX(-50%);
           bottom: 0px;
           position: absolute;
+
           .lebron {
             .lebron_body {
               position: relative;
@@ -130,6 +174,7 @@ $bgWhite: white;
               left: 50%;
               transform: translateX(-60%);
             }
+
             .lebron_H1 {
               position: absolute;
               height: 49px;
@@ -137,6 +182,7 @@ $bgWhite: white;
               left: 50%;
               transform: translateX(-82%);
             }
+
             .lebron_H2 {
               position: absolute;
               height: 55px;
@@ -144,6 +190,7 @@ $bgWhite: white;
               left: 50%;
               transform: translateX(-70%);
             }
+
             .lebron_LH {
               position: absolute;
               height: 80px;
@@ -152,6 +199,7 @@ $bgWhite: white;
               transform: translateX(0%);
               z-index: -1;
             }
+
             .lebron_RH {
               position: absolute;
               height: 94px;
@@ -160,6 +208,7 @@ $bgWhite: white;
               transform: translateX(0%);
               z-index: 1;
             }
+
             height: 110px;
             width: 120px;
             left: 10%;
@@ -204,6 +253,7 @@ $bgWhite: white;
           transform: translateX(-50%);
           bottom: 0px;
           position: relative;
+
           .roullet {
             height: 126px;
             left: 16%;
@@ -211,6 +261,7 @@ $bgWhite: white;
             position: absolute;
             z-index: 0;
           }
+
           .chips {
             height: 132px;
             left: 4%;
@@ -219,8 +270,9 @@ $bgWhite: white;
             position: absolute;
             z-index: 4;
           }
+
           .poker {
-            @include breakpoint($iphone8){
+            @include breakpoint($iphone8) {
               width: 90%;
             }
             height: 115px;
@@ -229,6 +281,7 @@ $bgWhite: white;
             position: absolute;
             z-index: 5;
           }
+
           .Jackpot {
             height: 100px;
             left: 13%;
@@ -268,6 +321,7 @@ $bgWhite: white;
         transform: translateX(-50%);
         bottom: 0px;
         position: absolute;
+
         .lotteryTicket01 {
           height: 126px;
           left: 24%;
@@ -276,6 +330,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 0;
         }
+
         .lotteryTicket02 {
           height: 132px;
           left: 32%;
@@ -284,6 +339,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 1;
         }
+
         .ColoredBalls_N3 {
           height: 63px;
           left: 40%;
@@ -292,6 +348,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 2;
         }
+
         .ColoredBalls_N5 {
           height: 100px;
           left: 5%;
@@ -300,6 +357,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 3;
         }
+
         .coins {
           height: 67px;
           left: 28%;
@@ -327,7 +385,7 @@ $bgWhite: white;
       }
 
       .stage {
-        @include breakpoint($iphone8){
+        @include breakpoint($iphone8) {
           max-width: 168px;
         }
         border-radius: 8px;
@@ -349,6 +407,7 @@ $bgWhite: white;
             height: 60px;
             width: 47px;
           }
+
           .rocket {
             position: absolute;
             z-index: 2;
@@ -361,6 +420,7 @@ $bgWhite: white;
             height: 80px;
             width: 95px;
           }
+
           background-image: url(../../build/images/fish/shark.png);
           background-size: contain;
           background-repeat: no-repeat;
@@ -372,6 +432,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 1;
         }
+
         .nimo {
           height: 63px;
           transform: translateX(-113%);
@@ -418,6 +479,7 @@ $bgWhite: white;
         transform: translateX(-50%);
         bottom: 0px;
         position: absolute;
+
         .man {
           height: 275px;
           right: 3%;
@@ -426,8 +488,9 @@ $bgWhite: white;
           position: absolute;
           z-index: 4;
         }
+
         .beauty {
-          @include breakpoint($iphone8){
+          @include breakpoint($iphone8) {
             left: 1%;
           }
           height: 227px;
@@ -437,6 +500,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 8;
         }
+
         .Mahjong {
           height: 63px;
           left: 25%;
@@ -445,6 +509,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 9;
         }
+
         .card01 {
           height: 133px;
           left: 50%;
@@ -453,6 +518,7 @@ $bgWhite: white;
           position: absolute;
           z-index: 1;
         }
+
         .chips {
           height: 100px;
           left: 38%;

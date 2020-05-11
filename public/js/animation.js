@@ -12,7 +12,6 @@
     $HomeBtn = $('.home'),
     $front = $('.home .front'),
     $back = $('.home .back'),
-    $baccarat = $('.play01 .title'),
     $lebron = $('.lebron'),
     $lebronH1 = $('.lebron_H1'),
     $lebronH2 = $('.lebron_H2'),
@@ -68,9 +67,8 @@
       .set($chips, {scale: .2, autoAlpha: 0})
       // .set($poker, {scale: .2, autoAlpha: 0})
       .set($Jackpot, {scale: .25, autoAlpha: 0})
-      .set($baccarat, {y: 200, autoAlpha: 0})
-      .set($HomeBtn, {autoAlpha: 0})
-      .set($front, {scale: .25, autoAlpha: 1, rotationY: 0})
+      .set($HomeBtn, {autoAlpha: 1})
+      .set($front, {scale: .75, autoAlpha: 1, rotationY: 0})
       .set($back, {scale: .5, autoAlpha: 0, rotationY: -180})
       .set($body, {autoAlpha: 1})
       .set($elbow, {autoAlpha: 1})
@@ -94,7 +92,6 @@
   function enterStuff() {
     const stuffTl = new TimelineMax();
     stuffTl
-      .to($baccarat, 1, {y: 0, autoAlpha: 1}, -2)
       .to($fbb, 1, {x: 0, autoAlpha: 1}, -2)
       .to($lebron, 1, {y: 0, autoAlpha: 1, onComplete: lebron}, -2)
       .to($lotteryTicket01, 1, {y: 0, autoAlpha: 1}, -2)
@@ -216,7 +213,7 @@
       lebronTl
         .fromTo($lebronH1, 1, {autoAlpha: 1}, {autoAlpha: 0, duration: 3})
 
-        .fromTo($lebronH2, 1, {autoAlpha: 1, ease: Power4.easeInOut, duration: 16}, {autoAlpha: 0},'+=3.2')
+        .fromTo($lebronH2, 1, {autoAlpha: 1, ease: Power4.easeInOut, duration: 16}, {autoAlpha: 0}, '+=3.2')
         .to($lebronH1, 1, {autoAlpha: 1}, '-=1.2')
 
     }

@@ -57,6 +57,8 @@
             type="text/javascript"
             src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
+    <script src="http://esotericsoftware.com/files/spine-player/3.8/spine-player.js"></script>
+    <link rel="stylesheet" href="http://esotericsoftware.com/files/spine-player/3.8/spine-player.css">
     <script type="text/javascript" src="build/js/data-watermark.js"></script>
 
     <!--[if lt IE 9]>
@@ -833,43 +835,12 @@
                         class="play01"
                         style="background-image: url(build/images/mobile/mainpage/BGpattern.jpg)"
                 >
-                    <div class="fbb">
-                        <div class="fanBingBing">
-
-                            <img src="build/images/FanBingBing/poker&coin.png"
-                                 alt=""
-                                 class="img-responsive pokerCoin"
-                            />
-                            <img src="build/images/FanBingBing/body.png"
-                                 alt=""
-                                 class="img-responsive body"
-                            />
-                            <div class="head">
-                                <img src="build/images/FanBingBing/eye_closed.png"
-                                     alt=""
-                                     class="img-responsive eye_closed"
-                                />
-                                <img src="build/images/FanBingBing/head.png"
-                                     alt=""
-                                     class="img-responsive head_main"
-                                />
-
-                            </div>
-                            <div class="elbow">
-                                <img src="build/images/FanBingBing/elbow-joint.png"
-                                     alt=""
-                                     class="img-responsive elbow-joint"
-                                />
-                                <img src="build/images/FanBingBing/hand.png"
-                                     alt=""
-                                     class="img-responsive hand"
-                                />
-                            </div>
-                        </div>
+                    <div class="playerBox">
+                        <div id="player-container"></div>
                     </div>
                     <img src="build/images/FanBingBing/title.png"
                          alt=""
-                         class="wow fadeInUp img-responsive title"
+                         class="img-responsive title"
                     />
 
                 </div>
@@ -913,7 +884,6 @@
                             </div>
 
 
-
                         </div>
                     </div>
                     <div
@@ -936,11 +906,11 @@
                                     alt=""
                                     class="img-responsive chips"
                             />
-<!--                            <img-->
-<!--                                    src="build/images/electronics/poker.png"-->
-<!--                                    alt=""-->
-<!--                                    class="img-responsive poker"-->
-<!--                            />-->
+                            <!--                            <img-->
+                            <!--                                    src="build/images/electronics/poker.png"-->
+                            <!--                                    alt=""-->
+                            <!--                                    class="img-responsive poker"-->
+                            <!--                            />-->
                             <img
                                     src="build/images/electronics/Jackpot.png"
                                     alt=""
@@ -2565,6 +2535,15 @@
         type="application/javascript"
         src="build/js/scripts.min.js?v=1.1"
 ></script>
+<script>
+  new spine.SpinePlayer("player-container", {
+    jsonUrl: "./build/spine/fanBingBing/woman.json",
+    atlasUrl: "./build/spine/fanBingBing/woman.atlas",
+    showControls: false,
+    alpha: true, // Enable player translucency
+    backgroundColor: "#00000000"
+  });
+</script>
 <script>
 
   const startPlayState = {
