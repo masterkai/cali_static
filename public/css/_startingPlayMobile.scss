@@ -290,7 +290,7 @@ $bgWhite: white;
           transform: translateX(-30%);
           bottom: 30px;
           position: absolute;
-          z-index: 1;
+          z-index: 2;
         }
         .ColoredBalls_N5 {
           height: 100px;
@@ -298,7 +298,7 @@ $bgWhite: white;
           transform: translateX(-93%);
           bottom: 14px;
           position: absolute;
-          z-index: 2;
+          z-index: 3;
         }
         .coins {
           height: 67px;
@@ -306,7 +306,7 @@ $bgWhite: white;
           transform: translateX(-47%);
           bottom: 3px;
           position: absolute;
-          z-index: 2;
+          z-index: 4;
         }
       }
     }
@@ -339,14 +339,7 @@ $bgWhite: white;
         transform: translateX(-50%);
         bottom: 0px;
         position: absolute;
-        .pufferfish {
-          height: 79px;
-          left: 50%;
-          transform: translateX(5%);
-          bottom: 2px;
-          position: absolute;
-          z-index: 0;
-        }
+
         .shark {
           .sharkRightHand {
             position: absolute;
@@ -358,7 +351,7 @@ $bgWhite: white;
           }
           .rocket {
             position: absolute;
-            z-index: 1;
+            z-index: 2;
             top: 46px;
             right: -4px;
             background-image: url(../../build/images/fish/rocket.png);
@@ -376,7 +369,7 @@ $bgWhite: white;
           width: 100%;
           right: 12%;
           bottom: 6px;
-          position: relative;
+          position: absolute;
           z-index: 1;
         }
         .nimo {
@@ -450,7 +443,7 @@ $bgWhite: white;
           transform: translateX(-119%);
           bottom: 2px;
           position: absolute;
-          z-index: 8;
+          z-index: 9;
         }
         .card01 {
           height: 133px;
@@ -458,7 +451,7 @@ $bgWhite: white;
           transform: translateX(-50%);
           bottom: -5px;
           position: absolute;
-          z-index: 3;
+          z-index: 1;
         }
         .chips {
           height: 100px;

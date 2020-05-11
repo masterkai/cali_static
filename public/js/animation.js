@@ -114,7 +114,7 @@
       // .to($poker, 2, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, -2)
       .to($Jackpot, 2, {scale: .85, autoAlpha: 1}, -2)
       .to($fanBIngBing, 2, {scale: 1.0, autoAlpha: 0}, 0.02)
-      .to($HomeBtn, 2, {autoAlpha: 1}, 0.02)
+      .to($HomeBtn, .5, {autoAlpha: 1}, -0.25)
       .to($front, 1, {scale: 1, autoAlpha: 1, rotationY: 0, ease: Power4.easeInOut, onComplete: homeBtnFliping}, 0.02)
       .to($back, 2, {scale: .05, autoAlpha: 0, rotationY: 180}, 0.02)
       .to($head, 2, {transformOrigin: '60px 94px 0', onComplete: startBlinking})
