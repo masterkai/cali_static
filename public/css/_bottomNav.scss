@@ -11,6 +11,9 @@
   }
   .btnGroup {
     &--crystal {
+      @include breakpoint($iphone5){
+        background-size: cover;
+      }
       justify-content: space-around;
       background-image: url(../../build/images/login&registerPanel03.png);
       background-repeat: no-repeat;
@@ -18,7 +21,14 @@
       background-size: contain;
       height: 68px;
       a {
+
         span {
+          @include breakpoint($iphone8){
+            padding-top: 10px;
+          }
+          @include breakpoint($iphone5){
+            padding-top: unset;
+          }
           font-size: 1.375rem;
           color: $mainText;
           text-shadow: 0 0 3px rgba(0,0,0,.65);
