@@ -1,0 +1,83 @@
+
+woman.png
+size: 1904,810
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L Hair
+  rotate: true
+  xy: 1093, 9
+  size: 139, 237
+  orig: 139, 237
+  offset: 0, 0
+  index: -1
+L Hair 2
+  rotate: true
+  xy: 828, 9
+  size: 120, 263
+  orig: 121, 265
+  offset: 0, 0
+  index: -1
+R Hair
+  rotate: false
+  xy: 983, 150
+  size: 455, 658
+  orig: 455, 659
+  offset: 0, 0
+  index: -1
+R Hair 2
+  rotate: false
+  xy: 524, 131
+  size: 457, 677
+  orig: 458, 678
+  offset: 1, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 7
+  size: 520, 801
+  orig: 520, 801
+  offset: 0, 0
+  index: -1
+card
+  rotate: true
+  xy: 1440, 175
+  size: 279, 253
+  orig: 297, 253
+  offset: 0, 0
+  index: -1
+coin'
+  rotate: false
+  xy: 1695, 223
+  size: 176, 231
+  orig: 182, 236
+  offset: 2, 2
+  index: -1
+elbow-joint
+  rotate: true
+  xy: 1500, 2
+  size: 171, 367
+  orig: 173, 369
+  offset: 1, 1
+  index: -1
+eye
+  rotate: false
+  xy: 1332, 65
+  size: 166, 83
+  orig: 168, 85
+  offset: 1, 1
+  index: -1
+face
+  rotate: false
+  xy: 1440, 456
+  size: 462, 352
+  orig: 462, 352
+  offset: 0, 0
+  index: -1
+hand
+  rotate: true
+  xy: 524, 3
+  size: 126, 302
+  orig: 128, 304
+  offset: 1, 1
+  index: -1
