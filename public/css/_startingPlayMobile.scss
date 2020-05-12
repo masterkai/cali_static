@@ -48,10 +48,10 @@ $bgWhite: white;
             width: 100vw;
             bottom: -141px;
           }
-          width: 80vw;
-          height: 100vh;
+          width: 70vw;
+          height: 70vh;
           position: absolute;
-          bottom: -220px;
+          bottom: -126px;
           left: 50%;
           transform: translateX(-41%);
         }
@@ -129,8 +129,9 @@ $bgWhite: white;
         max-width: 130px;
         bottom: 10px;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%)
+        right: 0;
+        //left: 50%;
+        //transform: translateX(-50%);
       }
     }
 
