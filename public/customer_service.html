@@ -77,7 +77,7 @@
     </script>
 </head>
 <body>
-
+<header id="header"></header>
 <div class="displayMobile">
     <!--    使用者登入前  -->
     <!--    <div class='fixed-top'>-->
@@ -251,13 +251,23 @@
 
             </div>
 
-            <textarea
-                    rows="'1"
-                    aria-label="maximum height"
-                    placeholder="說些什麼吧！"
-            ></textarea>
+            <div
+                    style='height: 74px;
+    background-color: rgb(216, 216, 216);
+    border-radius: 3px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;'
+            >
+                <span style="font-size: 3rem;" class="iconfont icon_comment-alt-dots-light"></span>
+                <div style="font-size:1rem;">意見反饋</div>
+                <div class="btn btn-primary" id="messageBtn">留言</div>
 
-            <div class="outlineBtn" style='width: 60%;margin: 0 auto'>送出</div>
+            </div>
+
+
         </div>
     </div>
 
@@ -444,6 +454,27 @@
     </div>
 </div>
 
+<div class="mobileModal-container" id="message">
+    <div class="mobileModal">
+        <div class="close-btn" id="closeMessage">
+            <span class="iconfont icon_times-light"></span>
+        </div>
+        <div class="mobileModal-header">
+            <h3>意見反饋</h3>
+        </div>
+        <div class="mobileModal-content" style="background: #000000;">
+           <textarea
+                   style="width: 100%;margin-bottom: 20px;"
+                   rows="6"
+                   aria-label="maximum height"
+                   placeholder="說些什麼吧！"
+           ></textarea>
+
+            <div class="outlineBtn" style='width: 60%;margin: 0 auto'>送出</div>
+
+        </div>
+    </div>
+</div>
 
 <script
         type="application/javascript"
@@ -474,9 +505,17 @@
 
 
   const modal = document.getElementById('modal');
-
-
-  // modal.classList.add('show-mobileModal');
+  const close_message = document.getElementById('closeMessage');
+  const messageBtn = document.getElementById('messageBtn');
+  const modal_message = document.getElementById(
+    'message'
+  );
+  messageBtn.addEventListener('click', () => {
+    modal_message.classList.add('show-mobileModal');
+  });
+  close_message.addEventListener('click', () =>
+    modal_message.classList.remove('show-mobileModal')
+  );
 
 
   // Hide modal
