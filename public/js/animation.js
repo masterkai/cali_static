@@ -45,7 +45,7 @@
 
     clearTl
       .set($fanBIngBing, {autoAlpha: 0})
-      .set($fbb, {x: 0, y: 280, autoAlpha: 0})
+      .set($fbb, {x: 0, y: 280, autoAlpha: 1})
       .set($lebron, {y: 280, autoAlpha: 0})
       .set($lebronH1, {autoAlpha: 1})
       .set($lebronH2, {autoAlpha: 0})
@@ -92,7 +92,7 @@
   function enterStuff() {
     const stuffTl = new TimelineMax();
     stuffTl
-      .to($fbb, 1, {x: 0, autoAlpha: 1}, -2)
+      .to($fbb, .5, {x: 0, y: 280, autoAlpha: 1},'-=0.5')
       .to($lebron, 1, {y: 0, autoAlpha: 1, onComplete: lebron}, -2)
       .to($lotteryTicket01, 1, {y: 0, autoAlpha: 1}, -2)
       .to($lotteryTicket02, 1, {y: 0, autoAlpha: 1}, -2)
@@ -110,7 +110,7 @@
       .to($chips, 2, {scale: 1, autoAlpha: 1}, -2)
       // .to($poker, 2, {scale: 1, autoAlpha: 1, ease: Power4.easeInOut}, -2)
       .to($Jackpot, 2, {scale: .85, autoAlpha: 1}, -2)
-      .to($fanBIngBing, 2, {scale: 1.0, autoAlpha: 0}, 0.02)
+      .to($fanBIngBing, 2, {scale: 1.0, autoAlpha: 1}, 0.02)
       .to($HomeBtn, .5, {autoAlpha: 1}, -0.25)
       .to($front, 1, {scale: 1, autoAlpha: 1, rotationY: 0, ease: Power4.easeInOut, onComplete: homeBtnFliping}, 0.02)
       .to($back, 2, {scale: .05, autoAlpha: 0, rotationY: 180}, 0.02)
