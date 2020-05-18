@@ -854,36 +854,8 @@
                                 alt=""
                                 class="img-responsive title wow fadeInUp"
                         />
-                        <div class="stage">
-                            <div class="lebron">
-                                <img
-                                        src="build/images/sports/lebron_body.png"
-                                        alt=""
-                                        class="img-responsive lebron_body"
-                                />
-                                <img
-                                        src="build/images/sports/lebron_H1.png"
-                                        alt=""
-                                        class="img-responsive lebron_H1"
-                                />
-                                <img
-                                        src="build/images/sports/lebron_H2.png"
-                                        alt=""
-                                        class="img-responsive lebron_H2"
-                                />
-                                <img
-                                        src="build/images/sports/lebron_LH.png"
-                                        alt=""
-                                        class="img-responsive lebron_LH"
-                                />
-                                <img
-                                        src="build/images/sports/lebron_RH.png"
-                                        alt=""
-                                        class="img-responsive lebron_RH"
-                                />
-                            </div>
-
-
+                        <div class="playerBox">
+                            <div id="player-container--sport"></div>
                         </div>
                     </div>
                     <div
@@ -895,27 +867,8 @@
                                 alt=""
                                 class="img-responsive title wow fadeInUp"
                         />
-                        <div class="stage">
-                            <img
-                                    src="build/images/electronics/roullet.png"
-                                    alt=""
-                                    class="img-responsive roullet"
-                            />
-                            <img
-                                    src="build/images/electronics/chips.png"
-                                    alt=""
-                                    class="img-responsive chips"
-                            />
-                            <!--                            <img-->
-                            <!--                                    src="build/images/electronics/poker.png"-->
-                            <!--                                    alt=""-->
-                            <!--                                    class="img-responsive poker"-->
-                            <!--                            />-->
-                            <img
-                                    src="build/images/electronics/Jackpot.png"
-                                    alt=""
-                                    class="img-responsive Jackpot"
-                            />
+                        <div class="playerBox">
+                            <div id="player-container--elec"></div>
                         </div>
                     </div>
                 </div>
@@ -930,32 +883,8 @@
                             alt=""
                             class="img-responsive title wow fadeInUp"
                     />
-                    <div class="stage">
-                        <img
-                                src="build/images/bingo/lotteryTicket01.png"
-                                alt=""
-                                class="img-responsive lotteryTicket01"
-                        />
-                        <img
-                                src="build/images/bingo/lotteryTicket02.png"
-                                alt=""
-                                class="img-responsive lotteryTicket02"
-                        />
-                        <img
-                                src="build/images/bingo/ColoredBalls_N3.png"
-                                alt=""
-                                class="img-responsive ColoredBalls_N3"
-                        />
-                        <img
-                                src="build/images/bingo/ColoredBalls_N5.png"
-                                alt=""
-                                class="img-responsive ColoredBalls_N5"
-                        />
-                        <img
-                                src="build/images/bingo/coins.png"
-                                alt=""
-                                class="img-responsive coins"
-                        />
+                    <div class="playerBox">
+                        <div id="player-container--bingo"></div>
                     </div>
                 </div>
                 <div
@@ -967,16 +896,8 @@
                             alt=""
                             class="img-responsive title wow fadeInUp"
                     />
-                    <div class="stage">
-                        <img
-                                src="build/images/fish/nimo.png"
-                                alt=""
-                                class="img-responsive nimo"
-                        />
-                        <div class="shark">
-                            <img src="build/images/fish/sharkRightHand.png" alt="" class="sharkRightHand">
-                            <div class="rocket"></div>
-                        </div>
+                    <div class="playerBox">
+                        <div id="player-container--fish"></div>
                     </div>
                 </div>
             </div>
@@ -2539,6 +2460,34 @@
   new spine.SpinePlayer("player-container", {
     jsonUrl: "./build/spine/fanBingBing/woman.json",
     atlasUrl: "./build/spine/fanBingBing/woman.atlas",
+    showControls: false,
+    alpha: true, // Enable player translucency
+    backgroundColor: "#00000000"
+  });
+  new spine.SpinePlayer("player-container--sport", {
+    jsonUrl: "./build/spine/sport/Sports.json",
+    atlasUrl: "./build/spine/sport/Sports.atlas",
+    showControls: false,
+    alpha: true, // Enable player translucency
+    backgroundColor: "#00000000"
+  });
+  new spine.SpinePlayer("player-container--elec", {
+    jsonUrl: "./build/spine/elec/Elec.json",
+    atlasUrl: "./build/spine/elec/Elec.atlas",
+    showControls: false,
+    alpha: true, // Enable player translucency
+    backgroundColor: "#00000000"
+  });
+  new spine.SpinePlayer("player-container--bingo", {
+    jsonUrl: "./build/spine/bingo/Bingo.json",
+    atlasUrl: "./build/spine/bingo/Bingo.atlas",
+    showControls: false,
+    alpha: true, // Enable player translucency
+    backgroundColor: "#00000000"
+  });
+  new spine.SpinePlayer("player-container--fish", {
+    jsonUrl: "./build/spine/fish/Fish.json",
+    atlasUrl: "./build/spine/fish/Fish.atlas",
     showControls: false,
     alpha: true, // Enable player translucency
     backgroundColor: "#00000000"

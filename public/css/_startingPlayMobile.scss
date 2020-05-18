@@ -35,18 +35,22 @@ $bgWhite: white;
         width: 184px;
         bottom: 0;
         right: 0;
+        border-radius: 12px;
         #player-container {
           @include breakpoint($pixel2xl){
-            width: 85vw;
-            bottom: -265px;
+            width: 75vw;
+            bottom: -165px;
           }
           @include breakpoint($iphone8){
-            width: 90vw;
-            bottom: -186px;
+            width: 75vw;
+            bottom: -96px;
+          }
+          @include breakpoint($iphoneX){
+            bottom: -144px;
           }
           @include breakpoint($iphone5){
-            width: 100vw;
-            bottom: -141px;
+            width: 85vw;
+            bottom: -58px;
           }
           width: 70vw;
           height: 70vh;
@@ -156,6 +160,46 @@ $bgWhite: white;
           z-index: 2;
         }
 
+        .playerBox {
+          @include breakpoint($iphone8){
+            width: 166px;
+          }
+          @include breakpoint($iphone5){
+            width: 139px;
+          }
+          position: absolute;
+          overflow: hidden;
+          height: 150px;
+          width: 184px;
+          bottom: 0;
+          right: 0;
+          border-radius: 12px;
+          #player-container--sport {
+            @include breakpoint($pixel2xl){
+              width: 75vw;
+              bottom: -176px;
+            }
+            @include breakpoint($iphone8){
+              width: 60vw;
+              bottom: -106px;
+            }
+            @include breakpoint($iphoneX){
+              width: 60vw;
+              bottom: -141px;
+            }
+            @include breakpoint($iphone5){
+              width: 80vw;
+              bottom: -95px;
+            }
+            width: 60vw;
+            height: 50vh;
+            position: absolute;
+            bottom: -129px;
+            left: 50%;
+            transform: translateX(-47%);
+          }
+        }
+
         .stage {
           border-radius: 8px;
           overflow: hidden;
@@ -244,6 +288,46 @@ $bgWhite: white;
           z-index: 2;
         }
 
+        .playerBox {
+          @include breakpoint($iphone8){
+            width: 166px;
+          }
+          @include breakpoint($iphone5){
+            width: 139px;
+          }
+          position: absolute;
+          overflow: hidden;
+          height: 150px;
+          width: 184px;
+          bottom: 0;
+          right: 0;
+          border-radius: 12px;
+          #player-container--elec {
+            @include breakpoint($pixel2xl){
+              width: 65vw;
+              bottom: -145px;
+            }
+            @include breakpoint($iphone8){
+              width: 65vw;
+              bottom: -106px;
+            }
+            @include breakpoint($iphoneX){
+              width: 65vw;
+              bottom: -140px;
+            }
+            @include breakpoint($iphone5){
+              width: 70vw;
+              bottom: -77px;
+            }
+            width: 60vw;
+            height: 50vh;
+            position: absolute;
+            bottom: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
         .stage {
           border-radius: 8px;
           overflow: hidden;
@@ -310,6 +394,45 @@ $bgWhite: white;
         bottom: 3px;
         position: absolute;
         z-index: 2;
+      }
+
+      .playerBox {
+        @include breakpoint($iphone8){
+          width: 166px;
+        }
+        @include breakpoint($iphone5){
+          width: 139px;
+        }
+        position: absolute;
+        overflow: hidden;
+        height: 150px;
+        width: 184px;
+        bottom: 0;
+        right: 0;
+        #player-container--bingo {
+          @include breakpoint($pixel2xl){
+            width: 55vw;
+            bottom: -132px;
+          }
+          @include breakpoint($iphone8){
+            width: 55vw;
+            bottom: -98px;
+          }
+          @include breakpoint($iphoneX){
+            width: 55vw;
+            bottom: -132px;
+          }
+          @include breakpoint($iphone5){
+            width: 59vw;
+            bottom: -74px;
+          }
+          width: 53vw;
+          height: 50vh;
+          position: absolute;
+          bottom: -111px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
 
       .stage {
@@ -383,6 +506,46 @@ $bgWhite: white;
         bottom: 3px;
         position: absolute;
         z-index: 2;
+      }
+
+      .playerBox {
+        @include breakpoint($iphone8){
+          width: 166px;
+        }
+        @include breakpoint($iphone5){
+          width: 139px;
+        }
+        position: absolute;
+        overflow: hidden;
+        height: 150px;
+        width: 184px;
+        bottom: 0;
+        right: 0;
+        #player-container--fish {
+          @include breakpoint($pixel2xl){
+            width: 53vw;
+            bottom: -134px;
+          }
+
+          @include breakpoint($iphone8){
+            width: 50vw;
+            bottom: -89px;
+          }
+          @include breakpoint($iphoneX){
+            width: 50vw;
+            bottom: -125px;
+          }
+          @include breakpoint($iphone5){
+            width: 55vw;
+            bottom: -69px;
+          }
+          width: 50vw;
+          height: 47vh;
+          position: absolute;
+          bottom: -111px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
 
       .stage {

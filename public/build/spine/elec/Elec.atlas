@@ -1,0 +1,62 @@
+
+Elec.png
+size: 286,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+777 b
+  rotate: true
+  xy: 181, 145
+  size: 122, 101
+  orig: 150, 106
+  offset: 2, 3
+  index: -1
+ball
+  rotate: false
+  xy: 231, 5
+  size: 23, 23
+  orig: 25, 25
+  offset: 1, 1
+  index: -1
+botton
+  rotate: false
+  xy: 2, 2
+  size: 173, 86
+  orig: 176, 88
+  offset: 1, 1
+  index: -1
+coin1
+  rotate: false
+  xy: 181, 90
+  size: 65, 53
+  orig: 228, 160
+  offset: 0, 107
+  index: -1
+coin2
+  rotate: false
+  xy: 231, 30
+  size: 53, 58
+  orig: 55, 60
+  offset: 1, 1
+  index: -1
+coin3
+  rotate: true
+  xy: 177, 2
+  size: 86, 52
+  orig: 88, 54
+  offset: 1, 1
+  index: -1
+line
+  rotate: false
+  xy: 248, 95
+  size: 16, 48
+  orig: 18, 50
+  offset: 1, 1
+  index: -1
+roullet
+  rotate: false
+  xy: 2, 90
+  size: 177, 177
+  orig: 179, 179
+  offset: 1, 1
+  index: -1

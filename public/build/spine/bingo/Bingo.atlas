@@ -1,0 +1,41 @@
+
+Bingo.png
+size: 333,582
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ColoredBalls_N3
+  rotate: false
+  xy: 202, 40
+  size: 129, 130
+  orig: 131, 132
+  offset: 1, 1
+  index: -1
+ColoredBalls_N5
+  rotate: true
+  xy: 2, 2
+  size: 168, 198
+  orig: 170, 200
+  offset: 1, 1
+  index: -1
+coins
+  rotate: true
+  xy: 208, 353
+  size: 227, 121
+  orig: 229, 123
+  offset: 1, 1
+  index: -1
+lotteryTicket01
+  rotate: true
+  xy: 2, 172
+  size: 164, 231
+  orig: 166, 233
+  offset: 1, 1
+  index: -1
+lotteryTicket02
+  rotate: false
+  xy: 2, 338
+  size: 204, 242
+  orig: 206, 244
+  offset: 1, 1
+  index: -1

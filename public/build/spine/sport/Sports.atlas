@@ -1,0 +1,41 @@
+
+Sports.png
+size: 1321,414
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 2, 2
+  size: 410, 521
+  orig: 410, 521
+  offset: 0, 0
+  index: -1
+lebron_H1
+  rotate: true
+  xy: 1090, 31
+  size: 142, 229
+  orig: 144, 231
+  offset: 1, 1
+  index: -1
+lebron_H2
+  rotate: true
+  xy: 829, 31
+  size: 142, 259
+  orig: 144, 261
+  offset: 1, 1
+  index: -1
+lebron_LH
+  rotate: false
+  xy: 525, 6
+  size: 302, 406
+  orig: 302, 406
+  offset: 0, 0
+  index: -1
+lebron_RH
+  rotate: true
+  xy: 829, 175
+  size: 237, 455
+  orig: 237, 455
+  offset: 0, 0
+  index: -1

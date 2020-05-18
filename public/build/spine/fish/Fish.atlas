@@ -1,0 +1,41 @@
+
+Fish.png
+size: 1195,454
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ammo
+  rotate: false
+  xy: 1035, 79
+  size: 116, 109
+  orig: 120, 111
+  offset: 1, 1
+  index: -1
+nimo
+  rotate: false
+  xy: 861, 190
+  size: 332, 262
+  orig: 332, 262
+  offset: 0, 0
+  index: -1
+rocket
+  rotate: true
+  xy: 569, 62
+  size: 390, 290
+  orig: 393, 292
+  offset: 1, 1
+  index: -1
+shark
+  rotate: true
+  xy: 2, 2
+  size: 450, 565
+  orig: 450, 565
+  offset: 0, 0
+  index: -1
+wing
+  rotate: false
+  xy: 861, 6
+  size: 172, 182
+  orig: 172, 182
+  offset: 0, 0
+  index: -1
