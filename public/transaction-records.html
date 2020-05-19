@@ -117,7 +117,7 @@
               <span
                       class="iconfont icon_chevron-left-light"
                       style='margin-left: 10px;font-size: 1.625rem;'></span>
-            <div class='title'>交易資料</div>
+            <div class='title'>交易紀錄</div>
         </nav>
         <div class="userStateBar">
             <div class='userStateColumn'>
@@ -205,8 +205,11 @@
 
     <div class='mobileBox' style="margin-top: 80px;height: auto;padding-bottom: 80px;" id="swt01">
         <div class="switchTabsNav">
-            <div class="tab active">未完成</div>
-            <div class="tab">已完成</div>
+            <div class="tab active">存款</div>
+            <div class="tab">提款</div>
+            <div class="tab">轉點</div>
+            <div class="tab">優惠</div>
+            <div class="tab">下注歷史</div>
         </div>
         <div class="panelsGroup">
             <div class="panel">
@@ -241,24 +244,12 @@
                             aria-label="First group"
                             style="width: 100%"
                     >
-                        <button type="button" class="btn btn-outline-light">明日</button>
                         <button type="button" class="btn btn-outline-light">今日</button>
                         <button type="button" class="btn btn-outline-light">昨日</button>
                         <button type="button" class="btn btn-outline-light">本週</button>
-                    </div>
-                    <div
-                            class="btn-group mb-3"
-                            role="group"
-                            aria-label="Second group"
-                            style="width: 100%"
-                    >
                         <button type="button" class="btn btn-outline-light">上週</button>
-                        <button type="button" class="btn btn-outline-light">本月</button>
-                        <button type="button" class="btn btn-outline-light">上月</button>
-                        <button type="button" class="btn btn-outline-light">
-                            近一個月
-                        </button>
                     </div>
+
                     <div
                             class="btn-group mb-3"
                             role="group"
@@ -266,9 +257,6 @@
                             style="width: 100%"
                     >
                         <button type="button" class="btn btn-primary btn-md">
-                            清除時間
-                        </button>
-                        <button type="button" class="btn btn-secondary btn-md">
                             搜尋
                         </button>
                     </div>
@@ -283,10 +271,18 @@
                 <div class='itemContainer itemContainer__records' style='height: auto;'>
                     <div>單號：xxxxx</div>
                     <div>2020/02/27/15:28</div>
+                    <div>儲值方式：ATM</div>
                     <div>金額：1000</div>
-                    <div>狀態：<span style='color:#E02020'>失敗</span></div>
+                    <div>狀態：<span class="failure">申請中</span></div>
                 </div>
-                
+                <div class='itemContainer itemContainer__records' style='height: auto;'>
+                    <div>單號：xxxxx</div>
+                    <div>2020/02/27/15:28</div>
+                    <div>儲值方式：ATM</div>
+                    <div>金額：1000</div>
+                    <div>狀態：<span class="success">成功</span></div>
+                </div>
+
             </div>
             <div class="panel">
                 <form>
@@ -320,24 +316,12 @@
                             aria-label="First group"
                             style="width: 100%"
                     >
-                        <button type="button" class="btn btn-outline-light">明日</button>
                         <button type="button" class="btn btn-outline-light">今日</button>
                         <button type="button" class="btn btn-outline-light">昨日</button>
                         <button type="button" class="btn btn-outline-light">本週</button>
-                    </div>
-                    <div
-                            class="btn-group mb-3"
-                            role="group"
-                            aria-label="Second group"
-                            style="width: 100%"
-                    >
                         <button type="button" class="btn btn-outline-light">上週</button>
-                        <button type="button" class="btn btn-outline-light">本月</button>
-                        <button type="button" class="btn btn-outline-light">上月</button>
-                        <button type="button" class="btn btn-outline-light">
-                            近一個月
-                        </button>
                     </div>
+
                     <div
                             class="btn-group mb-3"
                             role="group"
@@ -345,11 +329,9 @@
                             style="width: 100%"
                     >
                         <button type="button" class="btn btn-primary btn-md">
-                            清除時間
-                        </button>
-                        <button type="button" class="btn btn-secondary btn-md">
                             搜尋
                         </button>
+
                     </div>
                 </form>
                 <div
@@ -363,84 +345,499 @@
                     <div>單號：xxxxx</div>
                     <div>2020/02/27/15:28</div>
                     <div>金額：1000</div>
-                    <div>狀態：<span style='color:#0091FF'>成功</span></div>
+                    <div>狀態：<span class="success">成功</span></div>
                 </div>
+
+                <div class='itemContainer itemContainer__records' style='height: auto;'>
+                    <div>單號：xxxxx</div>
+                    <div>2020/02/27/15:28</div>
+                    <div>金額：1000</div>
+                    <div>狀態：<span class="failure">失敗</span></div>
+                </div>
+            </div>
+            <div class="panel">
+                <form>
+                    <div class="form-group">
+                        <label class="mb-3" style="display: block;color: white;"
+                        >開始時間</label
+                        >
+                        <input
+                                type="text"
+                                id="datetimeFrom3"
+                                autocomplete="off"
+                                runat="server"
+                                class="form-control cursor mb-3"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-3" style="display: block;color: white;"
+                        >結束時間</label
+                        >
+                        <input
+                                type="text"
+                                id="datetimeFrom4"
+                                autocomplete="off"
+                                runat="server"
+                                class="form-control cursor mb-3"
+                        />
+                    </div>
+                    <div
+                            class="btn-group mb-3"
+                            role="group"
+                            aria-label="First group"
+                            style="width: 100%"
+                    >
+                        <button type="button" class="btn btn-outline-light">今日</button>
+                        <button type="button" class="btn btn-outline-light">昨日</button>
+                        <button type="button" class="btn btn-outline-light">本週</button>
+                        <button type="button" class="btn btn-outline-light">上週</button>
+                    </div>
+
+                    <div
+                            class="btn-group mb-3"
+                            role="group"
+                            aria-label="Third group"
+                            style="width: 100%"
+                    >
+                        <button type="button" class="btn btn-primary btn-md">
+                            搜尋
+                        </button>
+
+                    </div>
+                </form>
+                <div
+                        class="itemContainer itemContainer__norecords"
+                        style="height: 48px"
+                >
+                    尚無任何記錄
+                </div>
+
+                <div class="itemContainer">
+                    <div class="info__header"
+                    >
+                        <div class="info__header__container">
+                            <div class="property">
+                                卡利百家樂轉出
+                            </div>
+                            <div class="property">
+                                2020/02/27/15:28:35
+                            </div>
+                        </div>
+
+                        <span
+                                class="iconfont icon_chevron-down-light"
+                                style="font-size: 1rem; color: #9BA2AA"
+                        ></span>
+                    </div>
+
+                    <div class="dropDownBox">
+                        <div class="listItem">轉出帳戶：<span>卡利百家樂</span></div>
+                        <div class="listItem">轉入帳戶：<span class="orange">主帳戶</span></div>
+                        <div class="listItem">剩餘額度：<span>500</span></div>
+                    </div>
+                    <div class="info__footer">
+                        <div class="info__footer__container">
+                            <div class="property">
+                                狀態：<span class="success">成功</span>
+                            </div>
+                            <div class="property">
+                                轉帳金額：<span class="success">250</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="itemContainer">
+                    <div class="info__header"
+                    >
+                        <div class="info__header__container">
+                            <div class="property">
+                                主帳戶轉出
+                            </div>
+                            <div class="property">
+                                2020/02/27/15:28:35
+                            </div>
+                        </div>
+
+                        <span
+                                class="iconfont icon_chevron-down-light"
+                                style="font-size: 1rem; color: #9BA2AA"
+                        ></span>
+                    </div>
+
+                    <div class="dropDownBox">
+                        <div class="listItem">轉出帳戶：<span>主帳戶</span></div>
+                        <div class="listItem">轉入帳戶：<span class="orange">卡利百家樂</span></div>
+                        <div class="listItem">剩餘額度：<span>500</span></div>
+                        <div class="listItem">單號：<span>1395062</span></div>
+                    </div>
+                    <div class="info__footer">
+                        <div class="info__footer__container">
+                            <div class="property">
+                                狀態：<span class="failure">失敗</span>
+                            </div>
+                            <div class="property">
+                                轉帳金額：<span class="failure">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="panel">
+                <form>
+                    <div class="form-group">
+                        <label class="mb-3" style="display: block;color: white;"
+                        >開始時間</label
+                        >
+                        <input
+                                type="text"
+                                id="datetimeFrom3"
+                                autocomplete="off"
+                                runat="server"
+                                class="form-control cursor mb-3"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-3" style="display: block;color: white;"
+                        >結束時間</label
+                        >
+                        <input
+                                type="text"
+                                id="datetimeFrom4"
+                                autocomplete="off"
+                                runat="server"
+                                class="form-control cursor mb-3"
+                        />
+                    </div>
+                    <div
+                            class="btn-group mb-3"
+                            role="group"
+                            aria-label="First group"
+                            style="width: 100%"
+                    >
+                        <button type="button" class="btn btn-outline-light">上月</button>
+                        <button type="button" class="btn btn-outline-light">本月</button>
+                        <button type="button" class="btn btn-outline-light">常駐</button>
+                    </div>
+
+                    <div
+                            class="btn-group mb-3"
+                            role="group"
+                            aria-label="Third group"
+                            style="width: 100%"
+                    >
+                        <button type="button" class="btn btn-primary btn-md">
+                            搜尋
+                        </button>
+
+                    </div>
+                </form>
+                <div
+                        class="itemContainer itemContainer__norecords"
+                        style="height: 48px"
+                >
+                    尚無任何記錄
+                </div>
+                <div class="itemContainer" style="padding: 0;">
+                    <div
+                            style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
+                    >
+                        <div
+                                style="text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                        >
+                            首儲
+                        </div>
+
+                        <a
+                                style="text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;padding: 15px;
+    border-right: 1px solid rgb(204, 204, 204);border-left: 1px solid rgb(204, 204, 204);"
+                        >詳細內容</a
+                        >
+                        <div
+                                style="position: relative;text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;
+    padding: 15px 0;"
+                        >
+                            前往領取
+                            <span
+                                    style="position: absolute;top: 50%;transform: translateY(-50%);border-radius: 50px;left: 10px;
+    height: 10px;width: 10px;background-color: red;"
+                            ></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemContainer" style="padding: 0;">
+                    <div
+                            style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
+                    >
+                        <div
+                                style="text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                        >
+                            二儲
+                        </div>
+
+                        <a
+                                style="text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;padding: 15px;
+    border-right: 1px solid rgb(204, 204, 204);border-left: 1px solid rgb(204, 204, 204);"
+                        >詳細內容</a
+                        >
+                        <div
+                                style="position: relative;text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;
+    padding: 15px 0;"
+                        >
+                <span
+                        style="padding: 2px 5px;
+    color: white;
+    background-color: rgb(35, 216, 35);
+    border-radius: 3px;"
+                >已領取</span
+                >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <form>
+                    <div class="form-group"><label class="mb-3" style="display: block; color: white;">遊戲</label><select
+                            id="historyBetSid" class="form-control">
+                        <option value="63" selected="">卡利百家樂</option>
+                        <option value="12">歐博</option>
+                        <option value="10">沙龍百家樂</option>
+                        <option value="25">DG百家樂</option>
+                        <option value="32">WM百家樂</option>
+                        <option value="55">卡利體育</option>
+                        <option value="21">Super體育</option>
+                        <option value="58">雷火電競</option>
+                        <option value="59">幸運棋牌</option>
+                        <option value="62">MG棋牌</option>
+                        <option value="44">RTG天地</option>
+                        <option value="53">DreamTech</option>
+                        <option value="46">BTX</option>
+                        <option value="51">9K彩票</option>
+                        <option value="24">六合彩539</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-3" style="display: block;color: white;"
+                        >開始時間</label
+                        >
+                        <input
+                                type="text"
+                                id="datetimeFrom1"
+                                autocomplete="off"
+                                runat="server"
+                                class="form-control cursor mb-3"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-3" style="display: block;color: white;"
+                        >結束時間</label
+                        >
+                        <input
+                                type="text"
+                                id="datetimeFrom2"
+                                autocomplete="off"
+                                runat="server"
+                                class="form-control cursor mb-3"
+                        />
+                    </div>
+                    <div
+                            class="btn-group mb-3"
+                            role="group"
+                            aria-label="First group"
+                            style="width: 100%"
+                    >
+                        <button type="button" class="btn btn-outline-light">今日</button>
+                        <button type="button" class="btn btn-outline-light">昨日</button>
+                        <button type="button" class="btn btn-outline-light">本週</button>
+                        <button type="button" class="btn btn-outline-light">上週</button>
+                    </div>
+
+                    <div
+                            class="btn-group mb-3"
+                            role="group"
+                            aria-label="Third group"
+                            style="width: 100%"
+                    >
+                        <button type="button" class="btn btn-primary btn-md">
+                            搜尋
+                        </button>
+                    </div>
+                </form>
+                <div
+                        class="itemContainer itemContainer__norecords"
+                        style="height: 48px"
+                >
+                    尚無任何記錄
+                </div>
+
+                <div class="itemContainer">
+                    <div class="info__header">
+                        <div class="info__header__container">
+                            <div
+                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                            >
+                                卡利百家樂
+                            </div>
+                            <div
+                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                            >
+                                輸/贏： <span class="success">1000</span>
+                            </div>
+                        </div>
+
+                        <span
+                                class="iconfont icon_chevron-down-light"
+                                style="font-size: 1rem; color: #9BA2AA"
+                        ></span>
+                    </div>
+
+                    <div class="dropDownBox">
+                        <div class="listItem">單號：<span>xxxxx</span></div>
+                        <div class="listItem">星級：<span>六星級</span></div>
+                        <div class="listItem">遊戲平台：<span>卡利百家樂</span></div>
+                        <div class="listItem">遊戲類型：<span>真人百家樂</span></div>
+                        <div class="listItem">投注額：<span>1000</span></div>
+                        <div class="listItem">流水：<span>1000</span></div>
+                    </div>
+
+                    <div class="info__footer">
+                        <div class="info__footer__container">
+                            <div class="property">
+                                2020/02/27/15:28:35
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="itemContainer">
+                    <div class="info__header">
+                        <div class="info__header__container">
+                            <div
+                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                            >
+                                卡利百家樂
+                            </div>
+                            <div
+                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
+                            >
+                                輸/贏： <span class="failure">1000</span>
+                            </div>
+                        </div>
+
+                        <span
+                                class="iconfont icon_chevron-down-light"
+                                style="font-size: 1rem; color: #9BA2AA"
+                        ></span>
+                    </div>
+
+                    <div class="dropDownBox">
+                        <div class="listItem">單號：<span>xxxxx</span></div>
+                        <div class="listItem">星級：<span>六星級</span></div>
+                        <div class="listItem">遊戲平台：<span>卡利百家樂</span></div>
+                        <div class="listItem">遊戲類型：<span>真人百家樂</span></div>
+                        <div class="listItem">投注額：<span>1000</span></div>
+                        <div class="listItem">流水：<span>1000</span></div>
+                    </div>
+
+                    <div class="info__footer">
+                        <div class="info__footer__container">
+                            <div class="property">
+                                2020/02/27/15:28:35
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
     <nav class="navbar fixed-bottom BottomNav">
-        <a href="/platform_transfer">
-            <span class="iconfont icon_Transfer"></span>
-            平台轉帳
-        </a>
-        <a href="/promotions">
-            <span class="iconfont icon_gift-solid"></span>
-            最新優惠
-        </a>
-        <div style="position:relative;cursor: pointer">
-            <a href="/promotions" class="menuToggle lv1Menu">
-                <span class="iconfont icon_sack-dollar-solid"></span>
-                在線提款
+        <div class='btnGroup btnGroup--panel'>
+            <a href="/" class="home">
+                <div class="back"></div>
+                <div class="front"></div>
             </a>
-            <div class="nav-menu-2 UPS">
-                <div class="overlay"></div>
-                <div class="UpSwitch">
-                    <a href="/deposit">
-                        <p>
+
+
+            <a href="/platform_transfer">
+                <span class="iconfont icon_Transfer"></span>
+                平台轉帳
+            </a>
+            <a href="/promotions">
+                <span class="iconfont icon_gift-solid"></span>
+                最新優惠
+            </a>
+            <div style="width: 68px;"></div>
+            <div style="position:relative;cursor: pointer">
+                <a href="/promotions" class="onlineWithdraw">
+                    <span class="iconfont icon_sack-dollar-solid"></span>
+                    在線提款
+                </a>
+                <div class="UPS">
+                    <div class="overlay"></div>
+                    <div class="UpSwitch">
+                        <a href="/deposit">
+                            <p>
                   <span
                           class="iconfont icon_turnIN1"
                           style="color: #077F64"
                   ></span>
-                            存款專區
-                        </p>
-                    </a>
-                    <a href="/withdrawals">
-                        <p>
+                                存款專區
+                            </p>
+                        </a>
+                        <a href="/withdrawals">
+                            <p>
                   <span
                           class="iconfont icon_turnOUT1"
                           style="color: #FA6400"
                   ></span>
-                            提款專區
+                                提款專區
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="position:relative;">
+                <a href="/" class="memberCenter">
+                    <span class="iconfont icon_user-solid"></span>
+                    會員中心
+                </a>
+                <div class="UpMenu UPM">
+                    <a href="/edit_user_info">
+                        <p>
+                            <span class="iconfont icon_user-alt-light"></span>
+                            變更資料
+                        </p>
+                    </a>
+                    <a href="/transaction_records">
+                        <p>
+                            <span class="iconfont icon_file-invoice-dollar-light"></span>
+                            交易記錄
+                        </p>
+                    </a>
+                    <a href="/bet_records">
+                        <p>
+                            <span class="iconfont icon_coins-light"></span>
+                            各廳流水
+                        </p>
+                    </a>
+
+                    <a href="/recommendation">
+                        <p>
+                            <span class="iconfont icon_thumbs-up-light"></span>
+                            會員推薦
                         </p>
                     </a>
                 </div>
-            </div>
-        </div>
-        <a href="/customer_service">
-            <span class="iconfont iconHR"></span>
-            在線客服
-        </a>
-        <div style="position:relative;">
-            <a href="/" class="menuToggle lv1Menu">
-                <span class="iconfont icon_user-solid"></span>
-                會員中心
-            </a>
-            <div class="UpMenu nav-menu-2 UPM">
-                <a href="/edit_user_info">
-                    <p>
-                        <span class="iconfont icon_user-alt-light"></span>
-                        變更資料
-                    </p>
-                </a>
-                <a href="/transaction_records">
-                    <p>
-                        <span class="iconfont icon_file-invoice-dollar-light"></span>
-                        交易記錄
-                    </p>
-                </a>
-                <a href="/bet_records">
-                    <p>
-                        <span class="iconfont icon_coins-light"></span>
-                        投注記錄
-                    </p>
-                </a>
-                <a href="/bonus_records">
-                    <p>
-                        <span class="iconfont icon_gift-light"></span>
-                        優惠記錄
-                    </p>
-                </a>
             </div>
         </div>
     </nav>
@@ -550,7 +947,6 @@
         </div>
     </div>
 </div>
-
 
 
 <script

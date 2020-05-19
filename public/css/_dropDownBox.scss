@@ -21,6 +21,9 @@
     margin-top: 10px;
   }
   .listItem {
+    .orange {
+      color: $backgroundColor;
+    }
     span {
       color: $color-black
     }

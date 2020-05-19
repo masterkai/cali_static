@@ -204,10 +204,7 @@
     </div>
 
     <div class='mobileBox' style="margin-top: 80px;height: auto;padding-bottom: 80px;" id="swt01">
-        <div class="switchTabsNav">
-            <div class="tab active">本週</div>
-            <div class="tab">上週</div>
-        </div>
+
         <div class="panelsGroup">
             <div class="panel">
                 <form>
@@ -241,24 +238,12 @@
                             aria-label="First group"
                             style="width: 100%"
                     >
-                        <button type="button" class="btn btn-outline-light">明日</button>
                         <button type="button" class="btn btn-outline-light">今日</button>
                         <button type="button" class="btn btn-outline-light">昨日</button>
                         <button type="button" class="btn btn-outline-light">本週</button>
-                    </div>
-                    <div
-                            class="btn-group mb-3"
-                            role="group"
-                            aria-label="Second group"
-                            style="width: 100%"
-                    >
                         <button type="button" class="btn btn-outline-light">上週</button>
-                        <button type="button" class="btn btn-outline-light">本月</button>
-                        <button type="button" class="btn btn-outline-light">上月</button>
-                        <button type="button" class="btn btn-outline-light">
-                            近一個月
-                        </button>
                     </div>
+
                     <div
                             class="btn-group mb-3"
                             role="group"
@@ -266,9 +251,6 @@
                             style="width: 100%"
                     >
                         <button type="button" class="btn btn-primary btn-md">
-                            清除時間
-                        </button>
-                        <button type="button" class="btn btn-secondary btn-md">
                             搜尋
                         </button>
                     </div>
@@ -384,180 +366,7 @@
                 </div>
                 
             </div>
-            <div class="panel">
-                <form>
-                    <div class="form-group">
-                        <label class="mb-3" style="display: block;color: white;"
-                        >開始時間</label
-                        >
-                        <input
-                                type="text"
-                                id="datetimeFrom3"
-                                autocomplete="off"
-                                runat="server"
-                                class="form-control cursor mb-3"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label class="mb-3" style="display: block;color: white;"
-                        >結束時間</label
-                        >
-                        <input
-                                type="text"
-                                id="datetimeFrom4"
-                                autocomplete="off"
-                                runat="server"
-                                class="form-control cursor mb-3"
-                        />
-                    </div>
-                    <div
-                            class="btn-group mb-3"
-                            role="group"
-                            aria-label="First group"
-                            style="width: 100%"
-                    >
-                        <button type="button" class="btn btn-outline-light">明日</button>
-                        <button type="button" class="btn btn-outline-light">今日</button>
-                        <button type="button" class="btn btn-outline-light">昨日</button>
-                        <button type="button" class="btn btn-outline-light">本週</button>
-                    </div>
-                    <div
-                            class="btn-group mb-3"
-                            role="group"
-                            aria-label="Second group"
-                            style="width: 100%"
-                    >
-                        <button type="button" class="btn btn-outline-light">上週</button>
-                        <button type="button" class="btn btn-outline-light">本月</button>
-                        <button type="button" class="btn btn-outline-light">上月</button>
-                        <button type="button" class="btn btn-outline-light">
-                            近一個月
-                        </button>
-                    </div>
-                    <div
-                            class="btn-group mb-3"
-                            role="group"
-                            aria-label="Third group"
-                            style="width: 100%"
-                    >
-                        <button type="button" class="btn btn-primary btn-md">
-                            清除時間
-                        </button>
-                        <button type="button" class="btn btn-secondary btn-md">
-                            搜尋
-                        </button>
-                    </div>
-                </form>
-                <div
-                        class="itemContainer itemContainer__norecords"
-                        style="height: 48px"
-                >
-                    尚無任何記錄
-                </div>
 
-                <div class="itemContainer">
-                    <div
-                            style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
-                    >
-                        <div
-                                style="display: flex;align-items: center;justify-content: space-between;flex-basis: 90%;"
-                        >
-                            <div
-                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                            >
-                                2020/02/27/15:28:35
-                            </div>
-                            <div
-                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                            >
-                                輸/贏： <span style="color: rgb(0, 145, 255);">{status}</span>
-                            </div>
-                        </div>
-
-                        <span
-                                class="iconfont icon_chevron-down-light"
-                                style="font-size: 1rem; color: #9BA2AA"
-                        ></span>
-                    </div>
-
-                    <div class="dropDownBox">
-                        <div class="listItem">單號：<span>xxxxx</span></div>
-                        <div class="listItem">星級：<span>六星級</span></div>
-                        <div class="listItem">遊戲平台：<span>xxxxx</span></div>
-                        <div class="listItem">遊戲類型：<span>xxxxx</span></div>
-                        <div class="listItem">投注額：<span>1000</span></div>
-                        <div class="listItem">流水：<span>1000</span></div>
-                    </div>
-                </div>
-                <div class="itemContainer">
-                    <div
-                            style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
-                    >
-                        <div
-                                style="display: flex;align-items: center;justify-content: space-between;flex-basis: 90%;"
-                        >
-                            <div
-                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                            >
-                                2020/02/27/15:28:35
-                            </div>
-                            <div
-                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                            >
-                                輸/贏： <span style="color: rgb(0, 145, 255);">{status}</span>
-                            </div>
-                        </div>
-
-                        <span
-                                class="iconfont icon_chevron-down-light"
-                                style="font-size: 1rem; color: #9BA2AA"
-                        ></span>
-                    </div>
-
-                    <div class="dropDownBox">
-                        <div class="listItem">單號：<span>xxxxx</span></div>
-                        <div class="listItem">星級：<span>六星級</span></div>
-                        <div class="listItem">遊戲平台：<span>xxxxx</span></div>
-                        <div class="listItem">遊戲類型：<span>xxxxx</span></div>
-                        <div class="listItem">投注額：<span>1000</span></div>
-                        <div class="listItem">流水：<span>1000</span></div>
-                    </div>
-                </div>
-                <div class="itemContainer">
-                    <div
-                            style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
-                    >
-                        <div
-                                style="display: flex;align-items: center;justify-content: space-between;flex-basis: 90%;"
-                        >
-                            <div
-                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                            >
-                                2020/02/27/15:28:35
-                            </div>
-                            <div
-                                    style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                            >
-                                輸/贏： <span style="color: rgb(244,32,32);">{status}</span>
-                            </div>
-                        </div>
-
-                        <span
-                                class="iconfont icon_chevron-down-light"
-                                style="font-size: 1rem; color: #9BA2AA"
-                        ></span>
-                    </div>
-
-                    <div class="dropDownBox">
-                        <div class="listItem">單號：<span>xxxxx</span></div>
-                        <div class="listItem">星級：<span>六星級</span></div>
-                        <div class="listItem">遊戲平台：<span>xxxxx</span></div>
-                        <div class="listItem">遊戲類型：<span>xxxxx</span></div>
-                        <div class="listItem">投注額：<span>1000</span></div>
-                        <div class="listItem">流水：<span>1000</span></div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

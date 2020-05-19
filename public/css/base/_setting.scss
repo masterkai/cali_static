@@ -111,3 +111,14 @@ h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.success {
+  color: $color-mainLightBlue;
+}
+.failure {
+  color: $mainRed;
+}
+
+.orange {
+  color: $backgroundColor;
+}
