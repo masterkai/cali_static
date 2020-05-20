@@ -16,6 +16,9 @@
   }
 
   .walletModal {
+    &--money {
+      max-width: 650px;
+    }
     .wallet {
       cursor: pointer;
       position: absolute;
@@ -45,6 +48,7 @@
       .walletMain {
         &_modified {
           margin: 15px;
+          max-width: 620px;
         }
         @include breakpoint($ipad) {
           padding: 10px;
@@ -57,6 +61,9 @@
         border-radius: 8px;
 
         .mainNav {
+          &--money {
+            justify-content: center;
+          }
           max-width: 530px;
           margin: auto;
           height: 60px;

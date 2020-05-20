@@ -122,6 +122,10 @@
             </div>
 
             <span
+                    id="openMoney"
+                    class="iconfont icon_sack-dollar-light ml30"
+            ><span class="text" style="left: -23%;">存/提款</span></span>
+            <span
                     id="openWallet"
                     class="iconfont icon_wallet-light tip ml30"
                     title="電子錢包"
@@ -151,7 +155,7 @@
                     class="iconfont icon_gift-light tip ml30"
                     title="各廳流水"
             >
-                <span class="text" style="left: -38%;">各廳流水</span>
+                <span class="text" style="left: -38%;">優惠記錄</span>
             </span>
             <span
                     id="memberNotificationBtn"
@@ -1944,9 +1948,243 @@
     </div>
 </div>
 
+<!--MoneyModal-->
+<div class="walletModalGroup" id="moneyModal">
+    <div class="wallet_overlay"></div>
+    <div class="walletModal walletModal--money">
+        <div class="wallet" id="moneyCloseBtn">
+          <span
+                  class="iconfont icon_times-light"
+                  style="font-size: 26px; color: #32C5FF;"
+          ></span>
+        </div>
+
+        <div class="walletBox">
+            <div class="walletMain walletMain_modified">
+                <div class="mainNav mainNav--money">
+                    <div class="tab">存款</div>
+                    <div class="tab">提款</div>
+                </div>
+                <div class="uiBoxGroup">
+                    <div class="uiBox">
+                        <div class="uiContainer switch">
+                            <div class="switchBox">
+                                <div class="tab active">網上支付</div>
+                                <div class="tab">VIP存款區</div>
+                            </div>
+                            <div class="formGroup">
+                                <form class="formPanel">
+                                    <div class="form-group row formGroupCenter" id="bankCreditCardCheck">
+                                        <div class="form-check" style="margin: 0 10px 10px">
+                                            <input id="creditCard" type="radio" name="creditCard">
+                                            <label class="form-check-label" for="creditCard" style="color: #fff;">
+                                                信用卡
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="margin: 0 10px 10px">
+                                            <input id="bank" type="radio" name="bank">
+                                            <label class="form-check-label" for="bank" style="color: #fff;">
+                                                銀行
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label
+                                                for="inputPassword"
+                                                class="col-sm-3 col-form-label"
+                                                style="color: white;"
+                                        >從這轉帳</label
+                                        >
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm">
+                                                <option>— 請選擇 —</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label
+                                                for="inputPassword"
+                                                class="col-sm-3 col-form-label"
+                                                style="color: white;"
+                                        >數額</label
+                                        >
+                                        <div class="col-sm-9">
+                                            <input
+                                                    type="text"
+                                                    class="form-control form-control-sm"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label
+                                                for="inputPassword"
+                                                class="col-sm-3 col-form-label"
+                                                style="color: white;"
+                                        >優惠</label
+                                        >
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm">
+                                                <option>— 請選擇 —</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="submitBtn">轉帳</button>
+                                    <p
+                                            style="color: white; text-align: center;margin-top: 10px; font-size: 12px"
+                                    >
+                                        如需協助，請洽在線客服詢問!
+                                    </p>
+                                </form>
+                                <form class="formPanel">
+                                    <div class="form-group row">
+                                        <label
+                                                for="inputPassword"
+                                                class="col-sm-3 col-form-label"
+                                                style="color: white;"
+                                        >銀行戶口</label
+                                        >
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm">
+                                                <option>— 請選擇 —</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row" style="margin-bottom: 5px">
+                                        <label
+                                                for="inputPassword"
+                                                class="col-sm-3 col-form-label"
+                                                style="color: white;"
+                                        >數額</label
+                                        >
+                                        <div class="col-sm-9">
+                                            <input
+                                                    type="text"
+                                                    class="form-control form-control-sm"
+                                            />
+                                            <div
+                                                    style="color:white;margin-top: 5px;font-size: 10px; text-align: right;"
+                                            >
+                                                最低100.00
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label
+                                                for="inputPassword"
+                                                class="col-sm-3 col-form-label"
+                                                style="color: white;"
+                                        >備註</label
+                                        >
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm">
+                                                <option>— 請選擇 —</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label
+                                                for="inputPassword"
+                                                class="col-sm-3 col-form-label"
+                                                style="color: white;"
+                                        >存款日期</label
+                                        >
+                                        <div class="col-sm-9">
+                                            <input
+                                                    class="cursor datePickerComponent"
+                                                    type="text"
+                                                    id="datetimeFrom"
+                                                    autocomplete="off"
+                                                    runat="server"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label
+                                                for="inputPassword"
+                                                class="col-sm-3 col-form-label"
+                                                style="color: white;"
+                                        >優惠</label
+                                        >
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm">
+                                                <option>— 請選擇 —</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <button class="submitBtn">提交</button>
+                                    <p
+                                            style="color:white; text-align:center;margin-top: 10px;font-size: 12px"
+                                    >
+                                        如需協助，請洽在線客服詢問
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uiBox">
+                        <div class="uiContainer">
+                            <form>
+                                <div class="form-group row">
+                                    <label
+                                            for="inputPassword"
+                                            class="col-sm-3 col-form-label"
+                                            style="color:white;"
+                                    >銀行</label
+                                    >
+                                    <div class="col-sm-9">
+                                        <select class="form-control form-control-sm">
+                                            <option>— 選擇銀行 —</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label
+                                            for="inputPassword"
+                                            class="col-sm-3 col-form-label"
+                                            style="color:white;"
+                                    >銀行戶口名字</label
+                                    >
+                                    <div class="col-sm-9">
+                                        <input
+                                                type="text"
+                                                class="form-control form-control-sm"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label
+                                            for="inputPassword"
+                                            class="col-sm-3 col-form-label"
+                                            style="color:white;"
+                                    >銀行戶口號碼</label
+                                    >
+                                    <div class="col-sm-9">
+                                        <input
+                                                type="text"
+                                                class="form-control form-control-sm"
+                                        />
+                                    </div>
+                                </div>
+
+                                <button class="submitBtn">轉帳</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal -->
 <div class="mobileModal-container" id="modal">
-    <div class="mobileModal">
+    <div class="mobileModal mobileModal--prompt">
         <div class="close-btn" id="close">
             <span class="iconfont icon_times-light"></span>
         </div>
@@ -2116,13 +2354,32 @@
         </div>
         <div class="modalBody modalBody__BetRecordsLayout">
             <form>
+                <div class="form-group"><label class="mb-3" style="display: block; color: white;">遊戲</label><select
+                        id="historyBetSid" class="form-control">
+                    <option value="63" selected="">卡利百家樂</option>
+                    <option value="12">歐博</option>
+                    <option value="10">沙龍百家樂</option>
+                    <option value="25">DG百家樂</option>
+                    <option value="32">WM百家樂</option>
+                    <option value="55">卡利體育</option>
+                    <option value="21">Super體育</option>
+                    <option value="58">雷火電競</option>
+                    <option value="59">幸運棋牌</option>
+                    <option value="62">MG棋牌</option>
+                    <option value="44">RTG天地</option>
+                    <option value="53">DreamTech</option>
+                    <option value="46">BTX</option>
+                    <option value="51">9K彩票</option>
+                    <option value="24">六合彩539</option>
+                </select>
+                </div>
                 <div class="form-group">
                     <label class="mb-3" style="display: block;color: white;"
                     >開始時間</label
                     >
                     <input
                             type="text"
-                            id="datetimeFrom4"
+                            id="datetimeFrom1"
                             autocomplete="off"
                             runat="server"
                             class="form-control cursor mb-3"
@@ -2134,7 +2391,7 @@
                     >
                     <input
                             type="text"
-                            id="datetimeFrom5"
+                            id="datetimeFrom2"
                             autocomplete="off"
                             runat="server"
                             class="form-control cursor mb-3"
@@ -2146,61 +2403,42 @@
                         aria-label="First group"
                         style="width: 100%"
                 >
-                    <button type="button" class="btn btn-outline-light">明日</button>
                     <button type="button" class="btn btn-outline-light">今日</button>
                     <button type="button" class="btn btn-outline-light">昨日</button>
                     <button type="button" class="btn btn-outline-light">本週</button>
-                </div>
-                <div
-                        class="btn-group mb-3"
-                        role="group"
-                        aria-label="Second group"
-                        style="width: 100%"
-                >
                     <button type="button" class="btn btn-outline-light">上週</button>
-                    <button type="button" class="btn btn-outline-light">本月</button>
-                    <button type="button" class="btn btn-outline-light">上月</button>
-                    <button type="button" class="btn btn-outline-light">
-                        近一個月
-                    </button>
                 </div>
+
                 <div
                         class="btn-group mb-3"
                         role="group"
                         aria-label="Third group"
                         style="width: 100%"
                 >
-                    <button type="button" class="btn btn-primary btn-lg">
-                        清除時間
-                    </button>
-                    <button type="button" class="btn btn-secondary btn-lg">
+                    <button type="button" class="btn btn-primary btn-md">
                         搜尋
                     </button>
                 </div>
             </form>
-
             <div
                     class="itemContainer itemContainer__norecords"
                     style="height: 48px"
             >
                 尚無任何記錄
             </div>
+
             <div class="itemContainer">
-                <div
-                        style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
-                >
-                    <div
-                            style="display: flex;align-items: center;justify-content: space-between;flex-basis: 90%;"
-                    >
+                <div class="info__header">
+                    <div class="info__header__container">
                         <div
                                 style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
                         >
-                            2020/02/27/15:28:35
+                            卡利百家樂
                         </div>
                         <div
                                 style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
                         >
-                            輸/贏： <span style="color: rgb(0, 145, 255);">{status}</span>
+                            輸/贏： <span class="success">1000</span>
                         </div>
                     </div>
 
@@ -2213,28 +2451,34 @@
                 <div class="dropDownBox">
                     <div class="listItem">單號：<span>xxxxx</span></div>
                     <div class="listItem">星級：<span>六星級</span></div>
-                    <div class="listItem">遊戲平台：<span>xxxxx</span></div>
-                    <div class="listItem">遊戲類型：<span>xxxxx</span></div>
+                    <div class="listItem">遊戲平台：<span>卡利百家樂</span></div>
+                    <div class="listItem">遊戲類型：<span>真人百家樂</span></div>
                     <div class="listItem">投注額：<span>1000</span></div>
                     <div class="listItem">流水：<span>1000</span></div>
+                </div>
+
+                <div class="info__footer">
+                    <div class="info__footer__container">
+                        <div class="property">
+                            2020/02/27/15:28:35
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <div class="itemContainer">
-                <div
-                        style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
-                >
-                    <div
-                            style="display: flex;align-items: center;justify-content: space-between;flex-basis: 90%;"
-                    >
+                <div class="info__header">
+                    <div class="info__header__container">
                         <div
                                 style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
                         >
-                            2020/02/27/15:28:35
+                            卡利百家樂
                         </div>
                         <div
                                 style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
                         >
-                            輸/贏： <span style="color: rgb(0, 145, 255);">{status}</span>
+                            輸/贏： <span class="failure">1000</span>
                         </div>
                     </div>
 
@@ -2247,44 +2491,20 @@
                 <div class="dropDownBox">
                     <div class="listItem">單號：<span>xxxxx</span></div>
                     <div class="listItem">星級：<span>六星級</span></div>
-                    <div class="listItem">遊戲平台：<span>xxxxx</span></div>
-                    <div class="listItem">遊戲類型：<span>xxxxx</span></div>
+                    <div class="listItem">遊戲平台：<span>卡利百家樂</span></div>
+                    <div class="listItem">遊戲類型：<span>真人百家樂</span></div>
                     <div class="listItem">投注額：<span>1000</span></div>
                     <div class="listItem">流水：<span>1000</span></div>
                 </div>
-            </div>
-            <div class="itemContainer">
-                <div
-                        style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
-                >
-                    <div
-                            style="display: flex;align-items: center;justify-content: space-between;flex-basis: 90%;"
-                    >
-                        <div
-                                style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                        >
+
+                <div class="info__footer">
+                    <div class="info__footer__container">
+                        <div class="property">
                             2020/02/27/15:28:35
-                        </div>
-                        <div
-                                style="font-weight: 300;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                        >
-                            輸/贏： <span style="color: rgb(0, 145, 255);">{status}</span>
                         </div>
                     </div>
 
-                    <span
-                            class="iconfont icon_chevron-down-light"
-                            style="font-size: 1rem; color: #9BA2AA"
-                    ></span>
-                </div>
 
-                <div class="dropDownBox">
-                    <div class="listItem">單號：<span>xxxxx</span></div>
-                    <div class="listItem">星級：<span>六星級</span></div>
-                    <div class="listItem">遊戲平台：<span>xxxxx</span></div>
-                    <div class="listItem">遊戲類型：<span>xxxxx</span></div>
-                    <div class="listItem">投注額：<span>1000</span></div>
-                    <div class="listItem">流水：<span>1000</span></div>
                 </div>
             </div>
         </div>
@@ -2404,7 +2624,7 @@
                     <div
                             style="text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0px;"
                     >
-                        {subject}
+                        首儲
                     </div>
 
                     <a
@@ -2432,7 +2652,7 @@
                     <div
                             style="text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0px;"
                     >
-                        {subject}
+                        二儲
                     </div>
 
                     <a
@@ -3106,18 +3326,27 @@
 
   $(function () {
     const close = document.getElementById('walletCloseBtn');
+    const closeMoney = document.getElementById('moneyCloseBtn');
     const open = document.getElementById('openWallet');
+    const openMoney = document.getElementById('openMoney');
     const walletModal = document.getElementById('walletModal');
+    const moneyModal = document.getElementById('moneyModal');
     const walletOverLay = document.querySelector('.wallet_overlay');
 
     // Show modal
     open.addEventListener('click', () =>
       walletModal.classList.add('show-modal')
     );
+    openMoney.addEventListener('click', () =>
+      moneyModal.classList.add('show-modal')
+    );
 
     // Hide modal
     close.addEventListener('click', () =>
       walletModal.classList.remove('show-modal')
+    );
+    closeMoney.addEventListener('click', () =>
+      moneyModal.classList.remove('show-modal')
     );
 
     // Hide modal on outside click
