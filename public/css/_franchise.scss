@@ -11,6 +11,9 @@
     justify-content: space-between;
 
     .franchiseItem {
+      &--full {
+        flex: 1 1 100%;
+      }
       @include breakpoint($ipad) {
         flex: 1 1 100%;
       }
@@ -67,6 +70,11 @@
         line-height: 1.6;
       }
 
+      p {
+        color: $color-white;
+        line-height: 1.5;
+      }
+
       .table {
         color: $color-white;
         margin-bottom: 1.28rem;
@@ -90,6 +98,38 @@
   }
 
   &__intro {
+    &--center {
+      text-align: center;
+      .links {
+        @include breakpoint($ipad){
+          flex-direction: column;
+        }
+        padding-bottom: 10px;
+        //max-width: 600px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-between;
+        .titleLink{
+          .title {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          img {
+            width: 100%;
+          }
+
+          position: relative;
+          flex: 1 1 48%;
+          text-decoration: none;
+          color: $color-mainYellow;
+          font-size: 1.5rem;
+          padding: 20px;
+        }
+      }
+
+    }
     @include breakpoint($iphone) {
       padding: 20px;
     }
@@ -108,6 +148,28 @@
   }
 
   &__btnTitle {
+    &--full {
+      flex: 1 1 100%;
+    }
+    &.active {
+      background-image: $mainGradient;
+      color: $color-black;
+      span {
+        background: $aboutItem;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      background-image: $mainGradient;
+      color: $color-black;
+      span {
+        background: $aboutItem;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
     @include breakpoint($ipad) {
       flex: 1 1 100%;
       &:first-child {
@@ -150,6 +212,37 @@
       width: 100%;
       max-width: 670px;
 
+    }
+  }
+
+  &__Nav {
+    @include breakpoint($iphone) {
+      padding: 20px;
+    }
+    background-image: $navGradient;
+    border-bottom: 1px solid $lightYellow;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+
+    .centralize {
+      @include breakpoint($ipad) {
+        flex-wrap: wrap;
+      }
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 670px;
+
+    }
+  }
+
+  .panelGroup {
+    .panel{
+      &:first-child {
+        display: block;
+      }
+      display: none;
     }
   }
 }
