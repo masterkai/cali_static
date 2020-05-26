@@ -14,6 +14,7 @@
       &--full {
         flex: 1 1 100%;
       }
+
       @include breakpoint($ipad) {
         flex: 1 1 100%;
       }
@@ -26,10 +27,12 @@
 
         .ray {
           @include breakpoint($iphone) {
+            background-repeat: no-repeat;
             flex: 1 1 auto;
             width: 33.33%;
             //height: 110px;
           }
+          color: $color-white;
           background-position: center;
           background-size: contain;
           height: 123px;
@@ -61,6 +64,7 @@
 
       ul {
         display: block;
+
         li {
           text-align: justify;
         }
@@ -100,36 +104,74 @@
   &__intro {
     &--center {
       text-align: center;
+
       .links {
-        @include breakpoint($ipad){
-          flex-direction: column;
+        @include breakpoint($ipad) {
+          //flex-direction: column;
         }
         padding-bottom: 10px;
         //max-width: 600px;
         margin: 10px auto;
         display: flex;
         justify-content: space-between;
-        .titleLink{
-          .title {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
+        align-items: center;
+
+        .titleLink {
+          @include breakpoint($ipad) {
+            padding: 8px 15px;
+            flex: 0 1 48%;
+            border-radius: 0.5rem;
           }
-          img {
-            width: 100%;
+          @include breakpoint($iphone5) {
+            padding: 8px;
+            flex: 0 1 49%;
+            border-radius: 0.5rem;
           }
 
-          position: relative;
-          flex: 1 1 48%;
+          .title {
+            @include breakpoint($ipad) {
+              width: 100%;
+              justify-content: space-between;
+              font-size: 1.0rem;
+              line-height: 1.25;
+              text-align: justify;
+            }
+
+            br {
+              @include breakpoint($ipad) {
+                display: block;
+              }
+              display: none;
+            }
+
+            span {
+              @include breakpoint($ipad) {
+                font-size: 2.2rem;
+              }
+              font-size: 1.375rem;
+            }
+
+            display: flex;
+            align-items: center;
+            margin: 0;
+            color: $mainText;
+          }
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 0 1 48%;
           text-decoration: none;
-          color: $color-mainYellow;
+          background-image: $btnBGGradient;
+          border: 1px solid $color-mainYellow;
+          border-radius: 2.625rem;
           font-size: 1.5rem;
           padding: 20px;
         }
       }
 
     }
+
     @include breakpoint($iphone) {
       padding: 20px;
     }
@@ -151,25 +193,30 @@
     &--full {
       flex: 1 1 100%;
     }
+
     &.active {
       background-image: $mainGradient;
       color: $color-black;
+
       span {
         background: $aboutItem;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
     }
+
     &:hover {
       cursor: pointer;
       background-image: $mainGradient;
       color: $color-black;
+
       span {
         background: $aboutItem;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
     }
+
     @include breakpoint($ipad) {
       flex: 1 1 100%;
       &:first-child {
@@ -219,7 +266,8 @@
     @include breakpoint($iphone) {
       padding: 20px;
     }
-    background-image: $navGradient;
+    background-image: url(../../build/images/bgPattern_dark.png), $navBKGradient;
+    background-size: 20%, cover;
     border-bottom: 1px solid $lightYellow;
     padding: 40px;
     display: flex;
@@ -238,10 +286,11 @@
   }
 
   .panelGroup {
-    .panel{
+    .panel {
       &:first-child {
         display: block;
       }
+
       display: none;
     }
   }
