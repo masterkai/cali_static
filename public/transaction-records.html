@@ -261,6 +261,7 @@
                         </button>
                     </div>
                 </form>
+
                 <div
                         class="itemContainer itemContainer__norecords"
                         style="height: 48px"
@@ -268,19 +269,24 @@
                     尚無任何記錄
                 </div>
 
-                <div class='itemContainer itemContainer__records' style='height: auto;'>
-                    <div>單號：xxxxx</div>
-                    <div>2020/02/27/15:28</div>
-                    <div>儲值方式：ATM</div>
-                    <div>金額：1000</div>
-                    <div>狀態：<span class="failure">申請中</span></div>
-                </div>
-                <div class='itemContainer itemContainer__records' style='height: auto;'>
-                    <div>單號：xxxxx</div>
-                    <div>2020/02/27/15:28</div>
-                    <div>儲值方式：ATM</div>
-                    <div>金額：1000</div>
-                    <div>狀態：<span class="success">成功</span></div>
+                <div class="depositOutput"></div>
+
+                <div class="d-flex justify-content-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li class="page-item cannotBeRemove">
+                                <a class="page-link" href="" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+
+                            <li class="page-item cannotBeRemove">
+                                <a class="page-link" href="" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
             </div>
