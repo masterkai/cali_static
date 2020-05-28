@@ -606,13 +606,13 @@ const output = document.querySelector('.depositOutput');
 const depositLists = {
   postPerPage: 5,
   currentPage: 1,
-  optionsLength: 0,
+  optionsLength: null,
   selected: 1,
   result: null
 }
 
 const init = function (data = data) {
-  console.log('ready');
+  // console.log('ready');
   depositLists.result = data;
   // console.log(depositLists.result);
   loadPage(1)
@@ -628,7 +628,7 @@ const init = function (data = data) {
       depositLists.selected = parseInt(e.target.value)
     });
   }
-  $('.pagination .cannotBeRemove:last-child').before(pageSelector)
+  $('#deposit .pagination .cannotBeRemove:last-child').before(pageSelector)
 }
 
 const loadPage = function (pg) {
@@ -643,7 +643,7 @@ const loadPage = function (pg) {
 
   for (let x = 0; x < totalPages; x++) {
     if (totalPages <= 1) {
-      $('.pagination').css('display', 'none')
+      $('#deposit .pagination').css('display', 'none')
     }
   }
 
@@ -680,7 +680,7 @@ const loadPage = function (pg) {
 window.addEventListener('load', function () {
   init(data);
 });
-$('.pagination li:last-child').click(function (e) {
+$('#deposit .pagination li:last-child').click(function (e) {
   e.preventDefault();
 
   if (depositLists.selected === depositLists.optionsLength) {
@@ -688,12 +688,12 @@ $('.pagination li:last-child').click(function (e) {
   } else {
     depositLists.selected += 1;
     loadPage(depositLists.selected)
-    $('.pagination select').val(depositLists.selected);
+    $('#deposit .pagination select').val(depositLists.selected);
   }
   console.log('next clicked!');
   console.log('current:', depositLists.selected);
 })
-$('.pagination li:first-child').click(function (e) {
+$('#deposit .pagination li:first-child').click(function (e) {
   e.preventDefault();
 
   if (depositLists.selected === 1) {
@@ -701,7 +701,7 @@ $('.pagination li:first-child').click(function (e) {
   } else {
     depositLists.selected -= 1;
     loadPage(depositLists.selected)
-    $('.pagination select').val(depositLists.selected);
+    $('#deposit .pagination select').val(depositLists.selected);
   }
   console.log('prev clicked!');
   console.log('current:', depositLists.selected);
