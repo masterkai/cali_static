@@ -347,19 +347,26 @@
                     尚無任何記錄
                 </div>
 
-                <div class='itemContainer itemContainer__records' style='height: auto;'>
-                    <div>單號：xxxxx</div>
-                    <div>2020/02/27/15:28</div>
-                    <div>金額：1000</div>
-                    <div>狀態：<span class="success">成功</span></div>
+                <div class="withdrawOutput"></div>
+
+                <div id="withdraw" class="d-flex justify-content-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li class="page-item cannotBeRemove">
+                                <a class="page-link" href="" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+
+                            <li class="page-item cannotBeRemove">
+                                <a class="page-link" href="" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
-                <div class='itemContainer itemContainer__records' style='height: auto;'>
-                    <div>單號：xxxxx</div>
-                    <div>2020/02/27/15:28</div>
-                    <div>金額：1000</div>
-                    <div>狀態：<span class="failure">失敗</span></div>
-                </div>
             </div>
             <div class="panel">
                 <form>
@@ -418,79 +425,27 @@
                     尚無任何記錄
                 </div>
 
-                <div class="itemContainer">
-                    <div class="info__header"
-                    >
-                        <div class="info__header__container">
-                            <div class="property">
-                                卡利百家樂轉出
-                            </div>
-                            <div class="property">
-                                2020/02/27/15:28:35
-                            </div>
-                        </div>
+                <div class="transferOutput"></div>
 
-                        <span
-                                class="iconfont icon_chevron-down-light"
-                                style="font-size: 1rem; color: #9BA2AA"
-                        ></span>
-                    </div>
+                <div id="transfer" class="d-flex justify-content-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li class="page-item cannotBeRemove">
+                                <a class="page-link" href="" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
 
-                    <div class="dropDownBox">
-                        <div class="listItem">轉出帳戶：<span>卡利百家樂</span></div>
-                        <div class="listItem">轉入帳戶：<span class="orange">主帳戶</span></div>
-                        <div class="listItem">剩餘額度：<span>500</span></div>
-                    </div>
-                    <div class="info__footer">
-                        <div class="info__footer__container">
-                            <div class="property">
-                                狀態：<span class="success">成功</span>
-                            </div>
-                            <div class="property">
-                                轉帳金額：<span class="success">250</span>
-                            </div>
-                        </div>
-                    </div>
-
-
+                            <li class="page-item cannotBeRemove">
+                                <a class="page-link" href="" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="itemContainer">
-                    <div class="info__header"
-                    >
-                        <div class="info__header__container">
-                            <div class="property">
-                                主帳戶轉出
-                            </div>
-                            <div class="property">
-                                2020/02/27/15:28:35
-                            </div>
-                        </div>
-
-                        <span
-                                class="iconfont icon_chevron-down-light"
-                                style="font-size: 1rem; color: #9BA2AA"
-                        ></span>
-                    </div>
-
-                    <div class="dropDownBox">
-                        <div class="listItem">轉出帳戶：<span>主帳戶</span></div>
-                        <div class="listItem">轉入帳戶：<span class="orange">卡利百家樂</span></div>
-                        <div class="listItem">剩餘額度：<span>500</span></div>
-                        <div class="listItem">單號：<span>1395062</span></div>
-                    </div>
-                    <div class="info__footer">
-                        <div class="info__footer__container">
-                            <div class="property">
-                                狀態：<span class="failure">失敗</span>
-                            </div>
-                            <div class="property">
-                                轉帳金額：<span class="failure">0</span>
-                            </div>
-                        </div>
-                    </div>
 
 
-                </div>
 
             </div>
             <div class="panel">
@@ -548,6 +503,8 @@
                 >
                     尚無任何記錄
                 </div>
+
+
                 <div class="itemContainer" style="padding: 0;">
                     <div
                             style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
@@ -1045,8 +1002,8 @@
           loadPage(depositLists.selected)
           $('#deposit .pagination select').val(depositLists.selected);
         }
-        console.log('next clicked!');
-        console.log('current:', depositLists.selected);
+        // console.log('next clicked!');
+        // console.log('current:', depositLists.selected);
       });
       $('#deposit .pagination li:first-child').click(function (e) {
         e.preventDefault();
@@ -1058,8 +1015,125 @@
           loadPage(depositLists.selected)
           $('#deposit .pagination select').val(depositLists.selected);
         }
-        console.log('prev clicked!');
-        console.log('current:', depositLists.selected);
+        // console.log('prev clicked!');
+        // console.log('current:', depositLists.selected);
+      });
+    })($)
+  })
+  // withdraw records
+  $(function () {
+    (function ($) {
+      const withdrawOutput = document.querySelector('.withdrawOutput');
+
+      const withdrawLists = {
+        postPerPage: 5,
+        currentPage: 1,
+        optionsLength: null,
+        selected: 1,
+        result: null
+      }
+
+      const init = function () {
+        // console.log('ready');
+        const url = 'https://next.json-generator.com/api/json/get/VJLK5Pdsd';
+        fetch(url).then(function (res) {
+          return res.json();
+        }).then(function (data) {
+          withdrawLists.result = data;
+          loadPage(1)
+          const pageSelector = document.createElement('select')
+          for (let i = 0; i < withdrawLists.optionsLength; i++) {
+            let pageValue = document.createElement('option')
+            pageValue.value = (i + 1);
+            pageValue.textContent = (i + 1)
+            pageSelector.appendChild(pageValue)
+            pageSelector.addEventListener('change', e => {
+              loadPage(e.target.value)
+              withdrawLists.selected = parseInt(e.target.value)
+            });
+          }
+          $('#withdraw .pagination .cannotBeRemove:last-child').before(pageSelector)
+        }).catch(function (err) {
+          console.log(err);
+        });
+
+        // console.log(depositLists.result);
+
+        // console.log(depositLists.optionsLength);
+
+      }
+
+      const loadPage = function (pg) {
+        $('.withdrawOutput').html('');
+
+        // pagination.innerHTML = '';
+        withdrawLists.currentPage = pg;
+        let startPost = (withdrawLists.currentPage - 1) * withdrawLists.postPerPage;
+        let totalPages = Math.ceil(withdrawLists.result.length / withdrawLists.postPerPage);
+        let endPost = startPost + withdrawLists.postPerPage > withdrawLists.result.length ? withdrawLists.result.length : startPost + withdrawLists.postPerPage;
+        withdrawLists.optionsLength = totalPages;
+
+        for (let x = 0; x < totalPages; x++) {
+          if (totalPages <= 1) {
+            $('#withdraw .pagination').css('display', 'none')
+          }
+        }
+
+
+        for (let x = startPost; x < endPost; x++) {
+          const main = withdrawLists.result[x];
+          let div = document.createElement('div');
+          div.classList.add('itemContainer', 'itemContainer__records');
+          div.style.height = 'auto';
+          let div_id = document.createElement('div');
+          let div_time = document.createElement('div');
+          let div_value = document.createElement('div');
+          let div_status = document.createElement('div');
+          div_id.textContent = `單號：${main.id}`;
+          div_time.textContent = `${main.time}`;
+          div_value.textContent = `金額：${main.withdrawValue}`;
+          div_status.innerHTML = `狀態：${main.status ? `<span class="success">成功</span>` : '<span class="failure">申請中</span>'}`;
+          div.appendChild(div_id);
+          div.appendChild(div_time);
+          div.appendChild(div_value);
+          div.appendChild(div_status);
+
+
+          withdrawOutput.appendChild(div)
+
+        }
+
+
+      }
+
+      window.addEventListener('load', function () {
+        init();
+      });
+      $('#withdraw .pagination li:last-child').click(function (e) {
+        e.preventDefault();
+
+        if (withdrawLists.selected === withdrawLists.optionsLength) {
+          return false
+        } else {
+          withdrawLists.selected += 1;
+          loadPage(withdrawLists.selected)
+          $('#withdraw .pagination select').val(withdrawLists.selected);
+        }
+        // console.log('next clicked!');
+        // console.log('current:', depositLists.selected);
+      });
+      $('#withdraw .pagination li:first-child').click(function (e) {
+        e.preventDefault();
+
+        if (withdrawLists.selected === 1) {
+          return false
+        } else {
+          withdrawLists.selected -= 1;
+          loadPage(withdrawLists.selected)
+          $('#withdraw .pagination select').val(withdrawLists.selected);
+        }
+        // console.log('prev clicked!');
+        // console.log('current:', depositLists.selected);
       });
     })($)
   })
@@ -1093,7 +1167,7 @@
             betPageValue.textContent = (i + 1)
             betRecordsPageSelector.appendChild(betPageValue)
             betRecordsPageSelector.addEventListener('change', e => {
-              console.log('clicked!!');
+              // console.log('clicked!!');
               betRecordsLoadPage(e.target.value)
               betRecordsLists.selected = parseInt(e.target.value)
             });
@@ -1221,8 +1295,8 @@
           betRecordsLoadPage(betRecordsLists.selected)
           $('#betRecords .pagination select').val(betRecordsLists.selected);
         }
-        console.log('next clicked!');
-        console.log('current:', betRecordsLists.selected);
+        // console.log('next clicked!');
+        // console.log('current:', betRecordsLists.selected);
       })
       $('#betRecords .pagination li:first-child').click(function (e) {
         e.preventDefault();
@@ -1234,8 +1308,180 @@
           betRecordsLoadPage(betRecordsLists.selected)
           $('#betRecords .pagination select').val(betRecordsLists.selected);
         }
-        console.log('prev clicked!');
-        console.log('current:', betRecordsLists.selected);
+        // console.log('prev clicked!');
+        // console.log('current:', betRecordsLists.selected);
+      })
+    })($)
+  })
+  // transfer records
+  $(function () {
+    (function ($) {
+      const transferOutput = document.querySelector('.transferOutput');
+
+      const transferLists = {
+        postPerPage: 5,
+        currentPage: 1,
+        optionsLength: 0,
+        selected: 1,
+        result: null
+      }
+
+      const init = function () {
+        console.log('transferRecords ready!!');
+        const url = 'https://next.json-generator.com/api/json/get/VJYq8DusO';
+        // console.log(betRecordsLists.result);
+        fetch(url).then(function (res) {
+          return res.json();
+        }).then(function (data) {
+          transferLists.result = data;
+          loadPage(1)
+          // console.log('totalPages', betRecordsLists.optionsLength);
+          const pageSelector = document.createElement('select')
+          for (let i = 0; i < transferLists.optionsLength; i++) {
+            let pageValue = document.createElement('option')
+            pageValue.value = (i + 1);
+            pageValue.textContent = (i + 1)
+            pageSelector.appendChild(pageValue)
+            pageSelector.addEventListener('change', e => {
+              // console.log('clicked!!');
+              loadPage(e.target.value)
+              transferLists.selected = parseInt(e.target.value)
+            });
+          }
+          $('#transfer .pagination .cannotBeRemove:last-child').before(pageSelector)
+        }).catch(function (err) {
+          console.log(err);
+        });
+        // console.log(betRecordsLists.optionsLength);
+
+      }
+
+      const loadPage = function (pg) {
+        $('.transferOutput').html('');
+
+        // pagination.innerHTML = '';
+        transferLists.currentPage = pg;
+        let startPost = (transferLists.currentPage - 1) * transferLists.postPerPage;
+        let totalPages = Math.ceil(transferLists.result.length / transferLists.postPerPage);
+        let endPost = startPost + transferLists.postPerPage > transferLists.result.length ? transferLists.result.length : startPost + transferLists.postPerPage;
+        transferLists.optionsLength = totalPages;
+
+        for (let x = 0; x < totalPages; x++) {
+          if (totalPages <= 1) {
+            $('#transfer .pagination').css('display', 'none')
+          }
+        }
+
+
+        for (let x = startPost; x < endPost; x++) {
+          const main = transferLists.result[x];
+          let div = document.createElement('div');
+          div.classList.add('itemContainer');
+          let headerDiv = document.createElement('div')
+          let footerDiv = document.createElement('div')
+          headerDiv.classList.add('info__header')
+          footerDiv.classList.add('info__footer')
+          let headerContainer = document.createElement('div');
+          let footerContainer = document.createElement('div');
+          headerContainer.classList.add('info__header__container');
+          footerContainer.classList.add('info__footer__container');
+          let headerProperty01 = document.createElement('div');
+          headerProperty01.classList.add('property');
+          headerProperty01.textContent = `${main.fromAccount}轉出`;
+          headerContainer.appendChild(headerProperty01);
+          let headerProperty02 = document.createElement('div');
+          headerProperty02.classList.add('property');
+          // headerProperty02.innerHTML = `輸/贏：${parseInt(main.balance.split("$").join('')) > 0 ? `<span class="success">${main.balance}</span>` : `<span class="failure">${main.balance}</span>`}`;
+          headerProperty02.textContent = main.dateFormatted;
+          headerContainer.appendChild(headerProperty02);
+          let footerProperty = document.createElement('div');
+          let footerProperty2 = document.createElement('div');
+          footerProperty.classList.add('property')
+          footerProperty2.classList.add('property')
+          footerProperty.innerHTML = `狀態：${main.status?`<span class="success">成功</span>`:`<span class="failure">失敗</span>`}`;
+          footerProperty2.innerHTML = `轉帳金額：${main.status?`<span class="success">${main.transferValue}</span>`:`<span class="failure">0</span>`}`;
+          footerContainer.appendChild(footerProperty)
+          footerContainer.appendChild(footerProperty2)
+          footerDiv.appendChild(footerContainer)
+          let chevron = document.createElement('span')
+          chevron.classList.add('iconfont', 'icon_chevron-down-light')
+          chevron.style.color = '#9BA2AA';
+          headerDiv.appendChild(headerContainer)
+          headerDiv.appendChild(chevron)
+          let dropDownBox = document.createElement('div')
+          dropDownBox.classList.add('dropDownBox')
+          let div_id = document.createElement('div')
+          div_id.classList.add('listItem')
+          div_id.style.whiteSpace = 'nowrap';
+          div_id.innerHTML = `單號：<span>${main._id}</span>`
+          dropDownBox.appendChild(div_id)
+          let div_from = document.createElement('div')
+          div_from.classList.add('listItem')
+          div_from.innerHTML = `轉出帳戶：<span>${main.fromAccount}</span>`
+          dropDownBox.appendChild(div_from)
+          let div_to = document.createElement('div')
+          div_to.classList.add('listItem')
+          div_to.innerHTML = `轉入帳戶：<span class="orange">${main.toAccount}</span>`
+          dropDownBox.appendChild(div_to)
+
+          let div_balance = document.createElement('div')
+          div_balance.classList.add('listItem')
+          div_balance.innerHTML = `剩餘額度：<span>${main.balance}</span>`
+          dropDownBox.appendChild(div_balance)
+
+          div.appendChild(headerDiv)
+          div.appendChild(dropDownBox)
+          div.appendChild(footerDiv)
+          transferOutput.appendChild(div)
+
+          const transferState = {
+            clicked: false
+          }
+          $('.itemContainer').on('click', function () {
+            transferState.clicked = !transferState.clicked;
+            if (transferState.clicked) {
+              $(this).find('.icon_chevron-down-light').addClass('icon_chevron-up-light')
+              $(this).find('.itemContent').css('display', 'flex')
+              $(this).find('.dropDownBox').addClass('active')
+            } else {
+              $(this).find('.icon_chevron-down-light').removeClass('icon_chevron-up-light')
+              $(this).find('.itemContent').css('display', 'none')
+              $(this).find('.dropDownBox').removeClass('active')
+
+            }
+          })
+
+        }
+
+
+      }
+
+      window.addEventListener('load', function () {
+        init();
+      });
+      $('#transfer .pagination li:last-child').click(function (e) {
+        e.preventDefault();
+
+        if (transferLists.selected === transferLists.optionsLength) {
+          return false
+        } else {
+          transferLists.selected += 1;
+          loadPage(transferLists.selected)
+          $('#transfer .pagination select').val(transferLists.selected);
+        }
+        // console.log('next clicked!');
+        // console.log('current:', betRecordsLists.selected);
+      })
+      $('#transfer .pagination li:first-child').click(function (e) {
+        e.preventDefault();
+
+        if (transferLists.selected === 1) {
+          return false
+        } else {
+          transferLists.selected -= 1;
+          loadPage(transferLists.selected)
+          $('#transfer .pagination select').val(transferLists.selected);
+        }
       })
     })($)
   })
