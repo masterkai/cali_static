@@ -56,6 +56,32 @@
       }
     }
   }
+  .bonus {
+    &__body {
+      display: flex;justify-content: space-between;align-items: center;width: 100%;
+    }
+    &__subject {
+      text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0;
+    }
+    &__detail {
+      text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;padding: 15px;
+      border-right: 1px solid rgb(204, 204, 204);border-left: 1px solid rgb(204, 204, 204);
+    }
+    &__Goto {
+      position: relative;text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;
+      padding: 15px 0;
+      .undone {
+        position: absolute;top: 50%;transform: translateY(-50%);border-radius: 50px;left: 10px;
+        height: 10px;width: 10px;background-color: red;
+      }
+      .done {
+        padding: 2px 5px;
+        color: white;
+        background-color: rgb(35, 216, 35);
+        border-radius: 3px;
+      }
+    }
+  }
 }
 .itemResult {
   .period {

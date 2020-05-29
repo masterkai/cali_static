@@ -504,64 +504,28 @@
                     尚無任何記錄
                 </div>
 
+                <div class="bonusOutput"></div>
 
-                <div class="itemContainer" style="padding: 0;">
-                    <div
-                            style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
-                    >
-                        <div
-                                style="text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                        >
-                            首儲
-                        </div>
+                <div id="bonus" class="d-flex justify-content-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li class="page-item cannotBeRemove">
+                                <a class="page-link" href="" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
 
-                        <a
-                                style="text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;padding: 15px;
-    border-right: 1px solid rgb(204, 204, 204);border-left: 1px solid rgb(204, 204, 204);"
-                        >詳細內容</a
-                        >
-                        <div
-                                style="position: relative;text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;
-    padding: 15px 0;"
-                        >
-                            前往領取
-                            <span
-                                    style="position: absolute;top: 50%;transform: translateY(-50%);border-radius: 50px;left: 10px;
-    height: 10px;width: 10px;background-color: red;"
-                            ></span>
-                        </div>
-                    </div>
+                            <li class="page-item cannotBeRemove">
+                                <a class="page-link" href="" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
-                <div class="itemContainer" style="padding: 0;">
-                    <div
-                            style="display: flex;justify-content: space-between;align-items: center;width: 100%;"
-                    >
-                        <div
-                                style="text-align: center;flex-basis: 50%;font-size: 0.875rem;color: black;padding: 15px 0px;"
-                        >
-                            二儲
-                        </div>
 
-                        <a
-                                style="text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;padding: 15px;
-    border-right: 1px solid rgb(204, 204, 204);border-left: 1px solid rgb(204, 204, 204);"
-                        >詳細內容</a
-                        >
-                        <div
-                                style="position: relative;text-align: center;flex-basis: 25%;font-size: 0.75rem;color: black;
-    padding: 15px 0;"
-                        >
-                <span
-                        style="padding: 2px 5px;
-    color: white;
-    background-color: rgb(35, 216, 35);
-    border-radius: 3px;"
-                >已領取</span
-                >
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <div class="panel">
                 <form>
@@ -1131,6 +1095,122 @@
           withdrawLists.selected -= 1;
           loadPage(withdrawLists.selected)
           $('#withdraw .pagination select').val(withdrawLists.selected);
+        }
+        // console.log('prev clicked!');
+        // console.log('current:', depositLists.selected);
+      });
+    })($)
+  })
+  // bonus records
+  $(function () {
+    (function ($) {
+      const output = document.querySelector('.bonusOutput');
+
+      const bonusLists = {
+        postPerPage: 5,
+        currentPage: 1,
+        optionsLength: null,
+        selected: 1,
+        result: null
+      }
+
+      const init = function () {
+        // console.log('ready');
+        const url = 'https://next.json-generator.com/api/json/get/4yAS_wFsd';
+        fetch(url).then(function (res) {
+          return res.json();
+        }).then(function (data) {
+          bonusLists.result = data;
+          loadPage(1)
+          const pageSelector = document.createElement('select')
+          for (let i = 0; i < bonusLists.optionsLength; i++) {
+            let pageValue = document.createElement('option')
+            pageValue.value = (i + 1);
+            pageValue.textContent = (i + 1)
+            pageSelector.appendChild(pageValue)
+            pageSelector.addEventListener('change', e => {
+              loadPage(e.target.value)
+              bonusLists.selected = parseInt(e.target.value)
+            });
+          }
+          $('#bonus .pagination .cannotBeRemove:last-child').before(pageSelector)
+        }).catch(function (err) {
+          console.log(err);
+        });
+      }
+
+      const loadPage = function (pg) {
+        $('.bonusOutput').html('');
+
+        // pagination.innerHTML = '';
+        bonusLists.currentPage = pg;
+        let startPost = (bonusLists.currentPage - 1) * bonusLists.postPerPage;
+        let totalPages = Math.ceil(bonusLists.result.length / bonusLists.postPerPage);
+        let endPost = startPost + bonusLists.postPerPage > bonusLists.result.length ? bonusLists.result.length : startPost + bonusLists.postPerPage;
+        bonusLists.optionsLength = totalPages;
+
+        for (let x = 0; x < totalPages; x++) {
+          if (totalPages <= 1) {
+            $('#bonus .pagination').css('display', 'none')
+          }
+        }
+
+
+        for (let x = startPost; x < endPost; x++) {
+          const main = bonusLists.result[x];
+          let div = document.createElement('div');
+          div.classList.add('itemContainer');
+          div.style.padding = '0px';
+          let div_body = document.createElement('div');
+          div_body.classList.add('bonus__body')
+          let div_sub = document.createElement('div');
+          div_sub.classList.add('bonus__subject')
+          let div_detail = document.createElement('div');
+          div_detail.classList.add('bonus__detail')
+          let div_Goto = document.createElement('div');
+          div_Goto.classList.add('bonus__Goto')
+          div_sub.textContent = main.subject;
+          div_detail.innerHTML = `<a href="${main.link}" target=_blank>詳細內容</a>`;
+          div_Goto.innerHTML = main.isActive?`<span class="done">已領取</span>`:`前往領取<span class="undone"></span>`;
+          div_body.appendChild(div_sub)
+          div_body.appendChild(div_detail)
+          div_body.appendChild(div_Goto)
+          div.appendChild(div_body);
+
+
+
+          output.appendChild(div)
+
+        }
+
+
+      }
+
+      window.addEventListener('load', function () {
+        init();
+      });
+      $('#bonus .pagination li:last-child').click(function (e) {
+        e.preventDefault();
+
+        if (bonusLists.selected === bonusLists.optionsLength) {
+          return false
+        } else {
+          bonusLists.selected += 1;
+          loadPage(bonusLists.selected)
+          $('#bonus .pagination select').val(bonusLists.selected);
+        }
+        // console.log('next clicked!');
+        // console.log('current:', depositLists.selected);
+      });
+      $('#bonus .pagination li:first-child').click(function (e) {
+        e.preventDefault();
+
+        if (bonusLists.selected === 1) {
+          return false
+        } else {
+          bonusLists.selected -= 1;
+          loadPage(bonusLists.selected)
+          $('#bonus .pagination select').val(bonusLists.selected);
         }
         // console.log('prev clicked!');
         // console.log('current:', depositLists.selected);
