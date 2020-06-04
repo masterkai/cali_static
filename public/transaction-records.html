@@ -1139,7 +1139,7 @@
           div_Goto.classList.add('bonus__Goto')
           div_sub.textContent = main.subject;
           div_detail.innerHTML = `<div style="padding: 2px;">${main.time}</div><br><a href="${main.link}" target=_blank>詳細內容</a>`;
-          div_Goto.innerHTML = main.isActive?`<span class="done">已領取</span>`:`前往領取<span class="undone"></span>`;
+          div_Goto.innerHTML = main.isActive?`<span class="done">已領取</span>`:`<a class="btn btn-primary" style="font-size: 0.75rem;color:white;">前往領取</a><span class="undone"></span>`;
           div_body.appendChild(div_sub)
           div_body.appendChild(div_detail)
           div_body.appendChild(div_Goto)
