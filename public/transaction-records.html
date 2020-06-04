@@ -79,39 +79,7 @@
 <body>
 <header id="header"></header>
 <div class="displayMobile">
-    <!--    使用者登入前  -->
-    <!--    <div class='fixed-top'>-->
-    <!--        <nav class='navbar navBarFlex' style="height: 55px">-->
-    <!--            <span class="iconfont icon_bars-light" style='margin-left: 10px;font-size: 1.625rem;'></span>-->
 
-    <!--            <a class='logo'>-->
-    <!--                <img-->
-    <!--                        class="img-responsive logo_m"-->
-    <!--                        src="build/images/Cali_logo_mobile.png"-->
-    <!--                        alt=""-->
-    <!--                />-->
-    <!--            </a>-->
-
-    <!--            <div class='btnGroup'>-->
-    <!--                <button-->
-    <!--                        type="button"-->
-    <!--                        class='btnOutLine'-->
-    <!--                >-->
-    <!--                    註冊-->
-    <!--                </button>-->
-    <!--                <button-->
-    <!--                        type="button"-->
-    <!--                        class='btnOutLine'-->
-    <!--                >-->
-    <!--                    登入-->
-    <!--                </button>-->
-    <!--            </div>-->
-
-    <!--        </nav>-->
-
-    <!--    </div>-->
-
-    <!--    使用者登入後  -->
     <div class='fixed-top'>
         <nav class='navbar navBarFlex' style="height: 55px;">
               <span
@@ -1170,7 +1138,7 @@
           let div_Goto = document.createElement('div');
           div_Goto.classList.add('bonus__Goto')
           div_sub.textContent = main.subject;
-          div_detail.innerHTML = `<a href="${main.link}" target=_blank>詳細內容</a>`;
+          div_detail.innerHTML = `<div style="padding: 2px;">${main.time}</div><br><a href="${main.link}" target=_blank>詳細內容</a>`;
           div_Goto.innerHTML = main.isActive?`<span class="done">已領取</span>`:`前往領取<span class="undone"></span>`;
           div_body.appendChild(div_sub)
           div_body.appendChild(div_detail)
