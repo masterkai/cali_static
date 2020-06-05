@@ -13,8 +13,6 @@
     $front = $('.home .front'),
     $back = $('.home .back'),
     $lebron = $('.lebron'),
-    $lebronH1 = $('.lebron_H1'),
-    $lebronH2 = $('.lebron_H2'),
     $lebronRH = $('.lebron_RH'),
     $lebronLH = $('.lebron_LH'),
     $chips = $('.play02_2 .chips'),
@@ -47,8 +45,6 @@
       .set($fanBIngBing, {autoAlpha: 0})
       .set($fbb, {x: 0, y: 280, autoAlpha: 1})
       .set($lebron, {y: 280, autoAlpha: 0})
-      .set($lebronH1, {autoAlpha: 1})
-      .set($lebronH2, {autoAlpha: 0})
       .set($lebronRH, {transformOrigin: '24.375px 11.401px 0'})
       .set($lebronLH, {transformOrigin: '7.438px 13.937px 0'})
       .set($lotteryTicket01, {x: 0, y: 280, autoAlpha: 0})
@@ -93,7 +89,7 @@
     const stuffTl = new TimelineMax();
     stuffTl
       .to($fbb, .5, {x: 0, y: 280, autoAlpha: 1},'-=0.5')
-      .to($lebron, 1, {y: 0, autoAlpha: 1, onComplete: lebron}, -2)
+      .to($lebron, 1, {y: 0, autoAlpha: 1}, -2)
       .to($lotteryTicket01, 1, {y: 0, autoAlpha: 1}, -2)
       .to($lotteryTicket02, 1, {y: 0, autoAlpha: 1}, -2)
       .to($ColoredBalls_N3, 1, {y: 0, autoAlpha: 1}, -2)
@@ -208,15 +204,15 @@
         .to($front, .5, {scale: 1, autoAlpha: 1, rotationY: 0}, '-=0.8')
     }
 
-    function lebron() {
-      const lebronTl = new TimelineMax({repeat: -1, repeatDelay: 5});
-      lebronTl
-        .fromTo($lebronH1, 1, {autoAlpha: 1}, {autoAlpha: 0, duration: 3})
-
-        .fromTo($lebronH2, 1, {autoAlpha: 1, ease: Power4.easeInOut, duration: 16}, {autoAlpha: 0}, '+=3.2')
-        .to($lebronH1, 1, {autoAlpha: 1}, '-=1.2')
-
-    }
+    // function lebron() {
+    //   const lebronTl = new TimelineMax({repeat: -1, repeatDelay: 5});
+    //   lebronTl
+    //     .fromTo($lebronH1, 1, {autoAlpha: 1}, {autoAlpha: 0, duration: 3})
+    //
+    //     .fromTo($lebronH2, 1, {autoAlpha: 1, ease: Power4.easeInOut, duration: 16}, {autoAlpha: 0}, '+=3.2')
+    //     .to($lebronH1, 1, {autoAlpha: 1}, '-=1.2')
+    //
+    // }
 
     function mahjong() {
       const flipHomeTl = new TimelineMax();
