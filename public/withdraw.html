@@ -205,65 +205,119 @@
         </div>
     </div>
     <div class="mainBG" style="margin-top: 80px;">
-        <div class='mobileBox mobileBox_nobg' style='height: auto; padding-bottom: 80px'>
-            <div class='itemContainer itemContainer__simple'>
-                <img
-                        style='padding: 10px;width: 150px;'
-                        src="build/images/banks/bank01.png"
-                        alt=""
-                        class="img-responsive"
-                />
-                <div>尾號：6041</div>
+        <div class='mobileBox mobileBox_nobg' style='height: auto; padding-bottom: 80px;min-height: calc(593px);' id="swt01">
+            <div class="switchTabsNav">
+                <div class="tab active">提款</div>
+                <div class="tab">綁定銀行帳戶</div>
+            </div>
+            <div class="panelsGroup">
+                <div class="panel">
+
+
+                    <form>
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label class="mb-3" style="color: #fff;">銀行</label>
+
+                            <select id="w_ply_bank" class="form-control" name="w_ply_bank">
+                                <option value="0">-- 請選擇 --</option>
+                                <option value="1">三星地區農會 三星福山</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style='margin-bottom: 30px;'>
+                            <label class="mb-3" style='color: #fff;'>銀行戶名</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                            />
+                        </div>
+
+                        <div class="form-group" style='margin-bottom: 30px;'>
+                            <label class="mb-3" style='color: #fff;'>銀行帳號</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                            />
+                        </div>
+
+                        <div class="form-group" style='margin-bottom: 30px;'>
+                            <label class="mb-3" style='color: #fff;'>金額</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="最低1000點"
+                            />
+                            <p style="text-align: right;color: white;font-size: 0.85rem;margin: 5px 0 0;">最低1000</p>
+                        </div>
+
+
+                        <div class="form-group" style='margin-bottom: 30px;'>
+                            <label class="mb-3" style='color: #fff;'>密碼</label>
+                            <input
+                                    type="password"
+                                    class="form-control"
+                            />
+                        </div>
+                        <div class="outlineBtn">確認送出</div>
+                    </form>
+
+                    <div class='noticeBox'>
+                        <div class='noticeTitle'><span class="iconfont icon_exclamation-triangle-light"></span>注意事項</div>
+                        <ol style='padding-left: 20px;list-style: decimal;line-height: 1.5rem;'>
+
+
+
+
+
+
+                            <li>
+                                手續費規定:一般會員每周3次免手續費，VIP會員每天1次免手續費，超過免費次數每次加收1%手續費，最高5%
+                            </li>
+                            <li>
+                                需綁定本人帳戶，且第一次出款需出示相關證明
+                            </li>
+                            <li>如需取消提款提案請洽線上客服</li>
+                            <li><span class="red">若使用非本人帳戶入款將影響後續出款權益，相關損失需自行承擔風險</span></li>
+                            <li>如利用本平台進行任何洗錢和詐騙行為，任你博集團將保留權利終止會員服務及凍結其帳戶</li>
+                        </ol>
+                        <!--                <p class='ps' style="line-height: 1.5rem;">-->
+                        <!--                    PS.-->
+                        <!--                    如利用本平台進行任何洗錢詐騙行為，本公司將保留權利終止會員服務及凍結其帳戶。-->
+                        <!--                </p>-->
+                    </div>
+                </div>
+                <div class="panel">
+                    <form>
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label class="mb-3" style="color: #fff;">銀行</label>
+
+                            <select class="form-control" name="w_ply_bank">
+                                <option value="0">-- 請選擇 --</option>
+                                <option value="1">三星地區農會 三星福山</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style='margin-bottom: 30px;'>
+                            <label class="mb-3" style='color: #fff;'>銀行戶名</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                            />
+                        </div>
+
+                        <div class="form-group" style='margin-bottom: 30px;'>
+                            <label class="mb-3" style='color: #fff;'>銀行帳號</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                            />
+                        </div>
+
+                        <div class="outlineBtn">確認送出</div>
+                    </form>
+                </div>
             </div>
 
-            <form>
-                <div class="form-group" style='margin-bottom: 30px;'>
-                    <label class="mb-3" style='color: #fff;'>提款金額</label>
-                    <input
-                            type="text"
-                            class="form-control"
-                            placeholder="最低500點"
-                    />
-                </div>
-                <label class="mb-3" style='color: #fff'>提款密碼</label>
-                <div class='inputGroup' style='margin-bottom: 30px;'>
-                    <input
-                            type="email"
-                            class="form-control"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
-                    />
-                    <button type="button" class="btn btn-outline-light">
-                        簡訊
-                    </button>
-                </div>
-                <div class="outlineBtn">確認送出</div>
-            </form>
-
-            <div class='noticeBox'>
-                <div class='noticeTitle'><span class="iconfont icon_exclamation-triangle-light"></span>注意事項</div>
-                <ol style='padding-left: 20px;list-style: decimal;line-height: 1.5rem;'>
-
-
-
-
-
-
-                    <li>
-                        手續費規定:一般會員每周3次免手續費，VIP會員每天1次免手續費，超過免費次數每次加收1%手續費，最高5%
-                    </li>
-                    <li>
-                        需綁定本人帳戶，且第一次出款需出示相關證明
-                    </li>
-                    <li>如需取消提款提案請洽線上客服</li>
-                    <li><span class="red">若使用非本人帳戶入款將影響後續出款權益，相關損失需自行承擔風險</span></li>
-                    <li>如利用本平台進行任何洗錢和詐騙行為，任你博集團將保留權利終止會員服務及凍結其帳戶</li>
-                </ol>
-<!--                <p class='ps' style="line-height: 1.5rem;">-->
-<!--                    PS.-->
-<!--                    如利用本平台進行任何洗錢詐騙行為，本公司將保留權利終止會員服務及凍結其帳戶。-->
-<!--                </p>-->
-            </div>
 
         </div>
     </div>
