@@ -1,0 +1,76 @@
+
+Chess.png
+size: 533,533
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head_man
+  rotate: true
+  xy: 337, 56
+  size: 70, 100
+  orig: 72, 102
+  offset: 1, 1
+  index: -1
+Mahjong
+  rotate: true
+  xy: 150, 200
+  size: 118, 110
+  orig: 120, 112
+  offset: 1, 1
+  index: -1
+body_bueaty
+  rotate: false
+  xy: 2, 73
+  size: 146, 245
+  orig: 146, 297
+  offset: 0, 0
+  index: -1
+body_man
+  rotate: false
+  xy: 306, 128
+  size: 147, 248
+  orig: 147, 248
+  offset: 0, 0
+  index: -1
+card01
+  rotate: false
+  xy: 2, 320
+  size: 302, 211
+  orig: 304, 214
+  offset: 1, 2
+  index: -1
+chips
+  rotate: true
+  xy: 306, 378
+  size: 153, 152
+  orig: 155, 154
+  offset: 1, 1
+  index: -1
+hand L_bueaty
+  rotate: false
+  xy: 150, 53
+  size: 84, 145
+  orig: 87, 152
+  offset: 0, 7
+  index: -1
+head_bueaty
+  rotate: false
+  xy: 236, 42
+  size: 99, 84
+  orig: 101, 86
+  offset: 1, 1
+  index: -1
+手L_man
+  rotate: true
+  xy: 236, 139
+  size: 59, 39
+  orig: 62, 41
+  offset: 1, 1
+  index: -1
+手R_man
+  rotate: true
+  xy: 2, 2
+  size: 69, 142
+  orig: 71, 144
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,97 @@
+
+T002_Layer.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L eye
+  rotate: false
+  xy: 2, 2
+  size: 87, 87
+  orig: 87, 87
+  offset: 0, 0
+  index: -1
+L eyelid
+  rotate: false
+  xy: 885, 1468
+  size: 87, 87
+  orig: 87, 87
+  offset: 0, 0
+  index: -1
+L hand
+  rotate: false
+  xy: 2, 375
+  size: 370, 540
+  orig: 370, 540
+  offset: 0, 0
+  index: -1
+R eye
+  rotate: false
+  xy: 91, 6
+  size: 91, 83
+  orig: 91, 83
+  offset: 0, 0
+  index: -1
+R hand
+  rotate: false
+  xy: 374, 517
+  size: 378, 455
+  orig: 378, 455
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 298, 974
+  size: 521, 581
+  orig: 521, 581
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 374, 247
+  size: 268, 301
+  orig: 268, 301
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 1050, 1538
+  size: 480, 480
+  orig: 480, 480
+  offset: 0, 0
+  index: -1
+lower body
+  rotate: false
+  xy: 1532, 1616
+  size: 476, 402
+  orig: 476, 402
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 821, 1316
+  size: 239, 62
+  orig: 239, 62
+  offset: 0, 0
+  index: -1
+scarf
+  rotate: false
+  xy: 2, 91
+  size: 312, 282
+  orig: 312, 282
+  offset: 0, 0
+  index: -1
+shawl
+  rotate: false
+  xy: 298, 1557
+  size: 750, 461
+  orig: 750, 461
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 2, 917
+  size: 294, 1101
+  orig: 294, 1101
+  offset: 0, 0
+  index: -1
