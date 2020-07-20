@@ -187,32 +187,47 @@
           }
         }
 
-        .listContainer {
-          height: 32px;
-          width: 100%;
-          display: flex;
-
-          .name {
-            @include breakpoint($ipad) {
-              font-size: .875rem;
-            }
-            flex: 1 1 33.33%;
-            color: $color-white;
+        .listBox {
+          &::-webkit-scrollbar {
+            width: 12.34px;
           }
-
-          .surplus {
-            @include breakpoint($ipad) {
-              font-size: .875rem;
-            }
-            text-align: right;
-            flex: 1 1 33.33%;
-            color: $color-white;
+          &::-webkit-scrollbar-thumb {
+            background-color: #454543;
+            outline: #5f5f5f solid 1px;
           }
+          &::-webkit-scrollbar-track {
+            background-color: #151515;
+          }
+          overflow-y: scroll;
+          .listContainer {
+            height: 25px;
+            width: 100%;
+            display: flex;
+            margin-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,.25);
 
-          span {
-            text-align: right;
-            flex: 1 1 10%;
-            color: $color-mainLightBlue;
+            .name {
+              @include breakpoint($ipad) {
+                font-size: .875rem;
+              }
+              flex: 1 1 33.33%;
+              color: $color-white;
+            }
+
+            .surplus {
+              @include breakpoint($ipad) {
+                font-size: .875rem;
+              }
+              text-align: right;
+              flex: 1 1 33.33%;
+              color: $color-white;
+            }
+
+            span {
+              text-align: right;
+              flex: 1 1 10%;
+              color: $color-mainLightBlue;
+            }
           }
         }
 
