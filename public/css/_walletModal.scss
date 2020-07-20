@@ -205,12 +205,12 @@
             display: flex;
             margin-bottom: 5px;
             border-bottom: 1px solid rgba(255,255,255,.25);
-
+            font-size: .9rem;
             .name {
               @include breakpoint($ipad) {
                 font-size: .875rem;
               }
-              flex: 1 1 33.33%;
+              flex: 1 1 60%;
               color: $color-white;
             }
 
@@ -219,7 +219,7 @@
                 font-size: .875rem;
               }
               text-align: right;
-              flex: 1 1 33.33%;
+              flex: 1 1 30%;
               color: $color-white;
             }
 
