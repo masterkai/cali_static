@@ -42,7 +42,7 @@
 
 .accountSelector {
   //display: none;
-  top: 80px;
+  top: 90px;
   max-height: 444px;
   overflow-y: scroll;
   left: 0;
@@ -50,6 +50,16 @@
   z-index: 1035;
   position: absolute;
   background-color: $lightBrown;
+  &::-webkit-scrollbar {
+    width: 12.34px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #0091ff;
+    outline: #5f5f5f solid 1px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #151515;
+  }
 
   .accountItem {
     display: flex;

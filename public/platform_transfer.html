@@ -608,20 +608,27 @@
   ];
   let accountData = [
     {name: '主帳戶', value: 100, selected: true},
-    {name: 'DG百家樂', value: 0, selected: false},
-    {name: '歐博', value: 0, selected: false},
+    {name: '卡利百家樂', value: 0, selected: false},
+    {name: '歐博百家樂', value: 0, selected: false},
     {name: '沙龍百家樂', value: 0, selected: false},
+    {name: 'DG百家樂', value: 0, selected: false},
     {name: 'WM百家樂', value: 0, selected: false},
-    {name: '任你博體育', value: 0, selected: false},
-    {name: 'Super體育博彩', value: 0, selected: false},
+    {name: '卡利體育', value: 0, selected: false},
+    {name: 'Super體育', value: 0, selected: false},
     {name: 'AFB88', value: '維護中', selected: false},
-    {name: 'RTG天地', value: 0, selected: false},
-    {name: 'Betsoft', value: 0, selected: false},
-    {name: 'BTX', value: 0, selected: false},
+    {name: 'DT電子', value: 0, selected: false},
+    {name: 'RTG電子', value: 0, selected: false},
+    {name: 'BTX電子', value: 0, selected: false},
+    {name: 'SimplePlay電子', value: 0, selected: false},
+    {name: 'MG棋牌', value: 0, selected: false},
+    {name: '幸運棋牌', value: 0, selected: false},
     {name: '9K彩票', value: 0, selected: false},
-    {name: '六合彩539', value: 0, selected: false}
+    {name: '六合彩539', value: 0, selected: false},
+    {name: 'test', value: 0, selected: false},
+    {name: 'test', value: 0, selected: false},
+    {name: 'test', value: 0, selected: false}
   ];
-  let accountData2 = []
+  let accountData2 = [];
   const state = {
     clicked: false,
     accountSelector: false,
@@ -658,7 +665,6 @@
     div.innerHTML = item.name;
     accountSelector.insertAdjacentElement('beforeend', div)
   })
-
 
 
   // $(function () {
@@ -723,18 +729,18 @@
       // accountSelector.style.display = 'none'
       overlayAccountSelector.style.display = 'none'
     }
-    
+
     $('.accountSelector .accountItem').each(function (index, item) {
-      
+
       $(item).on('click', function (e) {
         overlayAccountSelector.style.display = 'none'
         const txt = $(e.target).text();
         $('#fromAccount').html(txt)
         state.accountSelector = false;
-        const filteredSelected = accountData.filter(item=>item.name===txt)
+        const filteredSelected = accountData.filter(item => item.name === txt)
         // console.log('filteredSelected',filteredSelected);
-        accountData.forEach(item=>item.selected=false)
-        filteredSelected[0].selected= true
+        accountData.forEach(item => item.selected = false)
+        filteredSelected[0].selected = true
         // console.log(accountData);
         // console.log(accountData[index].value);
         $('.value1').text(`餘額：${filteredSelected[0].value}`)
@@ -749,13 +755,11 @@
     if (accountData2 == false) {
       const $cont = $('.accountSelector .accountItem:not(".selected")').clone();
       accountData2 = [];
-      const filteredData = accountData.filter(item=> item.selected===false).filter(item=>item.value!=='維護中')
+      accountData2 = accountData.filter(item => item.selected === false).filter(item => item.value !== '維護中')
       // $cont.each((i, obj) => accountData2.push({name: `${$cont[i].innerText}`, selected: false}))
-      accountData2 = filteredData
+
       $('.accountSelector2 .accountItem').remove()
       $('.accountSelector2').append(renderAccountItem2(accountData2))
-    } else {
-
     }
 
     state.accountSelector2 = !state.accountSelector2;
@@ -766,11 +770,11 @@
     }
     $('.accountSelector2 .accountItem').each(function (index, item) {
       $(item).on('click', function (e) {
-        state.accountSelector2= false
+        state.accountSelector2 = false
         const txt = $(e.target).text();
         $('#intoAccount').html(txt)
         $('.value2').text(`餘額：${accountData2[index].value}`)
-        accountData2.forEach(item=>item.selected=false)
+        accountData2.forEach(item => item.selected = false)
         accountData2[index].selected = true
         $('.accountSelector2 .accountItem').removeClass('selected')
         $(this).addClass('selected')

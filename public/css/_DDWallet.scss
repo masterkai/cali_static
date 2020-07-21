@@ -1,5 +1,15 @@
 .DDWallet {
   .itemsBox {
+    &::-webkit-scrollbar {
+      width: 12.34px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #454543;
+      outline: #5f5f5f solid 1px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #151515;
+    }
     .item {
       &:last-child {
         border-bottom: unset;
