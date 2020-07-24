@@ -1,5 +1,6 @@
 
 .dropDownBox {
+
   &.active {
     display: flex;
   }
@@ -19,6 +20,15 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+  }
+  &--instruction {
+    justify-content: space-evenly;
+    border-top: unset;
+    flex-direction: row;
+    padding: 5px 0 5px;
+    div {
+      flex: 0 1 10%;
+    }
   }
   .listItem {
     .orange {

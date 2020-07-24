@@ -1063,7 +1063,6 @@
                             </div>
 
 
-
                         </div>
                     </div>
                     <div
@@ -2021,217 +2020,565 @@
         <div class="walletBox">
             <div class="walletMain walletMain_modified">
                 <div class="mainNav mainNav--money">
-                    <div class="tab">存款</div>
-                    <div class="tab">提款</div>
+                    <div class="tab tab_deposit active">存款</div>
+                    <div class="tab tab_withdraw">提款</div>
+                    <div class="tab">綁定銀行賬戶</div>
                 </div>
                 <div class="uiBoxGroup">
+
                     <div class="uiBox">
-                        <div class="uiContainer switch">
+                        <div class="uiContainer switch isDepo">
+                            <p id="depositcs"
+                               style="color: white; font-size: 13px; text-align: center; margin-bottom: 10px; display: none;">
+                                如需其他存款方式請洽在線客服</p>
+
                             <div class="switchBox">
-                                <div class="tab active">網上支付</div>
-                                <div class="tab">VIP存款區</div>
+                                <div id="depo_atm" class="tab active" data-depotype="atm">線上轉帳</div>
+                                <div id="depo_cc" class="tab" data-depotype="cc">線上刷卡</div>
+                                <div id="depo_market" class="tab" data-depotype="supermarket">超商繳費</div>
+                                <div id="depo_manual" class="tab" data-depotype="manual">VIP存款區</div>
                             </div>
                             <div class="formGroup">
-                                <form class="formPanel">
-                                    <div class="form-group row formGroupCenter" id="bankCreditCardCheck">
-                                        <div class="form-check" style="margin: 0 10px 10px">
-                                            <input id="creditCard" type="radio" name="creditCard">
-                                            <label class="form-check-label" for="creditCard" style="color: #fff;">
-                                                信用卡
-                                            </label>
-                                        </div>
-                                        <div class="form-check" style="margin: 0 10px 10px">
-                                            <input id="bank" type="radio" name="bank">
-                                            <label class="form-check-label" for="bank" style="color: #fff;">
-                                                銀行
-                                            </label>
-                                        </div>
-                                    </div>
+
+
+                                <style>
+                                    .btn_pg {
+                                        background-color: #454545;
+                                        width: 68px;
+                                        height: 27px;
+                                        padding: 5px;
+                                        color: white;
+                                        text-align: center;
+                                    }
+                                </style>
+
+                                <form id="form_depo_atm" name="form_depo_pg" class="formPanel container_depopg"
+                                      data-channeltype="5">
+
+                                    <input type="text" class="form-control form-control-sm" value="5"
+                                           style="display: none; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAx9JREFUWAndV79LY0EQnjySSAQ1OUG4OxvxR5BALggBi0BEIYUYtLC43v8ghZVgY3V9/oUjpMovEBvRSsGAHrY2Yi7BwlgEREXNzffMLnnP91bzkiDcQNjdmdlvvt3ZnbdxEcvOzs73p6enX9xdaDab36DrlbhcripjHbjd7s2tra2/ZlxXK/gfDjxqNvZyzERumMQPMwkNK+93cCwEMVq7bFiXxqMFg6a/gzextF7nXMXfKhZ24FPl/yYwOztLqVSK0NpJX3cgFArR8PAwobWTvhLgu6/HFa0Vib4SsApo1hkIDAwM0OTkJAUCAbMfObW9ATIp3GLs9/tpY2ODhoaG6OXlhQqFAp2dnelmpzaBrWrlDszPz+vB4axpGi0uLsp5Tm0SQNGRBBQ+fTVJAsfHx9RoNPRgSMH+/r4M7NQmARQd1/b2dlPYcdDGx8epXq/T7e2tUOutymZwfGfAV7LGLoet98GVgcA7c3tqZiJ1JhGRKegp+gfA+Mv4Be+DTyPQ4hiXdeADpG1dUCei0ShNT0/TyMgI3d/fU61Wo3K5TBcXF7bzeBe+dk0gHA7TysoKeb1eGQgHFkRmZmZod3eXTk5OpM3c6ToFExMThuDPz88yBgpaIpHQy7hUmjpd70CxWCSkYHBwkEqlElUqFYrFYrS0tKSH8ng8uv36+toU+nXo5utQtXqrWXpbKFG0MpkMYeV8qnUP1JF2EQWuXSf6SMGBGDhtHx4eZHCsOB6PS6jLy0u6u7uTY3NHQ0XiXbgxG5yMkfP19XUaGxvTp2NH9vb2lFAa/qngHwuT+I10KL0VRp5La2trFAwGdS+kJp/PU7Wqhnx9MymAzab2b4ewIfjq6ipFIhFdhfOQy+Xo/PxcuNi2Xd8CICeTSRn88fGRstmssgC1s+mawPLyMs3NzUlMrB53Hz8hR0dHdHp6KoaGtmsCU1NTBkCfz0f4tQtqhJ10XAk53/ie90SA5WQHDjn6T8EgnU4TDqFKcCNs5LBjAqgbfL8T+J4DtL322wSxVDNpPEg2O04B140rnhhhgAy20BJdocQczAUGsP4BPJYni4VMj2AAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+                                           name="hid_gateType" autocomplete="off">
 
                                     <div class="form-group row">
-                                        <label
-                                                for="inputPassword"
-                                                class="col-sm-3 col-form-label"
-                                                style="color: white;"
-                                        >從這轉帳</label
-                                        >
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            通道</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control form-control-sm">
-                                                <option>— 請選擇 —</option>
+                                            <select class="form-control form-control-sm ddl_pgate_pg readonly"
+                                                    name="pgate" style="pointer-events: none;">
+                                                <option value="0">— 請選擇 —</option>
+                                                <option value="23">虛擬賬號 (虛擬帳號)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row" style="display: none;">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm ddl_pbank" name="pbank">
+                                                <option value="137">虛擬賬號</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label
-                                                for="inputPassword"
-                                                class="col-sm-3 col-form-label"
-                                                style="color: white;"
-                                        >數額</label
-                                        >
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            數額</label>
                                         <div class="col-sm-9">
-                                            <input
-                                                    type="text"
-                                                    class="form-control form-control-sm"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label
-                                                for="inputPassword"
-                                                class="col-sm-3 col-form-label"
-                                                style="color: white;"
-                                        >優惠</label
-                                        >
-                                        <div class="col-sm-9">
-                                            <select class="form-control form-control-sm">
-                                                <option>— 請選擇 —</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <button class="submitBtn">轉帳</button>
-                                    <p
-                                            style="color: white; text-align: center;margin-top: 10px; font-size: 12px"
-                                    >
-                                        如需協助，請洽在線客服詢問!
-                                    </p>
-                                </form>
-                                <form class="formPanel">
-                                    <div class="form-group row">
-                                        <label
-                                                for="inputPassword"
-                                                class="col-sm-3 col-form-label"
-                                                style="color: white;"
-                                        >銀行戶口</label
-                                        >
-                                        <div class="col-sm-9">
-                                            <select class="form-control form-control-sm">
-                                                <option>— 請選擇 —</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row" style="margin-bottom: 5px">
-                                        <label
-                                                for="inputPassword"
-                                                class="col-sm-3 col-form-label"
-                                                style="color: white;"
-                                        >數額</label
-                                        >
-                                        <div class="col-sm-9">
-                                            <input
-                                                    type="text"
-                                                    class="form-control form-control-sm"
-                                            />
-                                            <div
-                                                    style="color:white;margin-top: 5px;font-size: 10px; text-align: right;"
-                                            >
-                                                最低100.00
+                                            <input type="text" onkeydown="isNumber(event)" name="txtPGDepoAmt"
+                                                   class="form-control form-control-sm">
+
+                                            <div style="color: white; margin-top: 5px; font-size: 12px; text-align: right;"
+                                                 id="div_limit">
+                                                <p class="noticefonts">
+                                                    <label>最低&nbsp;<span class="minamt">200</span></label>
+                                                    <label>最高&nbsp;<span class="maxamt">800</span></label>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label
-                                                for="inputPassword"
-                                                class="col-sm-3 col-form-label"
-                                                style="color: white;"
-                                        >備註</label
-                                        >
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            優惠</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control form-control-sm">
-                                                <option>— 請選擇 —</option>
+                                            <select class="form-control form-control-sm ddl_promotion"
+                                                    name="pg_promotion">
+                                                <option value="0">— 請選擇 —</option>
+                                                <option value="180">周年慶20%回饋</option>
+                                                <option value="166">二儲紅利</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="submitBtn btnDepo_pg">提交</button>
+                                    <p style="color: white; text-align: center; margin-top: 10px; font-size: 1rem; line-height: normal">
+                                        ★如需存款請使用本人銀行操作，若非本人而影響後續出款權益須自行承擔★
+                                    </p>
+                                </form>
+
+                                <form id="form_depo_cc" name="form_depo_pg" class="formPanel container_depopg"
+                                      data-channeltype="3">
+
+                                    <input type="text" class="form-control form-control-sm" value="3"
+                                           style="display: none; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAx9JREFUWAndV79LY0EQnjySSAQ1OUG4OxvxR5BALggBi0BEIYUYtLC43v8ghZVgY3V9/oUjpMovEBvRSsGAHrY2Yi7BwlgEREXNzffMLnnP91bzkiDcQNjdmdlvvt3ZnbdxEcvOzs73p6enX9xdaDab36DrlbhcripjHbjd7s2tra2/ZlxXK/gfDjxqNvZyzERumMQPMwkNK+93cCwEMVq7bFiXxqMFg6a/gzextF7nXMXfKhZ24FPl/yYwOztLqVSK0NpJX3cgFArR8PAwobWTvhLgu6/HFa0Vib4SsApo1hkIDAwM0OTkJAUCAbMfObW9ATIp3GLs9/tpY2ODhoaG6OXlhQqFAp2dnelmpzaBrWrlDszPz+vB4axpGi0uLsp5Tm0SQNGRBBQ+fTVJAsfHx9RoNPRgSMH+/r4M7NQmARQd1/b2dlPYcdDGx8epXq/T7e2tUOutymZwfGfAV7LGLoet98GVgcA7c3tqZiJ1JhGRKegp+gfA+Mv4Be+DTyPQ4hiXdeADpG1dUCei0ShNT0/TyMgI3d/fU61Wo3K5TBcXF7bzeBe+dk0gHA7TysoKeb1eGQgHFkRmZmZod3eXTk5OpM3c6ToFExMThuDPz88yBgpaIpHQy7hUmjpd70CxWCSkYHBwkEqlElUqFYrFYrS0tKSH8ng8uv36+toU+nXo5utQtXqrWXpbKFG0MpkMYeV8qnUP1JF2EQWuXSf6SMGBGDhtHx4eZHCsOB6PS6jLy0u6u7uTY3NHQ0XiXbgxG5yMkfP19XUaGxvTp2NH9vb2lFAa/qngHwuT+I10KL0VRp5La2trFAwGdS+kJp/PU7Wqhnx9MymAzab2b4ewIfjq6ipFIhFdhfOQy+Xo/PxcuNi2Xd8CICeTSRn88fGRstmssgC1s+mawPLyMs3NzUlMrB53Hz8hR0dHdHp6KoaGtmsCU1NTBkCfz0f4tQtqhJ10XAk53/ie90SA5WQHDjn6T8EgnU4TDqFKcCNs5LBjAqgbfL8T+J4DtL322wSxVDNpPEg2O04B140rnhhhgAy20BJdocQczAUGsP4BPJYni4VMj2AAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+                                           name="hid_gateType" autocomplete="off">
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            通道</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm ddl_pgate_pg readonly"
+                                                    name="pgate" style="pointer-events: none;">
+                                                <option value="0">— 請選擇 —</option>
+                                                <option value="4">信用卡 (信用卡渠道)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row" style="display: none;">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm ddl_pbank" name="pbank">
+                                                <option value="39">信用卡</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            數額</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" onkeydown="isNumber(event)" name="txtPGDepoAmt"
+                                                   class="form-control form-control-sm">
+
+                                            <div style="color: white; margin-top: 5px; font-size: 12px; text-align: right;"
+                                                 id="div_fee">
+                                                <p class="noticefonts">
+                                                    <span id="lblFees">刷卡需收8%手續費</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            優惠</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control form-control-sm ddl_promotion"
+                                                    name="pg_promotion">
+                                                <option value="0">— 請選擇 —</option>
+                                                <option value="180">周年慶20%回饋</option>
+                                                <option value="166">二儲紅利</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" id="btnDepo_pg" class="submitBtn btnDepo_pg">提交</button>
+                                    <p style="color: white; text-align: center; margin-top: 10px; font-size: 1rem; line-height: normal">
+                                        ★如需存款請使用本人銀行操作，若非本人而影響後續出款權益須自行承擔★
+                                    </p>
+                                </form>
+
+
+                                <form id="form_depo_mart" name="form_depo_mart" class="formPanel"
+                                      style="height: 390px;">
+
+                                    <div id="div_submitMart">
+
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label" style="color: white;">
+                                                通道</label>
+                                            <div class="col-sm-9">
+                                                <select id="ddl_pgate_mart"
+                                                        class="form-control form-control-sm readonly" name="pgate"
+                                                        style="pointer-events: none;">
+                                                    <option value="0">— 請選擇 —</option>
+                                                    <option value="24">超商代碼 (超商代碼)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="display: none;">
+                                            <label class="col-sm-3 col-form-label" style="color: white;">
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <select id="ddl_pbank" class="form-control form-control-sm"
+                                                        name="pbank">
+                                                    <option value="138">超商代碼</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 5px">
+                                            <label class="col-sm-3 col-form-label" style="color: white;">
+                                                數額</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" onkeydown="isNumber(event)"
+                                                       class="form-control form-control-sm" name="depo_mart_amt"
+                                                       autocomplete="off"
+                                                       style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAx9JREFUWAndV79LY0EQnjySSAQ1OUG4OxvxR5BALggBi0BEIYUYtLC43v8ghZVgY3V9/oUjpMovEBvRSsGAHrY2Yi7BwlgEREXNzffMLnnP91bzkiDcQNjdmdlvvt3ZnbdxEcvOzs73p6enX9xdaDab36DrlbhcripjHbjd7s2tra2/ZlxXK/gfDjxqNvZyzERumMQPMwkNK+93cCwEMVq7bFiXxqMFg6a/gzextF7nXMXfKhZ24FPl/yYwOztLqVSK0NpJX3cgFArR8PAwobWTvhLgu6/HFa0Vib4SsApo1hkIDAwM0OTkJAUCAbMfObW9ATIp3GLs9/tpY2ODhoaG6OXlhQqFAp2dnelmpzaBrWrlDszPz+vB4axpGi0uLsp5Tm0SQNGRBBQ+fTVJAsfHx9RoNPRgSMH+/r4M7NQmARQd1/b2dlPYcdDGx8epXq/T7e2tUOutymZwfGfAV7LGLoet98GVgcA7c3tqZiJ1JhGRKegp+gfA+Mv4Be+DTyPQ4hiXdeADpG1dUCei0ShNT0/TyMgI3d/fU61Wo3K5TBcXF7bzeBe+dk0gHA7TysoKeb1eGQgHFkRmZmZod3eXTk5OpM3c6ToFExMThuDPz88yBgpaIpHQy7hUmjpd70CxWCSkYHBwkEqlElUqFYrFYrS0tKSH8ng8uv36+toU+nXo5utQtXqrWXpbKFG0MpkMYeV8qnUP1JF2EQWuXSf6SMGBGDhtHx4eZHCsOB6PS6jLy0u6u7uTY3NHQ0XiXbgxG5yMkfP19XUaGxvTp2NH9vb2lFAa/qngHwuT+I10KL0VRp5La2trFAwGdS+kJp/PU7Wqhnx9MymAzab2b4ewIfjq6ipFIhFdhfOQy+Xo/PxcuNi2Xd8CICeTSRn88fGRstmssgC1s+mawPLyMs3NzUlMrB53Hz8hR0dHdHp6KoaGtmsCU1NTBkCfz0f4tQtqhJ10XAk53/ie90SA5WQHDjn6T8EgnU4TDqFKcCNs5LBjAqgbfL8T+J4DtL322wSxVDNpPEg2O04B140rnhhhgAy20BJdocQczAUGsP4BPJYni4VMj2AAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                                                <div id="div_limit_wm"
+                                                     style="color: white; margin-top: 5px; font-size: 12px; text-align: right;">
+                                                    <label>最低&nbsp;<span class="minamt">100</span></label>
+                                                    <label>最高&nbsp;<span class="maxamt">500</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label" style="color: white;">
+                                                優惠</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control form-control-sm ddl_promotion"
+                                                        name="depo_mart_promotion">
+                                                    <option value="0">— 請選擇 —</option>
+                                                    <option value="180">周年慶20%回饋</option>
+                                                    <option value="166">二儲紅利</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <input id="hid_gateType" type="text" class="form-control form-control-sm"
+                                               style="display: none;" name="hid_gateType" value="6">
+
+                                        <button type="button" id="btnDepo_mart" class="submitBtn btnDepo_mart">提交
+                                        </button>
+
+                                        <p style='color:#fff;margin-top: 10px;'>超商轉帳教學<span style='color:#fff;font-size:12px;margin-left: 10px;'>(請點選超商平台如下，謝謝！)</span>
+                                        </p>
+                                        <div class='dropDownBox active dropDownBox--instruction'>
+
+                                        </div>
+
+                                        <p style="color: white; text-align: left; font-size: 1rem; line-height: normal">
+                                            注意事項：<br>
+                                            1. 請洽客服開通<br>
+                                            2.系統將發配一組專屬交易單號，請至您選擇的超商門市進行繳費。<br>
+                                            3.繳費完成後請妥善保管交易收據，以便查證。<br>
+                                        </p>
+                                    </div>
+                                    <div id="div_mart" style="display: none">
+                                        <div class="form-group row" style="margin-bottom: 5px">
+                                            <label class="col-sm-3 col-form-label" style="color: white;">
+                                                通道</label>
+                                            <div class="col-sm-9">
+                                                <input disabled="disabled" type="text"
+                                                       class="form-control form-control-sm" name="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 5px">
+                                            <label class="col-sm-3 col-form-label" style="color: white;">
+                                                超商代碼</label>
+                                            <div class="col-sm-9">
+                                                <input disabled="disabled" type="text"
+                                                       class="form-control form-control-sm" name="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 5px">
+                                            <label class="col-sm-3 col-form-label" style="color: white;">
+                                                數額</label>
+                                            <div class="col-sm-9">
+                                                <input disabled="disabled" type="text"
+                                                       class="form-control form-control-sm" name="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 5px">
+                                            <label class="col-sm-3 col-form-label" style="color: white;">
+                                                截至時間</label>
+                                            <div class="col-sm-9">
+                                                <input disabled="disabled" type="text"
+                                                       class="form-control form-control-sm" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="div_cancelMart" style="padding-top: 95px; display: none">
+                                        <button id="btn_cancelMart" class="submitBtn">取消超商代碼</button>
+                                    </div>
+                                </form>
+
+                                <form id="form_depo_manual" name="form_depo_manual" class="formPanel">
+                                    <div class="form-group row" style="margin-bottom: 5px">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            銀行戶口</label>
+                                        <div class="col-sm-9">
+                                            <select id="ddl_depo_bank" class="form-control form-control-sm"
+                                                    name="depo_manual_bank">
+                                                <option value="0">— 請選擇 —</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row div_depo_manual_bankaccname"
+                                         style="margin-bottom: 5px; display: none;">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            銀行戶口名字</label>
+                                        <div class="col-sm-7">
+                                            <input type="text"
+                                                   class="form-control form-control-sm depo_manual_bankaccname"
+                                                   readonly="readonly" id="depo_manual_bankaccname"
+                                                   name="depo_manual_bankaccname"
+                                                   style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+                                        </div>
+                                        <svg class="svg-inline--fa fa-copy fa-w-14 cur_pointer"
+                                             onclick="CopyInfo('depo_manual_bankaccname')"
+                                             style="height: 1.5em; color: gold; width: 1.8em;" aria-hidden="true"
+                                             focusable="false" data-prefix="fas" data-icon="copy" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                  d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"></path>
+                                        </svg>
+                                        <!-- <i class="fas fa-copy cur_pointer" onclick="CopyInfo('depo_manual_bankaccname')" style="height: 1.5em; color: gold; width: 1.8em;"></i> -->
+                                    </div>
+                                    <div class="form-group row div_depo_manual_bankaccnum"
+                                         style="margin-bottom: 5px; display: none;">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            銀行戶口號碼</label>
+                                        <div class="col-sm-7">
+                                            <input type="text"
+                                                   class="form-control form-control-sm depo_manual_bankaccnum"
+                                                   readonly="readonly" id="depo_manual_bankaccnum"
+                                                   name="depo_manual_bankaccnum">
+                                        </div>
+                                        <svg class="svg-inline--fa fa-copy fa-w-14 cur_pointer"
+                                             onclick="CopyInfo('depo_manual_bankaccnum')"
+                                             style="height: 1.5em; color: gold; width: 1.8em;" aria-hidden="true"
+                                             focusable="false" data-prefix="fas" data-icon="copy" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                  d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"></path>
+                                        </svg>
+                                        <!-- <i class="fas fa-copy cur_pointer" onclick="CopyInfo('depo_manual_bankaccnum')" style="height: 1.5em; color: gold; width: 1.8em;"></i> -->
+                                    </div>
+                                    <div class="form-group row" style="margin-bottom: 5px">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            數額</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" onkeydown="isNumber(event)"
+                                                   class="form-control form-control-sm" name="depo_manual_amt">
+                                            <div style="color: white; margin-top: 5px; font-size: 12px; text-align: right;">
+                                                <label>最低 <span id="min_deposit">100</span></label>
+                                                <input id="hid_min_deposit" type="text"
+                                                       class="form-control form-control-sm" style="display: none;"
+                                                       name="hid_min_deposit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            備註</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control form-control-sm"
+                                                   placeholder="請填寫匯款帳戶後五碼" name="depo_manual_remark">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row" style="display: none;">
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            存款日期</label>
+                                        <div class="col-sm-9">
+                                            <input class="cursor datePickerComponent hasDatepicker" type="text"
+                                                   id="datetimeFrom" autocomplete="off" name="depo_manual_date">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label
-                                                for="inputPassword"
-                                                class="col-sm-3 col-form-label"
-                                                style="color: white;"
-                                        >存款日期</label
-                                        >
+                                        <label class="col-sm-3 col-form-label" style="color: white;">
+                                            優惠</label>
                                         <div class="col-sm-9">
-                                            <input
-                                                    class="cursor datePickerComponent"
-                                                    type="text"
-                                                    id="datetimeFrom"
-                                                    autocomplete="off"
-                                                    runat="server"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label
-                                                for="inputPassword"
-                                                class="col-sm-3 col-form-label"
-                                                style="color: white;"
-                                        >優惠</label
-                                        >
-                                        <div class="col-sm-9">
-                                            <select class="form-control form-control-sm">
-                                                <option>— 請選擇 —</option>
+                                            <select class="form-control form-control-sm ddl_promotion"
+                                                    name="depo_manual_promotion">
+                                                <option value="0">— 請選擇 —</option>
+                                                <option value="180">周年慶20%回饋</option>
+                                                <option value="166">二儲紅利</option>
                                             </select>
                                         </div>
                                     </div>
 
-                                    <button class="submitBtn">提交</button>
-                                    <p
-                                            style="color:white; text-align:center;margin-top: 10px;font-size: 12px"
-                                    >
-                                        如需協助，請洽在線客服詢問
+                                    <button type="button" id="btnDepo_manual" class="submitBtn btnDepo_manual">提交
+                                    </button>
+                                    <p style="color: white; text-align: center; margin-top: 10px; font-size: 1rem; line-height: normal">
+                                        ★VIP快速存款，上分更即時，24小時專屬客服為您服務★<br>
+                                        ★如需存款請使用本人銀行操作，若非本人而影響後續出款權益須自行承擔★
                                     </p>
                                 </form>
                             </div>
                         </div>
                     </div>
+
                     <div class="uiBox">
                         <div class="uiContainer">
-                            <form>
+                            <form id="form_withdraw" name="form_withdraw" method="post" _lpchecked="1">
                                 <div class="form-group row">
-                                    <label
-                                            for="inputPassword"
-                                            class="col-sm-3 col-form-label"
-                                            style="color:white;"
-                                    >銀行</label
-                                    >
+                                    <label for="w_ply_bank" class="col-sm-3 col-form-label" style="color: white;">
+                                        銀行</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control form-control-sm">
-                                            <option>— 選擇銀行 —</option>
+
+                                        <select id="w_ply_bank" class="form-control form-control-sm" name="w_ply_bank">
+                                            <option value="0">-- 請選擇 --</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="w_ply_bankname" class="col-sm-3 col-form-label" style="color: white;">
+                                        銀行戶名</label>
+                                    <div class="col-sm-9">
+                                        <input name="ctl00$w_ply_bankname" type="text" id="w_ply_bankname"
+                                               readonly="readonly" class="form-control form-control-sm"
+                                               style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="w_ply_bankacc" class="col-sm-3 col-form-label" style="color: white;">
+                                        銀行賬號</label>
+                                    <div class="col-sm-9">
+                                        <input name="ctl00$w_ply_bankacc" type="text" id="w_ply_bankacc"
+                                               readonly="readonly" class="form-control form-control-sm"
+                                               style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="w_amt" class="col-sm-3 col-form-label" style="color: white;">
+                                        數額</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" onkeydown="isNumber(event)"
+                                               class="form-control form-control-sm w_amt" name="w_amt"
+                                               autocomplete="off"
+                                               style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAx9JREFUWAndV79LY0EQnjySSAQ1OUG4OxvxR5BALggBi0BEIYUYtLC43v8ghZVgY3V9/oUjpMovEBvRSsGAHrY2Yi7BwlgEREXNzffMLnnP91bzkiDcQNjdmdlvvt3ZnbdxEcvOzs73p6enX9xdaDab36DrlbhcripjHbjd7s2tra2/ZlxXK/gfDjxqNvZyzERumMQPMwkNK+93cCwEMVq7bFiXxqMFg6a/gzextF7nXMXfKhZ24FPl/yYwOztLqVSK0NpJX3cgFArR8PAwobWTvhLgu6/HFa0Vib4SsApo1hkIDAwM0OTkJAUCAbMfObW9ATIp3GLs9/tpY2ODhoaG6OXlhQqFAp2dnelmpzaBrWrlDszPz+vB4axpGi0uLsp5Tm0SQNGRBBQ+fTVJAsfHx9RoNPRgSMH+/r4M7NQmARQd1/b2dlPYcdDGx8epXq/T7e2tUOutymZwfGfAV7LGLoet98GVgcA7c3tqZiJ1JhGRKegp+gfA+Mv4Be+DTyPQ4hiXdeADpG1dUCei0ShNT0/TyMgI3d/fU61Wo3K5TBcXF7bzeBe+dk0gHA7TysoKeb1eGQgHFkRmZmZod3eXTk5OpM3c6ToFExMThuDPz88yBgpaIpHQy7hUmjpd70CxWCSkYHBwkEqlElUqFYrFYrS0tKSH8ng8uv36+toU+nXo5utQtXqrWXpbKFG0MpkMYeV8qnUP1JF2EQWuXSf6SMGBGDhtHx4eZHCsOB6PS6jLy0u6u7uTY3NHQ0XiXbgxG5yMkfP19XUaGxvTp2NH9vb2lFAa/qngHwuT+I10KL0VRp5La2trFAwGdS+kJp/PU7Wqhnx9MymAzab2b4ewIfjq6ipFIhFdhfOQy+Xo/PxcuNi2Xd8CICeTSRn88fGRstmssgC1s+mawPLyMs3NzUlMrB53Hz8hR0dHdHp6KoaGtmsCU1NTBkCfz0f4tQtqhJ10XAk53/ie90SA5WQHDjn6T8EgnU4TDqFKcCNs5LBjAqgbfL8T+J4DtL322wSxVDNpPEg2O04B140rnhhhgAy20BJdocQczAUGsP4BPJYni4VMj2AAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                                        <div style="color: white; margin-top: 5px; font-size: 12px; text-align: right;">
+                                            <p class="noticefonts">
+                                                <label>最低 <span id="min_withdraw">1000</span></label>
+                                                <input id="hid_min_withdraw" type="text"
+                                                       class="form-control form-control-sm"
+                                                       style="display: none; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAx9JREFUWAndV79LY0EQnjySSAQ1OUG4OxvxR5BALggBi0BEIYUYtLC43v8ghZVgY3V9/oUjpMovEBvRSsGAHrY2Yi7BwlgEREXNzffMLnnP91bzkiDcQNjdmdlvvt3ZnbdxEcvOzs73p6enX9xdaDab36DrlbhcripjHbjd7s2tra2/ZlxXK/gfDjxqNvZyzERumMQPMwkNK+93cCwEMVq7bFiXxqMFg6a/gzextF7nXMXfKhZ24FPl/yYwOztLqVSK0NpJX3cgFArR8PAwobWTvhLgu6/HFa0Vib4SsApo1hkIDAwM0OTkJAUCAbMfObW9ATIp3GLs9/tpY2ODhoaG6OXlhQqFAp2dnelmpzaBrWrlDszPz+vB4axpGi0uLsp5Tm0SQNGRBBQ+fTVJAsfHx9RoNPRgSMH+/r4M7NQmARQd1/b2dlPYcdDGx8epXq/T7e2tUOutymZwfGfAV7LGLoet98GVgcA7c3tqZiJ1JhGRKegp+gfA+Mv4Be+DTyPQ4hiXdeADpG1dUCei0ShNT0/TyMgI3d/fU61Wo3K5TBcXF7bzeBe+dk0gHA7TysoKeb1eGQgHFkRmZmZod3eXTk5OpM3c6ToFExMThuDPz88yBgpaIpHQy7hUmjpd70CxWCSkYHBwkEqlElUqFYrFYrS0tKSH8ng8uv36+toU+nXo5utQtXqrWXpbKFG0MpkMYeV8qnUP1JF2EQWuXSf6SMGBGDhtHx4eZHCsOB6PS6jLy0u6u7uTY3NHQ0XiXbgxG5yMkfP19XUaGxvTp2NH9vb2lFAa/qngHwuT+I10KL0VRp5La2trFAwGdS+kJp/PU7Wqhnx9MymAzab2b4ewIfjq6ipFIhFdhfOQy+Xo/PxcuNi2Xd8CICeTSRn88fGRstmssgC1s+mawPLyMs3NzUlMrB53Hz8hR0dHdHp6KoaGtmsCU1NTBkCfz0f4tQtqhJ10XAk53/ie90SA5WQHDjn6T8EgnU4TDqFKcCNs5LBjAqgbfL8T+J4DtL322wSxVDNpPEg2O04B140rnhhhgAy20BJdocQczAUGsP4BPJYni4VMj2AAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+                                                       name="hid_min_withdraw" autocomplete="off">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="w_password" class="col-sm-3 col-form-label" style="color: white;">
+                                        密碼</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control form-control-sm w_password"
+                                               name="w_password" autocomplete="off"
+                                               style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAx9JREFUWAndV79LY0EQnjySSAQ1OUG4OxvxR5BALggBi0BEIYUYtLC43v8ghZVgY3V9/oUjpMovEBvRSsGAHrY2Yi7BwlgEREXNzffMLnnP91bzkiDcQNjdmdlvvt3ZnbdxEcvOzs73p6enX9xdaDab36DrlbhcripjHbjd7s2tra2/ZlxXK/gfDjxqNvZyzERumMQPMwkNK+93cCwEMVq7bFiXxqMFg6a/gzextF7nXMXfKhZ24FPl/yYwOztLqVSK0NpJX3cgFArR8PAwobWTvhLgu6/HFa0Vib4SsApo1hkIDAwM0OTkJAUCAbMfObW9ATIp3GLs9/tpY2ODhoaG6OXlhQqFAp2dnelmpzaBrWrlDszPz+vB4axpGi0uLsp5Tm0SQNGRBBQ+fTVJAsfHx9RoNPRgSMH+/r4M7NQmARQd1/b2dlPYcdDGx8epXq/T7e2tUOutymZwfGfAV7LGLoet98GVgcA7c3tqZiJ1JhGRKegp+gfA+Mv4Be+DTyPQ4hiXdeADpG1dUCei0ShNT0/TyMgI3d/fU61Wo3K5TBcXF7bzeBe+dk0gHA7TysoKeb1eGQgHFkRmZmZod3eXTk5OpM3c6ToFExMThuDPz88yBgpaIpHQy7hUmjpd70CxWCSkYHBwkEqlElUqFYrFYrS0tKSH8ng8uv36+toU+nXo5utQtXqrWXpbKFG0MpkMYeV8qnUP1JF2EQWuXSf6SMGBGDhtHx4eZHCsOB6PS6jLy0u6u7uTY3NHQ0XiXbgxG5yMkfP19XUaGxvTp2NH9vb2lFAa/qngHwuT+I10KL0VRp5La2trFAwGdS+kJp/PU7Wqhnx9MymAzab2b4ewIfjq6ipFIhFdhfOQy+Xo/PxcuNi2Xd8CICeTSRn88fGRstmssgC1s+mawPLyMs3NzUlMrB53Hz8hR0dHdHp6KoaGtmsCU1NTBkCfz0f4tQtqhJ10XAk53/ie90SA5WQHDjn6T8EgnU4TDqFKcCNs5LBjAqgbfL8T+J4DtL322wSxVDNpPEg2O04B140rnhhhgAy20BJdocQczAUGsP4BPJYni4VMj2AAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                                    </div>
+                                </div>
+                                <button type="button" id="btnWithdraw" class="submitBtn btnWithdraw">提交</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="uiBox">
+                        <div class="uiContainer">
+                            <form id="form_savebank" name="form_savebank" method="post">
+                                <div class="form-group row">
+                                    <label for="ply_bank" class="col-sm-3 col-form-label" style="color: white;">
+                                        銀行</label>
+                                    <div class="col-sm-9">
+                                        <select id="ddl_bank" class="form-control form-control-sm" name="ply_bank">
+                                            <option value="0">— 選擇銀行 —</option>
+                                            <option value="87">三信商業銀行</option>
+                                            <option value="171">三峽農會</option>
+                                            <option value="200">三星地區農會 三星福山</option>
+                                            <option value="225">三義鄉農會</option>
+                                            <option value="69">上海商業儲蓄銀行</option>
+                                            <option value="97">中國信託商業銀行</option>
+                                            <option value="75">中華郵政</option>
+                                            <option value="80">京城商業銀行</option>
+                                            <option value="226">信義鄉農會</option>
+                                            <option value="89">元大商業銀行</option>
+                                            <option value="73">兆豐國際商業銀行</option>
+                                            <option value="227">內湖區農會</option>
+                                            <option value="92">凱基商業銀行</option>
+                                            <option value="219">古坑鄉農會</option>
+                                            <option value="79">台中商業銀行</option>
+                                            <option value="205">台中市第二信用合作社</option>
+                                            <option value="70">台北富邦商業銀行</option>
+                                            <option value="223">台北市第五信用合作社</option>
+                                            <option value="94">台新國際商業銀行</option>
+                                            <option value="65">合作金庫商業銀行</option>
+                                            <option value="173">后里區農會</option>
+                                            <option value="71">國泰世華商業銀行</option>
+                                            <option value="64">土地銀行</option>
+                                            <option value="191">土庫鎮農會</option>
+                                            <option value="199">埤頭鄉農會</option>
+                                            <option value="188">基隆市第二信用合作社</option>
+                                            <option value="189">基隆第一信用合作社</option>
+                                            <option value="221">大園區農會</option>
+                                            <option value="198">大林農會</option>
+                                            <option value="216">大湖地區農會</option>
+                                            <option value="217">太保市農會</option>
+                                            <option value="96">安泰商業銀行</option>
+                                            <option value="206">宜蘭信用合作社</option>
+                                            <option value="68">彰化商業銀行</option>
+                                            <option value="222">彰化大村鄉農會</option>
+                                            <option value="174">彰化第一信用合作社</option>
+                                            <option value="195">彰化第五信用合作社</option>
+                                            <option value="197">彰化第六信用合作社</option>
+                                            <option value="220">彰化第十信用合作社</option>
+                                            <option value="214">新北市板橋區農會</option>
+                                            <option value="201">新竹第一信用合作社</option>
+                                            <option value="202">新竹第一信用合作社</option>
+                                            <option value="229">新莊農會</option>
+                                            <option value="95">日盛國際商業銀行</option>
+                                            <option value="93">星展（台灣）商業銀行</option>
+                                            <option value="232">朴子市農會</option>
+                                            <option value="86">板信商業銀行</option>
+                                            <option value="190">桃園信用合作社</option>
+                                            <option value="194">歸仁農會</option>
+                                            <option value="228">水林農會</option>
+                                            <option value="90">永豐商業銀行</option>
+                                            <option value="196">淡水第一信用合作社</option>
+                                            <option value="78">渣打國際商業銀行</option>
+                                            <option value="81">滙豐（台灣）商業銀行</option>
+                                            <option value="91">玉山商業銀行</option>
+                                            <option value="76">王道商業銀行</option>
+                                            <option value="82">瑞興商業銀行</option>
+                                            <option value="66">第一商業銀行</option>
+                                            <option value="168">聯邦銀行</option>
+                                            <option value="231">臺北市北投區農會</option>
+                                            <option value="77">臺灣中小企業銀行</option>
+                                            <option value="84">臺灣新光商業銀行</option>
+                                            <option value="63">臺灣銀行</option>
+                                            <option value="74">花旗（台灣）商業銀行</option>
+                                            <option value="172">花蓮第二信用合作社</option>
+                                            <option value="203">草屯鎮農會</option>
+                                            <option value="67">華南商業銀行</option>
+                                            <option value="83">華泰商業銀行</option>
+                                            <option value="207">虎尾農會</option>
+                                            <option value="224">西螺農會</option>
+                                            <option value="88">遠東國際商業銀行</option>
+                                            <option value="85">陽信商業銀行</option>
+                                            <option value="218">雲林縣斗六市農會</option>
+                                            <option value="193">雲林縣斗南鎮農會</option>
+                                            <option value="192">霧峰區農會</option>
+                                            <option value="170">高雄市第三信用合作社</option>
+                                            <option value="72">高雄銀行</option>
+                                            <option value="230">鳥松鄉農會</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label
-                                            for="inputPassword"
-                                            class="col-sm-3 col-form-label"
-                                            style="color:white;"
-                                    >銀行戶口名字</label
-                                    >
+                                    <label for="ply_bankname" class="col-sm-3 col-form-label" style="color: white;">
+                                        銀行戶名</label>
                                     <div class="col-sm-9">
-                                        <input
-                                                type="text"
-                                                class="form-control form-control-sm"
-                                        />
+                                        <input type="text" class="form-control form-control-sm" name="ply_bankname"
+                                               id="ply_bankname" autocomplete="off"
+                                               style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAx9JREFUWAndV79LY0EQnjySSAQ1OUG4OxvxR5BALggBi0BEIYUYtLC43v8ghZVgY3V9/oUjpMovEBvRSsGAHrY2Yi7BwlgEREXNzffMLnnP91bzkiDcQNjdmdlvvt3ZnbdxEcvOzs73p6enX9xdaDab36DrlbhcripjHbjd7s2tra2/ZlxXK/gfDjxqNvZyzERumMQPMwkNK+93cCwEMVq7bFiXxqMFg6a/gzextF7nXMXfKhZ24FPl/yYwOztLqVSK0NpJX3cgFArR8PAwobWTvhLgu6/HFa0Vib4SsApo1hkIDAwM0OTkJAUCAbMfObW9ATIp3GLs9/tpY2ODhoaG6OXlhQqFAp2dnelmpzaBrWrlDszPz+vB4axpGi0uLsp5Tm0SQNGRBBQ+fTVJAsfHx9RoNPRgSMH+/r4M7NQmARQd1/b2dlPYcdDGx8epXq/T7e2tUOutymZwfGfAV7LGLoet98GVgcA7c3tqZiJ1JhGRKegp+gfA+Mv4Be+DTyPQ4hiXdeADpG1dUCei0ShNT0/TyMgI3d/fU61Wo3K5TBcXF7bzeBe+dk0gHA7TysoKeb1eGQgHFkRmZmZod3eXTk5OpM3c6ToFExMThuDPz88yBgpaIpHQy7hUmjpd70CxWCSkYHBwkEqlElUqFYrFYrS0tKSH8ng8uv36+toU+nXo5utQtXqrWXpbKFG0MpkMYeV8qnUP1JF2EQWuXSf6SMGBGDhtHx4eZHCsOB6PS6jLy0u6u7uTY3NHQ0XiXbgxG5yMkfP19XUaGxvTp2NH9vb2lFAa/qngHwuT+I10KL0VRp5La2trFAwGdS+kJp/PU7Wqhnx9MymAzab2b4ewIfjq6ipFIhFdhfOQy+Xo/PxcuNi2Xd8CICeTSRn88fGRstmssgC1s+mawPLyMs3NzUlMrB53Hz8hR0dHdHp6KoaGtmsCU1NTBkCfz0f4tQtqhJ10XAk53/ie90SA5WQHDjn6T8EgnU4TDqFKcCNs5LBjAqgbfL8T+J4DtL322wSxVDNpPEg2O04B140rnhhhgAy20BJdocQczAUGsP4BPJYni4VMj2AAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label
-                                            for="inputPassword"
-                                            class="col-sm-3 col-form-label"
-                                            style="color:white;"
-                                    >銀行戶口號碼</label
-                                    >
+                                    <label for="ply_bankacc" class="col-sm-3 col-form-label" style="color: white;">
+                                        銀行賬號</label>
                                     <div class="col-sm-9">
-                                        <input
-                                                type="text"
-                                                class="form-control form-control-sm"
-                                        />
+                                        <input type="text" onkeydown="isNumber(event)"
+                                               class="form-control form-control-sm" name="ply_bankacc" id="ply_bankacc">
                                     </div>
                                 </div>
+                                <div class="form-group row">
 
-                                <button class="submitBtn">轉帳</button>
+                                    <div class="col-sm-12">
+                                        <button type="button" id="btnSaveBank" class="submitBtn btnSaveBank">提交</button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -2242,37 +2589,51 @@
 </div>
 
 <!-- Modal -->
+<!--<div class="mobileModal-container" id="modal">-->
+<!--    <div class="mobileModal mobileModal&#45;&#45;prompt">-->
+<!--        <div class="close-btn" id="close">-->
+<!--            <span class="iconfont icon_times-light"></span>-->
+<!--        </div>-->
+<!--        <div class="mobileModal-header">-->
+<!--            <h3>請輸入提款密碼</h3>-->
+<!--        </div>-->
+<!--        <div class="mobileModal-content">-->
+<!--            &lt;!&ndash;            <p>Register with us to get offers, support and more</p>&ndash;&gt;-->
+<!--            <form class="mobileModal-form">-->
+<!--                <div class="inputWithBtn">-->
+<!--                    &lt;!&ndash;                    <label for="name">Name</label>&ndash;&gt;-->
+<!--                    <input-->
+<!--                            type="text"-->
+<!--                            id="name"-->
+<!--                            placeholder="6-10位英、數字符"-->
+<!--                            class="form-input"-->
+<!--                    />-->
+
+<!--                    <button-->
+<!--                            type="button"-->
+<!--                            class="btn btn-primary btn-sm"-->
+<!--                            style="margin-left: 10px;-->
+<!--    flex: 1 1 40%;"-->
+<!--                    >-->
+<!--                        忘記密碼-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <input type="submit" value="Submit" class="submit-btn"/>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
 <div class="mobileModal-container" id="modal">
-    <div class="mobileModal mobileModal--prompt">
+    <div class="mobileModal" style="width: 50%;">
         <div class="close-btn" id="close">
             <span class="iconfont icon_times-light"></span>
         </div>
         <div class="mobileModal-header">
-            <h3>請輸入提款密碼</h3>
+            <h3>超商繳費流程</h3>
         </div>
-        <div class="mobileModal-content">
-            <!--            <p>Register with us to get offers, support and more</p>-->
-            <form class="mobileModal-form">
-                <div class="inputWithBtn">
-                    <!--                    <label for="name">Name</label>-->
-                    <input
-                            type="text"
-                            id="name"
-                            placeholder="6-10位英、數字符"
-                            class="form-input"
-                    />
+        <div class="mobileModal-content" style="height: 620px;overflow-y: scroll;">
 
-                    <button
-                            type="button"
-                            class="btn btn-primary btn-sm"
-                            style="margin-left: 10px;
-    flex: 1 1 40%;"
-                    >
-                        忘記密碼
-                    </button>
-                </div>
-                <input type="submit" value="Submit" class="submit-btn"/>
-            </form>
         </div>
     </div>
 </div>
@@ -3372,6 +3733,63 @@
     });
   });
 
+</script>
+<script>
+  (function () {
+    const data = [
+      {
+        logo: "build/images/convenienceStore/7-ELEVEN.png",
+        processImg: ['7-11-00.jpg', '7-11-01.png']
+      },
+      {
+        logo: "build/images/convenienceStore/FamilyMart.jpg",
+        processImg: ['famiport_001.jpg', 'famiport_002.jpg', 'famiport_003.jpg', 'famiport_004.jpg', 'famiport_005.jpg']
+      },
+      {
+        logo: "build/images/convenienceStore/Hi-Life.gif",
+        processImg: ['Lift-ET_001.jpg', 'Lift-ET_002.jpg', 'Lift-ET_003.jpg', 'Lift-ET_004.jpg', 'Lift-ET_005.jpg', 'Lift-ET_006.jpg']
+      },
+      {
+        logo: "build/images/convenienceStore/icon_okmart.jpg",
+        processImg: ['OKGO_001.jpg', 'OKGO_002.jpg', 'OKGO_003.jpg', 'OKGO_004.jpg', 'OKGO_005.jpg', 'OKGO_006.jpg']
+      }
+    ];
+    const renderConvenience = (data, i) => {
+      return data.map((d, i) => `<div>
+        <img style='max-width: 30px;max-height: 30px;' src=${d.logo} alt="" class="img-responsive"/>
+      </div>`).join('')
+    };
+    const renderImg = processImg => {
+      return processImg.map((p, i) => `<img style='width: 100%;' src='build/images/convenienceStore/${p}' alt='流程${i + 1}' class="img-responsive"/>`).join('')
+    };
+    $('.dropDownBox').append(renderConvenience(data))
+
+    const close = document.getElementById('close');
+
+    const modal = document.getElementById('modal');
+    $('.dropDownBox').find('div').each(function (i, obj) {
+      $(obj).click(function () {
+        // console.log(i);
+        $('.mobileModal-content img').remove();
+        $('.mobileModal-content').append(renderImg(data[i].processImg))
+        $(document).ready(function () {
+          modal.classList.add('show-mobileModal')
+        })
+      })
+    })
+
+
+    // Hide modal
+    close.addEventListener('click', () =>
+      modal.classList.remove('show-mobileModal')
+    );
+
+
+    // Hide modal on outside click
+    window.addEventListener('click', e =>
+      e.target == modal ? modal.classList.remove('show-mobileModal') : false
+    );
+  })()
 </script>
 </body>
 </html>
