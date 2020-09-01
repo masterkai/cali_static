@@ -214,10 +214,10 @@ $bgWhite: white;
           .lebron {
             .lebron_body {
               position: relative;
-              height: 144px;
+              height: 174px;
               bottom: 35px;
               left: 50%;
-              transform: translateX(-60%);
+              transform: translateX(-43%);
             }
 
             .lebron_H1 {
@@ -340,8 +340,8 @@ $bgWhite: white;
           position: relative;
 
           .roullet {
-            height: 126px;
-            left: 16%;
+            height: 135px;
+            left: 0%;
             bottom: 0px;
             position: absolute;
             z-index: 0;
@@ -483,10 +483,10 @@ $bgWhite: white;
         }
 
         .coins {
-          height: 67px;
-          left: 28%;
+          height: 140px;
+          left: 4%;
           transform: translateX(-47%);
-          bottom: 3px;
+          bottom: 1px;
           position: absolute;
           z-index: 4;
         }
@@ -585,14 +585,14 @@ $bgWhite: white;
             width: 95px;
           }
 
-          background-image: url(../../build/images/fish/shark.png);
+          background-image: url(../../build/images/fish/Bitmap.png);
           background-size: contain;
           background-repeat: no-repeat;
-          background-position: 70px 6px;
-          height: 134px;
+          background-position: center;
+          height: 143px;
           width: 100%;
-          right: 12%;
-          bottom: 6px;
+          right: 0;
+          bottom: -3px;
           position: absolute;
           z-index: 1;
         }
@@ -645,10 +645,10 @@ $bgWhite: white;
         position: absolute;
 
         .man {
-          height: 275px;
-          right: 3%;
+          height: 143px;
+          right: 6%;
           transform: translateX(-5%);
-          bottom: -131px;
+          bottom: -1px;
           position: absolute;
           z-index: 4;
         }
