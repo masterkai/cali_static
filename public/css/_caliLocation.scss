@@ -35,32 +35,13 @@
       display: none;
       justify-content: flex-end;
       align-items: flex-start;
-      height: 492px;
       padding: 20px;
       width: 100%;
+      margin-bottom: 30px;
       &:first-child {
         display: flex;
       }
-      &:nth-child(1) {
-        background: url(../../build/images/about/location01.png), $aboutItem;
-        background-size: cover;
-        background-position: center;
-      }
-      &:nth-child(2) {
-        background: url(../../build/images/about/location04.png), $aboutItem;
-        background-size: cover;
-        background-position: center;
-      }
-      &:nth-child(3) {
-        background: url(../../build/images/about/location03.png), $aboutItem;
-        background-size: cover;
-        background-position: center;
-      }
-      &:nth-child(4) {
-        background: url(../../build/images/about/location02.png), $aboutItem;
-        background-size: cover;
-        background-position: center;
-      }
+
     }
   }
 

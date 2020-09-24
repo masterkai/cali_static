@@ -8,7 +8,6 @@ $(function () {
     $tabAnchors.each(function (currentTab,obj) {
       $(obj).on('click', function (e) {
         e.preventDefault();
-        new WOW().init();
         // console.log($tabPanels.eq(currentTab));
         $tabPanels.eq(lastTab).css({display: 'none'});
         $tabPanels.eq(currentTab).css({display: 'flex'});
