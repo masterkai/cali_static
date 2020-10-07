@@ -13,33 +13,10 @@
     <title>ES6</title>
 
     <!--=========================== CSS ===========================-->
-    <!--
-    <link
-            href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional"
-            rel="stylesheet"
-    />
-    -->
-    <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-            crossorigin="anonymous"
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-    />
+
     <link rel="stylesheet" href="build/css/slick.css"/>
     <link rel="stylesheet" href="build/css/slick-theme.css"/>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="build/css/vendor.min.css"/>
+
     <link rel="stylesheet" href="build/css/tooltipster.bundle.min.css"/>
     <link rel="stylesheet" href="build/css/tooltipster-sideTip-borderless.min.css"/>
     <link rel="stylesheet" href="build/css/iconfont.css"/>
@@ -51,12 +28,7 @@
     <link rel="stylesheet" href="build/css/styles.css?v=1.1"/>
 
     <!--=========================== JS ===========================-->
-    <!--
-    <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
-    ></script>
-    -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script
             type="text/javascript"
@@ -321,7 +293,7 @@
                     <img
                             src="build/images/bonus/卡利-二儲_300x163.png"
                             alt=""
-                            class="img-responsive"
+                            class="img-responsive lazyload"
                     />
                     <div class="title">二儲優惠</div>
                     <p>套用規則為申請首存後的第一筆或是無申請優惠存款的第二筆即可申請該優惠
@@ -337,7 +309,7 @@
                     <img
                             src="build/images/bonus/img-promotion-1.png"
                             alt=""
-                            class="img-responsive"
+                            class="img-responsive lazyload"
                     />
                     <div class="title">也聯仍斷巴於做用深也預國性</div>
                     <p>
@@ -351,7 +323,7 @@
                     <img
                             src="build/images/bonus/img-promotion-2.png"
                             alt=""
-                            class="img-responsive"
+                            class="img-responsive lazyload"
                     />
                     <div class="title">{title}</div>
                     <p>{context}</p>
@@ -365,7 +337,7 @@
                     <img
                             src="build/images/bonus/img-promotion-1.png"
                             alt=""
-                            class="img-responsive"
+                            class="img-responsive lazyload"
                     />
                     <div class="title">{title}</div>
                     <p>{context}</p>
@@ -793,7 +765,7 @@
     </div>
 
 
-    <div class="mainBG" style="margin-top: 55px">
+    <div class="mainBG" style="margin-top: 55px;min-height: calc(701px); height: auto;">
         <!--    使用者登入前  -->
         <!--        <div class="mainCarousel" style="margin-top: 55px">-->
         <!--    使用者登入後  -->
@@ -1011,7 +983,7 @@
 
     </div>
 
-    <nav class="wow fadeInUp navbar fixed-bottom BottomNav BottomNav--noBG">
+    <nav class="fixed-bottom BottomNav BottomNav--noBG">
         <div class='btnGroup btnGroup--crystal'>
             <a href="/" class="home">
                 <div class="back"></div>
@@ -2298,7 +2270,7 @@
             <h3>加入會員</h3>
         </div>
         <div class="modalBody modalBody__InfoLayout">
-            <form style="padding: 40px 20px;">
+            <form style="padding: 20px;">
                 <div class="form-group row">
                     <label class="col-sm-3 col-form-label"
                     ><span class="red">*</span>用戶名</label
@@ -2393,9 +2365,9 @@
                     <input
                             type="checkbox"
                             class="form-check-input"
-                            id="exampleCheck2"
+                            id="exampleCheck"
                     />
-                    <label class="form-check-label" for="exampleCheck2">
+                    <label class="form-check-label" for="exampleCheck">
                         我已年滿18歲，並同意投注相關規範以及<span class="blue"
                     >服務條款</span
                     >
@@ -2465,6 +2437,7 @@
         type="application/javascript"
         src="build/js/scripts.min.js?v=1.1"
 ></script>
+<script src="build/js/lazysizes.min.js" async=""></script>
 <script>
 
   const startPlayState = {
@@ -2541,7 +2514,7 @@
         </div>
         ${
         startPlayState.TabsActiveDefault[index] ? `<div class='contentBox'>
-            <img class='contentIMG' src='build${tabImage}'/>
+            <img class='contentIMG lazyload' src='build${tabImage}'/>
             <div class='iconBox'>
               ${
           gameProvider.length > 2 ? gameProvider.map(p =>

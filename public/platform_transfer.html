@@ -13,30 +13,10 @@
     <title>ES6</title>
 
     <!--=========================== CSS ===========================-->
-    <link
-            href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional"
-            rel="stylesheet"
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-    />
+
     <link rel="stylesheet" href="build/css/slick.css"/>
     <link rel="stylesheet" href="build/css/slick-theme.css"/>
-    <!--    <link-->
-    <!--            rel="stylesheet"-->
-    <!--            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
-    <!--    />-->
-    <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-            crossorigin="anonymous"
-    />
+
     <link rel="stylesheet" href="build/css/vendor.min.css"/>
     <link rel="stylesheet" href="build/css/iconfont.css"/>
     <link href="build/css/jquery-ui.css" rel="stylesheet"/>
@@ -375,9 +355,13 @@
             </div>
         </div>
     </div>
-    <nav class="navbar fixed-bottom BottomNav">
+    <nav class="fixed-bottom BottomNav">
         <div class='btnGroup btnGroup--panel'>
-            <img src="build/images/circle_btn_cali.png" alt="" class="img-responsive home">
+            <a href="/" class="home">
+                <div class="back"></div>
+                <div class="front"></div>
+            </a>
+
 
             <a href="/platform_transfer">
                 <span class="iconfont icon_Transfer"></span>
@@ -423,10 +407,16 @@
                     會員中心
                 </a>
                 <div class="UpMenu UPM">
-                    <a href="/edit_user_info">
+                    <a href="/edit-password">
+                        <p>
+                            <span class="iconfont icon_key-light"></span>
+                            更改密碼
+                        </p>
+                    </a>
+                    <a href="/edit-userInfo">
                         <p>
                             <span class="iconfont icon_user-alt-light"></span>
-                            變更資料
+                            會員資料
                         </p>
                     </a>
                     <a href="/transaction_records">
@@ -438,20 +428,13 @@
                     <a href="/bet_records">
                         <p>
                             <span class="iconfont icon_coins-light"></span>
-                            投注記錄
+                            各廳流水
                         </p>
                     </a>
-                    <a href="/bonus_records">
-                        <p>
-                            <span class="iconfont icon_gift-light"></span>
-                            優惠記錄
-                        </p>
-                    </a>
+
                     <a href="/recommendation">
                         <p>
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon_thumbs-up-light"></use>
-                            </svg>
+                            <span class="iconfont icon_thumbs-up-light"></span>
                             會員推薦
                         </p>
                     </a>

@@ -1,9 +1,22 @@
 .card {
+  .card {
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
   border: none;
   background-color: unset;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, .65);
 
   .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
     background: rgba(0, 0, 0, 0.65);
     text-align: center;
 
@@ -14,5 +27,10 @@
 
     }
   }
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+  flex-shrink: 0;
+  width: 100%;
 }
 

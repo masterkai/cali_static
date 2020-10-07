@@ -72,11 +72,11 @@
       position: relative;
       &:after {
         position: absolute;
-        font-family: 'Font Awesome 5 Free';
-        content: '\f192';
-        //background-color: #007bff;
+        content: url(../../build/images/dot-circle-solid.svg);
         font-weight: 900;
         font-size: 16px;
+        height: 16px;
+        width: 16px;
         color: #0091ff;
         right: 6px;
         top: 50%;
@@ -101,18 +101,16 @@
       position: relative;
       &:after {
         position: absolute;
-        font-family: 'Font Awesome 5 Free';
-        content: '\f192';
-        //background-color: #007bff;
+        content: url(../../build/images/dot-circle-solid.svg);
+        height: 16px;
+        width: 16px;
         font-weight: 900;
         font-size: 16px;
         color: #0091ff;
         right: 6px;
         top: 50%;
         transform: translateY(-50%);
-        //width: 15px;
-        //height: 15px;
-        //border-radius: 10px;
+
       }
     }
   }

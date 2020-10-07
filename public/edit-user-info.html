@@ -117,7 +117,7 @@
               <span
                       class="iconfont icon_chevron-left-light"
                       style='margin-left: 10px;font-size: 1.625rem;'></span>
-            <div class='title'>變更資料</div>
+            <div class='title'>會員資料</div>
         </nav>
         <div class="userStateBar">
             <div class='userStateColumn'>
@@ -203,143 +203,118 @@
         </div>
     </div>
 
-    <div class='mobileBox' style="margin-top: 80px;height: auto;padding-bottom: 80px;" id="swt01">
-        <div class="switchTabsNav">
-            <div class="tab active">密碼</div>
-            <div class="tab">聯系資料</div>
-        </div>
-        <div class="panelsGroup">
-            <div class="panel">
-                <form>
-                    <div class="form-group">
-                        <label class="mb-3">舊密碼</label>
-                        <input
-                                type="password"
-                                class="form-control"
-                                placeholder="6-10位英、數字符"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label class="mb-3">新密碼</label>
-                        <input
-                                type="password"
-                                class="form-control"
-                                placeholder="6-10位英、數字符"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label class="mb-3">確認新密碼</label>
-                        <input
-                                type="password"
-                                class="form-control"
-                                placeholder="6-10位英、數字符"
-                        />
-                    </div>
-                  <div class="outlineBtn">確認送出</div>
-                </form>
+    <div class='mobileBox' style="margin-top: 80px;height: auto;padding-bottom: 80px;">
+        <form>
+            <div class="form-group">
+                <label class="mb-3">手機號碼</label>
+                <input
+                        type="number"
+                        class="form-control"
+                        placeholder="6-10位英、數字符"
+                />
             </div>
-            <div class="panel">
-                <form>
-                    <div class="form-group">
-                        <label class="mb-3">手機號碼</label>
-                        <input
-                                type="number"
-                                class="form-control"
-                                placeholder="6-10位英、數字符"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label class="mb-3">電子信箱</label>
-                        <input
-                                type="mail"
-                                class="form-control"
-                                placeholder="6-10位英、數字符"
-                        />
-                    </div>
-                    <div class="form-row" style="margin-bottom: 20px">
-                        <div class="col-12">
-                            <label class="mb-3">LINE帳號</label>
-                            <input type="text" class="form-control"/>
-                        </div>
-                    </div>
-                  <div class="outlineBtn">確認送出</div>
-                </form>
+            <div class="form-group">
+                <label class="mb-3">電子信箱</label>
+                <input
+                        type="mail"
+                        class="form-control"
+                        placeholder="6-10位英、數字符"
+                />
             </div>
-        </div>
+            <div class="form-row" style="margin-bottom: 20px">
+                <div class="col-12">
+                    <label class="mb-3">LINE帳號</label>
+                    <input type="text" class="form-control"/>
+                </div>
+            </div>
+            <div class="outlineBtn">確認送出</div>
+        </form>
     </div>
 
-    <nav class="navbar fixed-bottom BottomNav">
-        <a href="/platform_transfer">
-            <span class="iconfont icon_Transfer"></span>
-            平台轉帳
-        </a>
-        <a href="/promotions">
-            <span class="iconfont icon_gift-solid"></span>
-            最新優惠
-        </a>
-        <div style="position:relative;cursor: pointer">
-            <a href="/promotions" class="menuToggle lv1Menu">
-                <span class="iconfont icon_sack-dollar-solid"></span>
-                在線提款
+    <nav class="fixed-bottom BottomNav">
+        <div class='btnGroup btnGroup--panel'>
+            <a href="/" class="home">
+                <div class="back"></div>
+                <div class="front"></div>
             </a>
-            <div class="nav-menu-2 UPS">
-                <div class="overlay"></div>
-                <div class="UpSwitch">
-                    <a href="/deposit">
-                        <p>
+
+
+            <a href="/platform_transfer">
+                <span class="iconfont icon_Transfer"></span>
+                平台轉帳
+            </a>
+            <a href="/promotions">
+                <span class="iconfont icon_gift-solid"></span>
+                最新優惠
+            </a>
+            <div style="width: 68px;"></div>
+            <div style="position:relative;cursor: pointer">
+                <a href="/promotions" class="onlineWithdraw">
+                    <span class="iconfont icon_sack-dollar-solid"></span>
+                    在線提款
+                </a>
+                <div class="UPS">
+                    <div class="overlay"></div>
+                    <div class="UpSwitch">
+                        <a href="/deposit">
+                            <p>
                   <span
                           class="iconfont icon_turnIN1"
                           style="color: #077F64"
                   ></span>
-                            存款專區
-                        </p>
-                    </a>
-                    <a href="/withdrawals">
-                        <p>
+                                存款專區
+                            </p>
+                        </a>
+                        <a href="/withdrawals">
+                            <p>
                   <span
                           class="iconfont icon_turnOUT1"
                           style="color: #FA6400"
                   ></span>
-                            提款專區
+                                提款專區
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="position:relative;">
+                <a href="/" class="memberCenter">
+                    <span class="iconfont icon_user-solid"></span>
+                    會員中心
+                </a>
+                <div class="UpMenu UPM">
+                    <a href="/edit-password">
+                        <p>
+                            <span class="iconfont icon_key-light"></span>
+                            更改密碼
+                        </p>
+                    </a>
+                    <a href="/edit-userInfo">
+                        <p>
+                            <span class="iconfont icon_user-alt-light"></span>
+                            會員資料
+                        </p>
+                    </a>
+                    <a href="/transaction_records">
+                        <p>
+                            <span class="iconfont icon_file-invoice-dollar-light"></span>
+                            交易記錄
+                        </p>
+                    </a>
+                    <a href="/bet_records">
+                        <p>
+                            <span class="iconfont icon_coins-light"></span>
+                            各廳流水
+                        </p>
+                    </a>
+
+                    <a href="/recommendation">
+                        <p>
+                            <span class="iconfont icon_thumbs-up-light"></span>
+                            會員推薦
                         </p>
                     </a>
                 </div>
-            </div>
-        </div>
-        <a href="/customer_service">
-            <span class="iconfont iconHR"></span>
-            在線客服
-        </a>
-        <div style="position:relative;">
-            <a href="/" class="menuToggle lv1Menu">
-                <span class="iconfont icon_user-solid"></span>
-                會員中心
-            </a>
-            <div class="UpMenu nav-menu-2 UPM">
-                <a href="/edit_user_info">
-                    <p>
-                        <span class="iconfont icon_user-alt-light"></span>
-                        變更資料
-                    </p>
-                </a>
-                <a href="/transaction_records">
-                    <p>
-                        <span class="iconfont icon_file-invoice-dollar-light"></span>
-                        交易記錄
-                    </p>
-                </a>
-                <a href="/bet_records">
-                    <p>
-                        <span class="iconfont icon_coins-light"></span>
-                        投注記錄
-                    </p>
-                </a>
-                <a href="/bonus_records">
-                    <p>
-                        <span class="iconfont icon_gift-light"></span>
-                        優惠記錄
-                    </p>
-                </a>
             </div>
         </div>
     </nav>
@@ -414,41 +389,7 @@
 </div>
 
 
-<!-- Modal -->
-<div class="mobileModal-container" id="modal">
-    <div class="mobileModal">
-        <div class="close-btn" id="close">
-            <span class="iconfont icon_times-light"></span>
-        </div>
-        <div class="mobileModal-header">
-            <h3>請輸入提款密碼</h3>
-        </div>
-        <div class="mobileModal-content">
-            <!--            <p>Register with us to get offers, support and more</p>-->
-            <form class="mobileModal-form">
-                <div class="inputWithBtn">
-                    <!--                    <label for="name">Name</label>-->
-                    <input
-                            type="text"
-                            id="name"
-                            placeholder="6-10位英、數字符"
-                            class="form-input"
-                    />
 
-                    <button
-                            type="button"
-                            class="btn btn-primary btn-sm"
-                            style="margin-left: 10px;
-    flex: 1 1 40%;"
-                    >
-                        忘記密碼
-                    </button>
-                </div>
-                <input type="submit" value="Submit" class="submit-btn"/>
-            </form>
-        </div>
-    </div>
-</div>
 
 
 
@@ -476,26 +417,5 @@
         type="application/javascript"
         src="build/js/scripts.min.js?v=1.1"
 ></script>
-<script>
-  const close = document.getElementById('close');
-
-
-  const modal = document.getElementById('modal');
-
-
-  modal.classList.add('show-mobileModal');
-
-
-  // Hide modal
-  close.addEventListener('click', () =>
-    modal.classList.remove('show-mobileModal')
-  );
-
-
-  // Hide modal on outside click
-  window.addEventListener('click', e =>
-    e.target == modal ? modal.classList.remove('show-mobileModal') : false
-  );
-</script>
 </body>
 </html>

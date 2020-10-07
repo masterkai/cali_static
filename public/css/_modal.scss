@@ -278,10 +278,11 @@ input[type='submit'] {
 
     .userAccount {
       &:before {
-        font-family: 'Font Awesome 5 Free';
         font-weight: 900;
-        content: '\f007';
+        content: url(../../build/images/user-solid.svg);
         font-size: 16px;
+        height: 16px;
+        width: 16px;
         position: absolute;
         color: $color-mainLightBlue;
         left: 6px;
@@ -292,10 +293,11 @@ input[type='submit'] {
 
     .userPassword {
       &:before {
-        font-family: 'Font Awesome 5 Free';
         font-weight: 900;
-        content: '\f023';
+        content: url(../../build/images/lock-alt-solid.svg);
         font-size: 16px;
+        height: 16px;
+        width: 16px;
         position: absolute;
         color: $color-mainLightBlue;
         left: 6px;
